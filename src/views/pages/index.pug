@@ -1,0 +1,12 @@
+extends ../layouts/master
+
+
+
+include ../components/test
+
+
+
+block content
+  .container
+    - for (let i = 0; i < 100; i++)
+      +test
