@@ -1,0 +1,46 @@
+mixin footer 
+  footer.footer 
+    .footer__wrapper
+      .footer__row.footer__row--block 
+        .footer__col
+          .footer__inner
+            ul.footer__list
+              each item in data.nav
+                li.footer__list-item
+                  a.footer__list-link(href="#")
+                    |#{item}
+        .footer__col
+          .footer__inner 
+            .footer__container 
+              .footer__container-col
+                .footer__label 
+                  |Клиентский сервис
+                a.footer__phone(href="tel:88123375662") 
+                  |8 812 337-56-62
+                a.footer__mail(href="mailto:info@wine78.ru") 
+                  |info@wine78.ru
+                a.ask(href="#") 
+                  .ask__icon 
+                    +message-svg.ask__svg 
+                  .ask__text 
+                    |Задать вопрос
+              .footer__container-col
+                .footer__item 
+                  .footer__label 
+                    |Центральный офис
+                  address.footer__text 
+                    |188300, Ленинградская область, г. Гатчина, ул. Индустриальная, д. 18а
+                .footer__item 
+                  .footer__label 
+                    |Склад
+                  address.footer__text 
+                    |192289, Санкт-Петербург, ул. Карпатская, д.8, лит. Б, пом. 8-Н
+    .footer__row 
+      .footer__col
+        .footer__bot
+          .footer__logo 
+            |© WineBerry 2022
+      .footer__col
+        .footer__bot
+          .footer__made
+            |Cделано в #[a.footer__corp(href="#") CloudMill]

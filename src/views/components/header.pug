@@ -1,0 +1,74 @@
+mixin header
+  -
+    var ddata = {
+      links: [
+        {img: 'assets/images/svg/links-1.svg', text: 'Водка'},
+        {img: 'assets/images/svg/links-2.svg', text: 'Ликероводочные изделия'},
+        {img: 'assets/images/svg/links-3.svg', text: 'Коньяк'},
+        {img: 'assets/images/svg/links-4.svg', text: 'Вино и винные напитки'},
+        {img: 'assets/images/svg/links-5.svg', text: 'Слабоалкогольная продукция'},
+        {img: 'assets/images/svg/links-6.svg', text: 'Настойки и наливки'},
+      ]
+    }
+  header.header 
+    .header__inner 
+      .container
+        .header__desktop
+          .header__top
+            .header__row
+              .header__col
+                a.header__logo(href="#") 
+                  +logo-svg.header__logo-svg
+              .header__col
+                nav.header__nav 
+                  ul.header__nav-list 
+                    each item in data.nav
+                      li.header__nav-item 
+                        a.header__nav-link(href="#")
+                          |#{item}
+              .header__col
+                a.ask(href="#") 
+                  .ask__icon 
+                    +message-svg.ask__svg 
+                  .ask__text 
+                    |Задать вопрос
+          .header__bot
+            .header__row
+              .header__col
+                ul.header__links 
+                  each item in ddata.links
+                    li.header__links-item 
+                      a.header__links-link(href="#") 
+                        .header__links-img 
+                          img(src=item.img, alt="")
+                        .header__links-text
+                          |#{item.text}
+              .header__col
+                .header__buttons 
+                  .header__item 
+                    +search-svg.header__svg
+                  .header__item.header__cart
+                    +cart-svg.header__svg
+                    .header__cart-count 
+                      |8
+                  .header__item 
+                    +user-svg.header__svg
+        .header__mobile
+          .header__row 
+            .header__col 
+              .header__buttons 
+                .header__item
+                  |menu
+                .header__item
+                  +search-svg.header__svg
+            .header__col 
+              a.header__logo(href="#") 
+                +logo-svg.header__logo-svg
+            .header__col 
+              .header__buttons 
+                .header__item
+                  +user-svg.header__svg
+                .header__item.header__cart
+                  +cart-svg.header__svg
+                  .header__cart-count 
+                    |8

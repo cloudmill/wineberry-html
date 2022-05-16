@@ -1,0 +1,25 @@
+.section {
+  
+  margin-top: 60px;
+
+  &--border {
+    border-top: 1px solid var(--color-borders);
+    @media (max-width: ($breakpoint - 1px)) {
+      border-top: none;
+    }
+  }
+
+  &--first {
+    margin-top: 212px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 68px;
+    }
+  }
+
+  &__inner {
+    margin-top: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 0;
+    }
+  }
+}

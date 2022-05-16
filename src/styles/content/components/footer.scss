@@ -1,0 +1,217 @@
+.footer {
+  $comp: &;
+  
+  border-top: 1px solid var(--color-wine);
+
+  &__wrapper {
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-bottom: 32px;
+    }
+
+    border-bottom: 1px solid var(--color-borders);
+  }
+
+  &__row {
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 20px 20px 0;
+    }
+
+    display: flex;
+
+    &--block {
+      @media (max-width: ($breakpoint - 1px)) {
+        display: block;
+      }
+
+      #{$comp}__col {
+        @media (max-width: ($breakpoint - 1px)) {
+          &:nth-child(1) {
+            width: auto;
+          }
+
+          &:nth-child(2) {
+            margin-top: 32px;
+
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  &__col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      padding-left: 60px;
+      padding-right: calc(#{$col-width-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      width: calc(#{$col-width-d} * 5);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 50%;
+      }
+    }
+    
+    &:nth-child(2) {
+      padding-left: calc(#{$col-width-d});
+      padding-right: 60px;
+      @media (max-width: ($breakpoint - 1px)) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      width: calc(#{$col-width-d} * 7);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 50%;
+      }
+
+      border-left: 1px solid var(--color-borders);
+      @media (max-width: ($breakpoint - 1px)) {
+        border-left: 0;
+      }
+    }
+  }
+
+  &__inner {
+    padding: 120px 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0;
+    }
+  }
+
+  &__list {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 82px;
+      gap: 12px;
+    }
+  }
+  &__list-item {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 50%;
+    }
+
+    &:not(:first-child) {
+      margin-top: 32px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 0;
+      }
+    }
+  }
+  &__list-link {
+    letter-spacing: var(--letter-space);
+    @include fsl(22px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px, 120%);
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+  &__container-col {
+
+    &:nth-child(1) {
+      @media (max-width: ($breakpoint - 1px)) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &:not(:first-child) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 32px;
+      }
+    }
+  }
+
+  &__label {
+    margin-bottom: 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 8px;
+    }
+
+    color: var(--color-lilac);
+    @include fsl(14px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
+  }
+
+  &__phone {
+    letter-spacing: var(--letter-space);
+    @include fsl(48px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(24px);
+    }
+  }
+  
+  &__mail {
+    margin-bottom: 41px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 32px;
+    }
+
+    display: inline-block;
+
+    letter-spacing: var(--letter-space);
+    @include fsl(28px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px)
+    }
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: 40px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 32px;
+      }
+    }
+  }
+
+  &__text {
+    letter-spacing: var(--letter-space);
+    @include fsl(18px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+    }
+  }
+
+  &__bot {
+    padding: 24px 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 20px 0;
+    }
+  }
+
+  &__logo {
+    color: var(--color-lilac);
+    @include fsl(14px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
+  }
+
+  &__made {
+    @include fsl(14px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
+  }
+
+  &__corp {
+    color: var(--color-wine);
+  }
+}

@@ -1,0 +1,40 @@
+// fonts
+$fs: 16px;
+
+$ff-main: 'Dopis', sans-serif;
+
+:root {
+  // colors
+  --color-white: #fff;
+  --color-lilac: #9A7D8C;
+  --color-wine: #A71E5C;
+  --color-black: #1D1117;
+  --color-borders: #E7E7E7;
+  // --color-inner-borders: rgba(#3F3F40, 0.1);
+  // letter-space
+  --letter-space: -0.02em;
+}
+$rgba-borders: rgba(#3F3F40, 0.1);
+$rgba-white: rgba(255, 255, 255, 0.2);
+
+// media breakpoints
+$breakpoint-xs: 375px;
+$breakpoint-s: 576px;
+$breakpoint-m: 768px;
+$breakpoint-t: 1024px;
+$breakpoint: 1280px;
+$breakpoint-l: 1366px;
+$breakpoint-ll: 1440px;
+$breakpoint-xl: 1680px;
+$breakpoint-xxl: 1920px;
+
+// grid columns
+$col-count-m: 8;
+$col-count-d: 12;
+
+$col-width-m: '((100vw / #{$col-count-m})';
+$col-width-d: '(100vw / #{$col-count-d})';
+
+$transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+$transition-duration: .5s;
+$transition: $transition-duration $transition-timing-function;

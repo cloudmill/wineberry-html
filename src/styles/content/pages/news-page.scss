@@ -1,0 +1,235 @@
+.news-page {
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+
+  &__grid-item {
+
+    &--big {
+      grid-column: span 2;
+    }
+  }
+  &__grid-container {
+    padding: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 20px;
+    }
+
+    height: 100%;
+
+    border-bottom: 1px solid var(--color-borders);
+  }
+
+  &__card {}
+  &__card-row {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+  &__card-col {
+
+    &:nth-child(1) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-bottom: 12px;
+        position: relative;
+        z-index: 0;
+      }
+
+      flex-shrink: 0;
+      width: calc(#{$col-width-d} * 3);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
+      display: flex;
+      align-items: center;
+
+      border-radius: 32px;
+      @media (max-width: ($breakpoint - 1px)) {
+        border-radius: 12px;
+      }
+      overflow: hidden;
+    }
+    &:nth-child(2) {
+      margin-left: 32px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 0;
+      }
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  &__card-label {
+    margin-bottom: 12px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 8px;
+    }
+
+    letter-spacing: var(--letter-space);
+    color: var(--color-lilac);
+    @include fsl(14px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
+
+    &--big {
+      margin-bottom: 32px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-bottom: 8px;
+      }
+
+      @include fsl(16px, 120%);
+      @media (max-width: ($breakpoint - 1px)) {
+        @include fsl(12px);
+      }
+    }
+  }
+  &__card-heading {
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 130%);
+    }
+  }
+  &__card-title {
+    font-weight: 700;
+    @include fsl(18px, 130%);
+    letter-spacing: var(--letter-space);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+    }
+  }
+  &__card-icon {
+    --size: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--size);
+    height: var(--size);
+
+    border: 1px solid var(--color-borders);
+    border-radius: 8px;
+    background-color: var(--color-white);
+  }
+  &__card-container {
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 0;
+
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  &__card-img {
+    display: flex;
+    align-items: center;
+  }
+  &__card-bot {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    z-index: 1;
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: calc(#{$col-width-d} - 60px);
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
+    }
+    &:nth-child(2) {
+      width: calc(#{$col-width-d} * 6);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
+    }
+  }
+
+  &__top {
+    margin-bottom: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__date {
+    color: var(--color-lilac);
+    letter-spacing: var(--letter-space);
+    @include fsl(16px, 120%);
+  }
+
+  &__image {
+    margin-bottom: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 32px;
+    }
+    
+    display: flex;
+    align-items: center;
+
+    border-radius: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 16px;
+    }
+  }
+
+  &__caption {
+    margin-bottom: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 32px;
+    }
+
+    letter-spacing: var(--letter-space);
+    @include fsl(24px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px);
+    }
+  }
+
+  &__content {
+    margin-bottom: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__text {
+    margin-left: calc(#{$col-width-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 0;
+    }
+
+    letter-spacing: var(--letter-space);
+    @include fsl(18px, 160px);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+    }
+
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+  }
+}
