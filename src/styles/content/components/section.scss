@@ -16,6 +16,17 @@
     }
   }
 
+  &--big {
+    margin-top: 140px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 40px;
+    }
+  }
+
+  &--hidden {
+    overflow: hidden;
+  }
+
   &__inner {
     margin-top: 60px;
     @media (max-width: ($breakpoint - 1px)) {

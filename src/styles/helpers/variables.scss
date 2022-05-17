@@ -10,7 +10,7 @@ $ff-main: 'Dopis', sans-serif;
   --color-wine: #A71E5C;
   --color-black: #1D1117;
   --color-borders: #E7E7E7;
-  // --color-inner-borders: rgba(#3F3F40, 0.1);
+  --color-light-gray: #F7F7F7;
   // letter-space
   --letter-space: -0.02em;
 }
@@ -32,7 +32,7 @@ $breakpoint-xxl: 1920px;
 $col-count-m: 8;
 $col-count-d: 12;
 
-$col-width-m: '((100vw / #{$col-count-m})';
+$col-width-m: '(100vw / #{$col-count-m})';
 $col-width-d: '(100vw / #{$col-count-d})';
 
 $transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);

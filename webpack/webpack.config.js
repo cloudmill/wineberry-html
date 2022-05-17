@@ -197,6 +197,13 @@ module.exports = (env) => {
 
       ...utils.pages(env.NODE_ENV),
 
+      new webpack.ProvidePlugin({
+				$: 'jquery',
+				jQuery: 'jquery',
+				'window.$': 'jquery',
+				'window.jQuery': 'jquery'
+			}),
+
       new HtmlBeautifyPlugin({
         end_with_newline: true,
         indent_size: 2,

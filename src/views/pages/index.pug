@@ -7,4 +7,7 @@ block footer
 
 block content
   .container
-    
+    ul.routes
+      each route in data.routes
+        li.routes__item
+          a.button(href=route.href)= route.title

@@ -1,0 +1,20 @@
+.swiper-container {
+  &--visible {
+    overflow: visible;
+    &--mobile {
+      @media (min-width: $breakpoint) {
+        overflow: hidden;
+      }
+    }
+  }
+  &--slide-width-auto {
+    .swiper-slide {
+      width: auto;
+    }
+  }
+  &--slide-height-max {
+    .swiper-slide {
+      height: auto;
+    }
+  }
+}

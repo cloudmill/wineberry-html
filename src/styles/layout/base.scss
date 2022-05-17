@@ -49,11 +49,10 @@ h1 {
 }
 
 h2 {
-  @include fsl(60px, 100%);
-  letter-spacing: -2px;
+  @include fsl(32px, 110%);
+  letter-spacing: var(--letter-space);
   @media (max-width: ($breakpoint - 1px)) {
-    @include fsl(24px, 120%);
-    letter-spacing: -1px; 
+    @include fsl(18px); 
   }
 }
 

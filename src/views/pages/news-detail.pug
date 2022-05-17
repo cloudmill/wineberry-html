@@ -1,19 +1,21 @@
 extends ../layouts/master
 
 include ../components/breadcrumbs
+include ../components/news-components
 
 block content
   .news-page 
     section.section.section--first 
       .container
         +breadcrumbs(items = ['Новости'] page = 'Универсальный сорт: что нужно знать о шардоне')
-    section.section.section--border 
+    section.news-page__section
       .container
         .section__inner 
           .news-page__row 
             .news-page__col
               .news-page__button 
-                |button
+                +link-left 
+                  |Назад
             .news-page__col
               .news-page__top
                 h1.news-page__title
@@ -53,3 +55,30 @@ block content
                   each item in ['Каберне Совиньон', 'Мерло Можно', 'Шардоне', 'Совиньон Блан',]
                     li 
                       |#{item}
+              .news-page__image 
+                img(src="assets/images/news-4.jpg", alt="")
+              p.news-page__text 
+                |Шардоне — белый сорт винограда родом из французской Бургундии. Вкусовые характеристики этого самого популярного в мире белого сорта зависят от того, где он выращивается и выдерживается ли он в бочке. География действительно впечатляет. Ценнейшие образцы шардоне имеют бургундскую и калифорнийскую прописку, но еще он обитает в Австралии, Новой Зеландии и в ряде мест Южной Африки.
+    section.section.section--big.section--hidden 
+      .news-page__slider 
+        .container 
+          h2.news-page__slider-title
+            |Похожие новости
+        .news-page__slider-inner 
+          .swiper-container.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='news' data-slider-prev='q' data-slider-next='w')
+            .swiper-wrapper 
+              - for (i = 0; i < 7; i++)
+                .swiper-slide.news-page__slider-slide
+                  .news-page__grid-container.news-page__grid-container--small
+                    +news-card
+    section.section.section--big
+      .container
+        .news-page__follow 
+          form.news-page__follow-form(action="/") 
+            h3.news-page__follow-title 
+              |Подпишитесь на наши новости #[br] и будьте в курсе активностей
+            .news-page__follow-bot 
+              input.news-page__follow-input(type="email" placeholder="E-mail") 
+              .news-page__follow-btn
+                +submit-button 
+                  |Подписаться

@@ -1,0 +1,12 @@
+.routes {
+  margin-top: 30px;
+
+  &__item {
+    display: flex;
+    width: 200px;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+}

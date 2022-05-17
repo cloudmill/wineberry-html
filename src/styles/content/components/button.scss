@@ -1,0 +1,50 @@
+.button {
+  padding: 21px 0;
+  @media (max-width: ($breakpoint - 1px)) {
+    padding: 15px 0;
+  }
+  
+  width: 100%;
+  display: block;
+  
+  text-align: center;
+  @include f-main;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--color-white);
+  border: none;
+  background: var(--color-wine);
+  letter-spacing: var(--letter-space);
+  border-radius: 8px;
+  @include fsl(18px, 120%);
+  @media (max-width: ($breakpoint - 1px)) {
+    @include fsl(14px);
+    border-radius: 4px;
+  }
+
+  &--outline {
+    padding: 18px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-black);
+    background: none;
+    border: 1px solid var(--color-borders);
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__arrow {
+    transform: rotate(-180deg);
+  }
+
+  &__text {
+    margin-left: 20px;
+  }
+}

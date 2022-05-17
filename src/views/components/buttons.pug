@@ -1,0 +1,10 @@
+mixin submit-button 
+  button.button&attributes(attributtes)
+    block
+
+mixin link-left 
+  a.button.button--outline(href="#") 
+    .button__icon 
+      +arrow-svg.button__svg.button__arrow 
+    .button__text 
+      block

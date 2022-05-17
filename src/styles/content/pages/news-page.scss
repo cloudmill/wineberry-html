@@ -1,11 +1,18 @@
 .news-page {
 
   &__grid {
+    margin-left: -1px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 0;
+    }
+
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     @media (max-width: ($breakpoint - 1px)) {
       display: block;
     }
+
+    border-top: 1px solid var(--color-borders);
   }
 
   &__grid-item {
@@ -22,7 +29,17 @@
 
     height: 100%;
 
+    border-left: 1px solid var(--color-borders);
     border-bottom: 1px solid var(--color-borders);
+
+    &--small {
+      @media (max-width: ($breakpoint - 1px)) {
+        padding: 20px 0;
+
+        border-left: 0;
+        border-bottom: 0;
+      }
+    }
   }
 
   &__card {}
@@ -136,15 +153,32 @@
     z-index: 1;
   }
 
+  &__section {
+    margin-top: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 8px;
+
+      border-top: none;
+    }
+    border-top: 1px solid var(--color-borders);
+  }
+
+  &__button {
+    width: 147px;
+  }
+
   &__row {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
   }
 
   &__col {
     flex-shrink: 0;
 
     &:nth-child(1) {
-      width: calc(#{$col-width-d} - 60px);
+      width: calc(#{$col-width-d} * 3 - 60px);
       @media (max-width: ($breakpoint - 1px)) {
         display: none;
       }
@@ -166,6 +200,10 @@
 
   &__title {
     margin-bottom: 12px;
+    @include fsl(36px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(18px, 110%);
+    }
   }
 
   &__date {
@@ -183,6 +221,7 @@
     display: flex;
     align-items: center;
 
+    overflow: hidden;
     border-radius: 32px;
     @media (max-width: ($breakpoint - 1px)) {
       border-radius: 16px;
@@ -223,7 +262,7 @@
     }
 
     letter-spacing: var(--letter-space);
-    @include fsl(18px, 160px);
+    @include fsl(18px, 160%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px);
     }
@@ -231,5 +270,226 @@
     &:not(:first-child) {
       margin-top: 16px;
     }
+  }
+
+  &__enum {
+    margin-top: 24px;
+    padding-left: calc(#{$col-width-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-left: 0;
+      margin-top: 16px;
+    }
+
+    li {
+      padding-left: 68px;
+      @media (max-width: ($breakpoint - 1px)) {
+        padding-left: 36px;
+      }
+      position: relative;
+      z-index: 0;
+
+      letter-spacing: var(--letter-space);
+      @include fsl(18px, 160%);
+      @media (max-width: ($breakpoint - 1px)) {
+        @include fsl(14px);
+      }
+
+      &:not(:first-child) {
+        margin-top: 8px;
+        @media (max-width: ($breakpoint - 1px)) {
+          margin-top: 4px;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 20px;
+        height: 20px;
+
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 4.6933L13.3333 10.5266L7.5 16.36' stroke='%23A71E5C' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  &__quote {
+    margin-bottom: 60px;
+    padding: 60px calc(#{$col-width-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 32px;
+      padding: 60px 40px 40px;
+    }
+    position: relative;
+    z-index: 0;
+
+    border-radius: 20px;
+    background: var(--color-light-gray);
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(18px, 160%);
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 12px;
+      @include fsl(14px);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 60px;
+      top: 60px;
+      z-index: 1;
+      @media (max-width: ($breakpoint - 1px)) {
+        top: 20px;
+        left: 40px;
+      }
+
+      width: 40px;
+      height: 32px;
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 24px;
+        height: 20px;
+      }
+
+      background-image: url("data:image/svg+xml,%3Csvg width='40' height='33' viewBox='0 0 40 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M39.36 0.199951C30.4 0.199951 24.16 5.47995 24.16 17.64V32.2H39.36V16.68H31.2C31.84 8.99995 34.4 7.07996 39.36 7.07996V0.199951ZM15.2 0.199951C6.24 0.199951 0 5.47995 0 17.48V32.2H15.2V16.68H7.04C7.68 8.99995 10.24 7.07996 15.2 7.07996V0.199951Z' fill='%23A71E5C'/%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__list {
+    padding-left: calc(#{$col-width-d});
+    margin-top: 25px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 20px;
+      padding-left: 0;
+    }
+
+    counter-reset: index;
+
+    li {
+      padding-left: 68px;
+      position: relative;
+      z-index: 0;
+      @media (max-width: ($breakpoint - 1px)) {
+        padding-left: 36px;
+      }
+
+      counter-increment: index;
+      letter-spacing: var(--letter-space);
+      @include fsl(18px, 160%);
+      @media (max-width: ($breakpoint - 1px)) {
+        @include fsl(14px);
+      }
+
+      &:not(:first-child) {
+        margin-top: 8px;
+        @media (max-width: ($breakpoint - 1px)) {
+          margin-top: 4px;
+        }
+      }
+
+      &::before {
+        content: counter(index);
+        position: absolute;
+        top: 1px;
+        left: 0;
+        z-index: 1;
+
+        color: var(--color-wine);
+        font-weight: 700;
+        letter-spacing: var(--letter-space);
+        @include fsl(18px, 160%);
+        @media (max-width: ($breakpoint - 1px)) {
+          @include fsl(16px);
+        }
+      }
+    }
+  }
+
+  &__slider {}
+  &__slider-title {
+    margin-bottom: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 12px;
+    }
+  }
+  &__slider-inner {
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0 20px;
+
+      border-bottom: 1px solid var(--color-borders);
+    }
+    border-top: 1px solid var(--color-borders);
+  }
+  &__slider-slide {
+    width: calc(#{$col-width-d} * 3);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: calc(#{$col-width-m} * 6);
+    }
+  }
+
+  &__follow {
+    margin: 0 auto;
+    padding: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin: 0;
+      padding: 20px;
+    }
+
+    width: calc(#{$col-width-d} * 6);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: auto;
+    }
+
+    background-color: var(--color-light-gray);
+    border-radius: 20px;
+  }
+  &__follow-title {
+    margin-bottom: 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 20px;
+
+      @include fsl(16px, 110%);
+    }
+  }
+  &__follow-bot {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+  &__follow-input {
+    padding: 20px 21px;
+
+    width: 100%;
+
+    background: var(--color-white);
+    border: 1px solid var(--color-borders);
+    border-radius: 8px;
+    @include f-main();
+    letter-spacing: var(--letter-space);
+    @include fsl(16px, 130%);
+
+    @include placeholder {
+      color: var(--color-black);
+    }
+  }
+  &__follow-btn {
+    margin-left: 8px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 0;
+      margin-top: 8px;
+
+      width: auto;
+    }
+    width: 275px;
   }
 }
