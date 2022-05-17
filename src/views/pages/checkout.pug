@@ -1,0 +1,62 @@
+extends ../layouts/master
+
+include ../components/form-components
+include ../components/order-panel
+
+block variables
+  - var mainClass = "main--default"
+
+block content
+  -
+    var ddata = [
+      {
+        heading: 'Контактные данные',
+        inputs: [
+          {type: 'text', placeholder: 'Имя*'},
+          {type: 'phone', placeholder: 'Телефон*'},
+          {type: 'email', placeholder: 'E-mail*'},
+        ]
+      },
+      {
+        heading: 'Адрес доставки',
+        inputs: [
+          {type: 'text', placeholder: 'Город*'},
+          {type: 'text', placeholder: 'Адрес*'},
+        ]
+      },
+    ]
+  .checkout-page 
+    section.checkout-page__section 
+      .checkout-page__row 
+        .checkout-page__col
+          .checkout-page__button 
+            +link-left.button--huge
+              |В корзину
+        .checkout-page__col
+          h1.checkout-page__title 
+            |Оформить заказ
+          .checkout-page__form
+            form.form(action="/")
+              each item in ddata
+                .checkout-page__form-block 
+                  h3.checkout-page__form-heading 
+                    |#{item.heading}
+                  each input in item.inputs 
+                    .form__item 
+                      +input(type = input.type placeholder = input.placeholder)
+              .checkout-page__form-block 
+                h3.checkout-page__form-heading 
+                  |Дата доставки
+                .checkout-page__form-text 
+                  |Выберите адрес доставки
+                .checkout-page__form-inner 
+                  .checkout-page__form-grid 
+                    each item in ['23.01.2022', '26.01.2022', '28.01.2022', '30.01.2022', ]
+                      +radio-button(text = item name = 'date')
+              .checkout-page__form-block 
+                h3.checkout-page__form-heading 
+                  |Комментарий к заказу
+                +textarea(placeholder = 'Сообщение')
+        .checkout-page__col
+          .checkout-page__panel 
+            +order-panel

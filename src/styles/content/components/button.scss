@@ -24,14 +24,25 @@
 
   &--outline {
     padding: 18px 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 10px 0;
+    }
 
+    width: 147px;
     display: flex;
     align-items: center;
     justify-content: center;
 
     color: var(--color-black);
-    background: none;
+    background: var(--color-white);
     border: 1px solid var(--color-borders);
+  }
+
+  &--huge {
+    width: 179px;
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 134px;
+    }
   }
 
   &__icon {

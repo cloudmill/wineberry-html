@@ -1,0 +1,23 @@
+mixin login-modal 
+  .modal.login-modal 
+    .modal__container 
+      h2.modal__title 
+        |Войти
+      .login-modal__tabs 
+        .login-modal__item
+          .login-modal__tab.active 
+            |Есть аккаунт
+        .login-modal__item 
+          .login-modal__tab 
+            |Регистрация
+      .modal__inner
+        form.form(action="/")
+          each item in [{type: 'email', placeholder: 'E-mail'}, {type: 'password', placeholder: 'Пароль'}]
+            .form__item 
+              +input(type = item.type placeholder = item.placeholder)
+          .form__item
+            +submit-button
+              |Войти
+      .modal__inner 
+        .login-modal__button(href="#") 
+          |Забыли пароль?

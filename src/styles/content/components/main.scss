@@ -3,4 +3,8 @@
   @media (max-width: ($breakpoint - 1px)) {
     margin-bottom: 100px;
   }
+
+  &--default {
+    margin-bottom: 0;
+  }
 }

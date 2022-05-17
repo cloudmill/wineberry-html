@@ -60,7 +60,7 @@ h3 {
   @include fsl(24px, 110%);
   letter-spacing: var(--letter-space);
   @media (max-width: ($breakpoint - 1px)) {
-    @include fsl(14px);
+    @include fsl(16px);
   }
 }
 

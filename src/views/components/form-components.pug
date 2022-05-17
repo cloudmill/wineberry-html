@@ -1,0 +1,15 @@
+
+
+mixin input
+  input.form__input(type = attributes.type)&attributes(attributes)
+
+mixin textarea
+  textarea.form__textarea(placeholder = attributes.placeholder)&attributes(attributes)
+
+mixin radio-button 
+  .radio
+    label.radio__label
+      input.radio__input(type="radio" name=attributes.name)
+      .radio__icon
+      .radio__text 
+        |#{attributes.text}

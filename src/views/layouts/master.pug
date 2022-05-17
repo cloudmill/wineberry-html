@@ -2,11 +2,13 @@ include ../components/svg
 
 include ../components/header
 include ../components/footer
-
 include ../components/grid-test
 include ../components/buttons
+include ../components/modals
 
 block variables
+  -
+    var mainClass = "qwe"
 
 
 
@@ -25,7 +27,7 @@ html(lang='ru')
       block header
         +header
 
-      main.main
+      main.main(class=mainClass)
         block content
 
       block footer

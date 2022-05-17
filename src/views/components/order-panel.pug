@@ -1,0 +1,42 @@
+mixin order-panel 
+  -
+    var panelData = [
+      {
+        label: 'Позиций',
+        num: '68'
+      },
+      {
+        label: 'Стоимость без скидки',
+        num: '132 120 ₽'
+      },
+      {
+        label: 'Скидка',
+        num: '-26 424 ₽',
+        class: 'discont'
+      },
+    ]
+  .order-panel 
+    .order-panel__container 
+      h3
+        |Ваш заказ
+    ul.order-panel__list 
+      each item in panelData
+        li.order-panel__item 
+          .order-panel__row
+            .order-panel__col
+              .order-panel__label 
+                |#{item.label}
+            .order-panel__col
+              .order-panel__num(class=item.class)
+                |#{item.num}
+    .order-panel__container.order-panel__container--bot
+      .order-panel__row
+        .order-panel__col
+          .order-panel__text 
+            |Итого
+        .order-panel__col
+          .order-panel__total
+            |105 696 ₽
+      .order-panel__button 
+        +submit-button 
+          |Перейти к оформлению
