@@ -1,0 +1,50 @@
+extends ../layouts/master
+
+block variables
+  - var mainClass = "main--default"
+
+block header 
+  +header-small
+
+block footer 
+  +footer-small
+
+block content
+  .profile-page
+    .profile-page__row 
+      .profile-page__col 
+      .profile-page__col
+        h1
+          |Личный кабинет
+        .profile-page__section 
+          h2.profile-page__heading 
+            |Заказы
+          .profile-page__orders 
+            .profile-page__orders-top 
+              .profile-page__orders-row 
+                each item in ['№', 'Статус', 'Дата обновления', 'Юридическое лицо']
+                  .profile-page__orders-col
+                    .profile-page__orders-label 
+                      |#{item}
+            ul.profile-page__orders-list
+              - for (i = 0; i < 5; i++)
+                li.profile-page__orders-item 
+                  .profile-page__orders-row 
+                    .profile-page__orders-col
+                      .profile-page__orders-text 
+                        |21
+                    .profile-page__orders-col
+                      .profile-page__status
+                        .profile-page__status-icon 
+                          +check-svg.profile-page__status-svg.profile-page__status-ok
+                        .profile-page__status-text 
+                          |Подтверждено супервайзером
+                    .profile-page__orders-col
+                      .profile-page__orders-text 
+                          |21.09.2021
+                    .profile-page__orders-col
+                      .profile-page__orders-inner
+                        .profile-page__orders-text 
+                          |Ржевский Универсам N 43 АО
+                        .profile-page__orders-icon 
+                          +small-arrow-svg.profile-page__orders-svg 

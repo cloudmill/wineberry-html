@@ -72,3 +72,22 @@ mixin header
                   +cart-svg.header__svg
                   .header__cart-count 
                     |8
+
+mixin header-small
+  header.header.header--small 
+    .header__inner 
+      .container
+        .header__desktop
+          .header__row 
+            .header__col
+              .header__container 
+                .header__left 
+                  a.header__logo(href="#") 
+                    +logo-svg.header__logo-svg
+                .header__right
+                  .header__text 
+                    |Главный дистрибьютор алкогольной продукции #[br] на территории Северо-Западного федерального округа
+            .header__col
+              .header__buttons 
+                .header__item
+                  +user-svg.header__svg

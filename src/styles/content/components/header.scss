@@ -70,8 +70,6 @@
     @include fsl(18px, 120%);
   }
 
-  
-
   &__links {
     display: flex;
   }
@@ -155,5 +153,32 @@
       width: var(--size);
       height: var(--size);
     }
+  }
+
+  &__container {
+    width: calc(#{$col-width-d} * 6 - 60px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: auto;
+    }
+    display: flex;
+  }
+
+  &__left {
+    display: flex;
+    width: calc(#{$col-width-d} * 3 - 60px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: auto;
+    }
+  }
+
+  &__right {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+
+  &__text {
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
   }
 }

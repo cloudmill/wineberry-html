@@ -1,0 +1,114 @@
+.profile-page {
+
+  background: var(--color-light-gray);
+
+  &__row {
+    display: flex;
+    
+  }
+
+  &__col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      padding-top: 156px;
+      padding-bottom: 147px;
+
+      width: calc(#{$col-width-d} * 2 + #{$col-width-d} / 2);
+      
+      background: var(--color-white);
+    }
+    &:nth-child(2) {
+      padding: 156px 60px 147px;
+
+      width: calc(#{$col-width-d} * 9 + #{$col-width-d} / 2);
+    }
+  }
+
+  &__section {
+    margin-top: 60px;
+  }
+
+  &__heading {
+    margin-bottom: 32px;
+  }
+
+  &__orders {
+    border-radius: 12px;
+
+    background: var(--color-white);
+  }
+  &__orders-top {
+    padding: 30px 0;
+  }
+  &__orders-row {
+    display: flex;
+    align-items: center;
+  }
+  &__orders-col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      padding-left: 40px;
+
+      width: calc(#{$col-width-d});
+    }
+    &:nth-child(2) {
+      width: calc(#{$col-width-d} * 2);
+    }
+    &:nth-child(3) {
+      width: calc(#{$col-width-d} * 2);
+    }
+    &:nth-child(4) {
+      width: calc(#{$col-width-d} * 4 - 60px);
+    }
+  }
+  &__orders-label {
+    color: var(--color-lilac);
+    letter-spacing: var(--letter-space);
+  }
+  &__orders-item {
+    padding: 30px 0;
+
+    border-top: 1px solid var(--color-borders);
+    cursor: pointer;
+  }
+  &__orders-text {
+    letter-spacing: var(--letter-space);
+  }
+  &__orders-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__orders-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+  }
+  &__status-icon {
+    margin-right: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__status-text {
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    color: var(--color-light-green);
+  }
+  &__status-ok {
+    width: 24px;
+    height: 24px;
+
+    path {
+      stroke: var(--color-light-green);
+    }
+  }
+}
