@@ -1,4 +1,13 @@
-mixin login-modal 
+mixin login-modal
+  -
+    var ddata = [
+      {type: 'text', placeholder: 'Имя*'},
+      {type: 'email', placeholder: 'E-mail*'},
+      {type: 'phone', placeholder: 'Телефон*'},
+      {type: 'text', placeholder: 'Название организации*'},
+      {type: 'text', placeholder: 'ИНН*'},
+      {type: 'text', placeholder: 'КПП*'},
+    ]
   .modal.login-modal 
     .modal__container 
       h2.modal__title 
@@ -11,13 +20,80 @@ mixin login-modal
           .login-modal__tab 
             |Регистрация
       .modal__inner
-        form.form(action="/")
-          each item in [{type: 'email', placeholder: 'E-mail'}, {type: 'password', placeholder: 'Пароль'}]
+        .tabs-block.active
+          form.form(action="/")
+            each item in [{type: 'email', placeholder: 'E-mail'}, {type: 'password', placeholder: 'Пароль'}]
+              .form__item 
+                +input(type = item.type placeholder = item.placeholder)
+            .form__item
+              +submit-button
+                |Войти
+          .modal__inner 
+            .login-modal__button(href="#") 
+              |Забыли пароль?
+        .tabs-block
+          form.form(action="/")
+            each item in ddata
+              .form__item 
+                +input(type = item.type placeholder = item.placeholder)
             .form__item 
-              +input(type = item.type placeholder = item.placeholder)
-          .form__item
-            +submit-button
-              |Войти
+              +textarea.form__textarea--small(placeholder = 'Номер лицензии на право реализации алкогольной продукции*')
+            .form__item 
+              +textarea(placeholder = 'Сообщение')
+            .form__inner
+              +checkbox
+            .form__inner
+              +submit-button
+                |Зарегистрироваться
+
+mixin password-recovery-modal 
+  .modal.password-modal 
+    .password-modal__container 
+      .password-modal__back 
+        +link-left 
+          |Назад
+      h2.password-modal__title 
+        |Восстановить пароль
+      .password-modal__text 
+        |Чтобы восстановить пароль, укажите адрес электронный почты, на который был зарегистрирован ваш аккаунт
+      .modal__inner
+        form.form(action="/")
+          .form__item 
+            +input(type = 'email' placeholder = 'E-mail')
+          .form__item 
+            +submit-button 
+              |Отправить
+
+mixin password-create-modal 
+  .modal.password-modal
+    .password-modal__container 
+      h2.password-modal__title
+        |Создать новый пароль
+      .modal__inner
+        form.form(action="/")
+          .form__item 
+            +input(type = 'password' placeholder = 'Новый пароль')
+          .form__item 
+            +input(type = 'password' placeholder = 'Повторить новый пароль')
+          .form__item 
+            +submit-button 
+              |Сохранить
+
+mixin password-success-modal 
+  .modal.password-modal 
+    .password-modal__inner 
+      h2.password-modal__heading
+        |Пароль успешно изменен
       .modal__inner 
-        .login-modal__button(href="#") 
-          |Забыли пароль?
+        +submit-button 
+          |Авторизоваться
+
+mixin response-modal 
+  .modal.response-modal 
+    .modal__container 
+      .response-modal__icon 
+        +ok-svg.response-modal__svg 
+      h2.response-modal__title 
+        |Вы зарегистрировались
+      .response-modal__text 
+        |На указанную при регистрации почту придет ссылка для подтверждения. Пожалуйста, пройдите по ней.

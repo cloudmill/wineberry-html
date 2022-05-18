@@ -46,5 +46,19 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px);
     }
+
+    &--small {
+      min-height: 84px;
+      @media (max-width: ($breakpoint - 1px)) {
+        min-height: 62px;
+      }
+    }
+  }
+
+  &__inner {
+    margin-top: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 16px;
+    }
   }
 }

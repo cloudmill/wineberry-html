@@ -4,7 +4,7 @@ mixin input
   input.form__input(type = attributes.type)&attributes(attributes)
 
 mixin textarea
-  textarea.form__textarea(placeholder = attributes.placeholder)&attributes(attributes)
+  textarea.form__textarea(class=attributes.class placeholder = attributes.placeholder)&attributes(attributes)
 
 mixin radio-button 
   .radio
@@ -13,3 +13,16 @@ mixin radio-button
       .radio__icon
       .radio__text 
         |#{attributes.text}
+
+mixin checkbox 
+  .checkbox 
+    label.checkbox__label
+      input.checkbox__input(type="checkbox")&attributes(attributes)
+      .checkbox__box 
+        +check-svg.checkbox__svg
+      if (attributes.text)
+        .checkbox__caption
+          |#{attributes.text}
+      else
+        .checkbox__text 
+          |Согласен на обработку персональных данных в соответствии с #[a.checkbox__link(href="#") политикой конфиденциальности]
