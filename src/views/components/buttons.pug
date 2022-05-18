@@ -2,6 +2,10 @@ mixin submit-button
   button.button(class=attributes.class)&attributes(attributtes)
     block
 
+mixin red-link 
+  a.button(class=attributes.class href="#")&attributes(attributtes)
+    block
+
 mixin link-left 
   a.button.button--outline(href="#" class=attributes.class)&attributes(attributtes) 
     .button__icon 

@@ -1,0 +1,19 @@
+extends ../layouts/master
+
+block variables
+  - var mainClass = "main--default"
+
+block content
+  .error-page 
+    .error-page__container
+      .error-page__bg 
+        +404-icon-svg.error-page__svg
+      .error-page__row
+        .error-page__col
+          +404-svg.error-page__icon
+        .error-page__col
+          h3.error-page__title 
+            |Страница не найдена
+          .error-page__btn 
+            +red-link 
+              |На Главную
