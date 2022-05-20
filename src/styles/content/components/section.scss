@@ -33,4 +33,11 @@
       margin-top: 0;
     }
   }
+
+  &__block {
+    margin-top: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 40px;
+    }
+  }
 }

@@ -2,6 +2,7 @@ extends ../layouts/master
 
 block variables
   - var mainClass = "main--default"
+  - var bodyClass = "body--gray"
 
 block header 
   +header-small
@@ -11,11 +12,55 @@ block footer
 
 block content
   .profile-page
+    .mobile-only 
+      .aside
+        ul.aside__list 
+          li.aside__item.active
+            .aside__icon 
+              +orders-svg.aside__svg
+            .aside__text 
+              |Заказы
+          li.aside__item 
+            .aside__icon 
+              +clients-svg.aside__svg
+            .aside__text 
+              |Клиенты
+          li.aside__item 
+            .aside__icon 
+              +user-svg.aside__svg
+            .aside__text 
+              |Профиль
     .profile-page__row 
       .profile-page__col 
+        .aside
+          ul.aside__list 
+            li.aside__item.active
+              .aside__icon 
+                +orders-svg.aside__svg
+              .aside__text 
+                |Заказы
+            li.aside__item 
+              .aside__icon 
+                +clients-svg.aside__svg
+              .aside__text 
+                |Клиенты
+            li.aside__item 
+              .aside__icon 
+                +user-svg.aside__svg
+              .aside__text 
+                |Профиль
       .profile-page__col
+        .only-mobile 
+          p.profile-page__caption 
+            |Главный дистрибьютор алкогольной продукции #[br] на территории Северо-Западного федерального округа
         h1
           |Личный кабинет
+        .only-mobile 
+          .profile-page__exit 
+            .profile-page__exit-icon 
+              +exit-svg.profile-page__exit-svg 
+            .profile-page__exit-text 
+              |Выйти
         .profile-page__section 
           h2.profile-page__heading 
             |Заказы
@@ -48,3 +93,37 @@ block content
                           |Ржевский Универсам N 43 АО
                         .profile-page__orders-icon 
                           +small-arrow-svg.profile-page__orders-svg 
+          .mobile-only 
+            - for (i = 0; i < 3; i++)
+              .profile-page__block
+                ul.profile-page__block-list
+                  li.profile-page__block-item 
+                    .profile-page__orders-label 
+                      |Номер заказа
+                    .profile-page__orders-text 
+                      |21
+                  li.profile-page__block-item 
+                    .profile-page__orders-label 
+                      |Статус
+                    .profile-page__status
+                      .profile-page__status-icon 
+                        +check-svg.profile-page__status-svg.profile-page__status-ok
+                      .profile-page__status-text 
+                        |Подтверждено супервайзером
+                  li.profile-page__block-item 
+                    .profile-page__orders-label 
+                      |Дата обновления
+                    .profile-page__orders-text 
+                      |21.09.2021
+                  li.profile-page__block-item 
+                    .profile-page__orders-label 
+                      |Юридическое лицо
+                    .profile-page__orders-text 
+                      |Ржевский Универсам N 43 АО
+                .profile-page__block-bot
+                  .profile-page__block-button 
+                    .profile-page__block-text 
+                      |Подробнее
+                    .profile-page__orders-icon 
+                      +small-arrow-svg.profile-page__orders-svg 
+

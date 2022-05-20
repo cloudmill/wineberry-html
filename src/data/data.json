@@ -6,6 +6,7 @@
     {"title": "Новости детальная", "href": "news-detail"},
     {"title": "Чекаут", "href": "checkout"},
     {"title": "404", "href": "404"},
-    {"title": "Профиль менеджера", "href": "profile-manager"}
+    {"title": "Профиль менеджера", "href": "profile-manager"},
+    {"title": "Профиль менеджера заказ", "href": "profile-manager-order"}
   ]
 }
