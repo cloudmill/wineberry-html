@@ -3,6 +3,12 @@
   
   border-top: 1px solid var(--color-wine);
 
+  &--small {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+
   &__wrapper {
     @media (max-width: ($breakpoint - 1px)) {
       padding-bottom: 32px;
