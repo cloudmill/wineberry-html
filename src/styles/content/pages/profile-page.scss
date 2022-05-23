@@ -1,7 +1,5 @@
 .profile-page {
 
-  background: var(--color-light-gray);
-
   &__row {
     display: flex;
     
@@ -15,27 +13,43 @@
       padding-bottom: 147px;
 
       width: calc(#{$col-width-d} * 2 + #{$col-width-d} / 2);
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
       
       background: var(--color-white);
     }
     &:nth-child(2) {
       padding: 156px 60px 147px;
-
+      @media (max-width: ($breakpoint - 1px)) {
+        padding: 60px 20px 40px;
+        
+        width: 100%;
+      }
       width: calc(#{$col-width-d} * 9 + #{$col-width-d} / 2);
     }
   }
 
   &__section {
     margin-top: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 12px;
+    }
   }
 
   &__heading {
     margin-bottom: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 12px;
+    }
   }
 
   &__orders {
-    border-radius: 12px;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
 
+    border-radius: 12px;
     background: var(--color-white);
   }
   &__orders-top {
@@ -66,6 +80,11 @@
   &__orders-label {
     color: var(--color-lilac);
     letter-spacing: var(--letter-space);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 4px;
+
+      @include fsl(14px);
+    }
   }
   &__orders-item {
     padding: 30px 0;
@@ -75,6 +94,9 @@
   }
   &__orders-text {
     letter-spacing: var(--letter-space);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+    }
   }
   &__orders-inner {
     display: flex;
@@ -82,6 +104,10 @@
     justify-content: space-between;
   }
   &__orders-icon {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 4px;
+    }
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,6 +128,9 @@
     font-weight: 700;
     letter-spacing: var(--letter-space);
     color: var(--color-light-green);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+    }
   }
   &__status-ok {
     width: 24px;
@@ -109,6 +138,102 @@
 
     path {
       stroke: var(--color-light-green);
+    }
+  }
+
+  &__block {
+    background: var(--color-white);
+    border-radius: 8px;
+    
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+  &__block-list {
+    padding: 20px 20px 0;
+  }
+  &__block-item {
+    margin-bottom: 12px;
+
+    &:not(:last-child) {
+      padding-bottom: 12px;
+
+      border-bottom: 1px solid var(--color-borders);
+    }
+  }
+  &__block-bot {
+    padding: 12px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    border-top: 1px solid var(--color-borders);
+  }
+  &__block-button {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+  }
+  &__block-text {
+    color: var(--color-lilac);
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(14px);
+  }
+
+  &__exit {
+    margin-top: 12px;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+  }
+  &__exit-icon {
+    margin-right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__exit-text {
+    letter-spacing: var(--letter-space);
+    @include fsl(14px, 120%);
+  }
+
+  &__caption {
+    margin-bottom: 20px;
+    
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(12px, 120%);
+  }
+
+  &__order {
+    background: var(--color-white);
+    border-radius: 12px;
+  }
+  &__order-top {
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+  }
+  &__order-button {
+    margin-right: 60px;
+  }
+  &__order-row {
+    display: flex;
+    align-items: center;
+  }
+  &__order-col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      padding-left: 40px;
+
+      width: calc(#{$col-width-d} * 3);
     }
   }
 }

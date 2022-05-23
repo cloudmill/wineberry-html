@@ -1,0 +1,115 @@
+.aside {
+  $comp: &;
+  @media (max-width: ($breakpoint - 1px)) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: var(--color-white);
+    border-radius: 12px 12px 0px 0px;
+    border: 1px solid var(--color-borders);
+  }
+
+  &__list {
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 12px 20px;
+
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    padding-left: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-left: 0;
+    }
+    position: relative;
+    z-index: 0;
+
+    display: flex;
+    align-items: center;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+
+    cursor: pointer;
+
+    &:not(:first-child) {
+      margin-top: 24px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 32px;
+        margin-top: 0;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      width: 4px;
+      height: 40px;
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
+
+      border-radius: 10px;
+      background: transparent;
+    }
+
+    &.active {
+
+      &::before {
+        background: var(--color-wine);
+      }
+
+      #{$comp}__svg {
+        path {
+          stroke: var(--color-wine);
+        }
+      }
+
+      #{$comp}__text {
+        color: var(--color-wine);
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 12px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-right: 0;
+      margin-bottom: 4px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__svg {
+    width: 32px;
+    height: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 26px;
+      height: 26px;
+    }
+
+    path {
+      stroke: var(--color-lilac);
+    }
+  }
+
+  &__text {
+    letter-spacing: var(--letter-space);
+    @include fsl(18px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(11px);
+      text-align: center;
+    }
+  }
+}

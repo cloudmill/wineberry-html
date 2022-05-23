@@ -4,15 +4,8 @@
     overflow: hidden;
   }
 
-  &.fade-out {
-    .header {
-      transform: translateY(-100%);
-    }
-    .main,
-    .footer {
-      transition: $transition;
-      opacity: 0;
-    }
+  &--gray {
+    background: var(--color-light-gray);
   }
 
   &--hidden {

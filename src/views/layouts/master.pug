@@ -8,7 +8,9 @@ include ../components/modals
 
 block variables
   -
-    var mainClass = "qwe"
+    var mainClass = ""
+  -
+    var bodyClass = ""
 
 
 
@@ -21,7 +23,7 @@ html(lang='ru')
     title= data.title
     meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
   
-  body.body
+  body.body(class=bodyClass)
     
     .wrapper
       block header
