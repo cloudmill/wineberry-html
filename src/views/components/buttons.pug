@@ -2,6 +2,20 @@ mixin submit-button
   button.button(class=attributes.class)&attributes(attributtes)
     block
 
+mixin accept-button 
+  button.button.button--icon.button--sm(class=attributes.class)&attributes(attributtes)
+    .button__icon 
+      +check-svg.button__svg.button__check
+    .button__text 
+      block
+
+mixin delete-button
+  .button.button--outline.button--icon.button--sm(class=attributes.class)&attributes(attributtes) 
+    .button__icon 
+      +trash-svg.button__svg
+    .button__text 
+      block
+
 mixin red-link 
   a.button(class=attributes.class href="#")&attributes(attributtes)
     block

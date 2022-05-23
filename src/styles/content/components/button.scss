@@ -1,4 +1,6 @@
 .button {
+  $comp: &;
+
   padding: 21px 0;
   @media (max-width: ($breakpoint - 1px)) {
     padding: 15px 0;
@@ -45,14 +47,58 @@
     }
   }
 
+  &--auto {
+    padding: 19px 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 15px 0;
+
+      width: 100%;
+
+      text-align: center;
+    }
+    width: auto;
+  }
+
+  &--sm {
+    width: auto;
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
+
+    @include fsl(14px, 120%);
+
+    #{$comp}__text {
+      margin-left: 12px;
+      @media (max-width: ($breakpoint - 1px)) {
+        max-resolution: 8px;
+      }
+    }
+  }
+
+  &--icon {
+    padding: 12px 16px;
+
+    display: flex;
+    align-items: center;
+  }
+
   &__icon {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
+  &__svg {
+    width: 24px;
+    height: 24px;
+  }
+
   &__arrow {
     transform: rotate(-180deg);
+  }
+
+  &__check {
+
   }
 
   &__text {

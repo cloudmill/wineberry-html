@@ -95,7 +95,7 @@ block content
                 +link-left 
                   |Назад
               h1 
-                |Заказ №21
+                |Клиент №21
             ul.profile-page__orders-list
               li.profile-page__orders-item.profile-page__orders-item--order
                 .profile-page__order-row 
@@ -121,7 +121,7 @@ block content
             .profile-page__block.profile-page__block--order
               .profile-page__order-top
                 h1
-                  |Заказ №21
+                  |Клиент №21
               ul.profile-page__block-list
                 li.profile-page__block-item 
                   .profile-page__orders-label 
@@ -138,13 +138,50 @@ block content
                     .profile-page__orders-text 
                       |#{item.text}
         .section__block 
-          h2.profile-page__heading 
-            |Состав заказа
-          ul.profile-page__composition
-            - for (i = 0; i < 4; i++)
-              li.profile-page__composition-item
-                +order-card
+          .profile-page__info
+            .profile-page__info-item.big 
+              .profile-page__info-container
+                .profile-page__info-row
+                  .profile-page__info-icon 
+                    +profile-user-svg.profile-page__info-svg
+                  .profile-page__info-content
+                    .profile-page__info-label 
+                      |Закреплен профилем
+                    .profile-page__info-wrapper 
+                      .profile-page__info-heading 
+                        |ТК 5 шагов
+            .profile-page__info-item
+              .profile-page__info-container
+                .profile-page__info-row
+                  .profile-page__info-icon 
+                    +profile-stat-svg.profile-page__info-svg
+                  .profile-page__info-content
+                    .profile-page__info-label 
+                      |Уровень цен
+                    .profile-page__info-wrapper 
+                      .profile-page__info-heading.tooltip
+                        |Розница
+                        span.tooltip__icon 
+                          +tooltip-svg.tooltip__svg 
+                        .tooltip__container 
+                          |Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa placeat iusto quibusdam?
+            .profile-page__info-item
+              .profile-page__info-col 
+                .profile-page__info-block 
+                  .profile-page__info-container
+                    .profile-page__info-label 
+                      |Лимит по задолженности
+                    .profile-page__info-inner
+                      .profile-page__info-heading 
+                        |345 032 ₽
+                .profile-page__info-block 
+                  .profile-page__info-container
+                    .profile-page__info-label 
+                      |Лимит по отсрочке платежа
+                    .profile-page__info-inner
+                      .profile-page__info-heading 
+                        |30 дней
           .section__block 
             .profile-page__composition-button 
               +submit-button.button--auto
-                |Отправить заказ на согласование супервайзеру
+                |Подтвердить юридическое лицо

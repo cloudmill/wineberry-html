@@ -5,7 +5,7 @@ mixin order-card
         .order-card__col
           .order-card__info 
             .order-card__img 
-              img(src="", alt="")
+              +picture(url = 'product.jpg')
             .order-card__content 
               .order-card__code 
                 |Артикул: 124041
@@ -19,15 +19,23 @@ mixin order-card
           .order-card__prices 
             .order-card__prices-item 
               .order-card__label 
-                |
+                |Базовая цена
               .order-card__price 
-                |
+                |1 990 ₽ 
             .order-card__prices-item 
               .order-card__label 
-                |
-              input.order-card__input(type = 'text' value = '20')
+                |Персональная цена
+              .order-card__price 
+                |1 680 ₽ 
+            .order-card__prices-item 
+              .order-card__prices-count
+                .order-card__label 
+                  |Количество
+                input.order-card__input(type = 'text' value = '20')
           .order-card__buttons 
             .order-card__buttons-item 
-              |btn1
+              +accept-button 
+                |Подтвердить наличие
             .order-card__buttons-item 
-              |btn2
+              +delete-button 
+                |Удалить из заказа
