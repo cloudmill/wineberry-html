@@ -7,6 +7,12 @@
     {"title": "Чекаут", "href": "checkout"},
     {"title": "404", "href": "404"},
     {"title": "Профиль менеджера", "href": "profile-manager"},
-    {"title": "Профиль менеджера заказ", "href": "profile-manager-order"}
+    {"title": "Профиль менеджера заказ", "href": "profile-manager-order"},
+    {"title": "Профиль менеджера клиенты", "href": "profile-manager-clients"},
+    {"title": "Профиль менеджера клиент", "href": "profile-manager-client"},
+    {"title": "Профиль менеджера профиль", "href": "profile-manager-data"},
+    {"title": "Профиль супервайзера заказы", "href": "profile-supervisor-orders"},
+    {"title": "Профиль супервайзера заказ", "href": "profile-supervisor-order"},
+    {"title": "Профиль супервайзера профиль", "href": "profile-supervisor-data"}
   ]
 }

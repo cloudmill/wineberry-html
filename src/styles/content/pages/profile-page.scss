@@ -49,6 +49,13 @@
     }
   }
 
+  &__top {
+    margin-bottom: 32px;
+
+    display: flex;
+    align-items: center;
+  }
+
   &__orders {
     @media (max-width: ($breakpoint - 1px)) {
       display: none;
@@ -79,6 +86,8 @@
       width: calc(#{$col-width-d} * 2);
     }
     &:nth-child(4) {
+      padding-right: 10px;
+
       width: calc(#{$col-width-d} * 4 - 60px);
     }
   }
@@ -99,6 +108,14 @@
 
     &--order {
       cursor: auto;
+    }
+
+    &--supervisor {
+      cursor: auto;
+
+      &:first-child {
+        border-top: none;
+      }
     }
   }
   &__orders-text {
@@ -304,6 +321,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       border-radius: 8px;
     }
+
+    &--large {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   &__info-item {
 
@@ -398,6 +419,27 @@
       border-top: 1px solid var(--color-borders);
     }
   }
+  &__info-list {
+    width: calc(#{$col-width-d} * 3);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
+  }
+  &__info-btn {
+
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+  &__info-button {
+    margin-top: 12px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 8px;
+
+      // width: 100%;
+    }
+    // width: 216px;
+  }
 
   &__data {
     display: flex;
@@ -408,13 +450,22 @@
     padding: 13px 20px;
 
     width: calc(#{$col-width-d} * 2);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
 
     letter-spacing: var(--letter-space);
     border-radius: 8px;
     border: 1px solid var(--color-borders);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
 
     &.locked {
+      padding: 0;
+
       border-color: transparent;
+      pointer-events: none;
     }
   }
   &__data-btn {
@@ -443,5 +494,24 @@
     font-weight: 700;
     letter-spacing: var(--letter-space);
     @include fsl(14px, 120%);
+  }
+  &__data-container {
+    padding: 20px;
+  }
+  &__data-list {
+    padding-top: 12px;
+
+    border-top: 1px solid var(--color-borders);
+  }
+
+  &__inner {
+    margin-top: 16px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 20px;
+    }
+  }
+
+  &__supervisor-title {
+    margin-bottom: 20px;
   }
 }

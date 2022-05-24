@@ -47,6 +47,10 @@
     }
   }
 
+  &--wide {
+    width: 100%;
+  }
+
   &--auto {
     padding: 19px 24px;
     @media (max-width: ($breakpoint - 1px)) {
@@ -57,6 +61,13 @@
       text-align: center;
     }
     width: auto;
+  }
+
+  &--md {
+    padding: 14px 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 7px 14px;
+    }
   }
 
   &--sm {

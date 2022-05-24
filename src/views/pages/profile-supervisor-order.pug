@@ -1,0 +1,206 @@
+extends ../layouts/master
+
+include ../components/order-card
+
+block variables
+  - var mainClass = "main--default"
+  - var bodyClass = "body--gray"
+
+block header 
+  +header-small
+
+block footer 
+  +footer-small
+
+block content
+  -
+    var ddata = {
+      list: [
+        {
+          label: 'Дата обновления',
+          text: '21.09.2021'
+        },
+        {
+          label: 'Юридическое лицо',
+          text: 'Ржевский Универсам N 43 АО'
+        },
+        {
+          label: 'Город доставки',
+          text: 'Санкт-Петербург'
+        },
+        {
+          label: 'Адрес доставки',
+          text: 'ул. Большая Советская, дом. 15, лит. Б'
+        },
+        {
+          label: 'Имя',
+          text: 'Игорь Спартаков'
+        },
+        {
+          label: 'Номер телефона',
+          text: '8 981-850-45-73'
+        },
+        {
+          label: 'E-mail',
+          text: 'igspartakov@mail.ru'
+        },
+      ]
+    }
+  .profile-page
+    .mobile-only 
+      .aside
+        ul.aside__list 
+          li.aside__item.active
+            .aside__icon 
+              +orders-svg.aside__svg
+            .aside__text 
+              |Заказы
+          li.aside__item 
+            .aside__icon 
+              +user-svg.aside__svg
+            .aside__text 
+              |Профиль
+    .profile-page__row 
+      .profile-page__col 
+        .aside
+          ul.aside__list 
+            li.aside__item.active
+              .aside__icon 
+                +orders-svg.aside__svg
+              .aside__text 
+                |Заказы
+            li.aside__item 
+              .aside__icon 
+                +user-svg.aside__svg
+              .aside__text 
+                |Профиль
+      .profile-page__col
+        .mobile-only 
+          p.profile-page__caption 
+            |Главный дистрибьютор алкогольной продукции #[br] на территории Северо-Западного федерального округа
+        .desktop-only
+          .profile-page__top 
+            .profile-page__order-button 
+              +link-left 
+                |Назад
+            h1 
+              |Заказ №21
+        .profile-page__info
+          .profile-page__info-item.big 
+            .profile-page__info-container
+              .profile-page__info-row
+                .profile-page__info-icon 
+                  +profile-user-svg.profile-page__info-svg
+                .profile-page__info-content
+                  .profile-page__info-label 
+                    |Закреплен профилем
+                  .profile-page__info-wrapper 
+                    .profile-page__info-heading 
+                      |ТК 5 шагов
+          .profile-page__info-item
+            .profile-page__info-container
+              .profile-page__info-row
+                .profile-page__info-icon 
+                  +profile-stat-svg.profile-page__info-svg
+                .profile-page__info-content
+                  .profile-page__info-label 
+                    |Уровень цен
+                  .profile-page__info-wrapper 
+                    .profile-page__info-heading.tooltip
+                      |Розница
+                      span.tooltip__icon 
+                        +tooltip-svg.tooltip__svg 
+                      .tooltip__container 
+                        |Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa placeat iusto quibusdam?
+          .profile-page__info-item
+            .profile-page__info-col 
+              .profile-page__info-block 
+                .profile-page__info-container
+                  .profile-page__info-label 
+                    |Лимит по задолженности
+                  .profile-page__info-inner
+                    .profile-page__info-heading 
+                      |345 032 ₽
+              .profile-page__info-block 
+                .profile-page__info-container
+                  .profile-page__info-label 
+                    |Лимит по отсрочке платежа
+                  .profile-page__info-inner
+                    .profile-page__info-heading 
+                      |30 дней
+        .profile-page__inner
+          .desktop-only
+            .profile-page__order
+              ul.profile-page__orders-list
+                li.profile-page__orders-item.profile-page__orders-item--supervisor
+                  .profile-page__order-row 
+                    .profile-page__order-col
+                      .profile-page__orders-label 
+                        |Статус
+                    .profile-page__order-col
+                      .profile-page__status.pending
+                        .profile-page__status-icon 
+                          +clock-svg.profile-page__status-svg
+                        .profile-page__status-text 
+                          |Ждет проверки менеджером
+                each item in ddata.list
+                  li.profile-page__orders-item.profile-page__orders-item--supervisor
+                    .profile-page__order-row 
+                      .profile-page__order-col
+                        .profile-page__orders-label 
+                          |#{item.label}
+                      .profile-page__order-col
+                        .profile-page__orders-text 
+                          |#{item.text}
+        .mobile-only 
+          .profile-page__block.profile-page__block--order
+            .profile-page__data-container
+              h1.profile-page__supervisor-title
+                |Заказ №21
+              ul.profile-page__data-list
+                li.profile-page__block-item 
+                  .profile-page__orders-label 
+                    |Статус
+                  .profile-page__status.pending
+                    .profile-page__status-icon 
+                      +clock-svg.profile-page__status-svg
+                    .profile-page__status-text 
+                      |Ждет проверки менеджером
+                each item in ddata.list
+                  li.profile-page__block-item 
+                    .profile-page__orders-label 
+                      |#{item.label}
+                    .profile-page__orders-text 
+                      |#{item.text}
+        .section__block 
+          h2.profile-page__heading 
+            |Состав заказа
+          ul.profile-page__composition
+            - for (i = 0; i < 4; i++)
+              li.profile-page__composition-item
+                +order-card(supervisor = true)
+        .section__block 
+          h2.profile-page__heading 
+            |Состав заказа
+          .profile-page__info.profile-page__info--large
+            .profile-page__info-item 
+              .profile-page__info-container
+                .profile-page__info-row
+                  .profile-page__info-icon 
+                    +profile-smile-svg.profile-page__info-svg
+                  .profile-page__info-content
+                    .profile-page__info-heading 
+                      |Игорь Спартаков
+                    .profile-page__info-button 
+                      +outline-button.button--auto.button--md
+                        |Изменить менеджера
+            .profile-page__info-item
+              .profile-page__info-container
+                ul.profile-page__info-list
+                  li.profile-page__info-btn 
+                    +outline-button.button--wide
+                      |Вернуть менеджеру
+                  each item in ['Отказать отгрузку клиенту', 'Согласовать отгрузку клиенту', ]
+                    li.profile-page__info-btn 
+                      +submit-button 
+                        |#{item}
