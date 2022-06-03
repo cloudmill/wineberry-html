@@ -8,6 +8,14 @@
   &__row {
     display: flex;
     
+    &--big {
+      #{$comp}__col {
+        &:nth-child(1),
+        &:nth-child(2) {
+          padding-top: 212px;
+        }
+      }
+    }
   }
 
   &__col {
@@ -152,6 +160,17 @@
         color: var(--color-yellow);
       }
     }
+
+    &.success {
+      #{$comp}__status-svg {
+        path {
+          stroke: var(--color-light-blue);
+        }
+      }
+      #{$comp}__status-text {
+        color: var(--color-light-blue);
+      }
+    }
   }
   &__status-icon {
     margin-right: 4px;
@@ -164,6 +183,7 @@
     font-weight: 700;
     letter-spacing: var(--letter-space);
     color: var(--color-light-green);
+    line-height: 100%;
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px);
     }
@@ -464,6 +484,44 @@
       // width: 100%;
     }
     // width: 216px;
+  }
+  &__info-links {
+    margin-top: 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 8px;
+
+      display: block;
+    }
+    display: flex;
+  }
+  &__info-contact {
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+      margin-left: 48px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 0;
+      }
+    }
+  }
+  &__info-img {
+    margin-right: 12px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-right: 20px;
+    }
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__info-link {
+    text-decoration: underline;
+    letter-spacing: var(--letter-space);
+    @include fsl(18px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+    }
   }
 
   &__data {
