@@ -10,6 +10,18 @@
     }
   }
 
+  &--mobile {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+
+    #{$comp}__row {
+      @media (max-width: ($breakpoint - 1px)) {
+        padding-top: 0;
+      }
+    }
+  }
+
   &__wrapper {
     @media (max-width: ($breakpoint - 1px)) {
       padding-bottom: 32px;

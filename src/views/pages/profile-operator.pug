@@ -1,0 +1,64 @@
+extends ../layouts/master
+
+include ../components/form-components
+
+block variables
+  - var mainClass = "main--default"
+  - var bodyClass = "body--gray"
+
+block header 
+  +header-small
+
+block footer 
+  +footer-small.footer--mobile
+
+block content
+  -
+    var ddata = {
+      list: [
+        {
+          label: 'Дата обновления',
+          text: '21.09.2021'
+        },
+        {
+          label: 'Юридическое лицо',
+          text: 'Ржевский Универсам N 43 АО'
+        },
+        {
+          label: 'Город доставки',
+          text: 'Санкт-Петербург'
+        },
+        {
+          label: 'Адрес доставки',
+          text: 'ул. Большая Советская, дом. 15, лит. Б'
+        },
+        {
+          label: 'Имя',
+          text: 'Игорь Спартаков'
+        },
+        {
+          label: 'Номер телефона',
+          text: '8 981-850-45-73'
+        },
+        {
+          label: 'E-mail',
+          text: 'igspartakov@mail.ru'
+        },
+      ]
+    }
+  .profile-page
+    .profile-page__login 
+      .mobile-only 
+        p.profile-page__caption 
+          |Главный дистрибьютор алкогольной продукции #[br] на территории Северо-Западного федерального округа
+      .profile-page__login-container
+        h2.profile-page__login-title
+          |Войти
+        form.form(action="/") 
+          .form__item 
+            +input(type = 'email' placeholder = 'E-mail')
+          .form__item 
+            +input(type = 'password' placeholder = 'Пароль')
+          .form__item 
+            +submit-button 
+              |Войти

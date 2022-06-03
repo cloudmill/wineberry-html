@@ -1,0 +1,155 @@
+extends ../layouts/master
+
+include ../components/order-card
+
+block variables
+  - var mainClass = "main--default"
+  - var bodyClass = "body--gray"
+
+block header 
+  +header-small
+
+block footer 
+  +footer-small
+
+block content
+  -
+    var ddata = {
+      list: [
+        {
+          label: 'Дата обновления',
+          text: '21.09.2021'
+        },
+        {
+          label: 'Юридическое лицо',
+          text: 'Ржевский Универсам N 43 АО'
+        },
+        {
+          label: 'Город доставки',
+          text: 'Санкт-Петербург'
+        },
+        {
+          label: 'Адрес доставки',
+          text: 'ул. Большая Советская, дом. 15, лит. Б'
+        },
+        {
+          label: 'Имя',
+          text: 'Игорь Спартаков'
+        },
+        {
+          label: 'Номер телефона',
+          text: '8 981-850-45-73'
+        },
+        {
+          label: 'E-mail',
+          text: 'igspartakov@mail.ru'
+        },
+      ]
+    }
+  .profile-page
+    .mobile-only 
+      .aside
+        ul.aside__list 
+          li.aside__item.active
+            .aside__icon 
+              +orders-svg.aside__svg
+            .aside__text 
+              |Заказы
+          li.aside__item 
+            .aside__icon 
+              +clients-svg.aside__svg
+            .aside__text 
+              |Клиенты
+          li.aside__item 
+            .aside__icon 
+              +user-svg.aside__svg
+            .aside__text 
+              |Профиль
+    .profile-page__row 
+      .profile-page__col 
+        .aside
+          ul.aside__list 
+            li.aside__item.active
+              .aside__icon 
+                +orders-svg.aside__svg
+              .aside__text 
+                |Заказы
+            li.aside__item 
+              .aside__icon 
+                +clients-svg.aside__svg
+              .aside__text 
+                |Клиенты
+            li.aside__item 
+              .aside__icon 
+                +user-svg.aside__svg
+              .aside__text 
+                |Профиль
+      .profile-page__col
+        .mobile-only 
+          p.profile-page__caption 
+            |Главный дистрибьютор алкогольной продукции #[br] на территории Северо-Западного федерального округа
+        .profile-page__order
+          .desktop-only
+            .profile-page__order-top 
+              .profile-page__order-button 
+                +link-left 
+                  |Назад
+              h1 
+                |Заказ №21
+            ul.profile-page__orders-list
+              li.profile-page__orders-item.profile-page__orders-item--order
+                .profile-page__order-row 
+                  .profile-page__order-col
+                    .profile-page__orders-label 
+                      |Статус
+                  .profile-page__order-col
+                    .profile-page__status.pending
+                      .profile-page__status-icon 
+                        +clock-svg.profile-page__status-svg
+                      .profile-page__status-text 
+                        |Ждет проверки менеджером
+              each item in ddata.list
+                li.profile-page__orders-item.profile-page__orders-item--order
+                  .profile-page__order-row 
+                    .profile-page__order-col
+                      .profile-page__orders-label 
+                        |#{item.label}
+                    .profile-page__order-col
+                      .profile-page__orders-text 
+                        |#{item.text}
+          .mobile-only 
+            .profile-page__block.profile-page__block--order
+              .profile-page__order-top
+                h1
+                  |Заказ №21
+              ul.profile-page__block-list
+                li.profile-page__block-item 
+                  .profile-page__orders-label 
+                    |Статус
+                  .profile-page__status.pending
+                    .profile-page__status-icon 
+                      +clock-svg.profile-page__status-svg
+                    .profile-page__status-text 
+                      |Ждет проверки менеджером
+                each item in ddata.list
+                  li.profile-page__block-item 
+                    .profile-page__orders-label 
+                      |#{item.label}
+                    .profile-page__orders-text 
+                      |#{item.text}
+        .section__block 
+          h2.profile-page__heading 
+            |Состав заказа
+          ul.profile-page__composition
+            - for (i = 0; i < 4; i++)
+              li.profile-page__composition-item
+                +order-card
+        .section__block
+          h2.profile-page__heading 
+            |Какому менеджеру отправить заказ?
+          .profile-page__block-row 
+            .profile-page__block-col
+              |select
+            .profile-page__block-col
+              +submit-button.button--auto
+                |Отправить на согласование
