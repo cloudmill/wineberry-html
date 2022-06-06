@@ -1,0 +1,84 @@
+.discount-card {
+
+  display: flex;
+  min-height: 297px;
+  @media (max-width: ($breakpoint - 1px)) {
+    min-height: auto;
+  }
+
+  background: var(--color-white);
+  border-radius: 12px;
+
+  &__container {
+    padding: 24px 32px 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 20px;
+    }
+
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__top {
+    margin-bottom: 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 16px;
+    }
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: 12px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-right: 8px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__svg {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  &__label {
+    padding: 6px 12px;
+
+    border-radius: 50px;
+    background: var(--color-light-gray);
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(14px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
+  }
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(18px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+    }
+  }
+
+  &__button {
+    display: flex;
+  }
+}

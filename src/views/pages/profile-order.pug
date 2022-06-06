@@ -1,0 +1,195 @@
+extends ../layouts/master
+
+include ../components/order-card
+include ../components/breadcrumbs
+
+block variables
+  - var mainClass = "main--default"
+  - var bodyClass = "body--gray"
+
+
+
+block content
+  -
+    var ddata = {
+      list: [
+        {
+          label: 'Дата обновления',
+          text: '21.09.2021'
+        },
+        {
+          label: 'Юридическое лицо',
+          text: 'Ржевский Универсам N 43 АО'
+        },
+        {
+          label: 'Город доставки',
+          text: 'Санкт-Петербург'
+        },
+        {
+          label: 'Адрес доставки',
+          text: 'ул. Большая Советская, дом. 15, лит. Б'
+        },
+        {
+          label: 'Имя',
+          text: 'Игорь Спартаков'
+        },
+        {
+          label: 'Номер телефона',
+          text: '8 981-850-45-73'
+        },
+        {
+          label: 'E-mail',
+          text: 'igspartakov@mail.ru'
+        },
+      ]
+    }
+  .profile-page.section.section--default
+    .mobile-only 
+      .aside
+        ul.aside__list 
+          li.aside__item.active
+            .aside__icon 
+              +orders-svg.aside__svg
+            .aside__text 
+              |Мои заказы
+          li.aside__item 
+            .aside__icon 
+              +profile-bag-svg.aside__svg
+            .aside__text 
+              |Мои юридические лица
+          li.aside__item 
+            .aside__icon 
+              +profile-offer-svg.aside__svg
+            .aside__text 
+              |Персональные акции
+          li.aside__item 
+            .aside__icon 
+              +user-svg.aside__svg
+            .aside__text 
+              |Профиль
+    .profile-page__row.profile-page__row--big 
+      .profile-page__col 
+        .aside
+          .aside__wrapper
+            .aside__card 
+              .aside__top 
+                .aside__top-row 
+                  .aside__top-col
+                    .aside__top-text 
+                      |Вы авторизованы как
+                  .aside__top-col
+                    .aside__top-icon 
+                      +small-arrow-svg.aside__top-svg
+                .aside__title 
+                  |ТК 5 шагов
+              .aside__bot
+                .aside__type 
+                  |Родительский аккаунт
+          ul.aside__list 
+            li.aside__item.active
+              .aside__icon 
+                +orders-svg.aside__svg
+              .aside__text 
+                |Мои заказы
+            li.aside__item 
+              .aside__icon 
+                +profile-bag-svg.aside__svg
+              .aside__text 
+                |Мои юридические лица
+            li.aside__item 
+              .aside__icon 
+                +profile-offer-svg.aside__svg
+              .aside__text 
+                |Персональные акции
+            li.aside__item 
+              .aside__icon 
+                +user-svg.aside__svg
+              .aside__text 
+                |Профиль
+      .profile-page__col
+        .section__breadcrumbs
+          +breadcrumbs(items = ['Личный кабинет', 'Мои заказы'] page = 'Заказ №21')
+        .profile-page__order
+          .desktop-only
+            .profile-page__order-top 
+              .profile-page__order-button 
+                +link-left 
+                  |Назад
+              h1 
+                |Заказ №21
+            ul.profile-page__orders-list
+              li.profile-page__orders-item.profile-page__orders-item--order
+                .profile-page__order-row 
+                  .profile-page__order-col
+                    .profile-page__orders-label 
+                      |Статус
+                  .profile-page__order-col
+                    .profile-page__status.pending
+                      .profile-page__status-icon 
+                        +clock-svg.profile-page__status-svg
+                      .profile-page__status-text 
+                        |Ждет проверки менеджером
+              each item in ddata.list
+                li.profile-page__orders-item.profile-page__orders-item--order
+                  .profile-page__order-row 
+                    .profile-page__order-col
+                      .profile-page__orders-label 
+                        |#{item.label}
+                    .profile-page__order-col
+                      .profile-page__orders-text 
+                        |#{item.text}
+            .profile-page__orders-bot 
+              .profile-page__orders-buttons 
+                .profile-page__orders-btn 
+                  .button.button--outline.button--auto
+                    .button__icon 
+                      +list-svg.button__svg.button__arrow 
+                    .button__text 
+                      |Состав заказа
+                .profile-page__orders-btn 
+                  .button.button--outline.button--auto
+                    .button__icon 
+                      +refresh-svg.button__svg.button__arrow 
+                    .button__text 
+                      |Повторить заказ  
+          .mobile-only 
+            .profile-page__block.profile-page__block--order
+              .profile-page__order-top
+                h1
+                  |Заказ №21
+              ul.profile-page__block-list
+                li.profile-page__block-item 
+                  .profile-page__orders-label 
+                    |Статус
+                  .profile-page__status.pending
+                    .profile-page__status-icon 
+                      +clock-svg.profile-page__status-svg
+                    .profile-page__status-text 
+                      |Ждет проверки менеджером
+                each item in ddata.list
+                  li.profile-page__block-item 
+                    .profile-page__orders-label 
+                      |#{item.label}
+                    .profile-page__orders-text 
+                      |#{item.text}
+              .profile-page__orders-bot 
+                .profile-page__orders-buttons 
+                  .profile-page__orders-btn 
+                    .button.button--outline.button--auto
+                      .button__icon 
+                        +list-svg.button__svg.button__arrow 
+                      .button__text 
+                        |Состав заказа
+                  .profile-page__orders-btn 
+                    .button.button--outline.button--auto
+                      .button__icon 
+                        +refresh-svg.button__svg.button__arrow 
+                      .button__text 
+                        |Повторить заказ  
+        .section__block 
+          h2.profile-page__heading 
+            |Состав заказа
+          ul.profile-page__composition
+            - for (i = 0; i < 4; i++)
+              li.profile-page__composition-item
+                +order-card

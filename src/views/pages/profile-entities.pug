@@ -1,5 +1,6 @@
 extends ../layouts/master
 
+include ../components/order-card
 include ../components/breadcrumbs
 
 block variables
@@ -7,17 +8,51 @@ block variables
   - var bodyClass = "body--gray"
 
 
+
 block content
+  -
+    var ddata = {
+      list: [
+        {
+          label: 'Дата обновления',
+          text: '21.09.2021'
+        },
+        {
+          label: 'Юридическое лицо',
+          text: 'Ржевский Универсам N 43 АО'
+        },
+        {
+          label: 'Город доставки',
+          text: 'Санкт-Петербург'
+        },
+        {
+          label: 'Адрес доставки',
+          text: 'ул. Большая Советская, дом. 15, лит. Б'
+        },
+        {
+          label: 'Имя',
+          text: 'Игорь Спартаков'
+        },
+        {
+          label: 'Номер телефона',
+          text: '8 981-850-45-73'
+        },
+        {
+          label: 'E-mail',
+          text: 'igspartakov@mail.ru'
+        },
+      ]
+    }
   .profile-page.section.section--default
     .mobile-only 
       .aside
         ul.aside__list 
-          li.aside__item.active
+          li.aside__item
             .aside__icon 
               +orders-svg.aside__svg
             .aside__text 
               |Мои заказы
-          li.aside__item 
+          li.aside__item.active
             .aside__icon 
               +profile-bag-svg.aside__svg
             .aside__text 
@@ -51,12 +86,12 @@ block content
                 .aside__type 
                   |Родительский аккаунт
           ul.aside__list 
-            li.aside__item.active
+            li.aside__item
               .aside__icon 
                 +orders-svg.aside__svg
               .aside__text 
                 |Мои заказы
-            li.aside__item 
+            li.aside__item.active 
               .aside__icon 
                 +profile-bag-svg.aside__svg
               .aside__text 
@@ -73,7 +108,7 @@ block content
                 |Профиль
       .profile-page__col
         .section__breadcrumbs
-          +breadcrumbs(items = ['Личный кабинет'] page = 'Мои заказы')
+          +breadcrumbs(items = ['Личный кабинет'] page = 'Мои юридические лица')
         h1
           |Личный кабинет
         .mobile-only 
@@ -138,89 +173,54 @@ block content
                       .profile-page__info-heading 
                         |30 дней
         .profile-page__section 
-          h2.profile-page__heading 
-            |Заказы
+          .profile-page__section-top.profile-page__heading 
+            h2
+              |Заказы
+            .profile-page__section-btn 
+              button.button.button--icon.button--mid
+                .button__icon 
+                  +plus-svg.button__svg.button__check
+                .button__text 
+                  |Добавить юридическое лицо
           .profile-page__orders 
             .profile-page__orders-top 
               .profile-page__orders-row 
-                each item in ['№', 'Статус', 'Дата обновления', 'Ответственный менеджер']
-                  .profile-page__orders-col
+                each item in ['Название', 'ИНН', ]
+                  .profile-page__entity-col
                     .profile-page__orders-label 
                       |#{item}
+                .profile-page__entity-col
+                  .profile-page__entity-item
+                    .profile-page__orders-label 
+                      |КПП
+                  .profile-page__entity-item
+                    .profile-page__orders-label 
+                      |Статус юридического лица
+                  .profile-page__entity-item
             ul.profile-page__orders-list
-              li.profile-page__orders-item 
-                .profile-page__orders-row 
-                  .profile-page__orders-col
-                    .profile-page__orders-text 
-                      |21
-                  .profile-page__orders-col
-                    .profile-page__status.success
-                      .profile-page__status-icon 
-                        +check-svg.profile-page__status-svg
-                      .profile-page__status-text 
-                        |Оплачено
-                  .profile-page__orders-col
-                    .profile-page__orders-text 
-                        |21.09.2021
-                  .profile-page__orders-col
-                    .profile-page__orders-inner
-                      .profile-page__orders-text 
-                        |Игорь Дудников
-                      .profile-page__orders-icon 
-                        +small-arrow-svg.profile-page__orders-svg 
               - for (i = 0; i < 5; i++)
                 li.profile-page__orders-item 
                   .profile-page__orders-row 
-                    .profile-page__orders-col
-                      .profile-page__orders-text 
-                        |21
-                    .profile-page__orders-col
-                      .profile-page__status
-                        .profile-page__status-icon 
-                          +delivered-svg.profile-page__status-svg
-                        .profile-page__status-text 
-                          |Доставлено
-                    .profile-page__orders-col
-                      .profile-page__orders-text 
-                          |21.09.2021
-                    .profile-page__orders-col
-                      .profile-page__orders-inner
-                        .profile-page__orders-text 
-                          |Игорь Дудников
+                    .profile-page__entity-col
+                      .profile-page__orders-text
+                        |Универсам Таллинский ООО
+                    .profile-page__entity-col
+                      .profile-page__orders-text
+                        |2881362626
+                    .profile-page__entity-col
+                      .profile-page__entity-item
+                        .profile-page__orders-text
+                          |490901772
+                      .profile-page__entity-item
+                        .profile-page__status
+                          .profile-page__status-icon 
+                            +check-svg.profile-page__status-svg.profile-page__status-ok
+                          .profile-page__status-text 
+                            |Активен
+                      .profile-page__entity-item
                         .profile-page__orders-icon 
                           +small-arrow-svg.profile-page__orders-svg 
-          .mobile-only
-            .profile-page__block
-              ul.profile-page__block-list
-                li.profile-page__block-item 
-                  .profile-page__orders-label 
-                    |Номер заказа
-                  .profile-page__orders-text 
-                    |21
-                li.profile-page__block-item 
-                  .profile-page__orders-label 
-                    |Статус
-                  .profile-page__status.success
-                    .profile-page__status-icon 
-                      +check-svg.profile-page__status-svg
-                    .profile-page__status-text 
-                      |Оплачено
-                li.profile-page__block-item 
-                  .profile-page__orders-label 
-                    |Дата обновления
-                  .profile-page__orders-text 
-                    |21.09.2021
-                li.profile-page__block-item 
-                  .profile-page__orders-label 
-                    |Ответственный менеджер
-                  .profile-page__orders-text 
-                    |Игорь Дудников
-              .profile-page__block-bot
-                .profile-page__block-button 
-                  .profile-page__block-text 
-                    |Подробнее
-                  .profile-page__orders-icon 
-                    +small-arrow-svg.profile-page__orders-svg  
+          .mobile-only 
             - for (i = 0; i < 3; i++)
               .profile-page__block
                 ul.profile-page__block-list
@@ -232,11 +232,11 @@ block content
                   li.profile-page__block-item 
                     .profile-page__orders-label 
                       |Статус
-                    .profile-page__status.pending
+                    .profile-page__status
                       .profile-page__status-icon 
-                        +search-sort-svg.profile-page__status-svg
+                        +check-svg.profile-page__status-svg.profile-page__status-ok
                       .profile-page__status-text 
-                        |Проверка наличия товара
+                        |Подтверждено супервайзером
                   li.profile-page__block-item 
                     .profile-page__orders-label 
                       |Дата обновления
@@ -244,13 +244,12 @@ block content
                       |21.09.2021
                   li.profile-page__block-item 
                     .profile-page__orders-label 
-                      |Ответственный менеджер
+                      |Юридическое лицо
                     .profile-page__orders-text 
-                      |Игорь Дудников
+                      |Ржевский Универсам N 43 АО
                 .profile-page__block-bot
                   .profile-page__block-button 
                     .profile-page__block-text 
                       |Подробнее
                     .profile-page__orders-icon 
                       +small-arrow-svg.profile-page__orders-svg 
-

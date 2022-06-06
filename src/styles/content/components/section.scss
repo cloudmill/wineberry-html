@@ -44,4 +44,11 @@
       margin-top: 40px;
     }
   }
+
+  &__breadcrumbs {
+    margin-bottom: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 8px;
+    }
+  }
 }

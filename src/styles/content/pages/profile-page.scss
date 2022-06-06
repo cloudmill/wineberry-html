@@ -13,6 +13,9 @@
         &:nth-child(1),
         &:nth-child(2) {
           padding-top: 212px;
+          @media (max-width: ($breakpoint - 1px)) {
+            padding-top: 68px;
+          }
         }
       }
     }
@@ -29,7 +32,7 @@
       padding-top: 156px;
       padding-bottom: 147px;
 
-      width: calc(#{$col-width-d} * 2 + #{$col-width-d} / 2);
+      width: calc(#{$col-width-d} * 2 + #{$col-width-d} / 1.5);
       @media (max-width: ($breakpoint - 1px)) {
         display: none;
       }
@@ -49,6 +52,18 @@
 
   &__section {
     margin-top: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 12px;
+    }
+  }
+  &__section-top {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+  &__section-btn {
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 12px;
     }
@@ -149,6 +164,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  &__orders-bot {
+    padding: 40px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0 20px 20px;
+      border-top: none;
+    }
+    border-top: 1px solid var(--color-borders);
+  }
+  &__orders-buttons {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+  &__orders-btn {
+
+    &:not(:first-child) {
+      margin-left: 8px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 0;
+        margin-top: 8px;
+      }
+    }
   }
 
   &__status {
@@ -627,5 +666,48 @@
     }
 
     text-align: center;
+  }
+
+  &__offset {
+    margin-top: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 20px;
+    }
+  }
+
+  &__entity-col {
+    
+    &:nth-child(1) {
+      padding-left: 40px;
+      flex-shrink: 0;
+      width: calc(#{$col-width-d} * 3);
+    }
+    &:nth-child(2) {
+      flex-shrink: 0;
+      width: calc(#{$col-width-d} * 2);
+    }
+    &:nth-child(3) {
+      padding-right: 24px;
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__entity-item {
+    
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+
+  &__discounts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 39px;
+    @media (max-width: ($breakpoint - 1px)) {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
   }
 }
