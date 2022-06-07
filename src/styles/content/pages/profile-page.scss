@@ -625,6 +625,11 @@
 
     border-top: 1px solid var(--color-borders);
   }
+  &__data-inner {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 12px;
+    }
+  }
 
   &__inner {
     margin-top: 16px;
@@ -708,6 +713,105 @@
     @media (max-width: ($breakpoint - 1px)) {
       grid-template-columns: 1fr;
       gap: 8px;
+    }
+  }
+
+  &__discount-top {
+    display: flex;
+  }
+  &__discount-btn {
+    margin-right: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+  &__discount-title {
+    max-width: 1166px;
+    @include fsl(36px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(18px);
+    }
+  }
+  &__discount-row {
+    padding: 32px 0;
+
+    display: flex;
+    align-items: center;
+
+    background: var(--color-white);
+    border-radius: 12px;
+  }
+  &__discount-col {
+    &:nth-child(1) {
+      padding-left: 32px;
+
+      flex-shrink: 0;
+      display: flex;
+      width: calc(#{$col-width-d} * 8);
+    }
+    &:nth-child(2) {
+      padding-right: 40px;
+
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__discount-item {
+    flex-shrink: 0;
+    &:nth-child(1) {
+      padding-right: 20px;
+
+      width: calc(#{$col-width-d} * 6 - 32px);
+      @media (max-width: ($breakpoint - 1px)) {
+        padding-right: 0;
+        width: auto;
+      }
+    }
+    &:nth-child(2) {
+      width: calc(#{$col-width-d} * 2);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
+    }
+
+    &:not(:first-child) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 16px;
+      }
+    }
+  }
+  &__discount-heading {
+    margin-top: 16px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 4px;
+    }
+
+    letter-spacing: var(--letter-space);
+    font-weight: 700;
+    @include fsl(18px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
+  }
+  &__discount-container {
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 16px;
+    }
+  }
+
+  &__item {
+    
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+
+  &__text {
+    letter-spacing: var(--letter-space);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
     }
   }
 }
