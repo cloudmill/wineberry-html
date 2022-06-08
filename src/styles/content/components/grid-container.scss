@@ -1,0 +1,9 @@
+.grid-container {
+  --itemsCount: 6;
+
+  display: grid;
+  grid-template-columns: repeat(var(--itemsCount), 1fr);
+  @media (max-width: ($breakpoint - 1px)) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

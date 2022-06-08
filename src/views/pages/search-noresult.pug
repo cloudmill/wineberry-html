@@ -1,0 +1,27 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+include ../components/form-components
+
+
+block content
+  .search-page 
+    section.section.section--first
+      .container 
+        .section__breadcrumbs 
+          +breadcrumbs( page = 'Контакты')
+        h1 
+          |Контакты
+        .search-page__matches 
+          |Найдено товаров: 24
+        .section__block 
+          form.form.search-page__form(action="/")
+            +input(type='text' value = 'вино ') 
+            .search-page__form-btn 
+              +submit-button 
+                |Поиск
+    section.search-page__section 
+      .search-page__icon 
+        +search-icon-svg.search-page__svg
+      .search-page__bg 
+        +contacts-icon-svg.search-page__bg-icon

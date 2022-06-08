@@ -4,6 +4,9 @@
   "routes": [
     {"title": "Новости", "href": "news"},
     {"title": "Новости детальная", "href": "news-detail"},
+    {"title": "Контакты", "href": "contacts"},
+    {"title": "Поиск", "href": "search"},
+    {"title": "Поиск, без результатов", "href": "search-noresult"},
     {"title": "Чекаут", "href": "checkout"},
     {"title": "404", "href": "404"},
     {"title": "ЛК пользователя заказы", "href": "profile-orders"},
