@@ -1,0 +1,177 @@
+.contacts-page {
+
+  &__heading {
+    margin-bottom: 40px;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+    width: calc(#{$col-width-d} * 3);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: auto;
+    }
+
+    &:nth-child(1) {
+      width: calc(#{$col-width-d} * 3 - 60px);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
+    }
+
+    &:not(:first-child) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 32px;
+      }
+    }
+  }
+
+  &__label {
+    margin-bottom: 16px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 8px;
+    }
+
+    color: var(--color-lilac);
+    letter-spacing: var(--letter-space);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 120%);
+    }
+  }
+
+  &__phone {
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(32px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(24px);
+    }
+  }
+
+  &__text {
+    letter-spacing: var(--letter-space);
+    @include fsl(20px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__row {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+
+  &__col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: calc(#{$col-width-d} * 5 - 60px);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
+    }
+    &:nth-child(2) {
+      padding-left: calc(#{$col-width-d});
+      width: calc(#{$col-width-d} * 6);
+      @media (max-width: ($breakpoint - 1px)) {
+        padding-left: 0;
+        margin-top: 24px;
+        width: auto;
+      }
+    }
+  }
+
+  &__form {
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 20px 0;
+    }
+
+    border-top: 1px solid var(--color-borders);
+    border-bottom: 1px solid var(--color-borders);
+  }
+  &__form-inner {
+    padding: 60px 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0;
+    }
+
+    &:not(:first-child) {
+      border-left: 1px solid var(--color-borders);
+      @media (max-width: ($breakpoint - 1px)) {
+        border-left: none;
+      }
+    }
+  }
+  &__form-col {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+  &__form-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__props {}
+  &__props-item {
+    letter-spacing: var(--letter-space);
+    @include fsl(14px, 160%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
+
+    &:not(:first-child) {
+      margin-top: 10px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &__wrapper {
+    padding: 140px 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 40px 0;
+    }
+
+    background: var(--color-light-gray);
+  }
+
+  &__caption {
+    letter-spacing: var(--letter-space);
+    @include fsl(20px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 150%);
+    }
+  }
+}

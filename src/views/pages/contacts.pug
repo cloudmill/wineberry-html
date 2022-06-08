@@ -1,0 +1,113 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+include ../components/form-components
+
+block variables
+  - var mainClass = "main--default"
+
+block content
+  -
+    var ddata = {
+      form: [
+        {
+          type: 'text',
+          placeholder: 'Имя*'
+        },
+        {
+          type: 'email',
+          placeholder: 'E-mail*'
+        },
+        {
+          type: 'phone',
+          placeholder: 'Телефон'
+        },
+        {
+          type: 'text',
+          placeholder: 'Название организации'
+        },
+        {
+          type: 'text',
+          placeholder: 'Город'
+        },
+      ]
+    }
+  .contacts-page 
+    section.section.section--first
+      .container 
+        .section__breadcrumbs 
+          +breadcrumbs( page = 'Контакты')
+        h1 
+          |Контакты
+        .section__block 
+          h2.contacts-page__heading 
+            |Северо-Западный федеральный округ
+          .contacts-page__inner 
+            .contacts-page__item
+              .contacts-page__label 
+                |Клиентский сервис
+              a.contacts-page__phone(href="tel:8 812 337-56-62") 
+                |8 812 337-56-62
+              a.contacts-page__text.contacts-page__link(href="mailto:info@wine78.ru") 
+                |info@wine78.ru
+            .contacts-page__item
+              .contacts-page__label 
+                |Центральный офис
+              .contacts-page__text
+                |188300, Ленинградская область, г. Гатчина, ул. Индустриальная, д. 18а
+            .contacts-page__item
+              .contacts-page__label 
+                |Склад
+              .contacts-page__text
+                |192289, Санкт-Петербург, ул. Карпатская, д.8, лит. Б, пом. 8-Н
+        .section__block 
+          .contacts-page__row.contacts-page__form 
+            .contacts-page__col.contacts-page__form-inner
+              .contacts-page__form-col 
+                h2 
+                  |Связаться с нами
+                .mobile-only 
+                  p.contacts-page__form-text 
+                    |Мы всегда открыты к предложениям и сотрудничеству. Если у вас возникли вопросы или вы хотите стать нашим партнером, оставьте заявку через форму обратной связи.
+                .contacts-page__form-icon 
+                  +contacts-icon-svg.contacts-page__form-svg
+            .contacts-page__col.contacts-page__form-inner 
+              form.form(action="/")
+                each item in ddata.form 
+                  .form__item 
+                    +input(type = item.type placeholder = item.placeholder)
+                .form__item 
+                  +textarea(placeholder = "Комментарий")
+                .form__bot 
+                  .form__checkbox
+                    +checkbox
+                  .form__btn 
+                    +submit-button 
+                      |Отправить
+    section.section.section--big 
+      .container
+        .contacts-page__row 
+          .contacts-page__col
+            h2.contacts-page__title 
+              |Реквизиты
+            .contacts-page__btn 
+              button.button.button--outline.button--download
+                .button__icon 
+                  +download-svg.button__svg
+                .button__text 
+                  |Скачать PDF
+          .contacts-page__col
+            ul.contacts-page__props
+              each item in ['ООО «ВайнБерри»', 'Факт. адрес:  188300, Ленинградская обл., г.Гатчина,ул. Индустриальная, д. 18', 'Юр. адрес.: 192289, г.Санкт-Петербург, ул. Карпатская, д.8, лит. Б, пом.  26-Н', 'Адрес склада: 192289, Санкт-Петербург, ул. Карпатская, д.8, лит. Б, пом. 8-Н', 'ИНН 7816313096 / КПП 781601001', 'КПП обособленного подразделения 781601001', 'Банковские реквизиты: ПАО ЭНЕРГОМАШБАНК в г. Санкт-Петербург', 'р/с 40702810902170038167', 'к/с 30101810700000000754', 'БИК 044030754', ]
+                li.contacts-page__props-item 
+                  |#{item}
+    section.section.section--big 
+      .contacts-page__wrapper 
+        .container 
+          .contacts-page__row 
+            .contacts-page__col
+              h2 
+                |Лицензия на закупку, хранение #[br] и поставки алкогольной продукции
+            .contacts-page__col
+              .contacts-page__caption 
+                |РА 003830 от «12» августа 2016 года Рег. № 78ЗАП0005791
