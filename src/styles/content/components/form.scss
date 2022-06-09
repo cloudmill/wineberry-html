@@ -23,6 +23,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px);
     }
+    
+    @include placeholder {
+      color: var(--color-black);
+    }
   }
 
   &__textarea {
@@ -47,6 +51,10 @@
       @include fsl(12px);
     }
 
+    @include placeholder {
+      color: var(--color-black);
+    }
+
     &--small {
       min-height: 84px;
       @media (max-width: ($breakpoint - 1px)) {
@@ -60,5 +68,35 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 16px;
     }
+  }
+
+  &__bot {
+    margin-top: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 16px;
+      display: block;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__checkbox {
+    margin-right: 15px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-right: 0;
+      max-width: none;
+    }
+    max-width: 420px;
+  }
+
+  &__btn {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 16px;
+      
+      width: auto;
+    }
+    width: 260px;
+    flex-shrink: 0;
   }
 }

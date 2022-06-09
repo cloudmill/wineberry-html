@@ -14,12 +14,12 @@
 
   &__list {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     flex-shrink: 0;
-    gap: 24px;
+    column-gap: 24px;
     @media (max-width: ($breakpoint - 1px)) {
-      gap: 9px;
-      flex-wrap: nowrap;
+      column-gap: 9px;
+      // flex-wrap: nowrap;
     }
 
   }

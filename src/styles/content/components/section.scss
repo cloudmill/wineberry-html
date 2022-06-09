@@ -27,6 +27,10 @@
     overflow: hidden;
   }
 
+  &--default {
+    margin-top: 0;
+  }
+
   &__inner {
     margin-top: 60px;
     @media (max-width: ($breakpoint - 1px)) {
@@ -38,6 +42,13 @@
     margin-top: 60px;
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 40px;
+    }
+  }
+
+  &__breadcrumbs {
+    margin-bottom: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 8px;
     }
   }
 }

@@ -7,8 +7,9 @@ block content
   .news-page 
     section.section.section--first 
       .container
-        +breadcrumbs(page = 'Новости')
-        h1.section__title
+        .section__breadcrumbs
+          +breadcrumbs(page = 'Новости')
+        h1
           |Новости
     section.section 
       .news-page__grid 

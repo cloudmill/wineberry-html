@@ -1,0 +1,123 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+include ../components/discount-card
+
+block variables
+  - var mainClass = "main--default"
+  - var bodyClass = "body--gray"
+
+
+block content
+  .profile-page.section.section--default
+    .mobile-only 
+      .aside
+        ul.aside__list 
+          li.aside__item
+            .aside__icon 
+              +orders-svg.aside__svg
+            .aside__text 
+              |Мои заказы
+          li.aside__item 
+            .aside__icon 
+              +profile-bag-svg.aside__svg
+            .aside__text 
+              |Мои юридические лица
+          li.aside__item.active
+            .aside__icon 
+              +profile-offer-svg.aside__svg
+            .aside__text 
+              |Персональные акции
+          li.aside__item 
+            .aside__icon 
+              +user-svg.aside__svg
+            .aside__text 
+              |Профиль
+    .profile-page__row.profile-page__row--big 
+      .profile-page__col 
+        .aside
+          .aside__wrapper
+            .aside__card 
+              .aside__top 
+                .aside__top-row 
+                  .aside__top-col
+                    .aside__top-text 
+                      |Вы авторизованы как
+                  .aside__top-col
+                    .aside__top-icon 
+                      +small-arrow-svg.aside__top-svg
+                .aside__title 
+                  |ТК 5 шагов
+              .aside__bot
+                .aside__type 
+                  |Родительский аккаунт
+          ul.aside__list 
+            li.aside__item
+              .aside__icon 
+                +orders-svg.aside__svg
+              .aside__text 
+                |Мои заказы
+            li.aside__item 
+              .aside__icon 
+                +profile-bag-svg.aside__svg
+              .aside__text 
+                |Мои юридические лица
+            li.aside__item.active 
+              .aside__icon 
+                +profile-offer-svg.aside__svg
+              .aside__text 
+                |Персональные акции
+            li.aside__item 
+              .aside__icon 
+                +user-svg.aside__svg
+              .aside__text 
+                |Профиль
+      .profile-page__col
+        .section__breadcrumbs
+          +breadcrumbs(items = ['Личный кабинет', 'Персональные акции'] page = 'При единовременной закупке от 5 литров акционного ассортимента,  ТТ получает скидку в накладной - 15% *Ассортимент и размер скидки в руб./бут.')
+        .profile-page__discount-top
+          .profile-page__discount-btn
+            +link-left 
+              |Назад
+          h1.profile-page__discount-title
+            |При единовременной закупке от 5 литров акционного ассортимента,  ТТ получает скидку в накладной - 15% *Ассортимент и размер скидки в руб./бут.
+        .section__block
+          .desktop-only
+            ul.profile-page__orders-list
+              - for (i = 0; i < 6; i++)
+                li.profile-page__item
+                  a.profile-page__discount-row(href="#") 
+                    .profile-page__discount-col
+                      .profile-page__discount-item
+                        .profile-page__orders-label
+                          |Артикул: Р0908
+                        .profile-page__discount-heading
+                          |Глен Риверс ,купажированный виски "GLEN RIVERS", 0,5л., 40%( Vigrosso) Новые марки
+                      .profile-page__discount-item
+                        .profile-page__orders-label
+                          |Акционная цена
+                        .profile-page__discount-heading
+                          |12,37 ₽
+                    .profile-page__discount-col
+                      .profile-page__orders-icon 
+                        +small-arrow-svg.profile-page__orders-svg 
+          .mobile-only
+            - for (i = 0; i < 3; i++)
+              .profile-page__block
+                .profile-page__discount-container
+                  .profile-page__discount-item
+                    .profile-page__orders-label
+                      |Артикул: Р0908
+                    .profile-page__discount-heading
+                      |Глен Риверс ,купажированный виски "GLEN RIVERS", 0,5л., 40%( Vigrosso) Новые марки
+                  .profile-page__discount-item
+                    .profile-page__orders-label
+                      |Акционная цена
+                    .profile-page__discount-heading
+                      |12,37 ₽
+                .profile-page__block-bot
+                  .profile-page__block-button 
+                    .profile-page__block-text 
+                      |Подробнее
+                    .profile-page__orders-icon 
+                      +small-arrow-svg.profile-page__orders-svg  

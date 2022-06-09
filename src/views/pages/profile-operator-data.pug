@@ -1,0 +1,125 @@
+extends ../layouts/master
+
+include ../components/order-card
+
+block variables
+  - var mainClass = "main--default"
+  - var bodyClass = "body--gray"
+
+block header 
+  +header-small
+
+block footer 
+  +footer-small
+
+block content
+  -
+    var ddata = {
+      list: [
+        {
+          label: 'Имя',
+          value: 'Жильцов Сергей',
+          type: 'text',
+          button: true,
+        },
+        {
+          label: 'Номер телефона',
+          value: '8 981-850-45-73',
+          type: 'phone',
+          button: true,
+        },
+        {
+          label: 'Email (Логин)',
+          value: 'igspartakov@mail.ru',
+          type: 'email',
+          button: false,
+        },
+        {
+          label: 'Пароль',
+          value: '*************',
+          type: 'password',
+          button: true,
+        },
+      ]
+    }
+  .profile-page
+    .mobile-only 
+      .aside
+        ul.aside__list 
+          li.aside__item
+            .aside__icon 
+              +orders-svg.aside__svg
+            .aside__text 
+              |Заказы
+          li.aside__item.active
+            .aside__icon 
+              +user-svg.aside__svg
+            .aside__text 
+              |Профиль
+    .profile-page__row 
+      .profile-page__col 
+        .aside
+          ul.aside__list 
+            li.aside__item
+              .aside__icon 
+                +orders-svg.aside__svg
+              .aside__text 
+                |Заказы
+            li.aside__item.active
+              .aside__icon 
+                +user-svg.aside__svg
+              .aside__text 
+                |Профиль
+      .profile-page__col
+        .mobile-only 
+          p.profile-page__caption 
+            |Главный дистрибьютор алкогольной продукции #[br] на территории Северо-Западного федерального округа
+        h1
+          |Личный кабинет
+        .mobile-only 
+          .profile-page__exit 
+            .profile-page__exit-icon 
+              +exit-svg.profile-page__exit-svg 
+            .profile-page__exit-text 
+              |Выйти
+        .profile-page__section 
+          h2.profile-page__heading 
+            |Профиль
+        .profile-page__order
+          .desktop-only
+            ul.profile-page__orders-list
+              each item in ddata.list
+                li.profile-page__orders-item.profile-page__orders-item--supervisor
+                  .profile-page__order-row 
+                    .profile-page__order-col
+                      .profile-page__orders-label 
+                        |#{item.label}
+                    .profile-page__order-col
+                      .profile-page__data
+                        .profile-page__data-col
+                          input.profile-page__data-input.locked(type=item.type value = item.value)
+                        .profile-page__data-col
+                          if (item.button)
+                            .profile-page__data-btn 
+                              .profile-page__data-icon 
+                                +pencil-svg.profile-page__data-svg
+                                +check-svg.profile-page__data-ok
+                              .profile-page__data-text 
+                                |Изменить
+          .mobile-only 
+            .profile-page__block.profile-page__block--order
+              .profile-page__data-container
+                ul.profile-page__data-list
+                  each item in ddata.list
+                    li.profile-page__block-item 
+                      .profile-page__orders-label 
+                        |#{item.label}
+                      input.profile-page__data-input.locked(type=item.type value = item.value)
+                      if (item.button)
+                        .profile-page__data-inner 
+                          .profile-page__data-btn 
+                            .profile-page__data-icon 
+                              +pencil-svg.profile-page__data-svg
+                              +check-svg.profile-page__data-ok
+                            .profile-page__data-text 
+                              |Изменить

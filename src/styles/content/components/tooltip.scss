@@ -1,7 +1,22 @@
 .tooltip {
 
+  display: flex;
+  align-items: center;
 
   &__container {
     display: none;
+  }
+
+  &__icon {
+    margin-left: 4px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 2px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
   }
 }

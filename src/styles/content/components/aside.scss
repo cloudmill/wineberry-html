@@ -11,6 +11,10 @@
     border: 1px solid var(--color-borders);
   }
 
+  &__wrapper {
+    margin-bottom: 60px;
+  }
+
   &__list {
     @media (max-width: ($breakpoint - 1px)) {
       padding: 12px 20px;
@@ -111,5 +115,64 @@
       @include fsl(11px);
       text-align: center;
     }
+  }
+
+  &__card {
+    margin: 0 60px;
+
+    border-radius: 12px;
+    border: 1px solid var(--color-borders);
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  &__top {
+    padding: 16px 16px 20px 20px;
+    
+    background: var(--color-light-gray);
+  }
+  &__top-row {
+    margin-bottom: 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__top-col {
+    &:nth-child(2) {
+      margin-left: 10px;
+    }
+  }
+  &__top-text {
+    letter-spacing: var(--letter-space);
+  }
+  &__top-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg);
+  }
+  &__top-svg {
+    path {
+      stroke: var(--color-black);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(20px, 110%);
+  }
+  
+  &__bot {
+    padding: 16px 20px;
+
+    border-top: 1px solid var(--color-borders);
+  }
+
+  &__type {
+    letter-spacing: var(--letter-space);
+    color: var(--color-lilac);
+    @include fsl(14px, 120%);
   }
 }

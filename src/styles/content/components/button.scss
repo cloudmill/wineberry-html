@@ -1,7 +1,7 @@
 .button {
   $comp: &;
 
-  padding: 21px 0;
+  padding: 19px 0;
   @media (max-width: ($breakpoint - 1px)) {
     padding: 15px 0;
   }
@@ -51,6 +51,23 @@
     width: 100%;
   }
 
+  &--download {
+    padding: 19px 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 12px 16px;
+    }
+
+    width: auto;
+  }
+
+  &--icon {
+    padding: 12px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &--auto {
     padding: 19px 24px;
     @media (max-width: ($breakpoint - 1px)) {
@@ -63,10 +80,19 @@
     width: auto;
   }
 
+  &--mid {
+    padding: 18px 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 12px 14px;
+    }
+  }
+
   &--md {
     padding: 14px 24px;
     @media (max-width: ($breakpoint - 1px)) {
-      padding: 7px 14px;
+      padding: 12px 0;
+
+      width: 100%;
     }
   }
 
@@ -81,7 +107,7 @@
     #{$comp}__text {
       margin-left: 12px;
       @media (max-width: ($breakpoint - 1px)) {
-        max-resolution: 8px;
+        margin-left: 8px;
       }
     }
   }
@@ -102,11 +128,18 @@
     }
   }
 
-  &--icon {
-    padding: 12px 16px;
+  &--discount {
+    padding: 15px 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 9px 16px;
+    }
 
-    display: flex;
-    align-items: center;
+    width: auto;
+
+    @include fsl(14px);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
   }
 
   &__icon {
@@ -130,5 +163,8 @@
 
   &__text {
     margin-left: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 8px;
+    }
   }
 }

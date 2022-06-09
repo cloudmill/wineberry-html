@@ -1,0 +1,14 @@
+mixin discount-card 
+  .discount-card
+    .discount-card__container 
+      .discount-card__top 
+        .discount-card__icon 
+          +discount-svg.discount-card__svg 
+        .discount-card__label 
+          |9 мая — 1 июля
+      .discount-card__inner
+        p.discount-card__text
+          |При единовременной закупке от 5 литров акционного ассортимента,  ТТ получает скидку в накладной - 15% *Ассортимент и размер скидки в руб./бут.
+        .discount-card__button 
+          a.button.button--outline.button--discount(href='#')
+            |Подробнее

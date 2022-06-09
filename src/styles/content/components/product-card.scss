@@ -1,0 +1,125 @@
+.product-card {
+  padding-top: 24px;
+
+  border: 1px solid var(--color-borders);
+
+  &__image {
+    position: relative;
+    z-index: 0;
+    padding: 25px 10px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 15px 5px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 320px;
+    @media (max-width: ($breakpoint - 1px)) {
+      max-height: 188px;
+    }
+  }
+
+  &__code {
+    position: absolute;
+    z-index: 1;
+    left: 24px;
+    top: 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      position: static;
+    }
+
+    letter-spacing: var(--letter-space);
+    color: var(--color-lilac);
+    @include fsl(14px);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(8px);
+    }
+  }
+
+  &__info {
+    padding: 16px 24px 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 8px 12px 12px;
+    }
+  }
+
+  &__top {
+    margin-bottom: 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 8px;
+    }
+
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(10px);
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 4px;
+  }
+  &__list-item {
+    position: relative;
+    z-index: 0;
+
+    letter-spacing: var(--letter-space);
+    color: var(--color-lilac);
+    @include fsl(14px);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(8px);
+    }
+
+    &:not(:first-child) {
+      padding-left: 10px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 6px;
+        height: 6px;
+
+        background-color: var(--color-lilac);
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__label {
+    letter-spacing: var(--letter-space);
+    color: var(--color-lilac);
+    @include fsl(16px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(8px);
+    }
+  }
+
+  &__price {
+    margin-left: 10px;
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(18px);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
+  }
+}

@@ -1,0 +1,147 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+include ../components/discount-card
+
+block variables
+  - var mainClass = "main--default"
+  - var bodyClass = "body--gray"
+
+
+block content
+  .profile-page.section.section--default
+    .mobile-only 
+      .aside
+        ul.aside__list 
+          li.aside__item
+            .aside__icon 
+              +orders-svg.aside__svg
+            .aside__text 
+              |Мои заказы
+          li.aside__item 
+            .aside__icon 
+              +profile-bag-svg.aside__svg
+            .aside__text 
+              |Мои юридические лица
+          li.aside__item.active
+            .aside__icon 
+              +profile-offer-svg.aside__svg
+            .aside__text 
+              |Персональные акции
+          li.aside__item 
+            .aside__icon 
+              +user-svg.aside__svg
+            .aside__text 
+              |Профиль
+    .profile-page__row.profile-page__row--big 
+      .profile-page__col 
+        .aside
+          .aside__wrapper
+            .aside__card 
+              .aside__top 
+                .aside__top-row 
+                  .aside__top-col
+                    .aside__top-text 
+                      |Вы авторизованы как
+                  .aside__top-col
+                    .aside__top-icon 
+                      +small-arrow-svg.aside__top-svg
+                .aside__title 
+                  |ТК 5 шагов
+              .aside__bot
+                .aside__type 
+                  |Родительский аккаунт
+          ul.aside__list 
+            li.aside__item
+              .aside__icon 
+                +orders-svg.aside__svg
+              .aside__text 
+                |Мои заказы
+            li.aside__item 
+              .aside__icon 
+                +profile-bag-svg.aside__svg
+              .aside__text 
+                |Мои юридические лица
+            li.aside__item.active 
+              .aside__icon 
+                +profile-offer-svg.aside__svg
+              .aside__text 
+                |Персональные акции
+            li.aside__item 
+              .aside__icon 
+                +user-svg.aside__svg
+              .aside__text 
+                |Профиль
+      .profile-page__col
+        .section__breadcrumbs
+          +breadcrumbs(items = ['Личный кабинет'] page = 'Мои заказы')
+        h1
+          |Личный кабинет
+        .mobile-only 
+          .profile-page__exit 
+            .profile-page__exit-icon 
+              +exit-svg.profile-page__exit-svg 
+            .profile-page__exit-text 
+              |Выйти
+        .profile-page__offset
+          .profile-page__info
+            .profile-page__info-item.big 
+              .profile-page__info-container
+                .profile-page__info-row
+                  .profile-page__info-icon 
+                    +profile-smile-svg.profile-page__info-svg
+                  .profile-page__info-content
+                    .profile-page__info-label 
+                      |Закреплен профилем
+                    .profile-page__info-wrapper 
+                      .profile-page__info-heading 
+                        |ТК 5 шагов
+                ul.profile-page__info-links
+                  li.profile-page__info-contact 
+                    .profile-page__info-img 
+                      +call-svg
+                    a.profile-page__info-link(href="#") 
+                      |8 911 286 2563
+                  li.profile-page__info-contact 
+                    .profile-page__info-img 
+                      +mail-svg
+                    a.profile-page__info-link(href="#") 
+                      |ksh@cloudmill.ru
+            .profile-page__info-item
+              .profile-page__info-container
+                .profile-page__info-row
+                  .profile-page__info-icon 
+                    +profile-stat-svg.profile-page__info-svg
+                  .profile-page__info-content
+                    .profile-page__info-label 
+                      |Уровень цен
+                    .profile-page__info-wrapper 
+                      .profile-page__info-heading.tooltip
+                        |Розница
+                        span.tooltip__icon 
+                          +tooltip-svg.tooltip__svg 
+                        .tooltip__container 
+                          |Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa placeat iusto quibusdam?
+            .profile-page__info-item
+              .profile-page__info-col 
+                .profile-page__info-block 
+                  .profile-page__info-container
+                    .profile-page__info-label 
+                      |Лимит по задолженности
+                    .profile-page__info-inner
+                      .profile-page__info-heading 
+                        |345 032 ₽
+                .profile-page__info-block 
+                  .profile-page__info-container
+                    .profile-page__info-label 
+                      |Лимит по отсрочке платежа
+                    .profile-page__info-inner
+                      .profile-page__info-heading 
+                        |30 дней
+        .profile-page__section 
+          h2.profile-page__heading 
+            |Персональные акции
+          .profile-page__discounts 
+            - for (i = 0; i < 3; i++)
+              +discount-card
+
