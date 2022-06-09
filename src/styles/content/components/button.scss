@@ -86,6 +86,22 @@
     }
   }
 
+  &--small {
+    padding: 12px 14px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 4px 6px;
+
+      width: 100%;
+    }
+  }
+
+  &--producer {
+    padding: 13px 19px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 9px 16px;
+    }
+  }
+
   &--icon {
     padding: 12px 16px;
 

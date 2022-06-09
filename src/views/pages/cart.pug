@@ -1,0 +1,36 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+include ../components/order-panel
+
+block variables
+  - var mainClass = "main--default"
+
+block content
+  -
+    var ddata = [
+      {
+        heading: 'Контактные данные',
+        inputs: [
+          {type: 'text', placeholder: 'Имя*'},
+          {type: 'phone', placeholder: 'Телефон*'},
+          {type: 'email', placeholder: 'E-mail*'},
+        ]
+      },
+      {
+        heading: 'Адрес доставки',
+        inputs: [
+          {type: 'text', placeholder: 'Город*'},
+          {type: 'text', placeholder: 'Адрес*'},
+        ]
+      },
+    ]
+  .cart-page.section.section--default
+    .cart-page__row 
+      .cart-page__col
+        .section__breadcrumbs 
+          +breadcrumbs(page = 'Корзина')
+        h1 
+          |Корзина
+        .section__block 
+          

@@ -1,2 +1,30 @@
-mixin picture 
-  img(src=`assets/images/${attributes.url}`, alt="")
+mixin picture(fileName)
+  -
+    var file = {
+      getTitle(filename) {
+        var segments = filename.split('.');
+        segments.pop();
+        var title = segments.join('.');
+        return title;
+      },
+      getExtension(filename) {
+        var segments = filename.split('.');
+        var extension = segments.pop();
+        return extension;
+      },
+      getPath(title, extension) {
+        var path = 'assets/images/' + title + "." + extension;
+        return path;
+      },
+    };
+    var fileTitle = file.getTitle(fileName);
+    var fileExtension = file.getExtension(fileName);
+  picture.picture(class=attributes.class)
+    source(
+      type="image/webp"
+      srcset=(file.getPath(fileTitle, "webp") + " 1x, " + file.getPath(fileTitle + "_2x", "webp") + " 2x")
+    )
+    img.picture__img(
+      src=(file.getPath(fileTitle, fileExtension))
+      srcset=(file.getPath(fileTitle + "_2x", fileExtension) + " 2x")
+    )
