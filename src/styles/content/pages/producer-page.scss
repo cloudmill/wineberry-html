@@ -13,15 +13,23 @@
       padding: 20px;
     }
 
-    border: 1px sold var(--color-borders);
+    border-top: 1px solid var(--color-borders);
+    border-left: 1px solid var(--color-borders);
     @media (max-width: ($breakpoint - 1px)) {
       border-left: none;
-      border-right: none;
+      // border-right: none;
+    }
+
+    &:nth-child(odd) {
+      border-left: none;
     }
   }
 
   &__card {
-    padding: 16px;
+    padding: 16px 32px 32px 16px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 16px;
+    }
 
     background: var(--color-light-gray);
     border-radius: 16px;
@@ -41,15 +49,17 @@
       @media (max-width: ($breakpoint - 1px)) {
         padding-right: 0;
         width: calc((#{$col-width-m} * 2 + #{$col-width-m} / 2) - 16px);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
       }
     }
     &:nth-child(2) {
       padding-top: 16px;
       @media (max-width: ($breakpoint - 1px)) {
         padding-top: 0;
+        padding-left: 16px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
     }
   }
@@ -125,12 +135,152 @@
     }
   }
   &__card-buttons {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 16px;
+    }
+
     display: flex;
   }
   &__card-btn {
 
+    &:nth-child(2) {
+      margin-left: 8px;
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__section {
+    padding-top: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-top: 20px;
+
+      border-top: none;
+    }
+    border-top: 1px solid var(--color-borders);
+  }
+  &__section-container {
+    margin: 0 auto;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin: 0 20px;
+      
+      width: auto;
+    }
+    width: calc(#{$col-width-d} * 6);
+  }
+  &__section-row {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      align-items: flex-end;
+    }
+  }
+  &__section-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+
+    &:nth-child(2) {
+      @media (max-width: ($breakpoint - 1px)) {
+        order: -1;
+      }
+    }
+  }
+  &__section-title {
+    margin-bottom: 8px;
+  }
+  &__section-btn {
+
+  }
+  &__section-image {
+    padding: 20px 30px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 15px 20px;
+
+      min-height: 84px;
+      min-width: none;
+    }
+    min-width: 191px;
+    min-height: 132px;
+    
+    border: 1px solid var(--color-borders);
+    border-radius: 12px;
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 8px;
+    }
+  }
+  &__section-block {
+    margin-top: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 32px;
+    }
+  }
+  &__section-text {
+    letter-spacing: var(--letter-space);
+    @include fsl(24px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px);
+    }
+  }
+  &__section-heading {
+    margin-bottom: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__content {
+    margin-top: 32px;
+    padding-left: calc(#{$col-width-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 16px;
+      padding-left: 0;
+    }
+  }
+  &__content-item {
+
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+  }
+  &__content-text {
+    letter-spacing: var(--letter-space);
+    @include fsl(18px, 160%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+    }
+  }
+
+  &__category {
+    display: flex;
+  }
+  &__category-item {
+    padding: 8px 16px;
+
+    background: var(--color-lilac);
+    border-radius: 40px;
+    background: var(--color-light-gray);
+    letter-spacing: var(--letter-space);
+    cursor: pointer;
+
     &:not(:first-child) {
       margin-left: 8px;
+    }
+
+    &.active {
+      color: var(--color-white);
+      background: var(--color-wine);
+    }
+  }
+
+  &__products {
+    margin-top: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 12px;
     }
   }
 }

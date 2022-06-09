@@ -2,6 +2,10 @@ extends ../layouts/master
 
 include ../components/breadcrumbs
 
+block variables 
+  -
+    var mainClass = 'main--default'
+
 block content
   .producers-page 
     section.section.section--first 
@@ -11,40 +15,51 @@ block content
           |Производители
     .section__block
       .producers-page__grid 
-        .producers-page__grid-item
-          .producers-page__card 
-            .producers-page__card-row 
-              .producers-page__card-col
-                .producers-page__card-container 
-                  +picture('producer.jpg')
-              .producers-page__card-col
-                h3.producers-page__card-title 
-                  |Алеф-Виналь Крым
-                .desktop-only 
-                  p.producers-page__card-text 
-                    |Торговая марка Изюмовъ — это первый в России алкогольный бренд, который объединяет под одной торговой маркой различные категории алкогольных напитков: столовые и крепленые вина, шампанское и другие.
-                .producers-page__card-list 
-                  .producers-page__card-item 
-                    .producers-page__card-label
-                      |Категорий
-                    .producers-page__card-caption 
-                      |5
-                  .producers-page__card-item 
-                    .producers-page__card-label
-                      |Товаров
-                    .producers-page__card-caption 
-                      |120
-                .desktop-only 
-                  .producers-page__card-buttons 
-                    .producers-page__card-btn 
-                      a.button.button--outline.button--producer(href="#") 
+        - for (i = 0; i < 8; i++)
+          .producers-page__grid-item
+            .producers-page__card 
+              .producers-page__card-row 
+                .producers-page__card-col
+                  .producers-page__card-container 
+                    +picture('producer.jpg')
+                .producers-page__card-col
+                  h3.producers-page__card-title 
+                    |Алеф-Виналь Крым
+                  .desktop-only 
+                    p.producers-page__card-text 
+                      |Торговая марка Изюмовъ — это первый в России алкогольный бренд, который объединяет под одной торговой маркой различные категории алкогольных напитков: столовые и крепленые вина, шампанское и другие.
+                  .producers-page__card-list 
+                    .producers-page__card-item 
+                      .producers-page__card-label
+                        |Категорий
+                      .producers-page__card-caption 
+                        |5
+                    .producers-page__card-item 
+                      .producers-page__card-label
+                        |Товаров
+                      .producers-page__card-caption 
+                        |120
+                  .desktop-only 
+                    .producers-page__card-buttons 
+                      .producers-page__card-btn 
+                        a.button.button--outline.button--producer(href="#") 
+                          |Подробнее
+                      .producers-page__card-btn 
+                        a.button.button--icon.button--small(href="#") 
+                          .button__icon 
+                            +download-svg.button__svg.button__icon-white
+                          .button__text 
+                            |Скачать презентацию
+              .mobile-only
+                p.producers-page__card-text 
+                  |Торговая марка Изюмовъ — это первый в России алкогольный бренд, который объединяет под одной торговой маркой различные категории алкогольных напитков: столовые и крепленые вина, шампанское и другие.
+                .producers-page__card-buttons 
+                  .producers-page__card-btn 
+                    a.button.button--outline.button--producer(href="#") 
+                      |Подробнее
+                  .producers-page__card-btn 
+                    a.button.button--icon.button--small(href="#") 
+                      .button__icon 
+                        +download-svg.button__svg.button__icon-white
+                      .button__text 
                         |Скачать презентацию
-                    .producers-page__card-btn 
-                      a.button.button--small(href="#") 
-                        .button__icon 
-                          +download-svg.button__svg
-                        .button__text 
-                          |Скачать презентацию
-            .mobile-only
-              p.producers-page__card-text 
-                |Торговая марка Изюмовъ — это первый в России алкогольный бренд, который объединяет под одной торговой маркой различные категории алкогольных напитков: столовые и крепленые вина, шампанское и другие.

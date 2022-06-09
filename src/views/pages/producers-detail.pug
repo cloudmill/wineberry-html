@@ -1,0 +1,49 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+include ../components/product-card
+
+
+block content
+  .producers-page 
+    section.section.section--first 
+      .container
+        .section__breadcrumbs
+          +breadcrumbs(items = ['Производители'] page = 'Изюмов')
+        .mobile-only 
+          h1 
+            |Изюмов
+      .section__block 
+        .producers-page__section 
+          .producers-page__section-container
+            .producers-page__section-row 
+              .producers-page__section-col
+                .desktop-only
+                  h1.producers-page__section-title 
+                    |Изюмов
+                .producers-page__section-btn 
+                  |btn
+              .producers-page__section-col
+                .producers-page__section-image 
+                  +picture('producer.jpg')
+            .producers-page__section-block 
+              p.producers-page__section-text
+                |Торговая марка Изюмовъ — это первый в России алкогольный бренд, который объединяет под одной торговой маркой различные категории алкогольных напитков: столовые и крепленые вина, шампанское и другие.
+            ul.producers-page__content 
+              each item in ['Основной ассортимент продукции ТМ «Изюмовъ» производится в Крыму, из крымского винограда на самых известных и легендарных заводах: Массандра, Золотая Балка, КВКЗ «БАХЧИСАРАЙ», Севастопольский Винный Завод, Алеф-Виналь-Крым, Старокрымский и т.д.', 'Вся алкогольная продукция ТМ Изюмовъ проходит строжайший трехступенчатый контроль качества как на самих заводах-изготовителях, так и отделом качества винодельческой компании Изюмовъ и ГЛАВКРЫМВИНО, созданных специально для этих целей.', 'Продвижение ТМ Изюмовъ будет сопровождаться масштабной рекламной кампанией на центральных ТВ каналах, а также федеральными и локальными трейд-маркетинговыми мероприятиями по всей стране.', ]
+                li.producers-page__content-item 
+                  p.producers-page__content-text 
+                    |#{item}
+    section.section.section--big 
+      .producers-page__section-container
+        h2.producers-page__section-heading 
+          |Ассортимент производителя
+        ul.producers-page__category 
+          li.producers-page__category-item.active
+            |Вино и винные напитки
+          li.producers-page__category-item 
+            |Коньяк
+    section.producers-page__products
+      .grid-container 
+        - for (i = 0; i < 18; i++)
+          +product-card

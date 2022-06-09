@@ -118,6 +118,8 @@
       padding: 4px 6px;
 
       width: 100%;
+
+      @include fsl(12px);
     }
   }
 
@@ -125,7 +127,10 @@
     padding: 13px 19px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 9px 16px;
+
+      @include fsl(12px);
     }
+    width: auto;
   }
 
   &--discount {
@@ -146,6 +151,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  &__icon-white {
+    path {
+      fill: var(--color-white);
+    }
   }
 
   &__svg {
