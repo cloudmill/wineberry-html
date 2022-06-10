@@ -12,6 +12,24 @@
     @include scrollbar-hidden;
   }
 
+  &--white {
+    #{$comp}__item {
+
+      &:not(:first-child) {
+        &::before {
+          background-image: url("data:image/svg+xml,%3Csvg width='7' height='7' viewBox='0 0 7 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.564 3.632V2.84L0.84 0.164V1.064L5.508 3.236L0.84 5.408V6.284L6.564 3.632Z' fill='white'/%3E%3C/svg%3E%0A");
+        }
+      }
+    }
+    #{$comp}__link {
+      color: rgba(#fff, 0.5);
+    }
+
+    #{$comp}__text {
+      color: var(--color-white);
+    }
+  }
+
   &__list {
     display: flex;
     // flex-wrap: wrap;

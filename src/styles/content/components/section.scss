@@ -1,6 +1,9 @@
 .section {
   
   margin-top: 60px;
+  @media (max-width: ($breakpoint - 1px)) {
+    margin-top: 20px;
+  }
 
   &--border {
     border-top: 1px solid var(--color-borders);
@@ -60,5 +63,15 @@
       width: auto;
     }
     width: calc(#{$col-width-d} * 6);
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin: 0 20px;
+      
+      width: auto;
+    }
+    width: calc(#{$col-width-d} * 8);
   }
 }

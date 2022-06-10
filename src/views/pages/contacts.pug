@@ -60,30 +60,32 @@ block content
                 |Склад
               .contacts-page__text
                 |192289, Санкт-Петербург, ул. Карпатская, д.8, лит. Б, пом. 8-Н
-        .section__block 
-          .contacts-page__row.contacts-page__form 
-            .contacts-page__col.contacts-page__form-inner
-              .contacts-page__form-col 
-                h2 
-                  |Связаться с нами
-                .mobile-only 
-                  p.contacts-page__form-text 
-                    |Мы всегда открыты к предложениям и сотрудничеству. Если у вас возникли вопросы или вы хотите стать нашим партнером, оставьте заявку через форму обратной связи.
-                .contacts-page__form-icon 
-                  +contacts-icon-svg.contacts-page__form-svg
-            .contacts-page__col.contacts-page__form-inner 
-              form.form(action="/")
-                each item in ddata.form 
+      .section__block
+        .contacts 
+          .container
+            .contacts__row.contacts__form 
+              .contacts__col.contacts__inner
+                .contacts__form-col 
+                  h2 
+                    |Связаться с нами
+                  .mobile-only 
+                    p.contacts__text 
+                      |Мы всегда открыты к предложениям и сотрудничеству. Если у вас возникли вопросы или вы хотите стать нашим партнером, оставьте заявку через форму обратной связи.
+                  .contacts__icon 
+                    +contacts-icon-svg.contacts__svg
+              .contacts__col.contacts__inner 
+                form.form(action="/")
+                  each item in ddata.form 
+                    .form__item 
+                      +input(type = item.type placeholder = item.placeholder)
                   .form__item 
-                    +input(type = item.type placeholder = item.placeholder)
-                .form__item 
-                  +textarea(placeholder = "Комментарий")
-                .form__bot 
-                  .form__checkbox
-                    +checkbox
-                  .form__btn 
-                    +submit-button 
-                      |Отправить
+                    +textarea(placeholder = "Комментарий")
+                  .form__bot 
+                    .form__checkbox
+                      +checkbox
+                    .form__btn 
+                      +submit-button 
+                        |Отправить
     section.section.section--big 
       .container
         .contacts-page__row 
