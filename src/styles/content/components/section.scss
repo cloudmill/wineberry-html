@@ -51,4 +51,14 @@
       margin-bottom: 8px;
     }
   }
+
+  &__container {
+    margin: 0 auto;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin: 0 20px;
+      
+      width: auto;
+    }
+    width: calc(#{$col-width-d} * 6);
+  }
 }

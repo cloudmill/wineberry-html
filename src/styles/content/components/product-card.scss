@@ -11,7 +11,7 @@
     z-index: 0;
     padding: 25px 10px;
     @media (max-width: ($breakpoint - 1px)) {
-      padding: 15px 5px;
+      padding: 15px 13px 0;
     }
 
     display: flex;
@@ -20,8 +20,23 @@
     max-height: 320px;
     @media (max-width: ($breakpoint - 1px)) {
       max-height: 188px;
-      display: block;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      align-items: flex-start;
     }
+  }
+
+  &__picture {
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-bottom: 15px;
+
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+    }
+    display: flex;
+    align-items: center;
   }
 
   &__code {

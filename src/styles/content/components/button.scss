@@ -66,6 +66,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &--big {
+      padding: 18px 23px;
+      @media (max-width: ($breakpoint - 1px)) {
+        padding: 12px 5px;
+
+        width: 100%;
+      }
+    }
   }
 
   &--auto {
