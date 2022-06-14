@@ -1,0 +1,114 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+include ../components/form-components
+
+block variables 
+  -
+    var mainClass = 'main--default'
+
+block content
+  -
+    var ddata = {
+      form: [
+        {
+          type: 'text',
+          placeholder: 'Имя*'
+        },
+        {
+          type: 'email',
+          placeholder: 'E-mail*'
+        },
+        {
+          type: 'phone',
+          placeholder: 'Телефон'
+        },
+        {
+          type: 'text',
+          placeholder: 'Название организации'
+        },
+        {
+          type: 'text',
+          placeholder: 'Город'
+        },
+      ]
+    }
+  .about-page 
+    section.section.section--first 
+      .container
+        .mobile-only
+          .section__breadcrumbs 
+            +breadcrumbs(page = 'Партнерам')
+          h1
+            |Партнерам
+        .intro
+          .intro__container
+            .intro__image
+              +picture("partners.jpg")
+              .intro__top 
+                .section__breadcrumbs 
+                  +breadcrumbs(page = 'Партнерам').breadcrumbs--white
+                h1.intro__title 
+                  |Партнерам
+              .intro__bg 
+                +intro-svg.intro__bg-svg 
+              .intro__icon 
+                +intro-icon-svg.intro__svg
+    section.section 
+      .content
+        .section__container 
+          h2 
+            |Мы — главный дистрибьютер алкогольной продукции ООО&nbsp;«ВайнБерри» на территории Северно-Западного федерального округа.
+    section.section.section--big 
+      .section__container 
+        ul.about-page__features
+          - for (i = 1; i < 6; i++)
+            li.about-page__features-item(class=(i % 2 === 0 ? 'reverse' : ''))
+              .about-page__features-row 
+                .about-page__features-col
+                  +picture(`features-${i}.jpg`).about-page__features-image
+                .about-page__features-col
+                  .about-page__features-container
+                    .about-page__features-count 
+                      |#{i}
+                    h3.about-page__features-title 
+                      |Организация процессов
+                    ul.about-page__features-list
+                      each text in ['Личный кабинет для управления заказами', 'Склады и офисы в собственности', 'Качественный документооборот', 'Собственная транспортная компания', ]
+                        li.about-page__features-feature
+                          |#{text}
+    section.section 
+      .content
+        .section__container 
+          h2 
+            |Располагаем широким ассортиментом алкогольной продукции, регулярно осуществляя поставки по всему Северо-Западному региону.
+    section.section.section--big 
+      .qwe 
+        |slider 
+    section.section.section--big 
+      .contacts 
+        .container
+          .contacts__row.contacts__form 
+            .contacts__col.contacts__inner
+              .contacts__form-col 
+                h2 
+                  |Связаться с нами
+                .mobile-only 
+                  p.contacts__text 
+                    |Мы всегда открыты к предложениям и сотрудничеству. Если у вас возникли вопросы или вы хотите стать нашим партнером, оставьте заявку через форму обратной связи.
+                .contacts__icon 
+                  +contacts-icon-svg.contacts__svg
+            .contacts__col.contacts__inner 
+              form.form(action="/")
+                each item in ddata.form 
+                  .form__item 
+                    +input(type = item.type placeholder = item.placeholder)
+                .form__item 
+                  +textarea(placeholder = "Комментарий")
+                .form__bot 
+                  .form__checkbox
+                    +checkbox
+                  .form__btn 
+                    +submit-button 
+                      |Отправить
+

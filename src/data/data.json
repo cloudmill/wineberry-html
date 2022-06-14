@@ -7,6 +7,8 @@
     {"title": "Контакты", "href": "contacts"},
     {"title": "Поиск", "href": "search"},
     {"title": "Поиск, без результатов", "href": "search-noresult"},
+    {"title": "О компании", "href": "about"},
+    {"title": "Партнерам", "href": "partners"},
     {"title": "Чекаут", "href": "checkout"},
     {"title": "404", "href": "404"},
     {"title": "ЛК пользователя заказы", "href": "profile-orders"},
