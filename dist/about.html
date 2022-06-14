@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<title>wineberry</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<script defer="defer" src="assets/vendor.js"></script>
+		<script defer="defer" src="assets/app.js"></script>
+		<link href="styles.css" rel="stylesheet">
+		<link href="app.css" rel="stylesheet">
+	</head>
+
+	<body class="body">
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__inner">
+					<div class="container">
+						<div class="header__desktop">
+							<div class="header__top">
+								<div class="header__row">
+									<div class="header__col"><a class="header__logo" href="#"><svg class="header__logo-svg" width="210" height="32" viewbox="0 0 210 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M12.2304 1.56958C18.9795 1.56958 24.4607 7.03802 24.4607 13.7999C24.4607 20.5491 18.9923 26.0303 12.2304 26.0303C5.48126 26.0303 0 20.5619 0 13.7999C0 7.05083 5.48126 1.56958 12.2304 1.56958ZM9.38729 4.84808C11.6028 4.24617 13.7416 5.02738 14.1642 6.58979C14.5868 8.15221 13.1524 9.91953 10.9369 10.5214C8.72134 11.1234 6.58263 10.3421 6.16001 8.77973C5.73739 7.20451 7.18454 5.45 9.38729 4.84808Z" fill="#A71E5C"></path>
+												<path d="M63.4515 2.3656L55.8112 25.4146H51.2717L45.5814 8.35961L39.7952 25.4146H35.2077L27.5674 2.3656H32.0109L37.7332 19.8841L43.6953 2.3656H47.6433L53.4775 19.98L59.3596 2.3656H63.4515Z" fill="#1D1117"></path>
+												<path d="M66.9046 4.21978C66.3931 3.75625 66.1533 3.16483 66.1533 2.46153C66.1533 1.75823 66.4091 1.16684 66.9046 0.703301C67.4161 0.239764 68.0394 0 68.7747 0C69.526 0 70.1493 0.223773 70.6448 0.671326C71.1563 1.11888 71.3961 1.6943 71.3961 2.36563C71.3961 3.08491 71.1403 3.6923 70.6608 4.18781C70.1653 4.68331 69.5419 4.92308 68.7747 4.92308C68.0394 4.92308 67.4001 4.68332 66.9046 4.21978ZM66.6968 7.81619H70.8047V25.3986H66.6968V7.81619Z" fill="#1D1117"></path>
+												<path d="M91.5194 9.57444C92.862 10.8691 93.5334 12.7872 93.5334 15.3287V25.3986H89.4255V15.8562C89.4255 14.3217 89.0578 13.1549 88.3385 12.3876C87.6193 11.6204 86.5803 11.2208 85.2376 11.2208C83.7192 11.2208 82.5204 11.6843 81.6412 12.5794C80.7621 13.4905 80.3305 14.8012 80.3305 16.5115V25.3986H76.2227V7.81621H80.1387V10.0859C80.8261 9.27076 81.6732 8.66335 82.7122 8.24777C83.7511 7.83218 84.902 7.62439 86.1967 7.62439C88.4025 7.62439 90.1767 8.27974 91.5194 9.57444Z" fill="#1D1117"></path>
+												<path d="M115.383 17.934H101.589C101.829 19.2287 102.468 20.2517 103.475 21.0189C104.498 21.7701 105.761 22.1538 107.279 22.1538C109.213 22.1538 110.796 21.5144 112.059 20.2517L114.264 22.7931C113.465 23.7362 112.474 24.4555 111.275 24.935C110.061 25.4145 108.702 25.6543 107.199 25.6543C105.265 25.6543 103.571 25.2707 102.1 24.5034C100.63 23.7362 99.4951 22.6652 98.6959 21.2906C97.8967 19.916 97.4971 18.3655 97.4971 16.6393C97.4971 14.929 97.8807 13.3785 98.6639 12.0199C99.4471 10.6453 100.518 9.57433 101.909 8.8071C103.299 8.03987 104.85 7.65625 106.576 7.65625C108.286 7.65625 109.821 8.03988 111.163 8.79113C112.506 9.54238 113.561 10.6133 114.328 11.9879C115.079 13.3626 115.463 14.945 115.463 16.7512C115.447 16.9909 115.431 17.4065 115.383 17.934ZM103.219 12.0838C102.308 12.867 101.749 13.906 101.557 15.2007H111.531C111.355 13.922 110.812 12.899 109.917 12.0998C109.022 11.3166 107.903 10.917 106.56 10.917C105.249 10.917 104.13 11.3006 103.219 12.0838Z" fill="#1D1117"></path>
+												<path d="M139.152 15.5045C139.903 16.4795 140.27 17.6943 140.27 19.1488C140.27 21.1468 139.503 22.6813 137.969 23.7682C136.434 24.8551 134.197 25.3986 131.255 25.3986H119.795V2.3656H130.584C133.301 2.3656 135.395 2.89307 136.866 3.964C138.336 5.03493 139.072 6.48948 139.072 8.35961C139.072 9.49448 138.8 10.5175 138.288 11.3806C137.777 12.2437 137.042 12.931 136.115 13.4265C137.393 13.8421 138.4 14.5294 139.152 15.5045ZM124.079 5.72226V12.0679H130.137C131.623 12.0679 132.774 11.7962 133.573 11.2687C134.372 10.7253 134.772 9.94204 134.772 8.91906C134.772 7.86412 134.372 7.06491 133.573 6.53743C132.774 5.99398 131.623 5.73823 130.137 5.73823H124.079V5.72226ZM135.955 18.7173C135.955 16.4955 134.292 15.3926 130.984 15.3926H124.063V22.0419H130.984C134.292 22.0419 135.955 20.939 135.955 18.7173Z" fill="#1D1117"></path>
+												<path d="M160.906 17.934H147.111C147.351 19.2287 147.991 20.2517 148.998 21.0189C150.021 21.7701 151.283 22.1538 152.802 22.1538C154.736 22.1538 156.318 21.5144 157.581 20.2517L159.787 22.7931C158.988 23.7362 157.997 24.4555 156.798 24.935C155.583 25.4145 154.224 25.6543 152.722 25.6543C150.788 25.6543 149.093 25.2707 147.623 24.5034C146.152 23.7362 145.018 22.6652 144.218 21.2906C143.419 19.916 143.02 18.3655 143.02 16.6393C143.02 14.929 143.403 13.3785 144.186 12.0199C144.97 10.6453 146.041 9.57433 147.431 8.8071C148.822 8.03987 150.372 7.65625 152.098 7.65625C153.809 7.65625 155.343 8.03988 156.686 8.79113C158.029 9.54238 159.083 10.6133 159.851 11.9879C160.602 13.3626 160.986 14.945 160.986 16.7512C160.97 16.9909 160.954 17.4065 160.906 17.934ZM148.742 12.0838C147.831 12.867 147.271 13.906 147.079 15.2007H157.054C156.878 13.922 156.334 12.899 155.439 12.0998C154.544 11.3166 153.425 10.917 152.082 10.917C150.772 10.917 149.653 11.3006 148.742 12.0838Z" fill="#1D1117"></path>
+												<path d="M175.084 7.62439V11.5405C174.732 11.4766 174.412 11.4446 174.125 11.4446C172.526 11.4446 171.28 11.9081 170.369 12.8512C169.473 13.7782 169.026 15.1209 169.026 16.8792V25.3986H164.918V7.81621H168.834V10.3896C170.017 8.55148 172.111 7.62439 175.084 7.62439Z" fill="#1D1117"></path>
+												<path d="M188.75 7.62439V11.5405C188.398 11.4766 188.078 11.4446 187.791 11.4446C186.192 11.4446 184.946 11.9081 184.035 12.8512C183.139 13.7782 182.692 15.1209 182.692 16.8792V25.3986H178.584V7.81621H182.5V10.3896C183.683 8.55148 185.761 7.62439 188.75 7.62439Z" fill="#1D1117"></path>
+												<path d="M209.354 7.81616L201.122 26.8052C200.355 28.7073 199.428 30.0659 198.325 30.8332C197.222 31.6004 195.896 32 194.345 32C193.466 32 192.603 31.8561 191.74 31.5684C190.877 31.2807 190.189 30.8811 189.63 30.3856L191.276 27.3646C191.676 27.7323 192.139 28.0359 192.683 28.2597C193.226 28.4835 193.77 28.5954 194.313 28.5954C195.032 28.5954 195.64 28.4036 196.103 28.0359C196.567 27.6683 197.015 27.0449 197.398 26.1658L197.702 25.4785L190.029 7.83214H194.313L199.844 20.8272L205.406 7.83214H209.354V7.81616Z" fill="#1D1117"></path>
+											</svg></a></div>
+									<div class="header__col">
+										<nav class="header__nav">
+											<ul class="header__nav-list">
+												<li class="header__nav-item"><a class="header__nav-link" href="#">О компании</a></li>
+												<li class="header__nav-item"><a class="header__nav-link" href="#">Контакты</a></li>
+												<li class="header__nav-item"><a class="header__nav-link" href="#">Новости</a></li>
+												<li class="header__nav-item"><a class="header__nav-link" href="#">Партнерам</a></li>
+												<li class="header__nav-item"><a class="header__nav-link" href="#">Производители</a></li>
+											</ul>
+										</nav>
+									</div>
+									<div class="header__col"><a class="ask" href="#">
+											<div class="ask__icon"><svg class="ask__svg" width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5509 6.66663H20.4509C23.1676 6.68717 25.3535 8.90587 25.3335 11.6226V17.64C25.3431 18.9448 24.8339 20.2001 23.918 21.1295C23.0021 22.0589 21.7544 22.5864 20.4495 22.596H11.5509L6.66688 25.3333V11.6226C6.6573 10.3178 7.16649 9.06252 8.08242 8.13308C8.99836 7.20364 10.246 6.67614 11.5509 6.66663Z" stroke="#A71E5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg></div>
+											<div class="ask__text">Задать вопрос</div>
+										</a></div>
+								</div>
+							</div>
+							<div class="header__bot">
+								<div class="header__row">
+									<div class="header__col">
+										<ul class="header__links">
+											<li class="header__links-item"><a class="header__links-link" href="#">
+													<div class="header__links-img"><img src="assets/images/svg/links-1.svg" alt="" /></div>
+													<div class="header__links-text">Водка</div>
+												</a></li>
+											<li class="header__links-item"><a class="header__links-link" href="#">
+													<div class="header__links-img"><img src="assets/images/svg/links-2.svg" alt="" /></div>
+													<div class="header__links-text">Ликероводочные изделия</div>
+												</a></li>
+											<li class="header__links-item"><a class="header__links-link" href="#">
+													<div class="header__links-img"><img src="assets/images/svg/links-3.svg" alt="" /></div>
+													<div class="header__links-text">Коньяк</div>
+												</a></li>
+											<li class="header__links-item"><a class="header__links-link" href="#">
+													<div class="header__links-img"><img src="assets/images/svg/links-4.svg" alt="" /></div>
+													<div class="header__links-text">Вино и винные напитки</div>
+												</a></li>
+											<li class="header__links-item"><a class="header__links-link" href="#">
+													<div class="header__links-img"><img src="assets/images/svg/links-5.svg" alt="" /></div>
+													<div class="header__links-text">Слабоалкогольная продукция</div>
+												</a></li>
+											<li class="header__links-item"><a class="header__links-link" href="#">
+													<div class="header__links-img"><img src="assets/images/svg/links-6.svg" alt="" /></div>
+													<div class="header__links-text">Настойки и наливки</div>
+												</a></li>
+										</ul>
+									</div>
+									<div class="header__col">
+										<div class="header__buttons">
+											<div class="header__item"><svg class="header__svg" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M10 21.531C10.0001 16.0302 13.8859 11.2955 19.2811 10.2226C24.6762 9.14966 30.0779 12.0373 32.1826 17.1195C34.2873 22.2018 32.5088 28.063 27.9348 31.1186C23.3607 34.1742 17.2651 33.5732 13.376 29.683C11.2143 27.5208 9.99997 24.5885 10 21.531Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M33.0581 33.0591L38.0001 38.0011" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg></div>
+											<div class="header__item header__cart"><svg class="header__svg" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M17.3841 35.9C17.3819 37.0571 16.4425 37.9935 15.2855 37.992C14.1284 37.9906 13.1914 37.0518 13.1921 35.8947C13.1929 34.7377 14.1311 33.8001 15.2881 33.8C15.8446 33.8006 16.378 34.0221 16.7711 34.416C17.1641 34.8098 17.3847 35.3436 17.3841 35.9V35.9Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M28.5621 35.9C28.5599 37.0571 27.6205 37.9935 26.4635 37.992C25.3064 37.9906 24.3694 37.0518 24.3701 35.8947C24.3709 34.7377 25.309 33.8001 26.4661 33.8C27.0225 33.8006 27.556 34.0221 27.949 34.416C28.3421 34.8098 28.5626 35.3436 28.5621 35.9V35.9Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M36.2002 15.6H15.9862L14.5862 26.8C14.5862 28.3464 15.8398 29.6 17.3862 29.6L33.0002 28C33.9835 27.9995 34.8945 27.4833 35.4002 26.64L38.6002 19.84C39.1188 18.9752 39.1323 17.8983 38.6356 17.0207C38.1388 16.1431 37.2086 15.6005 36.2002 15.6Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M15.986 15.6L14.648 10.236C14.6122 10.0965 14.4861 9.99916 14.342 10H9" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+												<div class="header__cart-count">8</div>
+											</div>
+											<div class="header__item"><svg class="header__svg" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M32 18C32 22.4183 28.4183 26 24 26C19.5817 26 16 22.4183 16 18C16 13.5817 19.5817 10 24 10C26.1217 10 28.1566 10.8429 29.6569 12.3431C31.1571 13.8434 32 15.8783 32 18Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M10 38C18.5757 32.6818 29.4243 32.6818 38 38" stroke="#1D1117" stroke-width="2" stroke-linecap="round"></path>
+												</svg></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="header__mobile">
+							<div class="header__row">
+								<div class="header__col">
+									<div class="header__buttons">
+										<div class="header__item">menu</div>
+										<div class="header__item"><svg class="header__svg" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M10 21.531C10.0001 16.0302 13.8859 11.2955 19.2811 10.2226C24.6762 9.14966 30.0779 12.0373 32.1826 17.1195C34.2873 22.2018 32.5088 28.063 27.9348 31.1186C23.3607 34.1742 17.2651 33.5732 13.376 29.683C11.2143 27.5208 9.99997 24.5885 10 21.531Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M33.0581 33.0591L38.0001 38.0011" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg></div>
+									</div>
+								</div>
+								<div class="header__col"><a class="header__logo" href="#"><svg class="header__logo-svg" width="210" height="32" viewbox="0 0 210 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M12.2304 1.56958C18.9795 1.56958 24.4607 7.03802 24.4607 13.7999C24.4607 20.5491 18.9923 26.0303 12.2304 26.0303C5.48126 26.0303 0 20.5619 0 13.7999C0 7.05083 5.48126 1.56958 12.2304 1.56958ZM9.38729 4.84808C11.6028 4.24617 13.7416 5.02738 14.1642 6.58979C14.5868 8.15221 13.1524 9.91953 10.9369 10.5214C8.72134 11.1234 6.58263 10.3421 6.16001 8.77973C5.73739 7.20451 7.18454 5.45 9.38729 4.84808Z" fill="#A71E5C"></path>
+											<path d="M63.4515 2.3656L55.8112 25.4146H51.2717L45.5814 8.35961L39.7952 25.4146H35.2077L27.5674 2.3656H32.0109L37.7332 19.8841L43.6953 2.3656H47.6433L53.4775 19.98L59.3596 2.3656H63.4515Z" fill="#1D1117"></path>
+											<path d="M66.9046 4.21978C66.3931 3.75625 66.1533 3.16483 66.1533 2.46153C66.1533 1.75823 66.4091 1.16684 66.9046 0.703301C67.4161 0.239764 68.0394 0 68.7747 0C69.526 0 70.1493 0.223773 70.6448 0.671326C71.1563 1.11888 71.3961 1.6943 71.3961 2.36563C71.3961 3.08491 71.1403 3.6923 70.6608 4.18781C70.1653 4.68331 69.5419 4.92308 68.7747 4.92308C68.0394 4.92308 67.4001 4.68332 66.9046 4.21978ZM66.6968 7.81619H70.8047V25.3986H66.6968V7.81619Z" fill="#1D1117"></path>
+											<path d="M91.5194 9.57444C92.862 10.8691 93.5334 12.7872 93.5334 15.3287V25.3986H89.4255V15.8562C89.4255 14.3217 89.0578 13.1549 88.3385 12.3876C87.6193 11.6204 86.5803 11.2208 85.2376 11.2208C83.7192 11.2208 82.5204 11.6843 81.6412 12.5794C80.7621 13.4905 80.3305 14.8012 80.3305 16.5115V25.3986H76.2227V7.81621H80.1387V10.0859C80.8261 9.27076 81.6732 8.66335 82.7122 8.24777C83.7511 7.83218 84.902 7.62439 86.1967 7.62439C88.4025 7.62439 90.1767 8.27974 91.5194 9.57444Z" fill="#1D1117"></path>
+											<path d="M115.383 17.934H101.589C101.829 19.2287 102.468 20.2517 103.475 21.0189C104.498 21.7701 105.761 22.1538 107.279 22.1538C109.213 22.1538 110.796 21.5144 112.059 20.2517L114.264 22.7931C113.465 23.7362 112.474 24.4555 111.275 24.935C110.061 25.4145 108.702 25.6543 107.199 25.6543C105.265 25.6543 103.571 25.2707 102.1 24.5034C100.63 23.7362 99.4951 22.6652 98.6959 21.2906C97.8967 19.916 97.4971 18.3655 97.4971 16.6393C97.4971 14.929 97.8807 13.3785 98.6639 12.0199C99.4471 10.6453 100.518 9.57433 101.909 8.8071C103.299 8.03987 104.85 7.65625 106.576 7.65625C108.286 7.65625 109.821 8.03988 111.163 8.79113C112.506 9.54238 113.561 10.6133 114.328 11.9879C115.079 13.3626 115.463 14.945 115.463 16.7512C115.447 16.9909 115.431 17.4065 115.383 17.934ZM103.219 12.0838C102.308 12.867 101.749 13.906 101.557 15.2007H111.531C111.355 13.922 110.812 12.899 109.917 12.0998C109.022 11.3166 107.903 10.917 106.56 10.917C105.249 10.917 104.13 11.3006 103.219 12.0838Z" fill="#1D1117"></path>
+											<path d="M139.152 15.5045C139.903 16.4795 140.27 17.6943 140.27 19.1488C140.27 21.1468 139.503 22.6813 137.969 23.7682C136.434 24.8551 134.197 25.3986 131.255 25.3986H119.795V2.3656H130.584C133.301 2.3656 135.395 2.89307 136.866 3.964C138.336 5.03493 139.072 6.48948 139.072 8.35961C139.072 9.49448 138.8 10.5175 138.288 11.3806C137.777 12.2437 137.042 12.931 136.115 13.4265C137.393 13.8421 138.4 14.5294 139.152 15.5045ZM124.079 5.72226V12.0679H130.137C131.623 12.0679 132.774 11.7962 133.573 11.2687C134.372 10.7253 134.772 9.94204 134.772 8.91906C134.772 7.86412 134.372 7.06491 133.573 6.53743C132.774 5.99398 131.623 5.73823 130.137 5.73823H124.079V5.72226ZM135.955 18.7173C135.955 16.4955 134.292 15.3926 130.984 15.3926H124.063V22.0419H130.984C134.292 22.0419 135.955 20.939 135.955 18.7173Z" fill="#1D1117"></path>
+											<path d="M160.906 17.934H147.111C147.351 19.2287 147.991 20.2517 148.998 21.0189C150.021 21.7701 151.283 22.1538 152.802 22.1538C154.736 22.1538 156.318 21.5144 157.581 20.2517L159.787 22.7931C158.988 23.7362 157.997 24.4555 156.798 24.935C155.583 25.4145 154.224 25.6543 152.722 25.6543C150.788 25.6543 149.093 25.2707 147.623 24.5034C146.152 23.7362 145.018 22.6652 144.218 21.2906C143.419 19.916 143.02 18.3655 143.02 16.6393C143.02 14.929 143.403 13.3785 144.186 12.0199C144.97 10.6453 146.041 9.57433 147.431 8.8071C148.822 8.03987 150.372 7.65625 152.098 7.65625C153.809 7.65625 155.343 8.03988 156.686 8.79113C158.029 9.54238 159.083 10.6133 159.851 11.9879C160.602 13.3626 160.986 14.945 160.986 16.7512C160.97 16.9909 160.954 17.4065 160.906 17.934ZM148.742 12.0838C147.831 12.867 147.271 13.906 147.079 15.2007H157.054C156.878 13.922 156.334 12.899 155.439 12.0998C154.544 11.3166 153.425 10.917 152.082 10.917C150.772 10.917 149.653 11.3006 148.742 12.0838Z" fill="#1D1117"></path>
+											<path d="M175.084 7.62439V11.5405C174.732 11.4766 174.412 11.4446 174.125 11.4446C172.526 11.4446 171.28 11.9081 170.369 12.8512C169.473 13.7782 169.026 15.1209 169.026 16.8792V25.3986H164.918V7.81621H168.834V10.3896C170.017 8.55148 172.111 7.62439 175.084 7.62439Z" fill="#1D1117"></path>
+											<path d="M188.75 7.62439V11.5405C188.398 11.4766 188.078 11.4446 187.791 11.4446C186.192 11.4446 184.946 11.9081 184.035 12.8512C183.139 13.7782 182.692 15.1209 182.692 16.8792V25.3986H178.584V7.81621H182.5V10.3896C183.683 8.55148 185.761 7.62439 188.75 7.62439Z" fill="#1D1117"></path>
+											<path d="M209.354 7.81616L201.122 26.8052C200.355 28.7073 199.428 30.0659 198.325 30.8332C197.222 31.6004 195.896 32 194.345 32C193.466 32 192.603 31.8561 191.74 31.5684C190.877 31.2807 190.189 30.8811 189.63 30.3856L191.276 27.3646C191.676 27.7323 192.139 28.0359 192.683 28.2597C193.226 28.4835 193.77 28.5954 194.313 28.5954C195.032 28.5954 195.64 28.4036 196.103 28.0359C196.567 27.6683 197.015 27.0449 197.398 26.1658L197.702 25.4785L190.029 7.83214H194.313L199.844 20.8272L205.406 7.83214H209.354V7.81616Z" fill="#1D1117"></path>
+										</svg></a></div>
+								<div class="header__col">
+									<div class="header__buttons">
+										<div class="header__item"><svg class="header__svg" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M32 18C32 22.4183 28.4183 26 24 26C19.5817 26 16 22.4183 16 18C16 13.5817 19.5817 10 24 10C26.1217 10 28.1566 10.8429 29.6569 12.3431C31.1571 13.8434 32 15.8783 32 18Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M10 38C18.5757 32.6818 29.4243 32.6818 38 38" stroke="#1D1117" stroke-width="2" stroke-linecap="round"></path>
+											</svg></div>
+										<div class="header__item header__cart"><svg class="header__svg" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M17.3841 35.9C17.3819 37.0571 16.4425 37.9935 15.2855 37.992C14.1284 37.9906 13.1914 37.0518 13.1921 35.8947C13.1929 34.7377 14.1311 33.8001 15.2881 33.8C15.8446 33.8006 16.378 34.0221 16.7711 34.416C17.1641 34.8098 17.3847 35.3436 17.3841 35.9V35.9Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M28.5621 35.9C28.5599 37.0571 27.6205 37.9935 26.4635 37.992C25.3064 37.9906 24.3694 37.0518 24.3701 35.8947C24.3709 34.7377 25.309 33.8001 26.4661 33.8C27.0225 33.8006 27.556 34.0221 27.949 34.416C28.3421 34.8098 28.5626 35.3436 28.5621 35.9V35.9Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M36.2002 15.6H15.9862L14.5862 26.8C14.5862 28.3464 15.8398 29.6 17.3862 29.6L33.0002 28C33.9835 27.9995 34.8945 27.4833 35.4002 26.64L38.6002 19.84C39.1188 18.9752 39.1323 17.8983 38.6356 17.0207C38.1388 16.1431 37.2086 15.6005 36.2002 15.6Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M15.986 15.6L14.648 10.236C14.6122 10.0965 14.4861 9.99916 14.342 10H9" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+											<div class="header__cart-count">8</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="main main--default">
+				<div class="about-page">
+					<section class="section section--first">
+						<div class="container">
+							<div class="mobile-only">
+								<div class="section__breadcrumbs">
+									<div class="breadcrumbs">
+										<ul class="breadcrumbs__list">
+											<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" data-link="">Главная</a></li>
+											<li class="breadcrumbs__item">
+												<div class="breadcrumbs__text">Партнерам</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<h1>Партнерам</h1>
+							</div>
+							<div class="intro">
+								<div class="intro__container">
+									<div class="intro__image">
+										<picture class="picture">
+											<source type="image/webp" srcset="assets/images/partners.webp, assets/images/partners_2x.webp 2x" /><img class="picture__img" src="assets/images/partners.jpg" srcset="assets/images/partners_2x.jpg 2x" />
+										</picture>
+										<div class="intro__top">
+											<div class="section__breadcrumbs">
+												<div class="breadcrumbs breadcrumbs--white">
+													<ul class="breadcrumbs__list">
+														<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" data-link="">Главная</a></li>
+														<li class="breadcrumbs__item">
+															<div class="breadcrumbs__text">Партнерам</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h1 class="intro__title">Партнерам</h1>
+										</div>
+										<div class="intro__bg"><svg class="intro__bg-svg" width="768" height="769" viewbox="0 0 768 769" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M-1.6807e-05 384.5C-2.60817e-05 172.32 171.694 7.21602e-05 384 6.288e-05C595.904 5.36174e-05 768 171.918 768 384.5C768 596.679 596.306 769 384 769C172.096 769 -7.53237e-06 596.68 -1.6807e-05 384.5ZM102.936 473.881C84.0376 404.228 108.565 336.991 157.621 323.705C206.676 310.418 262.165 355.512 281.064 425.164C299.962 494.817 275.434 562.054 226.379 575.341C176.921 588.627 121.834 543.131 102.936 473.881Z" fill="#A71E5C"></path>
+											</svg></div>
+										<div class="intro__icon"><svg class="intro__svg" width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 0C19.3979 0 25 5.36544 25 12C25 18.622 19.411 24 12.5 24C5.6021 24 0 18.6346 0 12C0 5.37801 5.6021 0 12.5 0ZM9.59424 3.21675C11.8586 2.62618 14.0445 3.39267 14.4764 4.92565C14.9084 6.45864 13.4424 8.19267 11.178 8.78324C8.91361 9.37382 6.72775 8.60733 6.29581 7.07434C5.86388 5.52879 7.34293 3.80733 9.59424 3.21675Z" fill="white"></path>
+											</svg></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="section">
+						<div class="content">
+							<div class="section__container">
+								<h2>Мы — главный дистрибьютер алкогольной продукции ООО&nbsp;«ВайнБерри» на территории Северно-Западного федерального округа.</h2>
+							</div>
+						</div>
+					</section>
+					<section class="section section--big">
+						<div class="section__container">
+							<ul class="about-page__features">
+								<li class="about-page__features-item">
+									<div class="about-page__features-row">
+										<div class="about-page__features-col">
+											<picture class="picture about-page__features-image">
+												<source type="image/webp" srcset="assets/images/features-1.webp, assets/images/features-1_2x.webp 2x" /><img class="picture__img" src="assets/images/features-1.jpg" srcset="assets/images/features-1_2x.jpg 2x" />
+											</picture>
+										</div>
+										<div class="about-page__features-col">
+											<div class="about-page__features-container">
+												<div class="about-page__features-count">1</div>
+												<h3 class="about-page__features-title">Организация процессов</h3>
+												<ul class="about-page__features-list">
+													<li class="about-page__features-feature">Личный кабинет для управления заказами</li>
+													<li class="about-page__features-feature">Склады и офисы в собственности</li>
+													<li class="about-page__features-feature">Качественный документооборот</li>
+													<li class="about-page__features-feature">Собственная транспортная компания</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="about-page__features-item reverse">
+									<div class="about-page__features-row">
+										<div class="about-page__features-col">
+											<picture class="picture about-page__features-image">
+												<source type="image/webp" srcset="assets/images/features-2.webp, assets/images/features-2_2x.webp 2x" /><img class="picture__img" src="assets/images/features-2.jpg" srcset="assets/images/features-2_2x.jpg 2x" />
+											</picture>
+										</div>
+										<div class="about-page__features-col">
+											<div class="about-page__features-container">
+												<div class="about-page__features-count">2</div>
+												<h3 class="about-page__features-title">Организация процессов</h3>
+												<ul class="about-page__features-list">
+													<li class="about-page__features-feature">Личный кабинет для управления заказами</li>
+													<li class="about-page__features-feature">Склады и офисы в собственности</li>
+													<li class="about-page__features-feature">Качественный документооборот</li>
+													<li class="about-page__features-feature">Собственная транспортная компания</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="about-page__features-item">
+									<div class="about-page__features-row">
+										<div class="about-page__features-col">
+											<picture class="picture about-page__features-image">
+												<source type="image/webp" srcset="assets/images/features-3.webp, assets/images/features-3_2x.webp 2x" /><img class="picture__img" src="assets/images/features-3.jpg" srcset="assets/images/features-3_2x.jpg 2x" />
+											</picture>
+										</div>
+										<div class="about-page__features-col">
+											<div class="about-page__features-container">
+												<div class="about-page__features-count">3</div>
+												<h3 class="about-page__features-title">Организация процессов</h3>
+												<ul class="about-page__features-list">
+													<li class="about-page__features-feature">Личный кабинет для управления заказами</li>
+													<li class="about-page__features-feature">Склады и офисы в собственности</li>
+													<li class="about-page__features-feature">Качественный документооборот</li>
+													<li class="about-page__features-feature">Собственная транспортная компания</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="about-page__features-item reverse">
+									<div class="about-page__features-row">
+										<div class="about-page__features-col">
+											<picture class="picture about-page__features-image">
+												<source type="image/webp" srcset="assets/images/features-4.webp, assets/images/features-4_2x.webp 2x" /><img class="picture__img" src="assets/images/features-4.jpg" srcset="assets/images/features-4_2x.jpg 2x" />
+											</picture>
+										</div>
+										<div class="about-page__features-col">
+											<div class="about-page__features-container">
+												<div class="about-page__features-count">4</div>
+												<h3 class="about-page__features-title">Организация процессов</h3>
+												<ul class="about-page__features-list">
+													<li class="about-page__features-feature">Личный кабинет для управления заказами</li>
+													<li class="about-page__features-feature">Склады и офисы в собственности</li>
+													<li class="about-page__features-feature">Качественный документооборот</li>
+													<li class="about-page__features-feature">Собственная транспортная компания</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="about-page__features-item">
+									<div class="about-page__features-row">
+										<div class="about-page__features-col">
+											<picture class="picture about-page__features-image">
+												<source type="image/webp" srcset="assets/images/features-5.webp, assets/images/features-5_2x.webp 2x" /><img class="picture__img" src="assets/images/features-5.jpg" srcset="assets/images/features-5_2x.jpg 2x" />
+											</picture>
+										</div>
+										<div class="about-page__features-col">
+											<div class="about-page__features-container">
+												<div class="about-page__features-count">5</div>
+												<h3 class="about-page__features-title">Организация процессов</h3>
+												<ul class="about-page__features-list">
+													<li class="about-page__features-feature">Личный кабинет для управления заказами</li>
+													<li class="about-page__features-feature">Склады и офисы в собственности</li>
+													<li class="about-page__features-feature">Качественный документооборот</li>
+													<li class="about-page__features-feature">Собственная транспортная компания</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<section class="section">
+						<div class="content">
+							<div class="section__container">
+								<h2>Располагаем широким ассортиментом алкогольной продукции, регулярно осуществляя поставки по всему Северо-Западному региону.</h2>
+							</div>
+						</div>
+					</section>
+					<section class="section section--big">
+						<div class="qwe">slider</div>
+					</section>
+					<section class="section section--big">
+						<div class="contacts">
+							<div class="container">
+								<div class="contacts__row contacts__form">
+									<div class="contacts__col contacts__inner">
+										<div class="contacts__form-col">
+											<h2>Связаться с нами</h2>
+											<div class="mobile-only">
+												<p class="contacts__text">Мы всегда открыты к предложениям и сотрудничеству. Если у вас возникли вопросы или вы хотите стать нашим партнером, оставьте заявку через форму обратной связи.</p>
+											</div>
+											<div class="contacts__icon"><svg class="contacts__svg" width="246" height="246" viewbox="0 0 246 246" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M123 0C190.875 0 246 54.9958 246 123C246 190.875 191.004 246 123 246C55.1246 246 0 191.004 0 123C0 55.1246 55.1246 0 123 0ZM94.4073 32.9717C116.689 26.9183 138.198 34.7748 142.448 50.4879C146.698 66.201 132.273 83.9748 109.992 90.0283C87.7099 96.0817 66.2011 88.2251 61.9508 72.512C57.7005 56.6701 72.2545 39.0251 94.4073 32.9717Z" fill="#F4F4F4"></path>
+												</svg></div>
+										</div>
+									</div>
+									<div class="contacts__col contacts__inner">
+										<form class="form" action="/">
+											<div class="form__item"><input class="form__input" placeholder="Имя*" /></div>
+											<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" /></div>
+											<div class="form__item"><input class="form__input" type="phone" placeholder="Телефон" /></div>
+											<div class="form__item"><input class="form__input" placeholder="Название организации" /></div>
+											<div class="form__item"><input class="form__input" placeholder="Город" /></div>
+											<div class="form__item"><textarea class="form__textarea" placeholder="Комментарий"></textarea></div>
+											<div class="form__bot">
+												<div class="form__checkbox">
+													<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+															<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																</svg></div>
+															<div class="checkbox__text">Согласен на обработку персональных данных в соответствии с <a class="checkbox__link" href="#">политикой конфиденциальности</a></div>
+														</label></div>
+												</div>
+												<div class="form__btn"><button class="button">Отправить</button></div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</main>
+			<footer class="footer">
+				<div class="footer__wrapper">
+					<div class="footer__row footer__row--block">
+						<div class="footer__col">
+							<div class="footer__inner">
+								<ul class="footer__list">
+									<li class="footer__list-item"><a class="footer__list-link" href="#">О компании</a></li>
+									<li class="footer__list-item"><a class="footer__list-link" href="#">Контакты</a></li>
+									<li class="footer__list-item"><a class="footer__list-link" href="#">Новости</a></li>
+									<li class="footer__list-item"><a class="footer__list-link" href="#">Партнерам</a></li>
+									<li class="footer__list-item"><a class="footer__list-link" href="#">Производители</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__col">
+							<div class="footer__inner">
+								<div class="footer__container">
+									<div class="footer__container-col">
+										<div class="footer__label">Клиентский сервис</div><a class="footer__phone" href="tel:88123375662">8 812 337-56-62</a><a class="footer__mail" href="mailto:info@wine78.ru"> info@wine78.ru</a><a class="ask" href="#">
+											<div class="ask__icon"><svg class="ask__svg" width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5509 6.66663H20.4509C23.1676 6.68717 25.3535 8.90587 25.3335 11.6226V17.64C25.3431 18.9448 24.8339 20.2001 23.918 21.1295C23.0021 22.0589 21.7544 22.5864 20.4495 22.596H11.5509L6.66688 25.3333V11.6226C6.6573 10.3178 7.16649 9.06252 8.08242 8.13308C8.99836 7.20364 10.246 6.67614 11.5509 6.66663Z" stroke="#A71E5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg></div>
+											<div class="ask__text">Задать вопрос</div>
+										</a>
+									</div>
+									<div class="footer__container-col">
+										<div class="footer__item">
+											<div class="footer__label">Центральный офис</div>
+											<address class="footer__text">188300, Ленинградская область, г. Гатчина, ул. Индустриальная, д. 18а</address>
+										</div>
+										<div class="footer__item">
+											<div class="footer__label">Склад</div>
+											<address class="footer__text">192289, Санкт-Петербург, ул. Карпатская, д.8, лит. Б, пом. 8-Н</address>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__row">
+					<div class="footer__col">
+						<div class="footer__bot">
+							<div class="footer__logo">© WineBerry 2022</div>
+						</div>
+					</div>
+					<div class="footer__col">
+						<div class="footer__bot">
+							<div class="footer__made">Cделано в <a class="footer__corp" href="#">CloudMill</a></div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<div class="grid-test">
+				<div class="grid-test__row">
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+					<div class="grid-test__col"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
