@@ -1,0 +1,42 @@
+.counter {
+  padding: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid var(--color-borders);
+  border-radius: 8px;
+  @media (max-width: ($breakpoint - 1px)) {
+    border-radius: 4px;
+  }
+
+  &__item {
+    --size: 40px;
+    @media (max-width: ($breakpoint - 1px)) {
+      --size: 28px;
+    }
+
+    padding: 5px;
+
+    width: var(--size);
+    height: var(--size);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--color-light-gray);
+    cursor: pointer;
+  }
+
+  &__count {
+    letter-spacing: var(--letter-space);
+  }
+
+  &__svg {
+    path {
+      fill: var(--color-black);
+    }
+  }
+}

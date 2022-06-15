@@ -1,0 +1,79 @@
+.catalog-page {
+
+  &__category {
+    margin-top: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 20px;
+    }
+  }
+
+  &__listing {
+    margin-top: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 20px;
+    }
+
+    border-top: 1px solid var(--color-borders);
+    @media (max-width: ($breakpoint - 1px)) {
+      border-top: none;
+    }
+  }
+
+  &__row {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+
+  &__col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: calc(#{$col-width-d} * 2);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin: 0 20px;
+        width: auto;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-top: -1px;
+      margin-left: -1px;
+      width: calc(#{$col-width-d} * 10);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 20px;
+        margin-left: 0;
+        width: auto;
+      }
+    }
+  }
+
+  &__button {
+    padding: 4px 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: flex;
+    }
+
+    border: 1px solid var(--color-borders);
+    border-radius: 4px;
+    background: var(--color-white);
+    cursor: pointer;
+  }
+  &__button-icon {
+    margin-right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__button-text {
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(12px, 120%);
+  }
+}

@@ -1,0 +1,71 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+include ../components/form-components
+include ../components/product-card
+
+
+block content
+  .catalo-page 
+    section.section.section--first 
+      .container
+        .section__breadcrumbs
+          +breadcrumbs(page = 'Вина и винные напитки')
+        h1
+          |Вина и винные напитки
+        .catalog-page__category 
+          .category 
+            ul.category__list
+              each item, i in ['Десертное вино', 'Столовое вино', 'Белое сухое', 'Красное сухое', 'Безалкогольное']
+                li.category__item(class=(i === 0 ? 'active' : ''))
+                  |#{item}
+    section.catalog-page__listing 
+      .catalog-page__row 
+        .catalog-page__col
+          .catalog-page__button
+            .catalog-page__button-icon 
+              +filters-svg.catalog-page__button-svg 
+            .catalog-page__button-text 
+              |Фильтры
+          .filters
+            ul.filters__list
+              li.filters__item
+                .filters__heading 
+                  |Производитель
+                .filters__range
+                  .range(data-range-block='')
+                    .range__inputs 
+                      label.range__item 
+                        span.range__label 
+                          |от
+                        input.range__input(type="number" value ='2300' data-input-start='2300')
+                      label.range__item 
+                        span.range__label 
+                          |до
+                        input.range__input(type="number" value ='4000' data-input-end='4000')
+                    .range__range
+              - for (i = 1; i < 7; i++)
+                li.filters__item
+                  .filters__heading 
+                    |Производитель
+                  .filters__body 
+                    ul.filers__options 
+                      - for (j = 0; j < 4; j++)
+                        li.filters__box 
+                          +checkbox(text = 'Германия').checkbox--filters
+                    if (i % 3 === 0)
+                      .filters__show 
+                        .filters__text 
+                          |Показать все
+                        .filters__icon
+                          +small-arrow-svg.filters__svg 
+            .filters__button 
+              .filters__button-icon 
+                +refresh-svg.filters__button-svg 
+              .filters__button-text 
+                |Сбросить
+        .catalog-page__col
+          .grid-container.grid-container--catalog 
+            +product-card(noPrice = true)
+            - for (i = 0; i < 14; i++)
+              +product-card(bot = true)

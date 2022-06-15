@@ -15,7 +15,7 @@ mixin radio-button
         |#{attributes.text}
 
 mixin checkbox 
-  .checkbox 
+  .checkbox(class=attributes.class)
     label.checkbox__label
       input.checkbox__input(type="checkbox")&attributes(attributes)
       .checkbox__box 

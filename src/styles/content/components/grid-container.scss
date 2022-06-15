@@ -6,4 +6,8 @@
   @media (max-width: ($breakpoint - 1px)) {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  &--catalog {
+    --itemsCount: 5;
+  }
 }

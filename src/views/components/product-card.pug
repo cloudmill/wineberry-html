@@ -12,16 +12,37 @@ mixin product-card
           each item in ['Испания', '0.75 л.', 'Красное', 'Сухое', ]
             li.product-card__list-item
               |#{item}
-      ul.product-card__prices 
-        li.product-card__item 
-          .product-card__label
-            |Базовая цена
-          .product-card__price 
-            |1 990 ₽
-        li.product-card__item 
-          .product-card__label
-            |Персональная цена
-          .product-card__price 
-            |1 680 ₽
+      if (attributes.noPrice)
+        .product-card__auth 
+          .product-card__auth-col
+            +auth-svg.product-card__auth-svg
+          .product-card__auth-col
+            .product-card__auth-text 
+              |Цена доступна только для авторизованных пользователей
+            .product-card__auth-btn 
+              |Авторизоваться
+      else
+        ul.product-card__prices 
+          li.product-card__item 
+            .product-card__label
+              |Базовая цена
+            .product-card__price 
+              |1 990 ₽
+          li.product-card__item 
+            .product-card__label
+              |Персональная цена
+            .product-card__price 
+              |1 680 ₽
         if (attributes.bot)
           .product-card__bot
+            .product-card__bot-col
+              .counter
+                .counter__item
+                  +minus-svg.counter__svg
+                .counter__count
+                  |1
+                .counter__item
+                  +plus-svg.counter__svg
+            .product-card__bot-col
+              .product-card__button 
+                +cart-svg.product-card__svg

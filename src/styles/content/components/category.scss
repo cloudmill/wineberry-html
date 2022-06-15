@@ -1,0 +1,38 @@
+.category {
+
+  @media (max-width: ($breakpoint - 1px)) {
+    padding: 0 20px;
+    margin-left: -20px;
+
+    width: calc(100% + 40px);
+
+    display: flex;
+
+    @include scrollbar-hidden;
+    overflow-y: scroll;
+  }
+  
+  &__list {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  &__item {
+    padding: 8px 16px;
+
+    background: var(--color-lilac);
+    border-radius: 40px;
+    background: var(--color-light-gray);
+    letter-spacing: var(--letter-space);
+    cursor: pointer;
+
+    &:not(:first-child) {
+      margin-left: 8px;
+    }
+
+    &.active {
+      color: var(--color-white);
+      background: var(--color-wine);
+    }
+  }
+}

@@ -143,4 +143,96 @@
       @include fsl(12px);
     }
   }
+
+  &__bot {
+    margin-top: 28px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 12px;
+    }
+
+    display: flex;
+  }
+  &__bot-col {
+    &:nth-child(1) {
+      width: 100%;
+    }
+
+    &:nth-child(2) {
+      margin-left: 12px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 8px;
+      }
+    }
+  }
+  
+  &__button {
+    padding: 0 18px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 2px 13px;
+    }
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--color-wine);
+    cursor: pointer;
+    border-radius: 8px;
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 4px;
+    }
+  }
+
+  &__svg {
+    width: 42px;
+    height: 42px;
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 24px;
+      height: 22px;
+    }
+
+    path {
+      stroke: var(--color-white);
+    }
+  }
+
+  &__auth {
+    padding: 16px 20px 16px 16px;
+
+    display: flex;
+
+    background: var(--color-light-gray);
+    border-radius: 8px;
+  }
+  &__auth-col {
+    &:nth-child(1) {
+      flex-shrink: 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    &:nth-child(2) {
+      margin-left: 16px;
+    }
+  }
+  &__auth-text {
+    margin-bottom: 8px;
+
+    letter-spacing: var(--letter-space);
+    @include fsl(14px, 120%);
+  }
+  &__auth-btn {
+    padding: 9px 16px;
+
+    display: inline-block;
+
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(14px, 120%);
+    border: 1px solid var(--color-borders);
+    cursor: pointer;
+    background: var(--color-white);
+    border-radius: 4px;
+  }
 }

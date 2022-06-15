@@ -258,27 +258,7 @@
     }
   }
 
-  &__category {
-    display: flex;
-  }
-  &__category-item {
-    padding: 8px 16px;
-
-    background: var(--color-lilac);
-    border-radius: 40px;
-    background: var(--color-light-gray);
-    letter-spacing: var(--letter-space);
-    cursor: pointer;
-
-    &:not(:first-child) {
-      margin-left: 8px;
-    }
-
-    &.active {
-      color: var(--color-white);
-      background: var(--color-wine);
-    }
-  }
+ 
 
   &__products {
     margin-top: 32px;

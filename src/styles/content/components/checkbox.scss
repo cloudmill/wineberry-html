@@ -1,6 +1,19 @@
 .checkbox {
   $comp: &;
 
+  &--filters {
+    #{$comp}__label {
+      align-items: center;
+    }
+    #{$comp}__box {
+      --size: 24px;
+      margin-right: 8px;
+    }
+    #{$comp}__text {
+      @include fsl(16px);
+    }
+  }
+
   &__label {
     position: relative;
     z-index: 0;
@@ -36,10 +49,12 @@
   }
 
   &__box {
+    --size: 28px;
+
     margin-right: 16px;
 
-    width: 28px;
-    height: 28px;
+    width: var(--size);
+    height: var(--size);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,6 +63,7 @@
     transition: $transition;
     border: 2px solid var(--color-borders);
     border-radius: 4px;
+    background: var(--color-white);
   }
 
   &__svg {
