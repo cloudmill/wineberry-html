@@ -44,16 +44,26 @@ console.log(123);
               },
             }
             break;
-            case 'news':
-              slider_options = {
-                slidesPerView: 'auto',
-                spaceBetween: 12,
-                breakpoints: {
+          case 'news':
+            slider_options = {
+              slidesPerView: 'auto',
+              spaceBetween: 12,
+              breakpoints: {
                 [BREAKPOINT]: {
                   spaceBetween: 0,
                 },
               },
+            }
+            break;
+          case 'about':
+            slider_options = {
+              slidesPerView: 'auto',
+              spaceBetween: 0,
+              pagination: {
+                el: '.about-page__slider-pagination'
               }
+            }
+            break;
         }
 
         const slider_swiper = new Swiper(slider_el[0], slider_options);

@@ -83,6 +83,37 @@ block content
           h2 
             |Располагаем широким ассортиментом алкогольной продукции, регулярно осуществляя поставки по всему Северо-Западному региону.
     section.section.section--big 
+      .section__wrapper
+        .about-page__slider 
+          .about-page__slider-top 
+            .about-page__slider-col
+              .about-page__slider-control 
+                .about-page__buttons
+                  button.about-page__buttons-item.about-page__buttons-left(data-slider-button = '1')
+                    +small-arrow-svg.about-page__buttons-svg
+                  button.about-page__buttons-item(data-slider-button = '2')
+                    +small-arrow-svg.about-page__buttons-svg
+              .about-page__slider-pagination 
+                |pagin
+            .about-page__slider-col
+              .about-page__slider-item
+                .about-page__slider-num 
+                  |8
+                .about-page__slider-label 
+                  |складов
+              .about-page__slider-item
+                .about-page__slider-num 
+                  |5000 #[span.about-page__slider-small м #[span.about-page__slider-span 2]]
+                .about-page__slider-label 
+                  |общая плащадь
+          .about-page__slider-slider 
+            .swiper-container.swiper-container--visible(data-slider-id='about' data-slider-prev='1' data-slider-next='2')
+              .swiper-wrapper 
+                - for (i = 1; i < 5; i++)
+                  .swiper-slide
+                    .about-page__slider-slide
+                      +picture(`about-slider-${i}.jpg`).about-page__slider-image
+    section.section.section--big 
       .qwe 
         |slider 
     section.section.section--big 
