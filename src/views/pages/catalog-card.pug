@@ -15,47 +15,64 @@ block content
             .catalog-card__image 
               +picture('catalog-card.png')
         .catalog-card__col
-          .desktop-only
-            .section__breadcrumbs
-              +breadcrumbs(items=['Вина и винные напитки'] page = 'Ле Мэтр де Винь Совиньон Блан, вино стол.сух.бел., 11%, 0,75л.')
-          h1.catalog-card__title
-            |Ле Мэтр де Винь Совиньон Блан, вино стол.сух.бел., 11%, 0,75л.
-          .catalog-card__code 
-            |Артикул: 124041
-          ul.catalog-card__stats 
-            each item in ['Испания', '0.75 л.', 'Красное', 'Сухое',]
-              li.catalog-card__stats-item 
-                |#{item}
+          .catalog-card__wrapper
+            .desktop-only
+              .section__breadcrumbs
+                +breadcrumbs(items=['Вина и винные напитки'] page = 'Ле Мэтр де Винь Совиньон Блан, вино стол.сух.бел., 11%, 0,75л.')
+            h1.catalog-card__title
+              |Ле Мэтр де Винь Совиньон Блан, вино стол.сух.бел., 11%, 0,75л.
+            .catalog-card__code 
+              |Артикул: 124041
+            ul.catalog-card__stats 
+              each item in ['Испания', '0.75 л.', 'Красное', 'Сухое',]
+                li.catalog-card__stats-item 
+                  |#{item}
+            .catalog-card__inner 
+              .catalog-card__prices 
+                .catalog-card__prices-item 
+                  .catalog-card__label 
+                    |Базовая цена
+                  .catalog-card__prices-price 
+                    |1 990 ₽
+                .catalog-card__prices-item 
+                  .catalog-card__prices-label 
+                    |Персональная цена
+                  .catalog-card__prices-price 
+                    |1 680 ₽
+            .catalog-card__inner
+              .accordion 
+                |123
+            .catalog-card__inner 
+              ul.catalog-card__list
+                - for (i = 0; i < 6; i++)
+                  li.catalog-card__item 
+                    .catalog-card__item-col
+                      .catalog-card__label 
+                        |Страна
+                    .catalog-card__item-col
+                      .catalog-card__item-text 
+                        |Франция
+            .catalog-card__inner 
+              h2.catalog-card__heading 
+                |О производителе
+              p.catalog-card__text
+                |Глобальная популярность Lindeman's была обусловлена позитивной философией доктора Генри Линдмана, который основал  винодельню Lindeman's в Долине Хантер в 1843 году. Вина идеально подходящие для повседневных моментов и для особых случаев, что сделало их невероятно популярными во всем мире. Винодельня Lindeman's обладает безупречной репутацией неизменного качества.
           .catalog-card__inner 
-            .catalog-card__prices 
-              .catalog-card__prices-item 
-                .catalog-card__label 
-                  |Базовая цена
-                .catalog-card__prices-price 
-                  |1 990 ₽
-              .catalog-card__prices-item 
-                .catalog-card__prices-label 
-                  |Персональная цена
-                .catalog-card__prices-price 
-                  |1 680 ₽
-          .catalog-card__inner
-            .accordion 
-              |123
-          .catalog-card__inner 
-            ul.catalog-card__list
-              - for (i = 0; i < 6; i++)
-                li.catalog-card__item 
-                  .catalog-card__item-col
-                    .catalog-card__label 
-                      |Страна
-                  .catalog-card__item-col
-                    .catalog-card__item-text 
-                      |Франция
-          .catalog-card__inner 
-            h2.catalog-card__heading 
-              |О производителе
-            p.catalog-card__text
-              |Глобальная популярность Lindeman's была обусловлена позитивной философией доктора Генри Линдмана, который основал  винодельню Lindeman's в Долине Хантер в 1843 году. Вина идеально подходящие для повседневных моментов и для особых случаев, что сделало их невероятно популярными во всем мире. Винодельня Lindeman's обладает безупречной репутацией неизменного качества.
+            .catalog-card__panel
+              .catalog-card__panel-col
+                .counter.counter--big
+                  .counter__item
+                    +minus-svg.counter__svg
+                  .counter__count
+                    |4
+                  .counter__item
+                    +plus-svg.counter__svg
+              .catalog-card__panel-col
+                button.button.button--icon.button--icon--big
+                  .button__icon 
+                    +cart-button-svg.button__svg
+                  .button__text 
+                    |Добавить в корзину
     section.section.section--big 
       .container 
         .catalog-card__slider 
