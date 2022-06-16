@@ -233,42 +233,5 @@
       width: auto;
     }
   }
-  
-  &__buttons {
-    display: flex;
-  }
-  &__buttons-item {
-    --size: 60px;
-
-    width: var(--size);
-    height: var(--size);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-    background: var(--color-light-gray);
-    border: none;
-    cursor: pointer;
-
-    &:not(:first-child) {
-      margin-left: 4px;
-    }
-  }
-  &__buttons-svg {
-    --size: 24px;
-
-    width: var(--size);
-    height: var(--size);
-
-    path {
-      stroke: var(--color-black);
-    }
-  }
-  &__buttons-left {
-    svg {
-      transform: rotate(-180deg);
-    }
-  }
 }
 

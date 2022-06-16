@@ -64,7 +64,15 @@ console.log(123);
               }
             }
             break;
+          case 10:
+            slider_options = {
+              slidesPerView: 'auto',
+              spaceBetween: 0,
+            }
+            break;
         }
+
+        console.log(slider_options);
 
         const slider_swiper = new Swiper(slider_el[0], slider_options);
 
