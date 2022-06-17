@@ -1,0 +1,24 @@
+mixin accordion 
+  .accordion(data-accordion='')
+    .accordion__head(data-accordion-button='')
+      .accordion__row 
+        .accordion__col
+          .accordion__icon 
+            +accordion-svg.accordion__svg
+          .accordion__title 
+            |Товар участвует в акциях
+        .accordion__col
+          .accordion__arrow 
+            +small-arrow-svg.accordion__arrow-svg
+    .accordion__body(data-accordion-dropdown='')
+      ul.accordion__list 
+        - for (i = 0; i < 2; i++)
+          li.accordion__item 
+            .accordion__container 
+              .accordion__label 
+                |9 мая — 1 июля
+              p.accordion__text 
+                |При единовременной закупке от 5 литров акционного ассортимента,  ТТ получает скидку в накладной - 15% *Ассортимент и размер скидки в руб./бут.
+              .accordion__btn 
+                +outline-button.button--discount
+                  |Подробнее

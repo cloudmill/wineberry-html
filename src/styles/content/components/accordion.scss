@@ -1,0 +1,160 @@
+.accordion {
+  $comp: &;
+
+  border: 1px solid var(--color-borders);
+  transition: $transition;
+  border-radius: 12px;
+  @media (max-width: ($breakpoint - 1px)) {
+    border-radius: 8px;
+  }
+
+  &.active {
+    background: var(--color-light-gray);
+    border-color: var(--color-pink);
+
+    #{$comp}__arrow-svg {
+      transform: rotate(180deg);
+
+      path {
+        stroke: var(--color-wine);
+      }
+    }
+  }
+
+  &__head {
+    padding: 21px 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 12px 16px;
+    }
+
+    cursor: pointer;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__col {
+
+    &:nth-child(1) {
+      margin-right: 30px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-right: 10px;
+      }
+
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    margin-right: 16px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-right: 8px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__svg {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(20px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px);
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: rotate(90deg);
+  }
+  &__arrow-svg {
+    width: 32px;
+    height: 32px;
+
+    transition: $transition;
+    path {
+      transition: $transition;
+    }
+  }
+
+  &__body {
+    padding: 0 24px 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0 16px 16px;
+    }
+
+    display: none;
+  }
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-top: 12px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__container {
+    padding: 24px 24px 24px 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 20px 16px 20px 20px;
+    }
+
+    background: var(--color-white);
+    border-radius: 12px;
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 8px;
+    }
+  }
+
+  &__label {
+    padding: 6px 12px;
+    margin-bottom: 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 16px;
+    }
+
+    display: inline-block;
+
+    background: var(--color-light-gray);
+    border-radius: 50px;
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(14px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
+  }
+
+  &__text {
+    margin-bottom: 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 16px;
+    }
+
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(18px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+    }
+  }
+}

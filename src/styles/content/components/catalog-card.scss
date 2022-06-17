@@ -12,23 +12,28 @@
     flex-shrink: 0;
 
     &:nth-child(1) {
-      padding: 0 60px;
+      padding: 0 60px 59px;
       width: calc(#{$col-width-d} * 6);
       @media (max-width: ($breakpoint - 1px)) {
         padding: 0 20px;
         width: auto;
+        border-bottom: none;
       }
       border-bottom: 1px solid var(--color-borders);
     }
 
     &:nth-child(2) {
+      position: relative;
+      z-index: 0;
       padding: 212px 0 0;
-      width: calc(#{$col-width-d} * 6);
       @media (max-width: ($breakpoint - 1px)) {
         padding: 0;
+        margin-top: 20px;
+        
         width: auto;
         border-left: none;
       }
+      width: calc(#{$col-width-d} * 6);
       border-left: 1px solid var(--color-borders);
     }
   }
@@ -46,6 +51,7 @@
       padding: 0 26px 24px;
     }
     position: sticky;
+    position:-webkit-sticky;
     top: 0;
     z-index: 0;
     @media (max-width: ($breakpoint - 1px)) {
@@ -88,6 +94,11 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 8px;
     }
+
+    @include fsl(36px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(18px);
+    }
   }
 
   &__code {
@@ -105,7 +116,7 @@
   &__stats {
     margin: 40px 0;
     @media (max-width: ($breakpoint - 1px)) {
-      margin: 0 20px;
+      margin: 20px 0;
     }
 
     display: flex;
@@ -255,15 +266,42 @@
     height: 100%;
   }
 
+  &__layout {
+    @include cover;
+    z-index: 1;
+
+    display: flex;
+    align-items: flex-end;
+
+    pointer-events: none;
+  }
+
   &__panel {
     padding: 20px 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 20px;
+    }
     margin-left: -1px;
 
     display: flex;
+    width: 100%;
 
     border: 1px solid var(--color-borders);
     box-shadow: 0px -9px 20px rgba(0, 0, 0, 0.04);
     background: var(--color-white);
+
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &.sticky {
+      position: sticky;
+      position:-webkit-sticky;
+      bottom: 0;
+
+      pointer-events: all;
+    }
   }
   &__panel-col {
     &:nth-child(1) {
@@ -277,7 +315,13 @@
       margin-left: 20px;
       @media (max-width: ($breakpoint - 1px)) {
         margin-left: 8px;
+
+        width: 100%;
       }
     }
+  }
+
+  &__breadcrumbs {
+    margin-bottom: 20px;
   }
 }

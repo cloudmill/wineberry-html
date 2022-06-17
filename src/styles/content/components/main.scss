@@ -7,4 +7,10 @@
   &--default {
     margin-bottom: 0;
   }
+
+  &--small {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 40px;
+    }
+  }
 }
