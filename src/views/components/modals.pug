@@ -97,3 +97,49 @@ mixin response-modal
         |Вы зарегистрировались
       .response-modal__text 
         |На указанную при регистрации почту придет ссылка для подтверждения. Пожалуйста, пройдите по ней.
+
+mixin product-modal 
+  .modal.product-modal 
+    .product-modal__container
+      h2.modal__title 
+        |Товар добавлен в корзину
+      .product-modal__product
+        .order-card.order-card--small
+          .product-modal__row
+            .product-modal__col
+              .order-card__img 
+                +picture('wine.jpg').order-card__picture
+            .product-modal__col
+              .order-card__content 
+                .order-card__code 
+                  |Артикул: 124041
+                .order-card__title 
+                  |Ле Мэтр де Винь Совиньон Блан, вино стол.сух.бел., 11%, 0,75л.
+                ul.order-card__stats
+                  each item in ['Франция', '0.75 л.', 'Белое', 'Сухое'] 
+                    li.order-card__stats-item 
+                      |#{item}
+                .product-modal__prices 
+                  .order-card__prices 
+                    .order-card__prices-item 
+                      .order-card__label 
+                        |Базовая цена
+                      .order-card__price 
+                        |1 990 ₽ 
+                    .order-card__prices-item 
+                      .order-card__label 
+                        |Персональная цена
+                      .order-card__price 
+                        |1 680 ₽ 
+                    .order-card__prices-item 
+                      .order-card__label 
+                        |Количество
+                      .order-card__price 
+                        |32
+      .product-modal__buttons 
+        .product-modal__item 
+          +outline-button.button--auto.button--wide
+            |Вернуться в каталог
+        .product-modal__item 
+          +submit-button 
+            |Оформить заказ

@@ -1,8 +1,41 @@
 .order-card {
+  $comp: &;
 
   background: var(--color-white);
   border-radius: 12px;
   
+  &--small {
+    #{$comp}__img {
+      --size: 68px;
+      @media (max-width: ($breakpoint - 1px)) {
+        --size: 58px;
+      }
+    }
+
+    #{$comp}__code {
+      margin-bottom: 8px;
+    }
+
+    #{$comp}__title {
+      margin-bottom: 8px;
+
+      width: 100%;
+    }
+
+    #{$comp}__prices-item {
+      padding-right: 0;
+
+      width: auto;
+
+      &:not(:first-child) {
+        margin-left: 40px;
+        @media (max-width: ($breakpoint - 1px)) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
   &__container {
     padding: 20px 20px 32px;
     @media (max-width: ($breakpoint - 1px)) {
@@ -44,15 +77,27 @@
   }
 
   &__img {
+    --size: 120px;
     @media (max-width: ($breakpoint - 1px)) {
+      --size: 58px;
+    }
+
+    padding: 5px 10px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 2px 10px;
       margin-right: 8px;
 
-      // width: calc((#{$col-width-d} + (#{$col-width-d} / 2)) - 8px);
-      width: 58px;
       flex-shrink: 0;
     }
+    width: var(--size);
+    height: var(--size);
     display: flex;
     align-items: center;
+    justify-content: center;
+  }
+
+  &__picture {
+    height: 100%;
   }
 
   &__content {

@@ -47,10 +47,6 @@
     }
   }
 
-  &--wide {
-    width: 100%;
-  }
-
   &--download {
     padding: 19px 24px;
     @media (max-width: ($breakpoint - 1px)) {
@@ -87,6 +83,10 @@
       text-align: center;
     }
     width: auto;
+  }
+
+  &--wide {
+    width: 100%;
   }
 
   &--mid {
