@@ -314,8 +314,8 @@
 													<div class="order-card__col">
 														<div class="order-card__info">
 															<div class="order-card__img">
-																<picture class="picture">
-																	<source type="image/webp" srcset="assets/images/product.webp, assets/images/product_2x.webp 2x" /><img class="picture__img" src="assets/images/product.jpg" srcset="assets/images/product_2x.jpg 2x" />
+																<picture class="picture order-card__picture">
+																	<source type="image/webp" srcset="assets/images/wine.webp, assets/images/wine_2x.webp 2x" /><img class="picture__img" src="assets/images/wine.jpg" srcset="assets/images/wine_2x.jpg 2x" />
 																</picture>
 															</div>
 															<div class="order-card__content">
@@ -365,8 +365,8 @@
 													<div class="order-card__col">
 														<div class="order-card__info">
 															<div class="order-card__img">
-																<picture class="picture">
-																	<source type="image/webp" srcset="assets/images/product.webp, assets/images/product_2x.webp 2x" /><img class="picture__img" src="assets/images/product.jpg" srcset="assets/images/product_2x.jpg 2x" />
+																<picture class="picture order-card__picture">
+																	<source type="image/webp" srcset="assets/images/wine.webp, assets/images/wine_2x.webp 2x" /><img class="picture__img" src="assets/images/wine.jpg" srcset="assets/images/wine_2x.jpg 2x" />
 																</picture>
 															</div>
 															<div class="order-card__content">
@@ -416,8 +416,8 @@
 													<div class="order-card__col">
 														<div class="order-card__info">
 															<div class="order-card__img">
-																<picture class="picture">
-																	<source type="image/webp" srcset="assets/images/product.webp, assets/images/product_2x.webp 2x" /><img class="picture__img" src="assets/images/product.jpg" srcset="assets/images/product_2x.jpg 2x" />
+																<picture class="picture order-card__picture">
+																	<source type="image/webp" srcset="assets/images/wine.webp, assets/images/wine_2x.webp 2x" /><img class="picture__img" src="assets/images/wine.jpg" srcset="assets/images/wine_2x.jpg 2x" />
 																</picture>
 															</div>
 															<div class="order-card__content">
@@ -467,8 +467,8 @@
 													<div class="order-card__col">
 														<div class="order-card__info">
 															<div class="order-card__img">
-																<picture class="picture">
-																	<source type="image/webp" srcset="assets/images/product.webp, assets/images/product_2x.webp 2x" /><img class="picture__img" src="assets/images/product.jpg" srcset="assets/images/product_2x.jpg 2x" />
+																<picture class="picture order-card__picture">
+																	<source type="image/webp" srcset="assets/images/wine.webp, assets/images/wine_2x.webp 2x" /><img class="picture__img" src="assets/images/wine.jpg" srcset="assets/images/wine_2x.jpg 2x" />
 																</picture>
 															</div>
 															<div class="order-card__content">
@@ -543,6 +543,42 @@
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+				<div class="search-modal" data-fancy-modal="search">
+					<div class="search-modal__container">
+						<div class="search-modal__row">
+							<div class="search-modal__col">
+								<div class="search-modal__icon"><svg class="search-modal__svg" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10 21.531C10.0001 16.0302 13.8859 11.2955 19.2811 10.2226C24.6762 9.14966 30.0779 12.0373 32.1826 17.1195C34.2873 22.2018 32.5088 28.063 27.9348 31.1186C23.3607 34.1742 17.2651 33.5732 13.376 29.683C11.2143 27.5208 9.99997 24.5885 10 21.531Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+										<path d="M33.0581 33.0591L38.0001 38.0011" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+									</svg></div><input class="search-modal__input" placeholder="Что вы хотите найти?" />
+							</div>
+							<div class="search-modal__col">
+								<div class="search-modal__item"><button class="button button--huge button--big">Поиск</button></div>
+								<div class="search-modal__item"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal" data-fancy-modal="ask">
+					<div class="modal__container">
+						<h2 class="modal__title">Задать вопрос</h2>
+						<form class="form" action="/">
+							<div class="form__item"><input class="form__input" placeholder="Имя*" /></div>
+							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" /></div>
+							<div class="form__item"><input class="form__input" type="phone" placeholder="Телефон*" /></div>
+							<div class="form__item"><textarea class="form__textarea" placeholder="Сообщение"></textarea></div>
+							<div class="form__inner">
+								<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+										<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg></div>
+										<div class="checkbox__text">Согласен на обработку персональных данных в соответствии с <a class="checkbox__link" href="#">политикой конфиденциальности</a></div>
+									</label></div>
+							</div>
+							<div class="form__inner"><button class="button">Отправить</button></div>
+						</form>
 					</div>
 				</div>
 			</main>

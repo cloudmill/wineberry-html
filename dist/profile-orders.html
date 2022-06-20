@@ -42,7 +42,7 @@
 											</ul>
 										</nav>
 									</div>
-									<div class="header__col"><a class="ask" href="#">
+									<div class="header__col"><a class="ask" href="#" data-fancy-button="ask">
 											<div class="ask__icon"><svg class="ask__svg" width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5509 6.66663H20.4509C23.1676 6.68717 25.3535 8.90587 25.3335 11.6226V17.64C25.3431 18.9448 24.8339 20.2001 23.918 21.1295C23.0021 22.0589 21.7544 22.5864 20.4495 22.596H11.5509L6.66688 25.3333V11.6226C6.6573 10.3178 7.16649 9.06252 8.08242 8.13308C8.99836 7.20364 10.246 6.67614 11.5509 6.66663Z" stroke="#A71E5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 												</svg></div>
@@ -82,7 +82,7 @@
 									</div>
 									<div class="header__col">
 										<div class="header__buttons">
-											<div class="header__item"><svg class="header__svg" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<div class="header__item" data-fancy-button="search"><svg class="header__svg" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M10 21.531C10.0001 16.0302 13.8859 11.2955 19.2811 10.2226C24.6762 9.14966 30.0779 12.0373 32.1826 17.1195C34.2873 22.2018 32.5088 28.063 27.9348 31.1186C23.3607 34.1742 17.2651 33.5732 13.376 29.683C11.2143 27.5208 9.99997 24.5885 10 21.531Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 													<path d="M33.0581 33.0591L38.0001 38.0011" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 												</svg></div>
@@ -651,6 +651,42 @@
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+				<div class="search-modal" data-fancy-modal="search">
+					<div class="search-modal__container">
+						<div class="search-modal__row">
+							<div class="search-modal__col">
+								<div class="search-modal__icon"><svg class="search-modal__svg" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10 21.531C10.0001 16.0302 13.8859 11.2955 19.2811 10.2226C24.6762 9.14966 30.0779 12.0373 32.1826 17.1195C34.2873 22.2018 32.5088 28.063 27.9348 31.1186C23.3607 34.1742 17.2651 33.5732 13.376 29.683C11.2143 27.5208 9.99997 24.5885 10 21.531Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+										<path d="M33.0581 33.0591L38.0001 38.0011" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+									</svg></div><input class="search-modal__input" placeholder="Что вы хотите найти?" />
+							</div>
+							<div class="search-modal__col">
+								<div class="search-modal__item"><button class="button button--huge button--big">Поиск</button></div>
+								<div class="search-modal__item"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal" data-fancy-modal="ask">
+					<div class="modal__container">
+						<h2 class="modal__title">Задать вопрос</h2>
+						<form class="form" action="/">
+							<div class="form__item"><input class="form__input" placeholder="Имя*" /></div>
+							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" /></div>
+							<div class="form__item"><input class="form__input" type="phone" placeholder="Телефон*" /></div>
+							<div class="form__item"><textarea class="form__textarea" placeholder="Сообщение"></textarea></div>
+							<div class="form__inner">
+								<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+										<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg></div>
+										<div class="checkbox__text">Согласен на обработку персональных данных в соответствии с <a class="checkbox__link" href="#">политикой конфиденциальности</a></div>
+									</label></div>
+							</div>
+							<div class="form__inner"><button class="button">Отправить</button></div>
+						</form>
 					</div>
 				</div>
 			</main>
