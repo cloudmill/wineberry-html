@@ -132,6 +132,10 @@
     }
   }
 
+  &--big {
+    padding: 21px 0;
+  }
+
   &--producer {
     padding: 13px 19px;
     @media (max-width: ($breakpoint - 1px)) {

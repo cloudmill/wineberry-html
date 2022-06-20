@@ -7,7 +7,14 @@
   right: 0;
   z-index: 999;
 
+  width: 100vw;
+
   background-color: var(--color-white);
+  transition: $transition;
+
+  &--up {
+    transform: translateY(-56px);
+  }
 
   &__inner {
     padding: 24px 0;

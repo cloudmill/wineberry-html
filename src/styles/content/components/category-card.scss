@@ -1,0 +1,123 @@
+.category-card {
+  $comp: &;
+  position: relative;
+  z-index: 0;
+
+  overflow: hidden;
+
+  &:hover {
+    #{$comp}__hover {
+      transform: none;
+    }
+    #{$comp}__frame {
+      transform: none;
+    }
+  }
+
+  &__container {
+    padding: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 20px;
+    }
+  }
+  
+  &__img {
+    position: relative;
+    z-index: 0;
+    padding: 40px 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 15px 0;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--color-gray);
+    overflow: hidden;
+    border-radius: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 16px;
+    }
+  }
+  &__img-icon {
+    --pad: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      --pad: 12px;
+    }
+    position: absolute;
+    top: var(--pad);
+    right: var(--pad);
+    z-index: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__img-svg {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__picture {
+    img {
+      mix-blend-mode: darken;
+    }
+  }
+
+  &__title {
+    margin-top: 16px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 8px;
+    }
+
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(28px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px);
+    }
+  }
+
+  &__hover {
+    @include cover;
+
+    transform: translateY(100%);
+    overflow: hidden;
+    transition: $transition;
+
+    #{$comp}__title {
+      color: var(--color-wine)
+    }
+  }
+
+  &__frame {
+    transform: translateY(-100%);
+    transition: $transition;
+    background: var(--color-light-gray);
+  }
+
+  &__bg {
+    @include cover;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+}

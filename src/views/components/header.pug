@@ -27,7 +27,7 @@ mixin header
                         a.header__nav-link(href="#")
                           |#{item}
               .header__col
-                a.ask(href="#") 
+                a.ask(href="#" data-fancy-button='ask') 
                   .ask__icon 
                     +message-svg.ask__svg 
                   .ask__text 
@@ -45,7 +45,7 @@ mixin header
                           |#{item.text}
               .header__col
                 .header__buttons 
-                  .header__item 
+                  .header__item(data-fancy-button='search')
                     +search-svg.header__svg
                   .header__item.header__cart
                     +cart-svg.header__svg

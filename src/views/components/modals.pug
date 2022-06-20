@@ -143,3 +143,40 @@ mixin product-modal
         .product-modal__item 
           +submit-button 
             |Оформить заказ
+
+mixin ask-modal
+  -
+    var ddata = [
+      {type: 'text', placeholder: 'Имя*'},
+      {type: 'email', placeholder: 'E-mail*'},
+      {type: 'phone', placeholder: 'Телефон*'},
+    ]
+  .modal(data-fancy-modal='ask')
+    .modal__container 
+      h2.modal__title 
+        |Задать вопрос
+      form.form(action="/")
+        each item in ddata
+          .form__item 
+            +input(type = item.type placeholder = item.placeholder) 
+        .form__item 
+          +textarea(placeholder = 'Сообщение') 
+        .form__inner 
+          +checkbox 
+        .form__inner 
+          +submit-button 
+            |Отправить
+
+mixin search-modal 
+  .search-modal(data-fancy-modal='search')
+    .search-modal__container 
+      .search-modal__row 
+        .search-modal__col
+          .search-modal__icon 
+            +search-svg.search-modal__svg
+          input.search-modal__input(type="text" placeholder='Что вы хотите найти?')
+        .search-modal__col
+          .search-modal__item
+            +submit-button.button--huge.button--big 
+              |Поиск
+          .search-modal__item
