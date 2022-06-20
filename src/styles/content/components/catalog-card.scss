@@ -68,6 +68,7 @@
     
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   &__bg-img {
     overflow: hidden;
@@ -323,5 +324,62 @@
 
   &__breadcrumbs {
     margin-bottom: 20px;
+  }
+
+  &__auth {
+    padding: 21px 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 16px;
+    }
+
+    background: var(--color-light-gray);
+    border-radius: 12px;
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 8px;
+    }
+  }
+  &__auth-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__auth-col {
+    &:nth-child(1) {
+      display: flex;
+    }
+    &:nth-child(2) {
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
+    }
+  }
+  &__auth-icon {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  &__auth-svg {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  &__auth-content {
+    margin-left: 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 22px;
+    }
+  }
+  &__auth-text {
+    letter-spacing: var(--letter-space);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 120%);
+    }
+  }
+  &__auth-btn {
+    display: none;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 12px;
+      display: block;
+    }
   }
 }

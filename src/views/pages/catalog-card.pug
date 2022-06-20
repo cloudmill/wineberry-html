@@ -3,6 +3,7 @@ extends ../layouts/master
 include ../components/breadcrumbs
 include ../components/product-card
 include ../components/accordion
+include ../components/counter
 
 
 block variables
@@ -25,13 +26,7 @@ block content
           .catalog-card__layout 
             .catalog-card__panel.sticky
               .catalog-card__panel-col
-                .counter.counter--big
-                  .counter__item
-                    +minus-svg.counter__svg
-                  .counter__count
-                    |4
-                  .counter__item
-                    +plus-svg.counter__svg
+                +counter.counter--big
               .catalog-card__panel-col
                 button.button.button--icon.button--icon--big
                   .button__icon 
@@ -62,6 +57,21 @@ block content
                     |Персональная цена
                   .catalog-card__prices-price 
                     |1 680 ₽
+            .catalog-card__inner 
+              .catalog-card__auth
+                .catalog-card__auth-row 
+                  .catalog-card__auth-col 
+                    .catalog-card__auth-icon 
+                      +auth-svg.catalog-card__auth-svg
+                    .catalog-card__auth-content
+                      p.catalog-card__auth-text 
+                        |Цена доступна только #[br] для авторизованных пользователей
+                      .catalog-card__auth-btn
+                        +outline-button.button--catalog 
+                          |Авторизоваться
+                  .catalog-card__auth-col
+                    +outline-button.button--catalog 
+                      |Авторизоваться
             .catalog-card__inner
               +accordion
             .catalog-card__inner 
@@ -82,13 +92,7 @@ block content
           .catalog-card__inner 
             .catalog-card__panel.hidden
               .catalog-card__panel-col
-                .counter.counter--big
-                  .counter__item
-                    +minus-svg.counter__svg
-                  .counter__count
-                    |4
-                  .counter__item
-                    +plus-svg.counter__svg
+                +counter.counter--big
               .catalog-card__panel-col
                 button.button.button--icon.button--icon--big
                   .button__icon 

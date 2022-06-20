@@ -2,35 +2,86 @@ extends ../layouts/master
 
 include ../components/breadcrumbs
 include ../components/order-panel
+include ../components/counter
 
 block variables
   - var mainClass = "main--default"
 
 block content
   -
-    var ddata = [
-      {
-        heading: 'Контактные данные',
-        inputs: [
-          {type: 'text', placeholder: 'Имя*'},
-          {type: 'phone', placeholder: 'Телефон*'},
-          {type: 'email', placeholder: 'E-mail*'},
-        ]
-      },
-      {
-        heading: 'Адрес доставки',
-        inputs: [
-          {type: 'text', placeholder: 'Город*'},
-          {type: 'text', placeholder: 'Адрес*'},
-        ]
-      },
-    ]
+    var ddata = {
+      labels: ['Позиция', 'Базовая цена', 'Персональная цена', 'Количество', ]
+    }
   .cart-page.section.section--default
-    .cart-page__row 
-      .cart-page__col
-        .section__breadcrumbs 
-          +breadcrumbs(page = 'Корзина')
-        h1 
-          |Корзина
-        .section__block 
-          
+    section.cart-page__section
+      .cart-page__section-row 
+        .cart-page__section-col
+          .cart-page__section-inner
+            .container
+              .section__breadcrumbs
+                +breadcrumbs(page = 'Новости')
+              h1
+                |Новости
+              .section
+                .cart-page__top 
+                  .cart-page__row
+                    each item in ddata.labels 
+                      .cart-page__col
+                        .cart-page__label 
+                          |#{item}
+                ul.cart-page__list
+                  - for (i = 0; i < 3; i++)
+                    li.cart-page__list-item 
+                      .order-card.order-card--cart
+                        .cart-page__row 
+                          .cart-page__col.cart-page__container 
+                            .order-card__info 
+                              .order-card__img 
+                                +picture('wine.jpg').order-card__picture
+                              .order-card__content 
+                                .order-card__code 
+                                  |Артикул: 124041
+                                .order-card__title 
+                                  |Ле Мэтр де Винь Совиньон Блан, вино стол.сух.бел., 11%, 0,75л.
+                                ul.order-card__stats
+                                  each item in ['Франция', '0.75 л.', 'Белое', 'Сухое'] 
+                                    li.order-card__stats-item 
+                                      |#{item}
+                          .cart-page__col.cart-page__container 
+                            .desktop-only
+                              .order-card__price 
+                                |1 990 ₽ 
+                            .mobile-only
+                              .order-card__prices 
+                                .order-card__prices-item 
+                                  .order-card__label 
+                                    |Базовая цена
+                                  .order-card__price 
+                                    |1 990 ₽ 
+                                .order-card__prices-item 
+                                  .order-card__label 
+                                    |Персональная цена
+                                  .order-card__price 
+                                    |1 680 ₽ 
+                          .cart-page__col.cart-page__container 
+                            .order-card__price 
+                              |1 680 ₽ 
+                          .cart-page__col.cart-page__container 
+                            .cart-page__counter 
+                              +counter
+                            .cart-page__icon 
+                              +trash-svg.cart-page__svg
+        .cart-page__section-col
+          .cart-page__section-inner
+            .container
+              .cart-page__section-hidden
+                .section__breadcrumbs
+                  +breadcrumbs(page = 'Новости')
+                h1
+                  |Новости
+                .section
+                  .cart-page__top 
+                    .cart-page__label 
+                      |qwe
+              .cart-page__panel
+                +order-panel

@@ -1,3 +1,5 @@
+include ./counter
+
 mixin product-card 
   .product-card(class=attributes.class)
     .product-card__image 
@@ -36,13 +38,7 @@ mixin product-card
         if (attributes.bot)
           .product-card__bot
             .product-card__bot-col
-              .counter
-                .counter__item
-                  +minus-svg.counter__svg
-                .counter__count
-                  |1
-                .counter__item
-                  +plus-svg.counter__svg
+              +counter
             .product-card__bot-col
               .product-card__button 
                 +cart-svg.product-card__svg
