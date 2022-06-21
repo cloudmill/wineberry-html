@@ -18,7 +18,7 @@ button::-moz-focus-inner {border: 0;}
 
 html {
   font-size: getVw($fs, 1920px / 100);
-  @each $breakpoint in (1280px,1024px,768px,576px,414px,375px,320px) {
+  @each $breakpoint in (1279px,1024px,768px,576px,414px,375px,320px) {
     @media (max-width: #{$breakpoint}) {
       font-size: getVw($fs, $breakpoint / 100);
     }

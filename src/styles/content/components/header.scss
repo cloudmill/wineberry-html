@@ -17,9 +17,9 @@
   }
 
   &__inner {
-    padding: 24px 0;
+    padding: getRem(24px) 0;
     @media (max-width: ($breakpoint - 1px)) {
-      padding: 8px 0;
+      padding: getRem(8px) 0;
     }
     
     border-bottom: 1px solid var(--color-borders);
@@ -39,7 +39,7 @@
   }
 
   &__top {
-    margin-bottom: 24px;
+    margin-bottom: getRem(24px);
   }
 
   &__row {
@@ -55,8 +55,8 @@
   }
   &__logo-svg {
     @media (max-width: ($breakpoint - 1px)) {
-      width: 104px;
-      height: 16px;
+      width: getRem(104px);
+      height: getRem(16px);
     }
   }
 
@@ -68,13 +68,13 @@
     display: flex;
 
     &:not(:first-child) {
-      margin-left: 40px;
+      margin-left: getRem(40px);
     }
   }
   &__nav-link {
     letter-spacing: var(--letter-space);
     color: var(--color-lilac);
-    @include fsl(18px, 120%);
+    @include fsl(18px, 120%, true);
   }
 
   &__links {
@@ -84,7 +84,7 @@
     display: flex;
 
     &:not(:first-child) {
-      margin-left: 44px;
+      margin-left: getRem(44px);
     }
   }
   &__links-link {
@@ -94,15 +94,15 @@
   &__links-img {
     margin-right: 4px;
 
-    width: 24px;
-    height: 24px;
+    width: getRem(24px);
+    height: getRem(24px);
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   &__links-text {
-    @include fsl(22px, 120%);
+    @include fsl(22px, 120%, true);
     letter-spacing: var(--letter-space);
   }
 
@@ -118,9 +118,9 @@
     cursor: pointer;
 
     &:not(:first-child) {
-      margin-left: 32px;
+      margin-left: getRem(32px);
       @media (max-width: ($breakpoint - 1px)) {
-        margin-left: 8px;
+        margin-left: getRem(8px);
       }
     }
   }
@@ -150,15 +150,15 @@
     background: var(--color-wine);
     color: var(--color-white);
     letter-spacing: var(--letter-space);
-    @include fsl(12px, 120%);
+    @include fsl(12px, 120%, true);
   }
 
   &__svg {
+    width: getRem(48px);
+    height: getRem(48px);
     @media (max-width: ($breakpoint - 1px)) {
-      --size: 32px;
-      
-      width: var(--size);
-      height: var(--size);
+      width: getRem(32px);
+      height: getRem(32px);
     }
   }
 
@@ -188,6 +188,4 @@
     font-weight: 700;
     letter-spacing: var(--letter-space);
   }
-
-  
 }

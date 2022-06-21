@@ -90,6 +90,22 @@
     width: 100%;
   }
 
+  &__image {
+    animation: upDown 2s $transition-timing-function infinite;
+
+    @keyframes upDown {
+      0% {
+        transform: translateY(-10px);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+  }
+
   &__title {
     margin-bottom: 16px;
     @media (max-width: ($breakpoint - 1px)) {

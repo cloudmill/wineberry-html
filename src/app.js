@@ -5,3 +5,4 @@ import "./scripts/range-slider";
 import "./scripts/accordion";
 import "./scripts/header";
 import "./scripts/fancybox";
+import "./scripts/loader";

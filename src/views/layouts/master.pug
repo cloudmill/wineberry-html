@@ -25,8 +25,10 @@ html(lang='ru')
     title= data.title
     meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
   
-  body.body(class=bodyClass)
+  body.body.body--unvisible(class=bodyClass)
     
+    block loader
+
     .wrapper
       block header
         +header

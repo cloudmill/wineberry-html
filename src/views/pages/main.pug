@@ -3,9 +3,13 @@ extends ../layouts/master
 
 include ../components/category-card
 include ../components/order-panel
+include ../components/loader
 
 block variables
   - var mainClass = "main--default"
+
+block loader 
+  +loader
 
 block content
   .main-page
@@ -18,9 +22,9 @@ block content
                 |Главный дистрибьютор алкогольной продукции #[br] на территории СЗФО*
             .main-page__intro-video
               .desktop-only
-                video.main-page__intro-player(src="assets/videos/wineberry_video.mp4" poster='assets/images/poster.jpg' autoplay loop muted playsinline)
+                video.main-page__intro-player(src="assets/videos/wineberry_video.mp4" poster='assets/images/poster.jpg' data-video-desktop='' loop muted playsinline)
               .mobile-only
-                video.main-page__intro-player(src="assets/videos/wineberry_video_mobile.mp4" poster='assets/images/poster.jpg' autoplay loop muted playsinline)
+                video.main-page__intro-player(src="assets/videos/wineberry_video_mobile.mp4" poster='assets/images/poster.jpg' data-video-mobile='' loop muted playsinline)
               .main-page__intro-icon 
                 +main-icon-svg.main-page__intro-svg
               .main-page__intro-wrapper

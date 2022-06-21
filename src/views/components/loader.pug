@@ -1,0 +1,11 @@
+mixin loader 
+  .loader 
+    .loader__logo 
+      +logo-svg.loader__logo-svg 
+    .loader__container 
+      +glass-svg.loader__svg 
+      .loader__count(data-loader-count='')
+        |0%
+      .loader__wrapper
+        .loader__frame(data-loader-progress='')
+          +full-glass-svg.loader__frame-svg

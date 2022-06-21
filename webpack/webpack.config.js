@@ -11,11 +11,12 @@ const utils = require("./utils");
 
 module.exports = (env) => {
   return {
+    entry: ['babel-polyfill', './app.js'],
     context: path.resolve(__dirname, "../src"),
 
-    entry: {
-      app: "./app.js",
-    },
+    // entry: {
+    //   app: "./app.js",
+    // },
 
     output: {
       path: path.resolve(__dirname, "../dist"),

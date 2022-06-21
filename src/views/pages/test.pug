@@ -2,6 +2,7 @@ extends ../layouts/master
 
 
 include ../components/order-panel
+include ../components/loader
 
 block variables
   
@@ -11,6 +12,4 @@ block header
 block footer
 
 block content
-  .test
-    p.main-page__card-text 
-      |100% легальность продукции и документооборот в соответствии с требованиями действующего законодательства
+  +loader
