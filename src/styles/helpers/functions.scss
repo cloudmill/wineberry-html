@@ -1,0 +1,7 @@
+@function getVw($px, $width) {
+  @return $px / $width * 1vw;
+}
+
+@function getRem($px) {
+  @return unquote('#{$px / $fs}rem');
+}

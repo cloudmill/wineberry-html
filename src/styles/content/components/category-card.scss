@@ -3,6 +3,9 @@
   position: relative;
   z-index: 0;
 
+  height: 100%;
+  display: block;
+
   overflow: hidden;
 
   &:hover {
@@ -15,23 +18,27 @@
   }
 
   &__container {
-    padding: 60px;
+    padding: getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {
-      padding: 20px;
+      padding: getRem(20px);
     }
   }
   
   &__img {
     position: relative;
     z-index: 0;
-    padding: 40px 0;
+    padding: getRem(40px) 0;
     @media (max-width: ($breakpoint - 1px)) {
-      padding: 15px 0;
+      padding: getRem(15px) 0;
     }
 
     display: flex;
     align-items: center;
     justify-content: center;
+    height: getRem(480px);
+    @media (max-width: ($breakpoint - 1px)) {
+      height: getRem(198px);
+    }
 
     background: var(--color-gray);
     overflow: hidden;
@@ -41,13 +48,13 @@
     }
   }
   &__img-icon {
-    --pad: 32px;
-    @media (max-width: ($breakpoint - 1px)) {
-      --pad: 12px;
-    }
     position: absolute;
-    top: var(--pad);
-    right: var(--pad);
+    top: getRem(32px);
+    right: getRem(32px);
+    @media (max-width: ($breakpoint - 1px)) {
+      top: getRem(12px);
+      right: getRem(12px);
+    }
     z-index: 0;
 
     display: flex;
@@ -56,28 +63,29 @@
   }
   &__img-svg {
     @media (max-width: ($breakpoint - 1px)) {
-      width: 12px;
-      height: 12px;
+      width: getRem(12px);
+      height: getRem(12px);
     }
   }
 
   &__picture {
+    height: 100%;
     img {
       mix-blend-mode: darken;
     }
   }
 
   &__title {
-    margin-top: 16px;
+    margin-top: getRem(16px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 8px;
     }
 
     font-weight: 700;
     letter-spacing: var(--letter-space);
-    @include fsl(28px, 110%);
+    @include fsl(28px, 110%, true);
     @media (max-width: ($breakpoint - 1px)) {
-      @include fsl(16px);
+      @include fsl(16px, null, true);
     }
   }
 
@@ -94,6 +102,8 @@
   }
 
   &__frame {
+    height: 100%;
+
     transform: translateY(-100%);
     transition: $transition;
     background: var(--color-light-gray);
@@ -112,8 +122,8 @@
 
   &__icon {
     position: absolute;
-    bottom: 24px;
-    right: 24px;
+    bottom: getRem(24px);
+    right: getRem(24px);
     z-index: 1;
 
     @media (max-width: ($breakpoint - 1px)) {

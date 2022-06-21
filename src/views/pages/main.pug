@@ -1,0 +1,86 @@
+extends ../layouts/master
+
+
+include ../components/category-card
+include ../components/order-panel
+
+block variables
+  - var mainClass = "main--default"
+
+block content
+  .main-page
+    section.main-page__intro
+      .main-page__intro-row 
+        .main-page__intro-col
+          .main-page__intro-container
+            .mobile-only 
+              h1.main-page__intro-title 
+                |Главный дистрибьютор алкогольной продукции #[br] на территории СЗФО*
+            .main-page__intro-video
+              .desktop-only
+                video.main-page__intro-player(src="assets/videos/wineberry_video.mp4" poster='assets/images/poster.jpg' autoplay loop muted playsinline)
+              .mobile-only
+                video.main-page__intro-player(src="assets/videos/wineberry_video_mobile.mp4" poster='assets/images/poster.jpg' autoplay loop muted playsinline)
+              .main-page__intro-icon 
+                +main-icon-svg.main-page__intro-svg
+              .main-page__intro-wrapper
+                h1.main-page__intro-title 
+                  |Главный дистрибьютор алкогольной продукции #[br] на территории СЗФО*
+                .main-page__intro-bot 
+                  .main-page__intro-caption 
+                    |Северо-Западного федерального округа
+                  .main-page__intro-buttons 
+                    .main-page__intro-item 
+                      +submit-button.button--main 
+                        |Стать партнером
+                    .main-page__intro-item 
+                      +outline-button.button--main 
+                        |Больше о нас
+            .main-page__intro-bot
+              .mobile-only
+                .main-page__intro-caption 
+                  |Северо-Западного федерального округа
+                .main-page__intro-buttons 
+                  .main-page__intro-item 
+                    +submit-button.button--main 
+                      |Стать партнером
+                  .main-page__intro-item 
+                    +outline-button.button--main 
+                      |Больше о нас
+        .main-page__intro-col
+          .main-page__intro-container
+            .main-page__card
+              .main-page__card-container
+                .main-page__card-icon 
+                  +main-card-svg.main-page__card-svg
+                p.main-page__card-text 
+                  |100% легальность продукции #[br] и документооборот в соответствии #[br] с требованиями действующего законодательства
+              .desktop-only
+                +picture('main-card.jpg').main-page__card-image 
+              .mobile-only
+                +picture('main-card-mobile.jpg').main-page__card-image 
+    section.main-page__grid 
+      .main-page__grid-item.big 
+        .main-page__container 
+          .main-page__grid-container 
+            .main-page__grid-img 
+              +contacts-icon-svg.main-page__grid-bg 
+            .main-page__grid-top
+              .main-page__grid-title 
+                |400+
+              .desktop-only
+                .main-page__grid-text 
+                  |позиций в ассортименте
+              .mobile-only
+                .main-page__grid-text 
+                  |позиций в ассортименте #[br] от крупнейших производителей #[br] и импортеров алкоголя
+            .main-page__grid-bot
+              .main-page__grid-col
+                .main-page__grid-icon 
+                  +wb-icon-svg.main-page__grid-svg 
+              .main-page__grid-col
+                .main-page__grid-caption 
+                  |От крупнейших производителей #[br] и импортеров алкоголя
+      - for (i = 0; i < 6; i++)
+        .main-page__grid-item
+          +category-card

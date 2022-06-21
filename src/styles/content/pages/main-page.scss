@@ -1,0 +1,320 @@
+.main-page {
+
+  &__intro {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(68px);
+    }
+  }
+  &__intro-row {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+  &__intro-col {
+    padding-top: getRem(212px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-top: 0;
+    }
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: calc(#{$col-width-d} * 8);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
+    }
+
+    &:nth-child(2) {
+      width: calc(#{$col-width-d} * 4);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(40px);
+        width: auto;
+        border-left: none;
+      }
+      border-left: 1px solid var(--color-borders);
+    }
+  }
+  &__intro-container {
+    padding: 0 getRem(60px) getRem(60px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0 20px;
+    }
+  }
+  &__intro-video {
+    position: relative;
+    z-index: 0;
+
+    overflow: hidden;
+    border-radius: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 16px;
+    }
+  }
+  &__intro-wrapper {
+    @include cover;
+    z-index: 1;
+    padding: getRem(40px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+  &__intro-title {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(20px);
+      max-width: none;
+    }
+    max-width: getRem(614px);
+
+    color: var(--color-white);
+    @include fsl(48px, 110%, true);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(24px, null, true);
+      color: var(--color-black);
+    }
+  }
+  &__intro-player {
+    width: 100%;
+    display: block;
+  }
+  &__intro-icon {
+    position: absolute;
+    top: getRem(-414px);
+    left: getRem(-199px);
+    @media (max-width: ($breakpoint - 1px)) {
+      top: getRem(-60px);
+      left: getRem(-56px);
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__intro-svg {
+    width: getRem(853px);
+    height: getRem(853px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(179px);
+      height: getRem(179px);
+    }
+  }
+  &__intro-bot {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(15px);
+    }
+  }
+  &__intro-caption {
+    position: relative;
+    z-index: 0;
+    padding-left: 22px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-left: 18px;
+      max-width: none;
+    }
+    max-width: getRem(184px);
+
+    color: var(--color-white);
+    letter-spacing: var(--letter-space);
+    @include fsl(16px, 120%, true);
+    @media (max-width: ($breakpoint - 1px)) {
+      color: var(--color-lilac);
+      @include fsl(14px, null, true);
+    }
+
+    &::before {
+      content: "*";
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      font-weight: 700;
+      color: var(--color-white);
+      @include fsl(32px, 120%, true);
+      @media (max-width: ($breakpoint - 1px)) {
+        @include fsl(24px, null, true);
+        color: var(--color-black);
+      }
+    }
+  }
+  &__intro-buttons {
+    margin-top: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(17px);
+    }
+
+    display: flex;
+  }
+  &__intro-item {
+
+    &:not(:first-child) {
+      margin-left: 8px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  &__card {
+    position: relative;
+    z-index: 0;
+
+    height: getRem(700px);
+    @media (max-width: ($breakpoint - 1px)) {
+      height: auto;
+    }
+
+    overflow: hidden;
+    border-radius: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 16px;
+    }
+  }
+  &__card-container {
+    @include cover;
+    z-index: 1;
+    padding: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(20px);
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &__card-svg {
+    width: getRem(106px);
+    height: getRem(106px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(60px);
+      height: getRem(60px);
+    }
+  }
+  &__card-text {
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(24px, 110%, true);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px, null, true);
+    }
+  }
+  &__card-image {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__container {
+    padding: getRem(60px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0 20px 20px;
+    }
+
+    height: 100%;
+  }
+
+  &__grid {
+    --itemsCount: 4;
+    @media (max-width: ($breakpoint - 1px)) {
+      --itemsCount: 2;
+    }
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(40px);
+    }
+    margin-left: -1px;
+
+    display: grid;
+    grid-template-columns: repeat(var(--itemsCount), 1fr);
+
+  }
+  &__grid-item {
+
+    border-top: 1px solid var(--color-borders);
+    border-left: 1px solid var(--color-borders);
+
+    &.big {
+      grid-column: span 2;
+      @media (max-width: ($breakpoint - 1px)) {
+        border-top: none;
+      }
+    }
+  }
+  &__grid-container {
+    position: relative;
+    z-index: 0;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__grid-img {
+    @include cover;
+    z-index: -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+  &__grid-bg {
+    width: getRem(246px);
+    height: getRem(246px);
+  }
+  &__grid-title {
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    color: var(--color-wine);
+    @include fsl(180px, 90%, true);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(80px, null, true);
+    }
+  }
+  &__grid-text {
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(36px, 100%, true);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px, null, true);
+    }
+  }
+  &__grid-bot {
+    display: flex;
+    align-items: flex-end;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+  &__grid-col {
+    &:nth-child(1) {
+      flex-shrink: 0;
+      width: calc(#{$col-width-d} * 3 - 60px);
+    }
+  }
+  &__grid-icon {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  &__grid-caption {
+    letter-spacing: var(--letter-space);
+    @include fsl(24px, 130%, true);
+  }
+}

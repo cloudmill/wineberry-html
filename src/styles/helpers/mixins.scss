@@ -4,8 +4,12 @@
   font-family: $ff-main;
 }
 
-@mixin fsl($font-size, $line-height: null) {
-  font-size: unquote('#{$font-size / $fs}rem');
+@mixin fsl($font-size, $line-height: null, $isRem: false) {
+  @if $isRem {
+    font-size: unquote('#{$font-size / $fs}rem');
+  } @else {
+    font-size: $font-size;
+  }
   @if $line-height {
     line-height: $line-height / 100%;
   }
