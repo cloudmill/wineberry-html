@@ -42,7 +42,7 @@
 											</ul>
 										</nav>
 									</div>
-									<div class="header__col"><a class="ask" href="#" data-fancy-button="ask">
+									<div class="header__col"><a class="ask ask--header" href="#" data-fancy-button="ask">
 											<div class="ask__icon"><svg class="ask__svg" width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5509 6.66663H20.4509C23.1676 6.68717 25.3535 8.90587 25.3335 11.6226V17.64C25.3431 18.9448 24.8339 20.2001 23.918 21.1295C23.0021 22.0589 21.7544 22.5864 20.4495 22.596H11.5509L6.66688 25.3333V11.6226C6.6573 10.3178 7.16649 9.06252 8.08242 8.13308C8.99836 7.20364 10.246 6.67614 11.5509 6.66663Z" stroke="#A71E5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 												</svg></div>
@@ -107,7 +107,9 @@
 							<div class="header__row">
 								<div class="header__col">
 									<div class="header__buttons">
-										<div class="header__item">menu</div>
+										<div class="header__item header__menu">
+											<div class="header__burger"></div>
+										</div>
 										<div class="header__item"><svg class="header__svg" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M10 21.531C10.0001 16.0302 13.8859 11.2955 19.2811 10.2226C24.6762 9.14966 30.0779 12.0373 32.1826 17.1195C34.2873 22.2018 32.5088 28.063 27.9348 31.1186C23.3607 34.1742 17.2651 33.5732 13.376 29.683C11.2143 27.5208 9.99997 24.5885 10 21.531Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 												<path d="M33.0581 33.0591L38.0001 38.0011" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -139,6 +141,62 @@
 												<path d="M15.986 15.6L14.648 10.236C14.6122 10.0965 14.4861 9.99916 14.342 10H9" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 											</svg>
 											<div class="header__cart-count">8</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="header__modal">
+							<div class="header__modal-inner">
+								<div class="header__modal-container">
+									<h2 class="header__modal-title">Каталог</h2>
+									<ul class="header__links">
+										<li class="header__links-item"><a class="header__links-link" href="#">
+												<div class="header__links-img"><img src="assets/images/svg/links-1.svg" alt="" /></div>
+												<div class="header__links-text">Водка</div>
+											</a></li>
+										<li class="header__links-item"><a class="header__links-link" href="#">
+												<div class="header__links-img"><img src="assets/images/svg/links-2.svg" alt="" /></div>
+												<div class="header__links-text">Ликероводочные изделия</div>
+											</a></li>
+										<li class="header__links-item"><a class="header__links-link" href="#">
+												<div class="header__links-img"><img src="assets/images/svg/links-3.svg" alt="" /></div>
+												<div class="header__links-text">Коньяк</div>
+											</a></li>
+										<li class="header__links-item"><a class="header__links-link" href="#">
+												<div class="header__links-img"><img src="assets/images/svg/links-4.svg" alt="" /></div>
+												<div class="header__links-text">Вино и винные напитки</div>
+											</a></li>
+										<li class="header__links-item"><a class="header__links-link" href="#">
+												<div class="header__links-img"><img src="assets/images/svg/links-5.svg" alt="" /></div>
+												<div class="header__links-text">Слабоалкогольная продукция</div>
+											</a></li>
+										<li class="header__links-item"><a class="header__links-link" href="#">
+												<div class="header__links-img"><img src="assets/images/svg/links-6.svg" alt="" /></div>
+												<div class="header__links-text">Настойки и наливки</div>
+											</a></li>
+									</ul>
+								</div>
+								<div class="header__modal-bot">
+									<div class="header__modal-container">
+										<div class="header__modal-row">
+											<div class="header__modal-col">
+												<nav class="header__nav">
+													<ul class="header__nav-list">
+														<li class="header__nav-item"><a class="header__nav-link" href="#">О компании</a></li>
+														<li class="header__nav-item"><a class="header__nav-link" href="#">Контакты</a></li>
+														<li class="header__nav-item"><a class="header__nav-link" href="#">Новости</a></li>
+														<li class="header__nav-item"><a class="header__nav-link" href="#">Партнерам</a></li>
+														<li class="header__nav-item"><a class="header__nav-link" href="#">Производители</a></li>
+													</ul>
+												</nav>
+											</div>
+											<div class="header__modal-col"><a class="ask ask--header" href="#" data-fancy-button="ask">
+													<div class="ask__icon"><svg class="ask__svg" width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5509 6.66663H20.4509C23.1676 6.68717 25.3535 8.90587 25.3335 11.6226V17.64C25.3431 18.9448 24.8339 20.2001 23.918 21.1295C23.0021 22.0589 21.7544 22.5864 20.4495 22.596H11.5509L6.66688 25.3333V11.6226C6.6573 10.3178 7.16649 9.06252 8.08242 8.13308C8.99836 7.20364 10.246 6.67614 11.5509 6.66663Z" stroke="#A71E5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="ask__text">Задать вопрос</div>
+												</a></div>
 										</div>
 									</div>
 								</div>
@@ -365,7 +423,11 @@
 							</div>
 							<div class="search-modal__col">
 								<div class="search-modal__item"><button class="button button--huge button--big">Поиск</button></div>
-								<div class="search-modal__item"></div>
+								<div class="search-modal__item">
+									<div class="search-modal__button" data-fancybox-close=""><svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.62621 21.9596C8.23568 22.3501 8.23568 22.9833 8.62621 23.3738C9.01673 23.7643 9.6499 23.7643 10.0404 23.3738L8.62621 21.9596ZM16.7071 16.7071C17.0976 16.3166 17.0976 15.6835 16.7071 15.2929C16.3166 14.9024 15.6834 14.9024 15.2929 15.2929L16.7071 16.7071ZM15.2929 15.2929C14.9023 15.6835 14.9023 16.3166 15.2929 16.7071C15.6834 17.0977 16.3166 17.0977 16.7071 16.7071L15.2929 15.2929ZM23.3737 10.0405C23.7643 9.64996 23.7643 9.01679 23.3737 8.62627C22.9832 8.23574 22.3501 8.23574 21.9595 8.62627L23.3737 10.0405ZM16.7071 15.2929C16.3166 14.9024 15.6834 14.9024 15.2929 15.2929C14.9023 15.6835 14.9023 16.3166 15.2929 16.7071L16.7071 15.2929ZM21.9595 23.3738C22.3501 23.7643 22.9832 23.7643 23.3737 23.3738C23.7643 22.9833 23.7643 22.3501 23.3737 21.9596L21.9595 23.3738ZM15.2929 16.7071C15.6834 17.0977 16.3166 17.0977 16.7071 16.7071C17.0976 16.3166 17.0976 15.6835 16.7071 15.2929L15.2929 16.7071ZM10.0404 8.62627C9.6499 8.23574 9.01673 8.23574 8.62621 8.62627C8.23568 9.01679 8.23568 9.64996 8.62621 10.0405L10.0404 8.62627ZM10.0404 23.3738L16.7071 16.7071L15.2929 15.2929L8.62621 21.9596L10.0404 23.3738ZM16.7071 16.7071L23.3737 10.0405L21.9595 8.62627L15.2929 15.2929L16.7071 16.7071ZM15.2929 16.7071L21.9595 23.3738L23.3737 21.9596L16.7071 15.2929L15.2929 16.7071ZM16.7071 15.2929L10.0404 8.62627L8.62621 10.0405L15.2929 16.7071L16.7071 15.2929Z" fill="#1D1117"></path>
+										</svg></div>
+								</div>
 							</div>
 						</div>
 					</div>
