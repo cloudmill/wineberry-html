@@ -13,7 +13,39 @@
   transition: $transition;
 
   &--up {
-    transform: translateY(-56px);
+    transform: translateY(-3.5rem);
+  }
+
+  &.menu {
+
+    #{$comp}__mobile {
+      &::before {
+        transform: none;
+      }
+    }
+
+    #{$comp}__modal {
+      transform: none;
+      pointer-events: none;
+    }
+
+    #{$comp}__burger {
+      height: 0;
+      border-color: transparent;
+      transition: all 0.35s 0s $transition-timing-function;
+
+      &:before {
+        transform: translate(0, -50%) rotate(-45deg);
+        background: var(--color-black);
+        transition-delay: 0.5s;
+      }
+      
+      &:after {
+        transform: translate(0, -50%) rotate(-135deg);
+        background: var(--color-black);
+        transition-delay: 0.5s;
+      }
+    }
   }
 
   &__inner {
@@ -36,6 +68,20 @@
     @media (max-width: ($breakpoint - 1px)) {
       display: block;
     }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 1px;
+      z-index: 1;
+
+      background: var(--color-white);
+      transform: translateX(-100%);
+      transition: $transition;
+    }
   }
 
   &__top {
@@ -54,6 +100,8 @@
     justify-content: center;
   }
   &__logo-svg {
+    width: getRem(209px);
+    height: getRem(32px);
     @media (max-width: ($breakpoint - 1px)) {
       width: getRem(104px);
       height: getRem(16px);
@@ -63,28 +111,45 @@
   &__nav {}
   &__nav-list {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
   }
   &__nav-item {
     display: flex;
 
     &:not(:first-child) {
       margin-left: getRem(40px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 0;
+        margin-top: getRem(16px);
+      }
     }
   }
   &__nav-link {
     letter-spacing: var(--letter-space);
     color: var(--color-lilac);
     @include fsl(18px, 120%, true);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 120%, true);
+    }
   }
 
   &__links {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
   }
   &__links-item {
     display: flex;
 
     &:not(:first-child) {
       margin-left: getRem(44px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 0;
+        margin-top: getRem(12px);
+      }
     }
   }
   &__links-link {
@@ -93,7 +158,12 @@
   }
   &__links-img {
     margin-right: 4px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-right: 8px;
 
+      width: getRem(20px);
+      height: getRem(20px);
+    }
     width: getRem(24px);
     height: getRem(24px);
     flex-shrink: 0;
@@ -102,8 +172,11 @@
     justify-content: center;
   }
   &__links-text {
-    @include fsl(22px, 120%, true);
     letter-spacing: var(--letter-space);
+    @include fsl(22px, 120%, true);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 120%, true);
+    }
   }
 
   &__buttons {
@@ -150,7 +223,7 @@
     background: var(--color-wine);
     color: var(--color-white);
     letter-spacing: var(--letter-space);
-    @include fsl(12px, 120%, true);
+    @include fsl(12px, 120%);
   }
 
   &__svg {
@@ -187,5 +260,75 @@
   &__text {
     font-weight: 700;
     letter-spacing: var(--letter-space);
+  }
+
+  &__menu {
+    width: getRem(32px);
+    height: getRem(32px);
+  }
+
+  &__burger {
+    position: relative;
+    z-index: 1;
+
+    width: getRem(24px);
+    height: getRem(16px);
+
+    border-top: 2px solid var(--color-black);
+    border-bottom: 2px solid var(--color-black);
+    transition: height 0.4s 0.4s $transition-timing-function, border-color 0.4s 0.4s $transition-timing-function;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+
+      width: 100%;
+      height: 2px;
+
+      transition: transform 0.4s $transition-timing-function;
+      background: var(--color-black);
+    }
+  }
+
+  &__modal {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    transition: $transition;
+    background: var(--color-white);
+    transform: translateX(-100%);
+    pointer-events: none;
+  }
+  &__modal-inner {
+
+    overflow-y: scroll;
+  }
+  &__modal-container {
+    padding: getRem(20px);
+  }
+  &__modal-title {
+    margin-bottom: getRem(16px);
+  }
+  &__modal-bot {
+    border-top: 1px solid var(--color-borders);
+  }
+  &__modal-row {
+    display: flex;
+  }
+  &__modal-col {
+    &:nth-child(1) {
+      padding-right: 10px;
+
+      flex-shrink: 0;
+      width: calc(#{$col-width-m} * 4 - 20px);
+    }
   }
 }

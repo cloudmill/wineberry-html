@@ -52,3 +52,12 @@ import { mediaQuery } from './mediaQueries'
     }
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.header')
+  const burger = header.querySelector('.header__burger')
+
+  burger.onclick = function() {
+    header.classList.toggle('menu')
+  }
+})

@@ -1,6 +1,24 @@
 .ask {
+  $comp: &;
+
   display: flex;
   align-items: center;
+
+  &--header {
+    #{$comp}__svg {
+      width: getRem(32px);
+      height: getRem(32px);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: getRem(24px);
+        height: getRem(24px);
+      }
+    }
+    #{$comp}__text {
+      @media (max-width: ($breakpoint - 1px)) {
+        @include fsl(14px, null);
+      }
+    }
+  }
   
   &__icon {
     margin-right: 8px;
@@ -12,5 +30,8 @@
   &__text {
     letter-spacing: var(--letter-space);
     @include fsl(18px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px);
+    }
   }
 }

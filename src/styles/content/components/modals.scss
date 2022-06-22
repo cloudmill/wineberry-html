@@ -252,6 +252,10 @@
 
   background: var(--color-white);
 
+  .fancybox-button.fancybox-close-small {
+    display: none;
+  }
+
   &__container {
     padding: 44px 60px;
     @media (max-width: ($breakpoint - 1px)) {
@@ -320,6 +324,26 @@
       @media (max-width: ($breakpoint - 1px)) {
         margin-left: 0;
       }
+    }
+  }
+
+  &__button {
+    --size: 64px;
+    @media (max-width: ($breakpoint - 1px)) {
+      --size: 44px;
+    }
+
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    border: 1px solid var(--color-borders);
+    border-radius: 8px;
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 4px;
     }
   }
 }

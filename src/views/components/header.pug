@@ -27,7 +27,7 @@ mixin header
                         a.header__nav-link(href="#")
                           |#{item}
               .header__col
-                a.ask(href="#" data-fancy-button='ask') 
+                a.ask.ask--header(href="#" data-fancy-button='ask') 
                   .ask__icon 
                     +message-svg.ask__svg 
                   .ask__text 
@@ -57,8 +57,8 @@ mixin header
           .header__row 
             .header__col 
               .header__buttons 
-                .header__item
-                  |menu
+                .header__item.header__menu
+                  .header__burger
                 .header__item
                   +search-svg.header__svg
             .header__col 
@@ -72,6 +72,35 @@ mixin header
                   +cart-svg.header__svg
                   .header__cart-count 
                     |8
+        .header__modal
+          .header__modal-inner
+            .header__modal-container
+              h2.header__modal-title 
+                |Каталог
+              ul.header__links 
+                each item in ddata.links
+                  li.header__links-item 
+                    a.header__links-link(href="#") 
+                      .header__links-img 
+                        img(src=item.img, alt="")
+                      .header__links-text
+                        |#{item.text}
+            .header__modal-bot 
+              .header__modal-container
+                .header__modal-row 
+                  .header__modal-col
+                    nav.header__nav 
+                      ul.header__nav-list 
+                        each item in data.nav
+                          li.header__nav-item 
+                            a.header__nav-link(href="#")
+                              |#{item}
+                  .header__modal-col
+                    a.ask.ask--header(href="#" data-fancy-button='ask') 
+                      .ask__icon 
+                        +message-svg.ask__svg 
+                      .ask__text 
+                        |Задать вопрос
 
 mixin header-small
   header.header.header--small 
