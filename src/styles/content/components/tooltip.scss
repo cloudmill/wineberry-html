@@ -20,3 +20,50 @@
     cursor: pointer;
   }
 }
+
+
+.tippy-box {
+  position: relative;
+  background-color: none;
+  color: var(--color-black);
+  border-radius: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: normal;
+  outline: 0;
+  transition-property: transform,visibility,opacity;
+}
+
+.tippy-content {
+  padding: getRem(20px);
+  
+  max-width: getRem(260px);
+
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+  background: var(--color-white);
+  @include fsl(13px, 130%);
+}
+
+.tippy-arrow {
+  z-index: 1;
+  bottom: auto !important;
+
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 14px 0 14px;
+  border-color: var(--color-white) transparent transparent transparent;
+
+  &::before {
+    display: none;
+  }
+}
+
+.tooltip-span {
+  margin-left: 1px;
+  transform: translateY(2px);
+
+  display: inline-block;
+
+  font-size: 10px;
+}

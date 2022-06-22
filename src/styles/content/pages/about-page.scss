@@ -1,115 +1,6 @@
 .about-page {
   $comp: &;
 
-  &__features {}
-  &__features-item {
-    
-    &:not(:first-child) {
-      margin-top: 60px;
-      @media (max-width: ($breakpoint - 1px)) {
-        margin-top: 32px;
-      }
-    }
-
-    &.reverse {
-      #{$comp}__features-col {
-        &:nth-child(2) {
-          padding-left: 0;
-          order: -1;
-        }
-      }
-    }
-  }
-  &__features-row {
-    display: flex;
-    @media (max-width: ($breakpoint - 1px)) {
-      display: block;
-    }
-  }
-  &__features-col {
-    flex-shrink: 0;
-    width: calc(#{$col-width-d} * 3);
-    @media (max-width: ($breakpoint - 1px)) {
-      width: auto;
-    }
-    
-    &:nth-child(1) {
-      display: flex;
-    }
-    &:nth-child(2) {
-      padding-left: calc(#{$col-width-d} / 2);
-      @media (max-width: ($breakpoint - 1px)) {
-        padding-left: 0;
-        margin-top: 20px;
-      }
-    }
-  }
-  &__features-image {
-    overflow: hidden;
-    border-radius: 32px;
-    @media (max-width: ($breakpoint - 1px)) {
-      border-radius: 16px;
-    }
-  }
-  &__features-container {
-    position: relative;
-    z-index: 0;
-
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  &__features-count {
-    position: absolute;
-    left: 0;
-    top: 0;
-    @media (max-width: ($breakpoint - 1px)) {
-      display: none;
-    }
-
-    color: var(--color-wine);
-    font-weight: 700;
-    letter-spacing: var(--letter-space);
-    @include fsl(60px, 100%);
-  }
-  &__features-title {
-    margin-bottom: 20px;
-    @media (max-width: ($breakpoint - 1px)) {
-      margin-bottom: 12px;
-    }
-  }
-  &__features-feature {
-    padding-left: 32px;
-    position: relative;
-    z-index: 0;
-
-    letter-spacing: var(--letter-space);
-    @media (max-width: ($breakpoint - 1px)) {
-      @include fsl(14px);
-    }
-
-    &:not(:first-child) {
-      margin-top: 12px;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-
-      width: 20px;
-      height: 20px;
-
-      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 4.16669L13.3333 10L7.5 15.8334' stroke='%23A71E5C' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-  }
-
   &__slider {
     position: relative;
     z-index: 0;
@@ -233,5 +124,7 @@
       width: auto;
     }
   }
+
+  
 }
 

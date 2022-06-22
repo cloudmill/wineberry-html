@@ -12,3 +12,22 @@ block header
 block footer
 
 block content
+  section.main-page__about#about
+    .main-page__title 
+      |WineBerry #[span.main-page__span это]
+    ul.about.about--main
+      - for (i = 1; i < 6; i++)
+        li.about__item.reverse
+          .about__row 
+            .about__col
+              +picture(`features-${i}.jpg`).about__image
+            .about__col
+              .about__content(data-about-content='')
+                .about__count 
+                  |#{i}
+                .about__title 
+                  |Организация процессов
+                ul.about__list
+                  each text in ['Личный кабинет для управления заказами', 'Склады и офисы в собственности', 'Качественный документооборот', 'Собственная транспортная компания', ]
+                    li.about__feature
+                      |#{text}

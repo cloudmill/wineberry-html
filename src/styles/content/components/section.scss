@@ -74,4 +74,19 @@
     }
     width: calc(#{$col-width-d} * 8);
   }
+
+  &__heading {
+    margin-bottom: 12px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__text {
+    letter-spacing: var(--letter-space);
+    @include fsl(24px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px);
+    }
+  }
 }

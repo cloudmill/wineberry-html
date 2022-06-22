@@ -44,11 +44,15 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "aos": "^2.3.4",
+    "gsap": "^3.10.4",
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",
     "nouislider": "^15.6.0",
     "reset-css": "^5.0.1",
+    "scrollmagic": "^2.0.8",
+    "scrollmagic-plugin-gsap": "^1.0.4",
     "swiper": "^7.4.1",
+    "tippy.js": "^6.3.7",
     "wnumb": "^1.2.0"
   }
 }

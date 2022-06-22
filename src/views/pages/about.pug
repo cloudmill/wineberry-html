@@ -1,6 +1,7 @@
 extends ../layouts/master
 
 include ../components/breadcrumbs
+include ../components/ticker
 
 
 block variables 
@@ -54,28 +55,28 @@ block content
                 +intro-svg.intro__bg-svg 
               .intro__icon 
                 +intro-icon-svg.intro__svg
-    section.section 
+    section.section
       .content
         .section__container 
           h2 
             |Мы — главный дистрибьютер алкогольной продукции ООО&nbsp;«ВайнБерри» на территории Северно-Западного федерального округа.
     section.section.section--big 
       .section__container 
-        ul.about-page__features
+        ul.about
           - for (i = 1; i < 6; i++)
-            li.about-page__features-item(class=(i % 2 === 0 ? 'reverse' : ''))
-              .about-page__features-row 
-                .about-page__features-col
-                  +picture(`features-${i}.jpg`).about-page__features-image
-                .about-page__features-col
-                  .about-page__features-container
-                    .about-page__features-count 
+            li.about__item(class=(i % 2 === 0 ? 'reverse' : ''))
+              .about__row 
+                .about__col
+                  +picture(`features-${i}.jpg`).about__image
+                .about__col
+                  .about__container
+                    .about__count 
                       |#{i}
-                    h3.about-page__features-title 
+                    h3.about__title 
                       |Организация процессов
-                    ul.about-page__features-list
+                    ul.about__list
                       each text in ['Личный кабинет для управления заказами', 'Склады и офисы в собственности', 'Качественный документооборот', 'Собственная транспортная компания', ]
-                        li.about-page__features-feature
+                        li.about__feature
                           |#{text}
     section.section 
       .content
@@ -113,9 +114,20 @@ block content
                   .swiper-slide
                     .about-page__slider-slide
                       +picture(`about-slider-${i}.jpg`).about-page__slider-image
+    section.section.section--big
+      .container 
+        h1.section__heading 
+          |Ключевые клиенты
+        .section__text 
+          |Сети регионального и локального форматов
     section.section.section--big 
-      .qwe 
-        |slider 
+      +ticker
+    section.section.section--big 
+      .container
+        h1
+          |Ключевые клиенты
+    section.section.section--big 
+      +ticker
     section.section.section--big 
       .contacts 
         .container

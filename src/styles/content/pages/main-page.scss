@@ -317,4 +317,31 @@
     letter-spacing: var(--letter-space);
     @include fsl(24px, 130%, true);
   }
+
+  &__about {
+    padding: 50vh getRem(100px) getRem(100px) getRem(60px);
+    position: relative;
+    z-index: 0;
+
+    background: var(--color-black);
+    overflow: hidden;
+    border-radius: 60px;
+  }
+
+  &__title {
+    position: absolute;
+    top: getRem(140px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    white-space: nowrap;
+    color: var(--color-wine);
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(194px, 110%, true);
+  }
+
+  &__span {
+    color: var(--color-white);
+  }
 }
