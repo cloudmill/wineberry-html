@@ -88,18 +88,19 @@ mixin password-success-modal
         +submit-button 
           |Авторизоваться
 
-mixin response-modal 
-  .modal.response-modal 
-    .modal__container 
-      .response-modal__icon 
-        +ok-svg.response-modal__svg 
-      h2.response-modal__title 
-        |Вы зарегистрировались
-      .response-modal__text 
-        |На указанную при регистрации почту придет ссылка для подтверждения. Пожалуйста, пройдите по ней.
+mixin response-modal
+  .modal(data-response=attributes.id)
+    .response-modal 
+      .modal__container 
+        .response-modal__icon 
+          +ok-svg.response-modal__svg 
+        h2.response-modal__title 
+          |Вы зарегистрировались
+        .response-modal__text 
+          |#{attributes.text}
 
 mixin product-modal 
-  .modal.product-modal 
+  .modal.product-modal(data-fancy-modal='product')
     .product-modal__container
       h2.modal__title 
         |Товар добавлен в корзину
@@ -155,7 +156,7 @@ mixin ask-modal
     .modal__container 
       h2.modal__title 
         |Задать вопрос
-      form.form(action="/")
+      form.form(action="/" data-form='ask')
         each item in ddata
           .form__item 
             +input(type = item.type placeholder = item.placeholder) 

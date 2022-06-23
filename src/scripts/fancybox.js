@@ -1,9 +1,6 @@
 import '@fancyapps/fancybox';
 
-// fancybox
-$(() => {
-  $('[data-fancy-button]').on('click', function (event) {
-    let defaults = {
+export const defaults = {
       closeExisting: true,
       touch: false,
       hideScrollbar: false,
@@ -15,17 +12,23 @@ $(() => {
       ),
       animationEffect: 'zoom'
     }
+
+// fancybox
+$(() => {
+  $('[data-fancy-button]').on('click', function (event) {
+    const options = {...defaults}
+
     event.preventDefault();
     const id = $(this).data('fancy-button');
     const modal = $(`[data-fancy-modal="${id}"]`);
     
     switch (id) {
       case 'search': 
-        defaults.animationEffect = 'top'
+        options.animationEffect = 'top'
         break;
     }
 
-    $.fancybox.defaults = {...$.fancybox.defaults, ...defaults}
+    $.fancybox.defaults = {...$.fancybox.defaults, ...options}
     $.fancybox.open(modal);
   })
 })

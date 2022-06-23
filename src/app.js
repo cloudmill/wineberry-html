@@ -9,4 +9,5 @@ import "./scripts/loader";
 import "./scripts/tippy";
 import "./scripts/parallax";
 import "./scripts/main-about";
+import "./scripts/form-response";
 
