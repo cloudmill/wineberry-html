@@ -5,6 +5,13 @@
     #{$comp}__row {
       align-items: center;
       justify-content: space-between;
+      @media (max-width: ($breakpoint - 1px)) {
+        display: flex;
+        justify-content: flex-start;
+      }
+      @media (max-width: ($breakpoint-m - 1px)) {
+        display: block;
+      }
     }
 
     #{$comp}__item {
@@ -12,11 +19,25 @@
         #{$comp}__col {
           &:nth-child(1) {
             width: getRem(800px);
+            @media (max-width: ($breakpoint - 1px)) {
+              width: getRem(334px);
+            }
+            @media (max-width: ($breakpoint-m - 1px)) {
+              width: auto;
+            }
           }
           &:nth-child(2) {
-            
             position: relative;
             z-index: 0;
+            @media (max-width: ($breakpoint - 1px)) {
+              margin-top: 0;
+              margin-left: getRem(30px);
+              order: 1;
+            }
+            @media (max-width: ($breakpoint-m - 1px)) {
+              margin-top: getRem(20px);
+              margin-left: 0;
+            }
           }
         }
       }
@@ -39,16 +60,25 @@
 
     #{$comp}__title {
       margin-bottom: getRem(40px);
-
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-bottom: getRem(16px);
+        max-width: none;
+      }
       max-width: getRem(541px);
 
       font-weight: 700;
       color: var(--color-white);
       @include fsl(60px, 100%, true);
+      @media (max-width: ($breakpoint - 1px)) {
+        @include fsl(24px, null, true);
+      }
     }
     #{$comp}__feature {
       color: var(--color-white);
       @include fsl(18px, null, true);
+      @media (max-width: ($breakpoint - 1px)) {
+        @include fsl(14px, null, true);
+      }
     }
   }
 
@@ -163,5 +193,8 @@
   &__content {
     position: relative;
     padding-left: getRem(100px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-left: 0;
+    }
   }
 }

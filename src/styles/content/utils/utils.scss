@@ -10,3 +10,9 @@
     display: block;
   }
 }
+
+.fullheight-mobile {
+  @media (max-width: ($breakpoint - 1px)) {
+    height: 100%;
+  }
+}

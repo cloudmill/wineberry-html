@@ -3,11 +3,15 @@
   &__intro {
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: getRem(68px);
+      padding: 0 20px;
     }
   }
   &__intro-row {
     display: flex;
     @media (max-width: ($breakpoint - 1px)) {
+      justify-content: space-between;
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
       display: block;
     }
   }
@@ -21,6 +25,9 @@
     &:nth-child(1) {
       width: calc(#{$col-width-d} * 8);
       @media (max-width: ($breakpoint - 1px)) {
+        width: calc(50% - 10px);
+      }
+      @media (max-width: ($breakpoint-m - 1px)) {
         width: auto;
       }
     }
@@ -28,9 +35,12 @@
     &:nth-child(2) {
       width: calc(#{$col-width-d} * 4);
       @media (max-width: ($breakpoint - 1px)) {
+        width: calc(50% - 10px);
+        border-left: none;
+      }
+      @media (max-width: ($breakpoint-m - 1px)) {
         margin-top: getRem(40px);
         width: auto;
-        border-left: none;
       }
       border-left: 1px solid var(--color-borders);
     }
@@ -38,7 +48,7 @@
   &__intro-container {
     padding: 0 getRem(60px) getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {
-      padding: 0 20px;
+      padding: 0;
     }
   }
   &__intro-video {
@@ -55,6 +65,11 @@
     @include cover;
     z-index: 1;
     padding: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      position: static;
+      padding: 0;
+      margin-top: getRem(15px);
+    }
 
     display: flex;
     flex-direction: column;
@@ -110,7 +125,7 @@
   &__intro-caption {
     position: relative;
     z-index: 0;
-    padding-left: 22px;
+    padding-left: getRem(22px);
     @media (max-width: ($breakpoint - 1px)) {
       padding-left: 18px;
       max-width: none;
@@ -157,6 +172,12 @@
       }
     }
   }
+  &__intro-mobile {
+    display: none;
+    @media (max-width: ($breakpoint-m - 1px)) {
+      display: block;
+    }
+  }
 
   &__card {
     position: relative;
@@ -164,6 +185,9 @@
 
     height: getRem(700px);
     @media (max-width: ($breakpoint - 1px)) {
+      height: 100%;
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
       height: auto;
     }
 
@@ -220,6 +244,9 @@
   &__container {
     padding: getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {
+      padding: 20px;
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
       padding: 0 20px 20px;
     }
 
@@ -228,7 +255,7 @@
 
   &__grid {
     --itemsCount: 4;
-    @media (max-width: ($breakpoint - 1px)) {
+    @media (max-width: ($breakpoint-m - 1px)) {
       --itemsCount: 2;
     }
     @media (max-width: ($breakpoint - 1px)) {
@@ -238,7 +265,6 @@
 
     display: grid;
     grid-template-columns: repeat(var(--itemsCount), 1fr);
-
   }
   &__grid-item {
 
@@ -247,7 +273,7 @@
 
     &.big {
       grid-column: span 2;
-      @media (max-width: ($breakpoint - 1px)) {
+      @media (max-width: ($breakpoint-m - 1px)) {
         border-top: none;
       }
     }
@@ -319,26 +345,97 @@
   }
 
   &__about {
-    padding: 50vh getRem(100px) getRem(100px) getRem(60px);
     position: relative;
     z-index: 0;
 
     background: var(--color-black);
-    overflow: hidden;
     border-radius: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 24px;
+    }
+  }
+  &__about-container {
+    padding: 50vh getRem(100px) getRem(100px) getRem(60px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(32px) getRem(21px);
+    }
+  }
+  &__about-sticky {
+    @include cover;
+    padding-top: getRem(140px);
+    padding-bottom: getRem(830px);
+    @media (max-width: ($breakpoint - 1px)) {
+      position: static;
+      padding: getRem(32px) 0 0;
+
+      pointer-events: all;
+    }
+
+    pointer-events: none;
+  }
+  &__about-bg {
+    @include cover;
+    z-index: 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+  &__about-item {
+    position: absolute;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: blur(7px);
+    
+    &:nth-child(1) {
+      top: getRem(198px);
+      left: getRem(103px);
+    }
+    &:nth-child(2) {
+      top: getRem(501px);
+      left: getRem(566px);
+      filter: blur(8px);
+    }
+    &:nth-child(3) {
+      top: getRem(1000px);
+      left: getRem(780px);
+    }
+    &:nth-child(4) {
+      top: getRem(1300px);
+      left: getRem(295px);
+      filter: blur(19px);
+    }
+    &:nth-child(5) {
+      top: getRem(1100px);
+      right: getRem(60px);
+      filter: none;
+    }
+    &:nth-child(6) {
+      top: getRem(1200px);
+      right: getRem(142px);
+      filter: none;
+    }
   }
 
   &__title {
-    position: absolute;
+    position: sticky;
+    position: -webkit-sticky;
     top: getRem(140px);
-    left: 50%;
-    transform: translateX(-50%);
+    @media (max-width: ($breakpoint - 1px)) {
+      position: static;
+    }
 
+    pointer-events: all;
+    text-align: center;
     white-space: nowrap;
     color: var(--color-wine);
     font-weight: 700;
     letter-spacing: var(--letter-space);
     @include fsl(194px, 110%, true);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(20px, null, true);
+    }
   }
 
   &__span {
