@@ -94,7 +94,7 @@
 												</svg>
 												<div class="header__cart-count">8</div>
 											</div>
-											<div class="header__item"><svg class="header__svg" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<div class="header__item" data-fancy-button="auth"><svg class="header__svg" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M32 18C32 22.4183 28.4183 26 24 26C19.5817 26 16 22.4183 16 18C16 13.5817 19.5817 10 24 10C26.1217 10 28.1566 10.8429 29.6569 12.3431C31.1571 13.8434 32 15.8783 32 18Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 													<path d="M10 38C18.5757 32.6818 29.4243 32.6818 38 38" stroke="#1D1117" stroke-width="2" stroke-linecap="round"></path>
 												</svg></div>
@@ -680,7 +680,7 @@
 									</svg></div><input class="search-modal__input" placeholder="Что вы хотите найти?" />
 							</div>
 							<div class="search-modal__col">
-								<div class="search-modal__item"><button class="button button--huge button--big">Поиск</button></div>
+								<div class="search-modal__item"><button class="button button--huge button--big"><span class="button__span">Поиск</span></button></div>
 								<div class="search-modal__item">
 									<div class="search-modal__button" data-fancybox-close=""><svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M8.62621 21.9596C8.23568 22.3501 8.23568 22.9833 8.62621 23.3738C9.01673 23.7643 9.6499 23.7643 10.0404 23.3738L8.62621 21.9596ZM16.7071 16.7071C17.0976 16.3166 17.0976 15.6835 16.7071 15.2929C16.3166 14.9024 15.6834 14.9024 15.2929 15.2929L16.7071 16.7071ZM15.2929 15.2929C14.9023 15.6835 14.9023 16.3166 15.2929 16.7071C15.6834 17.0977 16.3166 17.0977 16.7071 16.7071L15.2929 15.2929ZM23.3737 10.0405C23.7643 9.64996 23.7643 9.01679 23.3737 8.62627C22.9832 8.23574 22.3501 8.23574 21.9595 8.62627L23.3737 10.0405ZM16.7071 15.2929C16.3166 14.9024 15.6834 14.9024 15.2929 15.2929C14.9023 15.6835 14.9023 16.3166 15.2929 16.7071L16.7071 15.2929ZM21.9595 23.3738C22.3501 23.7643 22.9832 23.7643 23.3737 23.3738C23.7643 22.9833 23.7643 22.3501 23.3737 21.9596L21.9595 23.3738ZM15.2929 16.7071C15.6834 17.0977 16.3166 17.0977 16.7071 16.7071C17.0976 16.3166 17.0976 15.6835 16.7071 15.2929L15.2929 16.7071ZM10.0404 8.62627C9.6499 8.23574 9.01673 8.23574 8.62621 8.62627C8.23568 9.01679 8.23568 9.64996 8.62621 10.0405L10.0404 8.62627ZM10.0404 23.3738L16.7071 16.7071L15.2929 15.2929L8.62621 21.9596L10.0404 23.3738ZM16.7071 16.7071L23.3737 10.0405L21.9595 8.62627L15.2929 15.2929L16.7071 16.7071ZM15.2929 16.7071L21.9595 23.3738L23.3737 21.9596L16.7071 15.2929L15.2929 16.7071ZM16.7071 15.2929L10.0404 8.62627L8.62621 10.0405L15.2929 16.7071L16.7071 15.2929Z" fill="#1D1117"></path>
@@ -694,10 +694,10 @@
 					<div class="modal__container">
 						<h2 class="modal__title">Задать вопрос</h2>
 						<form class="form" action="/" data-form="ask">
-							<div class="form__item"><input class="form__input" placeholder="Имя*" /></div>
-							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" /></div>
-							<div class="form__item"><input class="form__input" type="phone" placeholder="Телефон*" /></div>
-							<div class="form__item"><textarea class="form__textarea" placeholder="Сообщение"></textarea></div>
+							<div class="form__item"><input class="form__input" data-input="" required="required" /><span class="form__span">Имя*</span></div>
+							<div class="form__item"><input class="form__input" type="email" data-input="" required="required" /><span class="form__span">E-mail*</span></div>
+							<div class="form__item"><input class="form__input" type="phone" data-input="" required="required" /><span class="form__span">Телефон*</span></div>
+							<div class="form__item"><textarea class="form__textarea" data-input=""></textarea><span class="form__span"> Сообщение</span></div>
 							<div class="form__inner">
 								<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
 										<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -706,7 +706,7 @@
 										<div class="checkbox__text">Согласен на обработку персональных данных в соответствии с <a class="checkbox__link" href="#">политикой конфиденциальности</a></div>
 									</label></div>
 							</div>
-							<div class="form__inner"><button class="button">Отправить</button></div>
+							<div class="form__inner"><button class="button"><span class="button__span">Отправить</span></button></div>
 						</form>
 					</div>
 				</div>
@@ -718,6 +718,54 @@
 								</svg></div>
 							<h2 class="response-modal__title">Вы зарегистрировались</h2>
 							<div class="response-modal__text">Спасибо, мы с вами свяжемся в ближайшее время.</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal login-modal" data-fancy-modal="auth">
+					<div class="modal__container" data-tabs-parent="">
+						<h2 class="modal__title">Войти</h2>
+						<div class="login-modal__category">
+							<ul class="category__list" data-real-tabs="">
+								<li class="category__item active" data-tabs-item="">
+									<div class="category__text">Есть аккаунт</div>
+								</li>
+								<li class="category__item" data-tabs-item="">
+									<div class="category__text">Регистрация</div>
+								</li>
+							</ul>
+						</div>
+						<div class="modal__inner">
+							<div class="tabs-block active" data-tabs-block="">
+								<form class="form" action="/">
+									<div class="form__item"><input class="form__input" type="email" data-input="" required="required" /><span class="form__span">E-mail</span></div>
+									<div class="form__item"><input class="form__input" type="password" data-input="" required="required" /><span class="form__span">Пароль</span></div>
+									<div class="form__item"><button class="button"><span class="button__span">Войти</span></button></div>
+								</form>
+								<div class="modal__inner">
+									<div class="login-modal__button" data-fancy-button="pass-rec">Забыли пароль?</div>
+								</div>
+							</div>
+							<div class="tabs-block" data-tabs-block="">
+								<form class="form" action="/">
+									<div class="form__item"><input class="form__input" data-input="" required="required" /><span class="form__span">Имя*</span></div>
+									<div class="form__item"><input class="form__input" type="email" data-input="" required="required" /><span class="form__span">E-mail*</span></div>
+									<div class="form__item"><input class="form__input" type="phone" data-input="" required="required" /><span class="form__span">Телефон*</span></div>
+									<div class="form__item"><input class="form__input" data-input="" required="required" /><span class="form__span">Название организации*</span></div>
+									<div class="form__item"><input class="form__input" data-input="" required="required" /><span class="form__span">ИНН*</span></div>
+									<div class="form__item"><input class="form__input" data-input="" required="required" /><span class="form__span">КПП*</span></div>
+									<div class="form__item"><textarea class="form__textarea form__textarea--small form__textarea--small" data-input=""></textarea><span class="form__span"> Номер лицензии на право реализации алкогольной продукции*</span></div>
+									<div class="form__item"><textarea class="form__textarea" data-input=""></textarea><span class="form__span"> Сообщение</span></div>
+									<div class="form__inner">
+										<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+												<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg></div>
+												<div class="checkbox__text">Согласен на обработку персональных данных в соответствии с <a class="checkbox__link" href="#">политикой конфиденциальности</a></div>
+											</label></div>
+									</div>
+									<div class="form__inner"><button class="button"><span class="button__span">Зарегистрироваться</span></button></div>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
