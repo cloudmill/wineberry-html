@@ -1,6 +1,9 @@
 .button {
   $comp: &;
+  --color: var(--color-dark-red);
 
+  position: relative;
+  z-index: 0;
   padding: 19px 0;
   @media (max-width: ($breakpoint - 1px)) {
     padding: 15px 0;
@@ -9,6 +12,7 @@
   width: 100%;
   display: block;
   
+  overflow: hidden;
   text-align: center;
   @include f-main;
   cursor: pointer;
@@ -24,7 +28,29 @@
     border-radius: 4px;
   }
 
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transition: $transition;
+    background: var(--color);
+    transform: translateX(-100%);
+  }
+
+  &:hover {
+    &::before {
+      transform: none;
+    }
+  }
+
   &--outline {
+    --color: var(--color-wine);
     padding: 18px 0;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 10px 0;
@@ -37,7 +63,37 @@
 
     color: var(--color-black);
     background: var(--color-white);
-    border: 1px solid var(--color-borders);
+    // border: 1px solid var(--color-borders);
+
+    &::after {
+      content: "";
+      @include cover;
+      z-index: -1;
+
+      border-radius: 8px;
+      @media (max-width: ($breakpoint - 1px)) {
+        border-radius: 4px;
+      }
+      border: 1px solid var(--color-borders);
+      transition: $transition;
+    }
+
+    &:hover {
+      #{$comp}__text {
+        color: var(--color-white);
+      }
+      #{$comp}__span {
+        color: var(--color-white);
+      }
+      #{$comp}__svg {
+        path {
+          fill: var(--color-white);
+        }
+      }
+      &::after {
+        border-color: var(--color-wine);
+      }
+    }
   }
 
   &--huge {
@@ -194,22 +250,36 @@
   }
 
   &__svg {
+    position: relative;
+    z-index: 1;
+    
     width: 24px;
     height: 24px;
+
+    path {
+      transition: $transition;
+    }
   }
 
   &__arrow {
     transform: rotate(-180deg);
   }
 
-  &__check {
+  &__span {
+    position: relative;
+    z-index: 1;
 
+    transition: $transition;
   }
 
   &__text {
+    position: relative;
+    z-index: 1;
     margin-left: 20px;
     @media (max-width: ($breakpoint - 1px)) {
       margin-left: 8px;
     }
+
+    transition: $transition;
   }
 }

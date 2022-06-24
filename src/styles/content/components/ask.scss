@@ -19,6 +19,12 @@
       }
     }
   }
+
+  &:hover {
+    #{$comp}__text {
+      color: var(--color-wine);
+    }
+  }
   
   &__icon {
     margin-right: 8px;
@@ -28,6 +34,7 @@
     justify-content: center;
   }
   &__text {
+    transition: $transition;
     letter-spacing: var(--letter-space);
     @include fsl(18px, 120%);
     @media (max-width: ($breakpoint - 1px)) {

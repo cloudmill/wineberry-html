@@ -48,6 +48,7 @@
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",
     "nouislider": "^15.6.0",
+    "parsleyjs": "^2.9.2",
     "reset-css": "^5.0.1",
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugin-gsap": "^1.0.4",

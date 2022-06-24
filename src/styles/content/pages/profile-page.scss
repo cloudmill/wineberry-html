@@ -88,6 +88,7 @@
       display: none;
     }
 
+    overflow: hidden;
     border-radius: 12px;
     background: var(--color-white);
   }
@@ -132,6 +133,7 @@
 
     border-top: 1px solid var(--color-borders);
     cursor: pointer;
+    transition: $transition;
 
     &--order {
       cursor: auto;
@@ -144,8 +146,38 @@
         border-top: none;
       }
     }
+
+    &:hover {
+      background: var(--color-wine);
+      border-color: var(--color-wine);
+
+      #{$comp}__orders-text {
+        color: var(--color-white);
+      }
+      #{$comp}__orders-svg {
+        path {
+          stroke: var(--color-white);
+        }
+      }
+      #{$comp}__status {
+        #{$comp}__status-text {
+          color: var(--color-white);
+        }
+        #{$comp}__status-fill {
+          path {
+            fill: var(--color-white);
+          }
+        }
+        #{$comp}__status-stroke {
+          path {
+            stroke: var(--color-white);
+          }
+        }
+      }
+    }
   }
   &__orders-text {
+    transition: $transition;
     letter-spacing: var(--letter-space);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px);
@@ -189,6 +221,11 @@
       }
     }
   }
+  &__orders-svg {
+    path {
+      transition: $transition;
+    }
+  }
 
   &__status {
     display: flex;
@@ -217,6 +254,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    path {
+      transition: $transition;
+    }
   }
   &__status-text {
     font-weight: 700;
@@ -555,11 +596,34 @@
     justify-content: center;
   }
   &__info-link {
-    text-decoration: underline;
+    position: relative;
+    z-index: 0;
+
     letter-spacing: var(--letter-space);
     @include fsl(18px, 120%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 85%;
+      z-index: -1;
+
+      width: 100%;
+      height: 1px;
+
+      transform-origin: left  center;
+      transition: transform $transition;
+      background: var(--color-black);
+    }
+
+    &:hover {
+      &::before {
+        transform: scaleX(0);
+        transform-origin: right center;
+      }
     }
   }
 

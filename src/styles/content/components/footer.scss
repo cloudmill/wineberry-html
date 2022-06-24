@@ -130,6 +130,11 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(16px, 120%);
     }
+    transition: $transition;
+
+    &:hover {
+      color: var(--color-wine);
+    }
   }
 
   &__container {
@@ -174,6 +179,11 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(24px);
     }
+    transition: $transition;
+
+    &:hover {
+      color: var(--color-wine);
+    }
   }
   
   &__mail {
@@ -188,6 +198,11 @@
     @include fsl(28px, 120%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(16px)
+    }
+    transition: $transition;
+
+    &:hover {
+      color: var(--color-wine);
     }
   }
 

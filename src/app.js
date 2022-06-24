@@ -10,4 +10,7 @@ import "./scripts/tippy";
 import "./scripts/parallax";
 import "./scripts/main-about";
 import "./scripts/form-response";
+import "./scripts/forms";
+import "./scripts/counter";
+import "./scripts/real-tabs";
 

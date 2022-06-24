@@ -77,9 +77,13 @@ block content
                 form.form(action="/")
                   each item in ddata.form 
                     .form__item 
-                      +input(type = item.type placeholder = item.placeholder)
+                      +input(type = item.type)
+                      span.form__span 
+                        |#{item.placeholder}
                   .form__item 
-                    +textarea(placeholder = "Комментарий")
+                    +textarea
+                    span.form__span 
+                      |Комментарий
                   .form__bot 
                     .form__checkbox
                       +checkbox

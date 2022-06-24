@@ -1,10 +1,10 @@
 
 
 mixin input
-  input.form__input(type = attributes.type)&attributes(attributes)
+  input.form__input(type = attributes.type data-input='' required)&attributes(attributes)
 
 mixin textarea
-  textarea.form__textarea(class=attributes.class placeholder = attributes.placeholder)&attributes(attributes)
+  textarea.form__textarea(class=attributes.class data-input='' placeholder = attributes.placeholder)&attributes(attributes)
 
 mixin radio-button 
   .radio

@@ -8,38 +8,47 @@ mixin login-modal
       {type: 'text', placeholder: 'ИНН*'},
       {type: 'text', placeholder: 'КПП*'},
     ]
-  .modal.login-modal 
-    .modal__container 
+  .modal.login-modal(data-fancy-modal='auth')
+    .modal__container(data-tabs-parent='')
       h2.modal__title 
         |Войти
-      .login-modal__tabs 
-        .login-modal__item
-          .login-modal__tab.active 
-            |Есть аккаунт
-        .login-modal__item 
-          .login-modal__tab 
-            |Регистрация
+      .login-modal__category
+        ul.category__list(data-real-tabs='')
+          li.category__item.active(data-tabs-item='')
+            .category__text
+              |Есть аккаунт
+          li.category__item(data-tabs-item='')
+            .category__text
+              |Регистрация
       .modal__inner
-        .tabs-block.active
+        .tabs-block.active(data-tabs-block='')
           form.form(action="/")
             each item in [{type: 'email', placeholder: 'E-mail'}, {type: 'password', placeholder: 'Пароль'}]
               .form__item 
-                +input(type = item.type placeholder = item.placeholder)
+                +input(type = item.type)
+                span.form__span 
+                  |#{item.placeholder}
             .form__item
               +submit-button
                 |Войти
           .modal__inner 
-            .login-modal__button(href="#") 
+            .login-modal__button(data-fancy-button='pass-rec')
               |Забыли пароль?
-        .tabs-block
+        .tabs-block(data-tabs-block='')
           form.form(action="/")
             each item in ddata
               .form__item 
-                +input(type = item.type placeholder = item.placeholder)
+                +input(type = item.type)
+                span.form__span 
+                  |#{item.placeholder}
             .form__item 
-              +textarea.form__textarea--small(placeholder = 'Номер лицензии на право реализации алкогольной продукции*')
+              +textarea.form__textarea--small
+              span.form__span 
+                |Номер лицензии на право реализации алкогольной продукции*
             .form__item 
-              +textarea(placeholder = 'Сообщение')
+              +textarea
+              span.form__span 
+                |Сообщение
             .form__inner
               +checkbox
             .form__inner
@@ -159,9 +168,13 @@ mixin ask-modal
       form.form(action="/" data-form='ask')
         each item in ddata
           .form__item 
-            +input(type = item.type placeholder = item.placeholder) 
+            +input(type = item.type) 
+            span.form__span 
+              |#{item.placeholder}
         .form__item 
-          +textarea(placeholder = 'Сообщение') 
+          +textarea
+          span.form__span 
+            |Сообщение
         .form__inner 
           +checkbox 
         .form__inner 

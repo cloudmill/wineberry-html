@@ -83,6 +83,11 @@
       @include fsl(14px);
     }
   }
+
+  &__category {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .password-modal {

@@ -1,21 +1,43 @@
 .form {
+  $comp: &;
 
   &__item {
+    position: relative;
 
     &:not(:first-child) {
       margin-top: 12px;
     }
+
+    &.filled {
+      #{$comp}__input {
+        border-color: var(--color-pink);
+        box-shadow: 0px 8px 16px rgba(207, 178, 191, 0.3);
+      }
+      #{$comp}__textarea {
+        border-color: var(--color-pink);
+        box-shadow: 0px 8px 16px rgba(207, 178, 191, 0.3);
+      }
+      #{$comp}__span {
+        transform: translateY(-7px) scale(0.75);
+        @media (max-width: ($breakpoint - 1px)) {
+          
+        }
+
+        color: #87707B;
+      }
+    }
   }
 
   &__input {
-    padding: 21px 20px;
+    padding: 31px 20px 12px;
     @media (max-width: ($breakpoint - 1px)) {
-      padding: 15px 20px;
+      padding: 21px 20px 12px;
     }
 
     width: 100%;
 
     @include f-main;
+    transition: $transition;
     background-color: var(--color-white);
     border: 1px solid var(--color-borders);
     border-radius: 8px;
@@ -27,12 +49,33 @@
     @include placeholder {
       color: var(--color-black);
     }
+
+    &:hover {
+      border-color: var(--color-pink);
+    }
+  }
+
+  &__span {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      top: 15px;
+    }
+
+    transform-origin: left center;
+    pointer-events: none;
+    transition: $transition;
+    letter-spacing: var(--letter-space);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
   }
 
   &__textarea {
-    padding: 21px 20px;
+    padding: 31px 20px 12px;
     @media (max-width: ($breakpoint - 1px)) {
-      padding: 15px 20px;
+      padding: 21px 20px 12px;
     }
 
     width: 100%;
@@ -41,6 +84,7 @@
       min-height: 100px;
     }
 
+    transition: $transition;
     resize: none;
     @include f-main;
     background-color: var(--color-white);
@@ -60,6 +104,10 @@
       @media (max-width: ($breakpoint - 1px)) {
         min-height: 62px;
       }
+    }
+
+    &:hover {
+      border-color: var(--color-pink);
     }
   }
 
@@ -98,5 +146,14 @@
     }
     width: 260px;
     flex-shrink: 0;
+  }
+
+  .parsley-errors-list {
+    margin-top: 8px;
+
+    li {
+      @include fsl(12px, 130%);
+      color: var(--color-wine);
+    }
   }
 }

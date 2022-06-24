@@ -18,7 +18,8 @@ block content
             ul.category__list
               each item, i in ['Десертное вино', 'Столовое вино', 'Белое сухое', 'Красное сухое', 'Безалкогольное']
                 li.category__item(class=(i === 0 ? 'active' : ''))
-                  |#{item}
+                  .category__text
+                    |#{item}
     section.catalog-page__listing 
       .catalog-page__row 
         .catalog-page__col

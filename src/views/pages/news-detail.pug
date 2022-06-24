@@ -69,8 +69,7 @@ block content
             .swiper-wrapper 
               - for (i = 0; i < 7; i++)
                 .swiper-slide.news-page__slider-slide
-                  .news-page__grid-container.news-page__grid-container--small
-                    +news-card
+                  +news-card(small=true)
     section.section.section--big
       .container
         .news-page__follow 

@@ -8,6 +8,10 @@
     border-radius: 8px;
   }
 
+  &:hover {
+    background: var(--color-light-gray);
+  }
+
   &.active {
     background: var(--color-light-gray);
     border-color: var(--color-pink);
@@ -90,6 +94,7 @@
     transition: $transition;
     path {
       transition: $transition;
+      stroke: var(--color-black);
     }
   }
 

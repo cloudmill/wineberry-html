@@ -49,11 +49,16 @@
   }
 
   &__phone {
+    transition: $transition;
     font-weight: 700;
     letter-spacing: var(--letter-space);
     @include fsl(32px, 120%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(24px);
+    }
+
+    &:hover {
+      color: var(--color-wine);
     }
   }
 
@@ -67,6 +72,11 @@
 
   &__link {
     display: block;
+    transition: $transition;
+
+    &:hover {
+      color: var(--color-wine);
+    }
   }
 
   &__row {

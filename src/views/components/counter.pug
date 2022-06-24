@@ -1,8 +1,7 @@
 mixin counter 
   .counter(class=attributes.class)
-    .counter__item
+    button.counter__item(data-counter-minus='')
       +minus-svg.counter__svg
-    .counter__count
-      |1
-    .counter__item
+    input.counter__count(type='number' value='1' data-counter-count='')
+    button.counter__item(data-counter-plus='')
       +plus-svg.counter__svg

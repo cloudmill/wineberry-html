@@ -1,4 +1,5 @@
 .news-page {
+  $comp: &;
 
   &__grid {
     margin-left: -1px;
@@ -42,7 +43,32 @@
     }
   }
 
-  &__card {}
+  &__card {
+    display: block;
+    height: 100%;
+
+    transition: $transition;
+
+    &:hover {
+      background: var(--color-light-gray);
+
+      #{$comp}__card-heading {
+        color: var(--color-wine);
+      }
+      #{$comp}__card-title {
+        color: var(--color-wine);
+      }
+      #{$comp}__card-icon {
+        background: var(--color-wine);
+        border-color: var(--color-wine);
+      }
+      #{$comp}__card-svg {
+        path {
+          fill: var(--color-white);
+        }
+      }
+    }
+  }
   &__card-row {
     display: flex;
     @media (max-width: ($breakpoint - 1px)) {
@@ -112,6 +138,7 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px, 130%);
     }
+    transition: $transition;
   }
   &__card-title {
     font-weight: 700;
@@ -120,6 +147,7 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px);
     }
+    transition: $transition;
   }
   &__card-icon {
     --size: 48px;
@@ -133,6 +161,12 @@
     border: 1px solid var(--color-borders);
     border-radius: 8px;
     background-color: var(--color-white);
+    transition: $transition;
+  }
+  &__card-svg {
+    path {
+      transition: $transition;
+    }
   }
   &__card-container {
     margin-bottom: 16px;
@@ -164,7 +198,9 @@
   }
 
   &__button {
-    
+    position: sticky;
+    position: -webkit-sticky;
+    top: 200px;
   }
 
   &__row {
