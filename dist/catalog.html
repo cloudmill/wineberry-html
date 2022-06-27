@@ -246,7 +246,7 @@
 					<section class="catalog-page__listing">
 						<div class="catalog-page__row">
 							<div class="catalog-page__col">
-								<div class="catalog-page__button">
+								<div class="catalog-page__button" data-filters-button="">
 									<div class="catalog-page__button-icon"><svg class="catalog-page__button-svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd" d="M10.6901 7.84996C11.1935 7.09341 11.067 6.0823 10.3927 5.47312C9.71836 4.86394 8.69963 4.8404 7.99792 5.41779C7.2962 5.99517 7.1231 6.99935 7.59102 7.77835C8.05893 8.55735 9.02675 8.87624 9.86608 8.52796C10.2015 8.38801 10.4882 8.15215 10.6901 7.84996Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 											<path fill-rule="evenodd" clip-rule="evenodd" d="M10.6901 18.1649C11.1935 17.4084 11.067 16.3972 10.3927 15.7881C9.71836 15.1789 8.69963 15.1553 7.99792 15.7327C7.2962 16.3101 7.1231 17.3143 7.59102 18.0933C8.05893 18.8723 9.02675 19.1912 9.86608 18.8429C10.2015 18.703 10.4882 18.4671 10.6901 18.1649V18.1649Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -254,6 +254,9 @@
 											<path d="M11 5.82593C10.4477 5.82593 10 6.27364 10 6.82593C10 7.37821 10.4477 7.82593 11 7.82593V5.82593ZM19 7.82593C19.5523 7.82593 20 7.37821 20 6.82593C20 6.27364 19.5523 5.82593 19 5.82593V7.82593ZM7.327 7.82593C7.87928 7.82593 8.327 7.37821 8.327 6.82593C8.327 6.27364 7.87928 5.82593 7.327 5.82593V7.82593ZM5 5.82593C4.44772 5.82593 4 6.27364 4 6.82593C4 7.37821 4.44772 7.82593 5 7.82593V5.82593ZM11 16.1419C10.4477 16.1419 10 16.5896 10 17.1419C10 17.6942 10.4477 18.1419 11 18.1419V16.1419ZM19 18.1419C19.5523 18.1419 20 17.6942 20 17.1419C20 16.5896 19.5523 16.1419 19 16.1419V18.1419ZM7.327 18.1419C7.87928 18.1419 8.327 17.6942 8.327 17.1419C8.327 16.5896 7.87928 16.1419 7.327 16.1419V18.1419ZM5 16.1419C4.44772 16.1419 4 16.5896 4 17.1419C4 17.6942 4.44772 18.1419 5 18.1419V16.1419ZM13 12.9839C13.5523 12.9839 14 12.5362 14 11.9839C14 11.4316 13.5523 10.9839 13 10.9839V12.9839ZM5 10.9839C4.44772 10.9839 4 11.4316 4 11.9839C4 12.5362 4.44772 12.9839 5 12.9839V10.9839ZM16.673 10.9839C16.1207 10.9839 15.673 11.4316 15.673 11.9839C15.673 12.5362 16.1207 12.9839 16.673 12.9839V10.9839ZM19 12.9839C19.5523 12.9839 20 12.5362 20 11.9839C20 11.4316 19.5523 10.9839 19 10.9839V12.9839ZM11 7.82593H19V5.82593H11V7.82593ZM7.327 5.82593H5V7.82593H7.327V5.82593ZM11 18.1419H19V16.1419H11V18.1419ZM7.327 16.1419H5V18.1419H7.327V16.1419ZM13 10.9839H5V12.9839H13V10.9839ZM16.673 12.9839H19V10.9839H16.673V12.9839Z" fill="#1D1117"></path>
 										</svg></div>
 									<div class="catalog-page__button-text">Фильтры</div>
+									<div class="catalog-page__button-count hidden" data-filters-count="">
+										<div class="catalog-page__button-num" data-filters-num=""></div>
+									</div>
 								</div>
 								<div class="filters">
 									<ul class="filters__list">
@@ -513,11 +516,13 @@
 											</div>
 										</li>
 									</ul>
-									<div class="filters__button">
-										<div class="filters__button-icon"><svg class="filters__button-svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M17.3286 10.2738C17.4806 10.8048 18.0342 11.112 18.5652 10.96C19.0961 10.808 19.4033 10.2544 19.2513 9.7234L17.3286 10.2738ZM16.59 7.0486L17.3101 6.35478L17.3093 6.35399L16.59 7.0486ZM13.111 5.1336L13.313 4.15423L13.3111 4.15385L13.111 5.1336ZM9.18996 5.5336L8.79605 4.61445L8.79507 4.61487L9.18996 5.5336ZM6.14396 8.1096L5.30355 7.56765L5.30354 7.56767L6.14396 8.1096ZM6.98796 16.9486L7.71107 16.2579L7.71063 16.2574L6.98796 16.9486ZM15.557 17.8196L16.1263 18.6417L16.1265 18.6415L15.557 17.8196ZM18.9858 15.048C19.1904 14.535 18.9403 13.9533 18.4273 13.7487C17.9143 13.5442 17.3326 13.7942 17.1281 14.3072L18.9858 15.048ZM17.3221 9.74708C17.1832 10.2816 17.5039 10.8275 18.0384 10.9665C18.573 11.1054 19.1189 10.7847 19.2578 10.2501L17.3221 9.74708ZM19.9678 7.51813C20.1067 6.9836 19.786 6.43767 19.2515 6.29875C18.717 6.15984 18.171 6.48055 18.0321 7.01508L19.9678 7.51813ZM18.0236 10.9625C18.5559 11.1096 19.1067 10.7973 19.2538 10.265C19.4009 9.73262 19.0886 9.18183 18.5563 9.03473L18.0236 10.9625ZM15.9073 8.30273C15.375 8.15563 14.8242 8.46792 14.6771 9.00025C14.53 9.53259 14.8423 10.0834 15.3746 10.2305L15.9073 8.30273ZM19.2513 9.7234C18.8893 8.45874 18.2228 7.30211 17.3101 6.35478L15.8698 7.74242C16.5557 8.4543 17.0565 9.32346 17.3286 10.2738L19.2513 9.7234ZM17.3093 6.35399C16.229 5.23517 14.8362 4.46848 13.313 4.15423L12.9089 6.11298C14.0377 6.34587 15.07 6.91406 15.8706 7.74322L17.3093 6.35399ZM13.3111 4.15385C11.7943 3.84392 10.219 4.00463 8.79605 4.61445L9.58386 6.45275C10.6324 6.00341 11.7931 5.885 12.9108 6.11336L13.3111 4.15385ZM8.79507 4.61487C7.36358 5.23016 6.14798 6.25819 5.30355 7.56765L6.98436 8.65156C7.6133 7.67627 8.51867 6.9106 9.58485 6.45233L8.79507 4.61487ZM5.30354 7.56767C3.25576 10.7433 3.65353 14.909 6.26528 17.6398L7.71063 16.2574C5.73839 14.1953 5.43802 11.0496 6.98438 8.65154L5.30354 7.56767ZM6.26484 17.6393C8.85782 20.3539 13.0402 20.779 16.1263 18.6417L14.9876 16.9975C12.7104 18.5746 9.62437 18.2609 7.71107 16.2579L6.26484 17.6393ZM16.1265 18.6415C17.4121 17.7507 18.4066 16.5008 18.9858 15.048L17.1281 14.3072C16.6944 15.3949 15.9498 16.3307 14.9874 16.9977L16.1265 18.6415ZM19.2578 10.2501L19.9678 7.51813L18.0321 7.01508L17.3221 9.74708L19.2578 10.2501ZM18.5563 9.03473L15.9073 8.30273L15.3746 10.2305L18.0236 10.9625L18.5563 9.03473Z" fill="#1D1117"></path>
-											</svg></div>
-										<div class="filters__button-text">Сбросить</div>
+									<div class="filters__buttons">
+										<div class="filters__button" data-filters-reset="">
+											<div class="filters__button-icon"><svg class="filters__button-svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.3286 10.2738C17.4806 10.8048 18.0342 11.112 18.5652 10.96C19.0961 10.808 19.4033 10.2544 19.2513 9.7234L17.3286 10.2738ZM16.59 7.0486L17.3101 6.35478L17.3093 6.35399L16.59 7.0486ZM13.111 5.1336L13.313 4.15423L13.3111 4.15385L13.111 5.1336ZM9.18996 5.5336L8.79605 4.61445L8.79507 4.61487L9.18996 5.5336ZM6.14396 8.1096L5.30355 7.56765L5.30354 7.56767L6.14396 8.1096ZM6.98796 16.9486L7.71107 16.2579L7.71063 16.2574L6.98796 16.9486ZM15.557 17.8196L16.1263 18.6417L16.1265 18.6415L15.557 17.8196ZM18.9858 15.048C19.1904 14.535 18.9403 13.9533 18.4273 13.7487C17.9143 13.5442 17.3326 13.7942 17.1281 14.3072L18.9858 15.048ZM17.3221 9.74708C17.1832 10.2816 17.5039 10.8275 18.0384 10.9665C18.573 11.1054 19.1189 10.7847 19.2578 10.2501L17.3221 9.74708ZM19.9678 7.51813C20.1067 6.9836 19.786 6.43767 19.2515 6.29875C18.717 6.15984 18.171 6.48055 18.0321 7.01508L19.9678 7.51813ZM18.0236 10.9625C18.5559 11.1096 19.1067 10.7973 19.2538 10.265C19.4009 9.73262 19.0886 9.18183 18.5563 9.03473L18.0236 10.9625ZM15.9073 8.30273C15.375 8.15563 14.8242 8.46792 14.6771 9.00025C14.53 9.53259 14.8423 10.0834 15.3746 10.2305L15.9073 8.30273ZM19.2513 9.7234C18.8893 8.45874 18.2228 7.30211 17.3101 6.35478L15.8698 7.74242C16.5557 8.4543 17.0565 9.32346 17.3286 10.2738L19.2513 9.7234ZM17.3093 6.35399C16.229 5.23517 14.8362 4.46848 13.313 4.15423L12.9089 6.11298C14.0377 6.34587 15.07 6.91406 15.8706 7.74322L17.3093 6.35399ZM13.3111 4.15385C11.7943 3.84392 10.219 4.00463 8.79605 4.61445L9.58386 6.45275C10.6324 6.00341 11.7931 5.885 12.9108 6.11336L13.3111 4.15385ZM8.79507 4.61487C7.36358 5.23016 6.14798 6.25819 5.30355 7.56765L6.98436 8.65156C7.6133 7.67627 8.51867 6.9106 9.58485 6.45233L8.79507 4.61487ZM5.30354 7.56767C3.25576 10.7433 3.65353 14.909 6.26528 17.6398L7.71063 16.2574C5.73839 14.1953 5.43802 11.0496 6.98438 8.65154L5.30354 7.56767ZM6.26484 17.6393C8.85782 20.3539 13.0402 20.779 16.1263 18.6417L14.9876 16.9975C12.7104 18.5746 9.62437 18.2609 7.71107 16.2579L6.26484 17.6393ZM16.1265 18.6415C17.4121 17.7507 18.4066 16.5008 18.9858 15.048L17.1281 14.3072C16.6944 15.3949 15.9498 16.3307 14.9874 16.9977L16.1265 18.6415ZM19.2578 10.2501L19.9678 7.51813L18.0321 7.01508L17.3221 9.74708L19.2578 10.2501ZM18.5563 9.03473L15.9073 8.30273L15.3746 10.2305L18.0236 10.9625L18.5563 9.03473Z" fill="#1D1117"></path>
+												</svg></div>
+											<div class="filters__button-text">Сбросить</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1248,9 +1253,282 @@
 							</div>
 						</div>
 						<div class="product-modal__buttons">
-							<div class="product-modal__item"><button class="button button--outline button--auto button--wide"><span class="button__span">Вернуться в каталог</span></button></div>
+							<div class="product-modal__item"><button class="button button--outline button--auto button--wide button--auto button--wide"><span class="button__span">Вернуться в каталог</span></button></div>
 							<div class="product-modal__item"><button class="button"><span class="button__span">Оформить заказ</span></button></div>
 						</div>
+					</div>
+				</div>
+				<div class="catalog-menu filters filters--mobile">
+					<div class="catalog-menu__container">
+						<div class="catalog-menu__button" data-filters-close=""><svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.62621 21.9596C8.23568 22.3501 8.23568 22.9833 8.62621 23.3738C9.01673 23.7643 9.6499 23.7643 10.0404 23.3738L8.62621 21.9596ZM16.7071 16.7071C17.0976 16.3166 17.0976 15.6835 16.7071 15.2929C16.3166 14.9024 15.6834 14.9024 15.2929 15.2929L16.7071 16.7071ZM15.2929 15.2929C14.9023 15.6835 14.9023 16.3166 15.2929 16.7071C15.6834 17.0977 16.3166 17.0977 16.7071 16.7071L15.2929 15.2929ZM23.3737 10.0405C23.7643 9.64996 23.7643 9.01679 23.3737 8.62627C22.9832 8.23574 22.3501 8.23574 21.9595 8.62627L23.3737 10.0405ZM16.7071 15.2929C16.3166 14.9024 15.6834 14.9024 15.2929 15.2929C14.9023 15.6835 14.9023 16.3166 15.2929 16.7071L16.7071 15.2929ZM21.9595 23.3738C22.3501 23.7643 22.9832 23.7643 23.3737 23.3738C23.7643 22.9833 23.7643 22.3501 23.3737 21.9596L21.9595 23.3738ZM15.2929 16.7071C15.6834 17.0977 16.3166 17.0977 16.7071 16.7071C17.0976 16.3166 17.0976 15.6835 16.7071 15.2929L15.2929 16.7071ZM10.0404 8.62627C9.6499 8.23574 9.01673 8.23574 8.62621 8.62627C8.23568 9.01679 8.23568 9.64996 8.62621 10.0405L10.0404 8.62627ZM10.0404 23.3738L16.7071 16.7071L15.2929 15.2929L8.62621 21.9596L10.0404 23.3738ZM16.7071 16.7071L23.3737 10.0405L21.9595 8.62627L15.2929 15.2929L16.7071 16.7071ZM15.2929 16.7071L21.9595 23.3738L23.3737 21.9596L16.7071 15.2929L15.2929 16.7071ZM16.7071 15.2929L10.0404 8.62627L8.62621 10.0405L15.2929 16.7071L16.7071 15.2929Z" fill="#1D1117"></path>
+							</svg></div>
+						<h2 class="catalog-menu__title">Фильтры</h2>
+						<ul class="filters__list">
+							<li class="filters__item">
+								<div class="filters__heading">Производитель</div>
+								<div class="filters__range">
+									<div class="range" data-range-block="">
+										<div class="range__inputs"><label class="range__item"><span class="range__label">от</span><input class="range__input" type="number" value="2300" data-input-start="2300" /></label><label class="range__item"><span class="range__label">до</span><input class="range__input" type="number" value="4000" data-input-end="4000" /></label></div>
+										<div class="range__range"></div>
+									</div>
+								</div>
+							</li>
+							<li class="filters__item">
+								<div class="filters__heading">Производитель</div>
+								<div class="filters__body">
+									<ul class="filers__options">
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="filters__item">
+								<div class="filters__heading">Производитель</div>
+								<div class="filters__body">
+									<ul class="filers__options">
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="filters__item">
+								<div class="filters__heading">Производитель</div>
+								<div class="filters__body">
+									<ul class="filers__options">
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+									</ul>
+									<div class="filters__show">
+										<div class="filters__text">Показать все</div>
+										<div class="filters__icon"><svg class="filters__svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10 17L15 12L10 7" stroke="#C7C7C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg></div>
+									</div>
+								</div>
+							</li>
+							<li class="filters__item">
+								<div class="filters__heading">Производитель</div>
+								<div class="filters__body">
+									<ul class="filers__options">
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="filters__item">
+								<div class="filters__heading">Производитель</div>
+								<div class="filters__body">
+									<ul class="filers__options">
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="filters__item">
+								<div class="filters__heading">Производитель</div>
+								<div class="filters__body">
+									<ul class="filers__options">
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+										<li class="filters__box">
+											<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" text="Германия" data-filters-input="" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="checkbox__caption">Германия</div>
+												</label></div>
+										</li>
+									</ul>
+									<div class="filters__show">
+										<div class="filters__text">Показать все</div>
+										<div class="filters__icon"><svg class="filters__svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10 17L15 12L10 7" stroke="#C7C7C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg></div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="filters__buttons">
+						<div class="filters__button" data-filters-reset="">
+							<div class="filters__button-icon"><svg class="filters__button-svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M17.3286 10.2738C17.4806 10.8048 18.0342 11.112 18.5652 10.96C19.0961 10.808 19.4033 10.2544 19.2513 9.7234L17.3286 10.2738ZM16.59 7.0486L17.3101 6.35478L17.3093 6.35399L16.59 7.0486ZM13.111 5.1336L13.313 4.15423L13.3111 4.15385L13.111 5.1336ZM9.18996 5.5336L8.79605 4.61445L8.79507 4.61487L9.18996 5.5336ZM6.14396 8.1096L5.30355 7.56765L5.30354 7.56767L6.14396 8.1096ZM6.98796 16.9486L7.71107 16.2579L7.71063 16.2574L6.98796 16.9486ZM15.557 17.8196L16.1263 18.6417L16.1265 18.6415L15.557 17.8196ZM18.9858 15.048C19.1904 14.535 18.9403 13.9533 18.4273 13.7487C17.9143 13.5442 17.3326 13.7942 17.1281 14.3072L18.9858 15.048ZM17.3221 9.74708C17.1832 10.2816 17.5039 10.8275 18.0384 10.9665C18.573 11.1054 19.1189 10.7847 19.2578 10.2501L17.3221 9.74708ZM19.9678 7.51813C20.1067 6.9836 19.786 6.43767 19.2515 6.29875C18.717 6.15984 18.171 6.48055 18.0321 7.01508L19.9678 7.51813ZM18.0236 10.9625C18.5559 11.1096 19.1067 10.7973 19.2538 10.265C19.4009 9.73262 19.0886 9.18183 18.5563 9.03473L18.0236 10.9625ZM15.9073 8.30273C15.375 8.15563 14.8242 8.46792 14.6771 9.00025C14.53 9.53259 14.8423 10.0834 15.3746 10.2305L15.9073 8.30273ZM19.2513 9.7234C18.8893 8.45874 18.2228 7.30211 17.3101 6.35478L15.8698 7.74242C16.5557 8.4543 17.0565 9.32346 17.3286 10.2738L19.2513 9.7234ZM17.3093 6.35399C16.229 5.23517 14.8362 4.46848 13.313 4.15423L12.9089 6.11298C14.0377 6.34587 15.07 6.91406 15.8706 7.74322L17.3093 6.35399ZM13.3111 4.15385C11.7943 3.84392 10.219 4.00463 8.79605 4.61445L9.58386 6.45275C10.6324 6.00341 11.7931 5.885 12.9108 6.11336L13.3111 4.15385ZM8.79507 4.61487C7.36358 5.23016 6.14798 6.25819 5.30355 7.56765L6.98436 8.65156C7.6133 7.67627 8.51867 6.9106 9.58485 6.45233L8.79507 4.61487ZM5.30354 7.56767C3.25576 10.7433 3.65353 14.909 6.26528 17.6398L7.71063 16.2574C5.73839 14.1953 5.43802 11.0496 6.98438 8.65154L5.30354 7.56767ZM6.26484 17.6393C8.85782 20.3539 13.0402 20.779 16.1263 18.6417L14.9876 16.9975C12.7104 18.5746 9.62437 18.2609 7.71107 16.2579L6.26484 17.6393ZM16.1265 18.6415C17.4121 17.7507 18.4066 16.5008 18.9858 15.048L17.1281 14.3072C16.6944 15.3949 15.9498 16.3307 14.9874 16.9977L16.1265 18.6415ZM19.2578 10.2501L19.9678 7.51813L18.0321 7.01508L17.3221 9.74708L19.2578 10.2501ZM18.5563 9.03473L15.9073 8.30273L15.3746 10.2305L18.0236 10.9625L18.5563 9.03473Z" fill="#1D1117"></path>
+								</svg></div>
+							<div class="filters__button-text">Сбросить</div>
+						</div><button class="button" data-filters-accept=""><span class="button__span">Применить</span></button>
 					</div>
 				</div>
 				<div class="search-modal" data-fancy-modal="search">
@@ -1263,7 +1541,7 @@
 									</svg></div><input class="search-modal__input" placeholder="Что вы хотите найти?" />
 							</div>
 							<div class="search-modal__col">
-								<div class="search-modal__item"><button class="button button--huge button--big"><span class="button__span">Поиск</span></button></div>
+								<div class="search-modal__item"><button class="button button--huge button--big button--huge button--big"><span class="button__span">Поиск</span></button></div>
 								<div class="search-modal__item">
 									<div class="search-modal__button" data-fancybox-close=""><svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M8.62621 21.9596C8.23568 22.3501 8.23568 22.9833 8.62621 23.3738C9.01673 23.7643 9.6499 23.7643 10.0404 23.3738L8.62621 21.9596ZM16.7071 16.7071C17.0976 16.3166 17.0976 15.6835 16.7071 15.2929C16.3166 14.9024 15.6834 14.9024 15.2929 15.2929L16.7071 16.7071ZM15.2929 15.2929C14.9023 15.6835 14.9023 16.3166 15.2929 16.7071C15.6834 17.0977 16.3166 17.0977 16.7071 16.7071L15.2929 15.2929ZM23.3737 10.0405C23.7643 9.64996 23.7643 9.01679 23.3737 8.62627C22.9832 8.23574 22.3501 8.23574 21.9595 8.62627L23.3737 10.0405ZM16.7071 15.2929C16.3166 14.9024 15.6834 14.9024 15.2929 15.2929C14.9023 15.6835 14.9023 16.3166 15.2929 16.7071L16.7071 15.2929ZM21.9595 23.3738C22.3501 23.7643 22.9832 23.7643 23.3737 23.3738C23.7643 22.9833 23.7643 22.3501 23.3737 21.9596L21.9595 23.3738ZM15.2929 16.7071C15.6834 17.0977 16.3166 17.0977 16.7071 16.7071C17.0976 16.3166 17.0976 15.6835 16.7071 15.2929L15.2929 16.7071ZM10.0404 8.62627C9.6499 8.23574 9.01673 8.23574 8.62621 8.62627C8.23568 9.01679 8.23568 9.64996 8.62621 10.0405L10.0404 8.62627ZM10.0404 23.3738L16.7071 16.7071L15.2929 15.2929L8.62621 21.9596L10.0404 23.3738ZM16.7071 16.7071L23.3737 10.0405L21.9595 8.62627L15.2929 15.2929L16.7071 16.7071ZM15.2929 16.7071L21.9595 23.3738L23.3737 21.9596L16.7071 15.2929L15.2929 16.7071ZM16.7071 15.2929L10.0404 8.62627L8.62621 10.0405L15.2929 16.7071L16.7071 15.2929Z" fill="#1D1117"></path>
