@@ -1,35 +1,35 @@
 mixin submit-button 
-  button.button(class=attributes.class)&attributes(attributtes)
+  button.button(class=attributes.class)&attributes(attributes)
     span.button__span
       block
 
 mixin accept-button 
-  button.button.button--icon.button--sm(class=attributes.class)&attributes(attributtes)
+  button.button.button--icon.button--sm(class=attributes.class)&attributes(attributes)
     .button__icon 
       +check-svg.button__svg.button__check
     .button__text 
       block
 
 mixin delete-button
-  .button.button--outline.button--icon.button--sm(class=attributes.class)&attributes(attributtes) 
+  .button.button--outline.button--icon.button--sm(class=attributes.class)&attributes(attributes) 
     .button__icon 
       +trash-svg.button__svg
     .button__text 
       block
 
 mixin red-link 
-  a.button(class=attributes.class href="#")&attributes(attributtes)
+  a.button(class=attributes.class href="#")&attributes(attributes)
     span.button__span
       block
 
 mixin link-left 
-  a.button.button--outline(href="#" class=attributes.class)&attributes(attributtes) 
+  a.button.button--outline(href="#" class=attributes.class)&attributes(attributes) 
     .button__icon 
       +arrow-svg.button__svg.button__arrow 
     .button__text 
       block
 
 mixin outline-button 
-  button.button.button--outline(class=attributes.class)&attributes(attributtes) 
+  button.button.button--outline(class=attributes.class)&attributes(attributes) 
     span.button__span
       block

@@ -1,13 +1,29 @@
 .grid-container {
   --itemsCount: 6;
+  @media (max-width: 1601px) {
+    --itemsCount: 5;
+  }
+  @media (max-width: ($breakpoint-l - 1px)) {
+    --itemsCount: 4;
+  }
+  @media (max-width: ($breakpoint - 1px)) {
+    --itemsCount: 2;
+  }
 
   display: grid;
   grid-template-columns: repeat(var(--itemsCount), 1fr);
-  @media (max-width: ($breakpoint - 1px)) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  
 
   &--catalog {
     --itemsCount: 5;
+    @media (max-width: 1601px) {
+      --itemsCount: 4;
+    }
+    @media (max-width: ($breakpoint-l - 1px)) {
+      --itemsCount: 3;
+    }
+    @media (max-width: ($breakpoint - 1px)) {
+      --itemsCount: 2;
+    }
   }
 }

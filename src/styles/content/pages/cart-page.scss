@@ -50,6 +50,8 @@
     @media (max-width: ($breakpoint - 1px)) {
       padding-top: 68px;
     }
+
+    height: 100%;
   }
   &__section-hidden {
     opacity: 0;
@@ -165,6 +167,15 @@
 
     path {
       fill: #C7C7C7;
+    }
+  }
+
+  &__panel {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 140px;
+    @media (max-width: ($breakpoint - 1px)) {
+      position: static;
     }
   }
 }

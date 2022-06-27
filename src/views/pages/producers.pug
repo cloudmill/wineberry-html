@@ -9,9 +9,10 @@ block variables
 block content
   .producers-page 
     section.section.section--first 
-      .container
-        +breadcrumbs(page = 'Производители')
-        h1.section__title
+      .container.container--rem
+        .section__breadcrumbs
+          +breadcrumbs(page = 'Производители')
+        h1
           |Производители
     .section__block
       .producers-page__grid 

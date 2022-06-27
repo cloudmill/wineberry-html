@@ -141,6 +141,8 @@
 
   &__price {
     margin-left: 10px;
+
+    white-space: nowrap;
     font-weight: 700;
     letter-spacing: var(--letter-space);
     @include fsl(18px);

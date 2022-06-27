@@ -11,6 +11,10 @@
   }
 }
 
+.fullheight {
+  height: 100%;
+}
+
 .fullheight-mobile {
   @media (max-width: ($breakpoint - 1px)) {
     height: 100%;

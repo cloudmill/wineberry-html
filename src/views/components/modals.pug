@@ -196,3 +196,50 @@ mixin search-modal
           .search-modal__item
             .search-modal__button(data-fancybox-close='')
               +cross-svg
+
+mixin catalog-menu 
+  .catalog-menu.filters.filters--mobile
+    .catalog-menu__container
+      .catalog-menu__button(data-filters-close='')
+        +cross-svg
+      h2.catalog-menu__title 
+        |Фильтры
+      ul.filters__list
+        li.filters__item
+          .filters__heading 
+            |Производитель
+          .filters__range
+            .range(data-range-block='')
+              .range__inputs 
+                label.range__item 
+                  span.range__label 
+                    |от
+                  input.range__input(type="number" value ='2300' data-input-start='2300')
+                label.range__item 
+                  span.range__label 
+                    |до
+                  input.range__input(type="number" value ='4000' data-input-end='4000')
+              .range__range
+        - for (i = 1; i < 7; i++)
+          li.filters__item
+            .filters__heading 
+              |Производитель
+            .filters__body 
+              ul.filers__options 
+                - for (j = 0; j < 4; j++)
+                  li.filters__box 
+                    +checkbox(text = 'Германия' data-filters-input='').checkbox--filters
+              if (i % 3 === 0)
+                .filters__show 
+                  .filters__text 
+                    |Показать все
+                  .filters__icon
+                    +small-arrow-svg.filters__svg 
+    .filters__buttons
+      .filters__button(data-filters-reset='')
+        .filters__button-icon 
+          +refresh-svg.filters__button-svg 
+        .filters__button-text 
+          |Сбросить
+      +submit-button(data-filters-accept='')
+        |Применить

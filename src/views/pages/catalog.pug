@@ -23,11 +23,13 @@ block content
     section.catalog-page__listing 
       .catalog-page__row 
         .catalog-page__col
-          .catalog-page__button
+          .catalog-page__button(data-filters-button='')
             .catalog-page__button-icon 
               +filters-svg.catalog-page__button-svg 
             .catalog-page__button-text 
               |Фильтры
+            .catalog-page__button-count.hidden(data-filters-count='')
+              .catalog-page__button-num(data-filters-num='')
           .filters
             ul.filters__list
               li.filters__item
@@ -60,14 +62,16 @@ block content
                           |Показать все
                         .filters__icon
                           +small-arrow-svg.filters__svg 
-            .filters__button 
-              .filters__button-icon 
-                +refresh-svg.filters__button-svg 
-              .filters__button-text 
-                |Сбросить
+            .filters__buttons
+              .filters__button(data-filters-reset='')
+                .filters__button-icon 
+                  +refresh-svg.filters__button-svg 
+                .filters__button-text 
+                  |Сбросить
         .catalog-page__col
           .grid-container.grid-container--catalog 
             +product-card(noPrice = true)
             - for (i = 0; i < 14; i++)
               +product-card(bot = true)
   +product-modal
+  +catalog-menu
