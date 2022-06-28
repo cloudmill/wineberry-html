@@ -201,13 +201,65 @@
   &__cart {
     position: relative;
     z-index: 0;
+
+    width: getRem(58px);
+    height: getRem(58px);
+    
+    &::after {
+      content: "";
+      @include cover;
+      z-index: -1;
+
+      transition: $transition;
+      border-radius: 12px;
+      background: var(--color-wine);
+      opacity: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: calc(100% - 2px);
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 0;
+      height: 0;
+
+      border-style: solid;
+      border-width: 6px 12px 0 12px;
+      border-color: var(--color-wine) transparent transparent transparent;
+      opacity: 0;
+      transition: $transition;
+    }
+
+    &.active {
+      &::before {
+        opacity: 1;
+      }
+      &::after {
+        opacity: 1;
+      }
+
+      #{$comp}__cart-svg {
+        path {
+          stroke: var(--color-white);
+        }
+      }
+
+      #{$comp}__cart-count {
+        background: var(--color-black);
+        color: var(--color-white);
+      }
+    }
   }
   &__cart-count {
     --size: 16px;
 
     position: absolute;
-    top: 4px;
-    right: 0;
+    top: getRem(9px);
+    right: getRem(6px);
     z-index: 1;
     @media (max-width: ($breakpoint - 1px)) {
       position: static;
@@ -223,7 +275,13 @@
     background: var(--color-wine);
     color: var(--color-white);
     letter-spacing: var(--letter-space);
+    transition: $transition;
     @include fsl(12px, 120%);
+  }
+  &__cart-svg {
+    path {
+      transition: $transition;
+    }
   }
 
   &__svg {

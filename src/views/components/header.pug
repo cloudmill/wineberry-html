@@ -47,8 +47,8 @@ mixin header
                 .header__buttons 
                   .header__item(data-fancy-button='search')
                     +search-svg.header__svg
-                  .header__item.header__cart
-                    +cart-svg.header__svg
+                  .header__item.header__cart(data-cart-button='')
+                    +cart-svg.header__svg.header__cart-svg
                     .header__cart-count 
                       |8
                   .header__item(data-fancy-button='auth')
@@ -68,7 +68,7 @@ mixin header
               .header__buttons 
                 .header__item
                   +user-svg.header__svg
-                .header__item.header__cart
+                .header__item.header__cart(data-cart-button='')
                   +cart-svg.header__svg
                   .header__cart-count 
                     |8
@@ -101,6 +101,7 @@ mixin header
                         +message-svg.ask__svg 
                       .ask__text 
                         |Задать вопрос
+    +cart-modal
 
 mixin header-small
   header.header.header--small 

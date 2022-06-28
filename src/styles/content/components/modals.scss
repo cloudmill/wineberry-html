@@ -213,6 +213,14 @@
     display: flex;
   }
 
+  &__col {
+    &:nth-child(2) {
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+      }
+    }
+  }
+
   &__prices {
     margin-top: 20px;
     @media (max-width: ($breakpoint - 1px)) {
@@ -349,6 +357,206 @@
     border-radius: 8px;
     @media (max-width: ($breakpoint - 1px)) {
       border-radius: 4px;
+    }
+  }
+}
+
+.cart-modal {
+  $comp: &;
+
+  position: absolute;
+  z-index: 0;
+  top: 100%;
+  @media (max-width: ($breakpoint - 1px)) {
+    top: 0;
+    z-index: 1;
+  }
+
+  width: 100%;
+  height: calc(100vh - 10.2rem);
+  @media (max-width: ($breakpoint - 1px)) {
+    height: 100vh;
+  }
+
+  pointer-events: none;
+
+  &.active {
+    pointer-events: all;
+
+    #{$comp}__overlay {
+      opacity: 1;
+    }
+    #{$comp}__modal {
+      transform: none;
+    }
+  }
+
+  &__overlay {
+    height: 100%;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+
+    background: rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(12px);
+    transition: $transition;
+    opacity: 0;
+  }
+  
+  &__modal {
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+    height: 100%;
+    width: calc(#{$col-width-d} * 3);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
+  
+    background: var(--color-white);
+    box-shadow: -14px 4px 24px rgba(0, 0, 0, 0.1);
+    background: var(--color-white);
+    overflow-y: scroll;
+    @include scrollbar-hidden;
+    transition: $transition;
+    transform: translateX(100%);
+  }
+
+  &__top {
+    padding: 21px 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 12px 20px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__button {
+    --size: 44px;
+
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    border: 1px solid var(--color-borders);
+    border-radius: 8px;
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 4px;
+    }
+  }
+
+  &__list {
+    // overflow-y: scroll;
+
+  }
+
+  &__item {
+    border-top: 1px solid var(--color-borders);
+  }
+
+  &__container {
+    padding: 20px 32px 20px 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 16px 36px 16px 28px;
+    }
+  }
+
+  &__bot {
+    margin-top: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 16px;
+    }
+  }
+
+  &__counter {
+    width: 140px;
+    @media (max-width: ($breakpoint - 1px)) {
+      width: calc(#{$col-width-m} * 4);
+    }
+  }
+
+  &__delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    cursor: pointer;
+  }
+  &__delete-svg {
+    width: 36px;
+    height: 36px;
+
+    path {
+      fill: #C7C7C7;
+    }
+  }
+
+  &__panel {
+    padding: 12px 32px 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 12px 20px 10px;
+    }
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 0;
+
+    background: var(--color-white);
+    box-shadow: 0px -9px 20px rgba(0, 0, 0, 0.04);
+  }
+
+  &__line {
+
+    &:not(:last-child) {
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+      @media (max-width: ($breakpoint - 1px)) {
+        padding-bottom: 9px;
+        margin-bottom: 16px;
+      }
+
+      border-bottom: 1px solid var(--color-borders);
+    }
+  }
+
+  &_label {
+    color: var(--color-lilac);
+    letter-spacing: var(--letter-space);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+    }
+  }
+
+  &__num {
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+  }
+
+  &__text {
+    letter-spacing: var(--letter-space);
+    @include fsl(20px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(18px);
+    }
+  }
+
+  &__price {
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(20px, 120%);
+  }
+
+  &__btn {
+    margin-top: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 16px;
     }
   }
 }

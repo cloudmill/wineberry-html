@@ -10,4 +10,6 @@ block content
     ul.routes
       each route in data.routes
         li.routes__item
-          a.button(href=route.href)= route.title
+          a.button(href=route.href)
+            span.button__span
+              |#{route.title}

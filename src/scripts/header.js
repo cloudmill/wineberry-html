@@ -53,11 +53,40 @@ import { mediaQuery } from './mediaQueries'
   });
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
+  // mobile menu
   const header = document.querySelector('.header')
   const burger = header.querySelector('.header__burger')
 
   burger.onclick = function() {
     header.classList.toggle('menu')
   }
+
+  // cart modal
+  const modal = document.querySelector('[data-cart-modal]')
+  const btn = document.querySelector('[data-cart-button]')
+
+  window.addEventListener('click', event => {
+    const target = event.target
+
+    if (target.closest('[data-cart-button]')) {
+      if (header.classList.contains('header--up')) {
+        header.classList.remove('header--up')
+      }
+
+      document.body.classList.toggle('body--hidden')
+      modal.classList.toggle('active')
+      btn.classList.toggle('active')
+    }
+    if (target.closest('[data-cart-overlay]')) {
+      modal.classList.remove('active')
+      btn.classList.remove('active')
+    }
+    if (target.closest('[data-cart-close]')) {
+      modal.classList.remove('active')
+      btn.classList.remove('active')
+    }
+  })
 })
+
