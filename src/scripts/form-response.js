@@ -3,7 +3,7 @@ import {defaults} from './fancybox'
 $(() => {
   const form = $('[data-form]');
 
-  if (form.length !== 0) {
+  if (form.length) {
 
     form.each(function() {
       const ths = $(this)

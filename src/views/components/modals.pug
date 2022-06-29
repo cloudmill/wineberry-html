@@ -35,7 +35,7 @@ mixin login-modal
             .login-modal__button(data-fancy-button='pass-rec')
               |Забыли пароль?
         .tabs-block(data-tabs-block='')
-          form.form(action="/")
+          form.form(action="/" data-form='reg')
             each item in ddata
               .form__item 
                 +input(type = item.type)
@@ -56,10 +56,10 @@ mixin login-modal
                 |Зарегистрироваться
 
 mixin password-recovery-modal 
-  .modal.password-modal 
+  .modal.password-modal(data-fancy-modal='pass-rec')
     .password-modal__container 
       .password-modal__back 
-        +link-left 
+        +link-left(data-fancy-button='auth')
           |Назад
       h2.password-modal__title 
         |Восстановить пароль
@@ -68,7 +68,9 @@ mixin password-recovery-modal
       .modal__inner
         form.form(action="/")
           .form__item 
-            +input(type = 'email' placeholder = 'E-mail')
+            +input(type = 'email')
+            span.form__span 
+              |E-mail
           .form__item 
             +submit-button 
               |Отправить
@@ -81,9 +83,13 @@ mixin password-create-modal
       .modal__inner
         form.form(action="/")
           .form__item 
-            +input(type = 'password' placeholder = 'Новый пароль')
+            +input(type = 'password')
+            span.form__span 
+              |Новый пароль
           .form__item 
-            +input(type = 'password' placeholder = 'Повторить новый пароль')
+            +input(type = 'password')
+            span.form__span 
+              |Повторить новый пароль
           .form__item 
             +submit-button 
               |Сохранить
@@ -104,7 +110,7 @@ mixin response-modal
         .response-modal__icon 
           +ok-svg.response-modal__svg 
         h2.response-modal__title 
-          |Вы зарегистрировались
+          |#{attributes.title}
         .response-modal__text 
           |#{attributes.text}
 
@@ -165,7 +171,7 @@ mixin ask-modal
     .modal__container 
       h2.modal__title 
         |Задать вопрос
-      form.form(action="/" data-form='ask')
+      form.form(action="/" data-parsley-validate data-form='ask' )
         each item in ddata
           .form__item 
             +input(type = item.type) 

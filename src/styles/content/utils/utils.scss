@@ -4,6 +4,16 @@
   }
 }
 
+.tablet-only {
+  display: none;
+  @media (max-width: ($breakpoint - 1px)) {
+    display: block;
+  }
+  @media (max-width: ($breakpoint-m - 1px)) {
+    display: none;
+  }
+}
+
 .mobile-only {
   display: none;
   @media (max-width: ($breakpoint - 1px)) {

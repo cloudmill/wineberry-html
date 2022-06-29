@@ -127,11 +127,16 @@
     }
   }
   &__nav-link {
+    transition: color $transition;
     letter-spacing: var(--letter-space);
     color: var(--color-lilac);
     @include fsl(18px, 120%, true);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px, 120%, true);
+    }
+    
+    &:hover {
+      color: var(--color-wine);
     }
   }
 
@@ -155,6 +160,12 @@
   &__links-link {
     display: flex;
     align-items: center;
+
+    &:hover {
+      #{$comp}__links-text {
+        color: var(--color-wine);
+      }
+    }
   }
   &__links-img {
     margin-right: 4px;
@@ -172,6 +183,7 @@
     justify-content: center;
   }
   &__links-text {
+    transition: color $transition;
     letter-spacing: var(--letter-space);
     @include fsl(22px, 120%, true);
     @media (max-width: ($breakpoint - 1px)) {
@@ -196,6 +208,14 @@
         margin-left: getRem(8px);
       }
     }
+
+    &:hover {
+      #{$comp}__svg {
+        path {
+          stroke: var(--color-wine);
+        }
+      }
+    }
   }
 
   &__cart {
@@ -204,6 +224,10 @@
 
     width: getRem(58px);
     height: getRem(58px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: auto;
+      height: auto;
+    }
     
     &::after {
       content: "";
@@ -220,25 +244,41 @@
       content: "";
       position: absolute;
       z-index: -1;
-      top: calc(100% - 2px);
-      left: 50%;
-      transform: translateX(-50%);
+      top: 0;
+      left: 0;
 
-      width: 0;
-      height: 0;
+      width: getRem(58px);
+      height: getRem(62px);
 
-      border-style: solid;
-      border-width: 6px 12px 0 12px;
-      border-color: var(--color-wine) transparent transparent transparent;
       opacity: 0;
       transition: $transition;
+      background-image: url("data:image/svg+xml,%3Csvg width='58' height='62' viewBox='0 0 58 62' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='58' height='58' rx='12' fill='%23A71E5C'/%3E%3Cpath d='M29 62L18.6077 57.5L39.3923 57.5L29 62Z' fill='%23A71E5C'/%3E%3C/svg%3E%0A");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &:hover {
+      @media (min-width: $breakpoint) {
+        &::before {
+          opacity: 1;
+        }
+  
+        #{$comp}__cart-svg {
+          path {
+            stroke: var(--color-white);
+          }
+        }
+  
+        #{$comp}__cart-count {
+          background: var(--color-black);
+          color: var(--color-white);
+        }
+      }
     }
 
     &.active {
       &::before {
-        opacity: 1;
-      }
-      &::after {
         opacity: 1;
       }
 
@@ -279,9 +319,7 @@
     @include fsl(12px, 120%);
   }
   &__cart-svg {
-    path {
-      transition: $transition;
-    }
+    
   }
 
   &__svg {
@@ -290,6 +328,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: getRem(32px);
       height: getRem(32px);
+    }
+
+    path {
+      transition: $transition;
     }
   }
 

@@ -283,22 +283,15 @@
     height: 100%;
   }
 
-  &__layout {
-    @include cover;
-    z-index: 1;
-
-    display: flex;
-    align-items: flex-end;
-
-    pointer-events: none;
-  }
-
   &__panel {
     padding: 20px 60px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 20px;
     }
     margin-left: -1px;
+    position: sticky;
+    position:-webkit-sticky;
+    bottom: 0;
 
     display: flex;
     width: 100%;
@@ -306,19 +299,6 @@
     border: 1px solid var(--color-borders);
     box-shadow: 0px -9px 20px rgba(0, 0, 0, 0.04);
     background: var(--color-white);
-
-    &.hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    &.sticky {
-      position: sticky;
-      position:-webkit-sticky;
-      bottom: 0;
-
-      pointer-events: all;
-    }
   }
   &__panel-col {
     &:nth-child(1) {

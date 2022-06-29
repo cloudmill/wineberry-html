@@ -38,8 +38,10 @@ html(lang='ru')
         block content
         +search-modal
         +ask-modal
-        +response-modal(id = 'ask' text = 'Спасибо, мы с вами свяжемся в ближайшее время.')
+        +response-modal(id = 'ask' title= 'Отправлено' text = 'Спасибо, мы с вами свяжемся в ближайшее время.')
+        +response-modal(id = 'reg' title = 'Вы зарегистрировались' text = 'Спасибо, мы с вами свяжемся в ближайшее время.')
         +login-modal
+        +password-recovery-modal
 
       block footer
         +footer

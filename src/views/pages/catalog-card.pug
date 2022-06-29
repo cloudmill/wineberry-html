@@ -22,16 +22,6 @@ block content
             .catalog-card__image 
               +picture('catalog-card.png').catalog-card__picture
         .catalog-card__col
-          .catalog-card__layout 
-            .catalog-card__panel.sticky
-              .catalog-card__panel-col
-                +counter.counter--big
-              .catalog-card__panel-col
-                button.button.button--icon.button--icon--big
-                  .button__icon 
-                    +cart-button-svg.button__svg
-                  .button__text 
-                    |Добавить в корзину
           .catalog-card__wrapper
             .desktop-only
               .section__breadcrumbs
@@ -88,16 +78,15 @@ block content
                 |О производителе
               p.catalog-card__text
                 |Глобальная популярность Lindeman's была обусловлена позитивной философией доктора Генри Линдмана, который основал  винодельню Lindeman's в Долине Хантер в 1843 году. Вина идеально подходящие для повседневных моментов и для особых случаев, что сделало их невероятно популярными во всем мире. Винодельня Lindeman's обладает безупречной репутацией неизменного качества.
-          .catalog-card__inner 
-            .catalog-card__panel.hidden
-              .catalog-card__panel-col
-                +counter.counter--big
-              .catalog-card__panel-col
-                button.button.button--icon.button--icon--big
-                  .button__icon 
-                    +cart-button-svg.button__svg
-                  .button__text 
-                    |Добавить в корзину
+          .catalog-card__inner.catalog-card__panel
+            .catalog-card__panel-col
+              +counter.counter--big
+            .catalog-card__panel-col
+              button.button.button--icon.button--icon--big
+                .button__icon 
+                  +cart-button-svg.button__svg
+                .button__text 
+                  |Добавить в корзину
     section.section.section--big 
       .container 
         .catalog-card__slider 

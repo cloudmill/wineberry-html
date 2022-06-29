@@ -147,7 +147,12 @@
   &__container-col {
 
     &:nth-child(1) {
+      padding-right: 10px;
+      flex-shrink: 0;
+      width: calc(#{$col-width-d} * 3);
       @media (max-width: ($breakpoint - 1px)) {
+        padding-right: 0;
+        width: auto;
         display: flex;
         flex-direction: column;
       }
@@ -176,6 +181,9 @@
   &__phone {
     letter-spacing: var(--letter-space);
     @include fsl(48px, 120%);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      @include fsl(38px);
+    }
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(24px);
     }

@@ -64,4 +64,20 @@
       display: none;
     }
   }
+
+  &__text {
+    margin-top: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 12px;
+
+      width: auto;
+    }
+    width: calc(#{$col-width-d} * 4 - 60px);
+
+    letter-spacing: var(--letter-space);
+    @include fsl(18px, 160%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+    }
+  }
 }

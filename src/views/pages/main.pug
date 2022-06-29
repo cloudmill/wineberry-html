@@ -42,6 +42,17 @@ block content
                     .main-page__intro-item 
                       +outline-button.button--main 
                         |Больше о нас
+            .main-page__intro-mobile
+              .main-page__intro-bot
+                .main-page__intro-caption 
+                  |Северо-Западного федерального округа
+                .main-page__intro-buttons 
+                  .main-page__intro-item 
+                    +submit-button.button--main 
+                      |Стать партнером
+                  .main-page__intro-item 
+                    +outline-button.button--main 
+                      |Больше о нас
         .main-page__intro-col
           .main-page__intro-container.fullheight-mobile
             .main-page__card
@@ -54,7 +65,7 @@ block content
                 +picture('main-card.jpg').main-page__card-image 
               .mobile-only.fullheight-mobile
                 +picture('main-card-mobile.jpg').main-page__card-image 
-      .mobile-only
+      .tablet-only
         .main-page__intro-bot
           .main-page__intro-caption 
             |Северо-Западного федерального округа
@@ -109,19 +120,19 @@ block content
           |WineBerry #[span.main-page__span это]
       .main-page__about-container
         ul.about.about--main
-          - for (i = 1; i < 6; i++)
+          each item,i in data.features
             li.about__item.reverse
               .about__row 
                 .about__col
-                  +picture(`features-${i}.jpg`).about__image
+                  +picture(`features-${i+1}.jpg`).about__image
                 .about__col
                   .about__content(data-about-content='')
                     .about__count 
-                      |#{i}
+                      |#{i+1}
                     .about__title 
-                      |Организация процессов
+                      |#{item.title}
                     ul.about__list
-                      each text in ['Личный кабинет для управления заказами', 'Склады и офисы в собственности', 'Качественный документооборот', 'Собственная транспортная компания', ]
+                      each text in item.items
                         li.about__feature
                           |#{text}
     section.section.section--big 
