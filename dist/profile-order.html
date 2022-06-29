@@ -1042,7 +1042,7 @@
 				<div class="modal" data-fancy-modal="ask">
 					<div class="modal__container">
 						<h2 class="modal__title">Задать вопрос</h2>
-						<form class="form" action="/" data-form="ask">
+						<form class="form" action="/" data-parsley-validate="data-parsley-validate" data-form="ask">
 							<div class="form__item"><input class="form__input" data-input="" required="required" /><span class="form__span">Имя*</span></div>
 							<div class="form__item"><input class="form__input" type="email" data-input="" required="required" /><span class="form__span">E-mail*</span></div>
 							<div class="form__item"><input class="form__input" type="phone" data-input="" required="required" /><span class="form__span">Телефон*</span></div>
@@ -1060,6 +1060,17 @@
 					</div>
 				</div>
 				<div class="modal" data-response="ask">
+					<div class="response-modal">
+						<div class="modal__container">
+							<div class="response-modal__icon"><svg class="response-modal__svg" width="132" height="132" viewbox="0 0 132 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M27.5 68.75L53.1685 93.5L104.5 44" stroke="#A71E5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg></div>
+							<h2 class="response-modal__title">Отправлено</h2>
+							<div class="response-modal__text">Спасибо, мы с вами свяжемся в ближайшее время.</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal" data-response="reg">
 					<div class="response-modal">
 						<div class="modal__container">
 							<div class="response-modal__icon"><svg class="response-modal__svg" width="132" height="132" viewbox="0 0 132 132" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1095,7 +1106,7 @@
 								</div>
 							</div>
 							<div class="tabs-block" data-tabs-block="">
-								<form class="form" action="/">
+								<form class="form" action="/" data-form="reg">
 									<div class="form__item"><input class="form__input" data-input="" required="required" /><span class="form__span">Имя*</span></div>
 									<div class="form__item"><input class="form__input" type="email" data-input="" required="required" /><span class="form__span">E-mail*</span></div>
 									<div class="form__item"><input class="form__input" type="phone" data-input="" required="required" /><span class="form__span">Телефон*</span></div>
@@ -1115,6 +1126,24 @@
 									<div class="form__inner"><button class="button"><span class="button__span">Зарегистрироваться</span></button></div>
 								</form>
 							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal password-modal" data-fancy-modal="pass-rec">
+					<div class="password-modal__container">
+						<div class="password-modal__back"><a class="button button--outline" href="#" data-fancy-button="auth">
+								<div class="button__icon"><svg class="button__svg button__arrow" width="23" height="24" viewbox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12.7438 8.05751C12.3439 7.67663 12.3285 7.04365 12.7094 6.64372C13.0902 6.24379 13.7232 6.22835 14.1232 6.60924L12.7438 8.05751ZM19.0232 11.2759C19.4231 11.6568 19.4385 12.2898 19.0576 12.6897C18.6767 13.0896 18.0438 13.1051 17.6438 12.7242L19.0232 11.2759ZM17.6438 11.2759C18.0438 10.895 18.6767 10.9105 19.0576 11.3104C19.4385 11.7103 19.4231 12.3433 19.0232 12.7242L17.6438 11.2759ZM14.1232 17.3908C13.7232 17.7717 13.0902 17.7563 12.7094 17.3564C12.3285 16.9564 12.3439 16.3235 12.7438 15.9426L14.1232 17.3908ZM18.3335 11C18.8858 11 19.3335 11.4478 19.3335 12C19.3335 12.5523 18.8858 13 18.3335 13V11ZM5.26683 13C4.71454 13 4.26683 12.5523 4.26683 12C4.26683 11.4478 4.71454 11 5.26683 11V13ZM14.1232 6.60924L19.0232 11.2759L17.6438 12.7242L12.7438 8.05751L14.1232 6.60924ZM19.0232 12.7242L14.1232 17.3908L12.7438 15.9426L17.6438 11.2759L19.0232 12.7242ZM18.3335 13H5.26683V11H18.3335V13Z" fill="#1D1117"></path>
+									</svg></div>
+								<div class="button__text">Назад</div>
+							</a></div>
+						<h2 class="password-modal__title">Восстановить пароль</h2>
+						<div class="password-modal__text">Чтобы восстановить пароль, укажите адрес электронный почты, на который был зарегистрирован ваш аккаунт</div>
+						<div class="modal__inner">
+							<form class="form" action="/">
+								<div class="form__item"><input class="form__input" type="email" data-input="" required="required" /><span class="form__span">E-mail</span></div>
+								<div class="form__item"><button class="button"><span class="button__span">Отправить</span></button></div>
+							</form>
 						</div>
 					</div>
 				</div>
