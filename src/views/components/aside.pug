@@ -1,0 +1,97 @@
+mixin aside-profile 
+  .aside
+    if (attributes.card)
+      .aside__wrapper
+        .aside__card 
+          .aside__top 
+            .aside__top-row 
+              .aside__top-col
+                .aside__top-text 
+                  |Вы авторизованы как
+              .aside__top-col
+                .aside__top-icon 
+                  +small-arrow-svg.aside__top-svg
+            .aside__title 
+              |ТК 5 шагов
+          .aside__bot
+            .aside__type 
+              |Родительский аккаунт
+    ul.aside__list 
+      li.aside__item(class=attributes.first)
+        a.aside__link(href="#")
+          .aside__icon 
+            +orders-svg.aside__svg
+          .aside__text 
+            |Мои заказы
+      li.aside__item(class=attributes.second)
+        a.aside__link(href="#")
+          .aside__icon 
+            +profile-bag-svg.aside__svg
+          .aside__text 
+            |Мои юридические лица
+      li.aside__item(class=attributes.third)
+        a.aside__link(href="#")
+          .aside__icon 
+            +profile-offer-svg.aside__svg
+          .aside__text 
+            |Персональные акции
+      li.aside__item(class=attributes.fourth)
+        a.aside__link(href="#")
+          .aside__icon 
+            +user-svg.aside__svg
+          .aside__text 
+            |Профиль
+
+mixin aside-operator 
+  .aside
+    ul.aside__list 
+      li.aside__item(class=attributes.first)
+        a.aside__link(href="#")
+          .aside__icon 
+            +orders-svg.aside__svg
+          .aside__text 
+            |Заказы
+      li.aside__item(class=attributes.second)
+        a.aside__link(href="#")
+          .aside__icon 
+            +user-svg.aside__svg
+          .aside__text 
+            |Профиль
+
+mixin aside-manager
+  .aside
+    ul.aside__list 
+      li.aside__item(class=attributes.first)
+        a.aside__link(href="#")
+          .aside__icon 
+            +orders-svg.aside__svg
+          .aside__text 
+            |Заказы
+      li.aside__item(class=attributes.second)
+        a.aside__link(href="#")
+          .aside__icon 
+            +clients-svg.aside__svg
+          .aside__text 
+            |Клиенты
+      li.aside__item(class=attributes.third)
+        a.aside__link(href="#")
+          .aside__icon 
+            +user-svg.aside__svg
+          .aside__text 
+            |Профиль
+
+mixin aside-supervisor
+  .aside
+    ul.aside__list 
+      li.aside__item(class=attributes.first)
+        a.aside__link(href="#")
+          .aside__icon 
+            +orders-svg.aside__svg
+          .aside__text 
+            |Заказы
+      li.aside__item(class=attributes.second)
+        a.aside__link(href="#")
+          .aside__icon 
+            +user-svg.aside__svg
+          .aside__text 
+            |Профиль

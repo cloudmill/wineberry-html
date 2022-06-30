@@ -128,28 +128,13 @@
       @include fsl(14px);
     }
   }
-  &__orders-item {
-    padding: 30px 0;
-
-    border-top: 1px solid var(--color-borders);
-    cursor: pointer;
-    transition: $transition;
-
-    &--order {
-      cursor: auto;
-    }
-
-    &--supervisor {
-      cursor: auto;
-
-      &:first-child {
-        border-top: none;
-      }
-    }
+  &__orders-link {
 
     &:hover {
-      background: var(--color-wine);
-      border-color: var(--color-wine);
+      #{$comp}__orders-item {
+        background: var(--color-wine);
+        border-color: var(--color-wine);
+      }
 
       #{$comp}__orders-text {
         color: var(--color-white);
@@ -173,6 +158,25 @@
             stroke: var(--color-white);
           }
         }
+      }
+
+      #{$comp}__status-ok {
+        path {
+          stroke: var(--color-white);
+        }
+      }
+    }
+  }
+  &__orders-item {
+    padding: 30px 0;
+
+    border-top: 1px solid var(--color-borders);
+    transition: $transition;
+
+    &--noborder-top {
+
+      &:first-child {
+        border-top: none;
       }
     }
   }

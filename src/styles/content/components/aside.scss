@@ -38,7 +38,6 @@
       display: block;
     }
 
-    cursor: pointer;
 
     &:not(:first-child) {
       margin-top: 24px;
@@ -83,6 +82,26 @@
     }
   }
 
+  &__link {
+    display: flex;
+    align-items: center;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+
+    &:hover {
+      #{$comp}__svg {
+        path {
+          stroke: var(--color-wine);
+        }
+      }
+
+      #{$comp}__text {
+        color: var(--color-wine);
+      }
+    }
+  }
+
   &__icon {
     margin-right: 12px;
     @media (max-width: ($breakpoint - 1px)) {
@@ -104,11 +123,13 @@
     }
 
     path {
+      transition: $transition;
       stroke: var(--color-lilac);
     }
   }
 
   &__text {
+    transition: color $transition;
     letter-spacing: var(--letter-space);
     @include fsl(18px, 120%);
     @media (max-width: ($breakpoint - 1px)) {

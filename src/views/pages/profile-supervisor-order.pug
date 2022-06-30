@@ -1,6 +1,7 @@
 extends ../layouts/master
 
 include ../components/order-card
+include ../components/aside
 
 block variables
   - var mainClass = "main--default"
@@ -48,32 +49,10 @@ block content
     }
   .profile-page
     .mobile-only 
-      .aside
-        ul.aside__list 
-          li.aside__item.active
-            .aside__icon 
-              +orders-svg.aside__svg
-            .aside__text 
-              |Заказы
-          li.aside__item 
-            .aside__icon 
-              +user-svg.aside__svg
-            .aside__text 
-              |Профиль
+      +aside-supervisor(first = 'active')
     .profile-page__row 
       .profile-page__col 
-        .aside
-          ul.aside__list 
-            li.aside__item.active
-              .aside__icon 
-                +orders-svg.aside__svg
-              .aside__text 
-                |Заказы
-            li.aside__item 
-              .aside__icon 
-                +user-svg.aside__svg
-              .aside__text 
-                |Профиль
+        +aside-supervisor(first = 'active')
       .profile-page__col
         .mobile-only 
           p.profile-page__caption 
@@ -132,7 +111,7 @@ block content
           .desktop-only
             .profile-page__order
               ul.profile-page__orders-list
-                li.profile-page__orders-item.profile-page__orders-item--supervisor
+                li.profile-page__orders-item.profile-page__orders-item--noborder-top
                   .profile-page__order-row 
                     .profile-page__order-col
                       .profile-page__orders-label 
@@ -144,7 +123,7 @@ block content
                         .profile-page__status-text 
                           |Ждет проверки менеджером
                 each item in ddata.list
-                  li.profile-page__orders-item.profile-page__orders-item--supervisor
+                  li.profile-page__orders-item.profile-page__orders-item--noborder-top
                     .profile-page__order-row 
                       .profile-page__order-col
                         .profile-page__orders-label 

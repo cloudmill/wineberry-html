@@ -89,6 +89,9 @@
         path {
           fill: var(--color-white);
         }
+        .stroke {
+          stroke: var(--color-white);
+        }
       }
       &::after {
         border-color: var(--color-wine);

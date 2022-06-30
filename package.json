@@ -52,6 +52,7 @@
     "reset-css": "^5.0.1",
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugin-gsap": "^1.0.4",
+    "select2": "^4.1.0-rc.0",
     "swiper": "^7.4.1",
     "tippy.js": "^6.3.7",
     "wnumb": "^1.2.0"

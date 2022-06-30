@@ -2,6 +2,7 @@ extends ../layouts/master
 
 include ../components/breadcrumbs
 include ../components/discount-card
+include ../components/aside
 
 block variables
   - var mainClass = "main--default"
@@ -11,67 +12,10 @@ block variables
 block content
   .profile-page.section.section--default
     .mobile-only 
-      .aside
-        ul.aside__list 
-          li.aside__item
-            .aside__icon 
-              +orders-svg.aside__svg
-            .aside__text 
-              |Мои заказы
-          li.aside__item 
-            .aside__icon 
-              +profile-bag-svg.aside__svg
-            .aside__text 
-              |Мои юридические лица
-          li.aside__item.active
-            .aside__icon 
-              +profile-offer-svg.aside__svg
-            .aside__text 
-              |Персональные акции
-          li.aside__item 
-            .aside__icon 
-              +user-svg.aside__svg
-            .aside__text 
-              |Профиль
+      +aside-profile(third = 'active')
     .profile-page__row.profile-page__row--big 
       .profile-page__col 
-        .aside
-          .aside__wrapper
-            .aside__card 
-              .aside__top 
-                .aside__top-row 
-                  .aside__top-col
-                    .aside__top-text 
-                      |Вы авторизованы как
-                  .aside__top-col
-                    .aside__top-icon 
-                      +small-arrow-svg.aside__top-svg
-                .aside__title 
-                  |ТК 5 шагов
-              .aside__bot
-                .aside__type 
-                  |Родительский аккаунт
-          ul.aside__list 
-            li.aside__item
-              .aside__icon 
-                +orders-svg.aside__svg
-              .aside__text 
-                |Мои заказы
-            li.aside__item 
-              .aside__icon 
-                +profile-bag-svg.aside__svg
-              .aside__text 
-                |Мои юридические лица
-            li.aside__item.active 
-              .aside__icon 
-                +profile-offer-svg.aside__svg
-              .aside__text 
-                |Персональные акции
-            li.aside__item 
-              .aside__icon 
-                +user-svg.aside__svg
-              .aside__text 
-                |Профиль
+        +aside-profile(third = 'active' card = true)
       .profile-page__col
         .section__breadcrumbs
           +breadcrumbs(items = ['Личный кабинет'] page = 'Мои заказы')

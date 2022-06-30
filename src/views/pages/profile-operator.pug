@@ -56,9 +56,13 @@ block content
           |Войти
         form.form(action="/") 
           .form__item 
-            +input(type = 'email' placeholder = 'E-mail')
+            +input(type = 'email')
+            span.form__span 
+              |E-mail
           .form__item 
-            +input(type = 'password' placeholder = 'Пароль')
+            +input(type = 'password')
+            span.form__span 
+              |Пароль
           .form__item 
             +submit-button 
               |Войти

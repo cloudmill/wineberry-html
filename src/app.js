@@ -14,4 +14,5 @@ import "./scripts/form-response";
 import "./scripts/counter";
 import "./scripts/real-tabs";
 import "./scripts/catalog-filters";
+import "./scripts/select";
 

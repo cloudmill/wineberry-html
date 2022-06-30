@@ -1,5 +1,8 @@
 extends ../layouts/master
 
+
+include ../components/aside
+
 block variables
   - var mainClass = "main--default"
   - var bodyClass = "body--gray"
@@ -13,32 +16,10 @@ block footer
 block content
   .profile-page
     .mobile-only 
-      .aside
-        ul.aside__list 
-          li.aside__item.active
-            .aside__icon 
-              +orders-svg.aside__svg
-            .aside__text 
-              |Заказы
-          li.aside__item 
-            .aside__icon 
-              +user-svg.aside__svg
-            .aside__text 
-              |Профиль
+      +aside-operator(first = 'active')
     .profile-page__row 
       .profile-page__col 
-        .aside
-          ul.aside__list 
-            li.aside__item.active
-              .aside__icon 
-                +orders-svg.aside__svg
-              .aside__text 
-                |Заказы
-            li.aside__item 
-              .aside__icon 
-                +user-svg.aside__svg
-              .aside__text 
-                |Профиль
+        +aside-operator(first = 'active')
       .profile-page__col
         .mobile-only 
           p.profile-page__caption 
