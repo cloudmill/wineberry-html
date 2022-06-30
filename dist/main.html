@@ -139,7 +139,7 @@
 										<div class="header__item header__menu">
 											<div class="header__burger"></div>
 										</div>
-										<div class="header__item"><svg class="header__svg" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<div class="header__item" data-fancy-button="search"><svg class="header__svg" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M10 21.531C10.0001 16.0302 13.8859 11.2955 19.2811 10.2226C24.6762 9.14966 30.0779 12.0373 32.1826 17.1195C34.2873 22.2018 32.5088 28.063 27.9348 31.1186C23.3607 34.1742 17.2651 33.5732 13.376 29.683C11.2143 27.5208 9.99997 24.5885 10 21.531Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 												<path d="M33.0581 33.0591L38.0001 38.0011" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 											</svg></div>
@@ -159,7 +159,7 @@
 										</svg></a></div>
 								<div class="header__col">
 									<div class="header__buttons">
-										<div class="header__item"><svg class="header__svg" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<div class="header__item" data-fancy-button="auth"><svg class="header__svg" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M32 18C32 22.4183 28.4183 26 24 26C19.5817 26 16 22.4183 16 18C16 13.5817 19.5817 10 24 10C26.1217 10 28.1566 10.8429 29.6569 12.3431C31.1571 13.8434 32 15.8783 32 18Z" stroke="#1D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 												<path d="M10 38C18.5757 32.6818 29.4243 32.6818 38 38" stroke="#1D1117" stroke-width="2" stroke-linecap="round"></path>
 											</svg></div>
@@ -615,7 +615,7 @@
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 0C13.1992 0 17 3.80081 17 8.5C17 13.1992 13.1992 17 8.5 17C3.80082 17 0 13.1992 0 8.5C0 3.81464 3.80082 0 8.5 0ZM6.6065 2.66748C8.0439 2.28049 9.43984 2.77805 9.71626 3.80081C9.99268 4.82358 9.05285 5.97073 7.61545 6.37154C6.17805 6.75854 4.78212 6.26098 4.50569 5.23821C4.21545 4.21545 5.1691 3.06829 6.6065 2.66748Z" fill="white"></path>
 											</svg></div>
 										<picture class="picture category-card__picture">
-											<source type="image/webp" srcset="assets/images/vodka.webp, assets/images/vodka_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka.jpg" srcset="assets/images/vodka_2x.jpg 2x" />
+											<source type="image/webp" srcset="assets/images/vodka.webp, assets/images/vodka_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka.png" srcset="assets/images/vodka_2x.png 2x" />
 										</picture>
 									</div>
 									<div class="category-card__title">Водка</div>
@@ -631,7 +631,7 @@
 														<path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 0C13.1992 0 17 3.80081 17 8.5C17 13.1992 13.1992 17 8.5 17C3.80082 17 0 13.1992 0 8.5C0 3.81464 3.80082 0 8.5 0ZM6.6065 2.66748C8.0439 2.28049 9.43984 2.77805 9.71626 3.80081C9.99268 4.82358 9.05285 5.97073 7.61545 6.37154C6.17805 6.75854 4.78212 6.26098 4.50569 5.23821C4.21545 4.21545 5.1691 3.06829 6.6065 2.66748Z" fill="white"></path>
 													</svg></div>
 												<picture class="picture category-card__picture">
-													<source type="image/webp" srcset="assets/images/vodka.webp, assets/images/vodka_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka.jpg" srcset="assets/images/vodka_2x.jpg 2x" />
+													<source type="image/webp" srcset="assets/images/vodka.webp, assets/images/vodka_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka.png" srcset="assets/images/vodka_2x.png 2x" />
 												</picture>
 											</div>
 											<div class="category-card__title">Водка</div>
@@ -652,26 +652,26 @@
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 0C13.1992 0 17 3.80081 17 8.5C17 13.1992 13.1992 17 8.5 17C3.80082 17 0 13.1992 0 8.5C0 3.81464 3.80082 0 8.5 0ZM6.6065 2.66748C8.0439 2.28049 9.43984 2.77805 9.71626 3.80081C9.99268 4.82358 9.05285 5.97073 7.61545 6.37154C6.17805 6.75854 4.78212 6.26098 4.50569 5.23821C4.21545 4.21545 5.1691 3.06829 6.6065 2.66748Z" fill="white"></path>
 											</svg></div>
 										<picture class="picture category-card__picture">
-											<source type="image/webp" srcset="assets/images/vodka.webp, assets/images/vodka_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka.jpg" srcset="assets/images/vodka_2x.jpg 2x" />
+											<source type="image/webp" srcset="assets/images/aperol.webp, assets/images/aperol_2x.webp 2x" /><img class="picture__img" src="assets/images/aperol.png" srcset="assets/images/aperol_2x.png 2x" />
 										</picture>
 									</div>
-									<div class="category-card__title">Водка</div>
+									<div class="category-card__title">Ликероводочные изделия</div>
 								</div>
 								<div class="category-card__hover">
 									<div class="category-card__frame">
 										<div class="category-card__container">
 											<div class="category-card__img">
 												<picture class="picture category-card__bg">
-													<source type="image/webp" srcset="assets/images/vodka-bg.webp, assets/images/vodka-bg_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka-bg.jpg" srcset="assets/images/vodka-bg_2x.jpg 2x" />
+													<source type="image/webp" srcset="assets/images/aperol-bg.webp, assets/images/aperol-bg_2x.webp 2x" /><img class="picture__img" src="assets/images/aperol-bg.jpg" srcset="assets/images/aperol-bg_2x.jpg 2x" />
 												</picture>
 												<div class="category-card__img-icon"><svg class="category-card__img-svg" width="17" height="17" viewbox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 0C13.1992 0 17 3.80081 17 8.5C17 13.1992 13.1992 17 8.5 17C3.80082 17 0 13.1992 0 8.5C0 3.81464 3.80082 0 8.5 0ZM6.6065 2.66748C8.0439 2.28049 9.43984 2.77805 9.71626 3.80081C9.99268 4.82358 9.05285 5.97073 7.61545 6.37154C6.17805 6.75854 4.78212 6.26098 4.50569 5.23821C4.21545 4.21545 5.1691 3.06829 6.6065 2.66748Z" fill="white"></path>
 													</svg></div>
 												<picture class="picture category-card__picture">
-													<source type="image/webp" srcset="assets/images/vodka.webp, assets/images/vodka_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka.jpg" srcset="assets/images/vodka_2x.jpg 2x" />
+													<source type="image/webp" srcset="assets/images/aperol.webp, assets/images/aperol_2x.webp 2x" /><img class="picture__img" src="assets/images/aperol.png" srcset="assets/images/aperol_2x.png 2x" />
 												</picture>
 											</div>
-											<div class="category-card__title">Водка</div>
+											<div class="category-card__title">Ликероводочные изделия</div>
 										</div>
 										<div class="category-card__icon"><svg class="category-card__svg" width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<circle cx="16" cy="16" r="16" fill="#A71E5C"></circle>
@@ -689,26 +689,26 @@
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 0C13.1992 0 17 3.80081 17 8.5C17 13.1992 13.1992 17 8.5 17C3.80082 17 0 13.1992 0 8.5C0 3.81464 3.80082 0 8.5 0ZM6.6065 2.66748C8.0439 2.28049 9.43984 2.77805 9.71626 3.80081C9.99268 4.82358 9.05285 5.97073 7.61545 6.37154C6.17805 6.75854 4.78212 6.26098 4.50569 5.23821C4.21545 4.21545 5.1691 3.06829 6.6065 2.66748Z" fill="white"></path>
 											</svg></div>
 										<picture class="picture category-card__picture">
-											<source type="image/webp" srcset="assets/images/vodka.webp, assets/images/vodka_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka.jpg" srcset="assets/images/vodka_2x.jpg 2x" />
+											<source type="image/webp" srcset="assets/images/brandy.webp, assets/images/brandy_2x.webp 2x" /><img class="picture__img" src="assets/images/brandy.png" srcset="assets/images/brandy_2x.png 2x" />
 										</picture>
 									</div>
-									<div class="category-card__title">Водка</div>
+									<div class="category-card__title">Коньяк</div>
 								</div>
 								<div class="category-card__hover">
 									<div class="category-card__frame">
 										<div class="category-card__container">
 											<div class="category-card__img">
 												<picture class="picture category-card__bg">
-													<source type="image/webp" srcset="assets/images/vodka-bg.webp, assets/images/vodka-bg_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka-bg.jpg" srcset="assets/images/vodka-bg_2x.jpg 2x" />
+													<source type="image/webp" srcset="assets/images/brandy-bg.webp, assets/images/brandy-bg_2x.webp 2x" /><img class="picture__img" src="assets/images/brandy-bg.jpg" srcset="assets/images/brandy-bg_2x.jpg 2x" />
 												</picture>
 												<div class="category-card__img-icon"><svg class="category-card__img-svg" width="17" height="17" viewbox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 0C13.1992 0 17 3.80081 17 8.5C17 13.1992 13.1992 17 8.5 17C3.80082 17 0 13.1992 0 8.5C0 3.81464 3.80082 0 8.5 0ZM6.6065 2.66748C8.0439 2.28049 9.43984 2.77805 9.71626 3.80081C9.99268 4.82358 9.05285 5.97073 7.61545 6.37154C6.17805 6.75854 4.78212 6.26098 4.50569 5.23821C4.21545 4.21545 5.1691 3.06829 6.6065 2.66748Z" fill="white"></path>
 													</svg></div>
 												<picture class="picture category-card__picture">
-													<source type="image/webp" srcset="assets/images/vodka.webp, assets/images/vodka_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka.jpg" srcset="assets/images/vodka_2x.jpg 2x" />
+													<source type="image/webp" srcset="assets/images/brandy.webp, assets/images/brandy_2x.webp 2x" /><img class="picture__img" src="assets/images/brandy.png" srcset="assets/images/brandy_2x.png 2x" />
 												</picture>
 											</div>
-											<div class="category-card__title">Водка</div>
+											<div class="category-card__title">Коньяк</div>
 										</div>
 										<div class="category-card__icon"><svg class="category-card__svg" width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<circle cx="16" cy="16" r="16" fill="#A71E5C"></circle>
@@ -726,26 +726,26 @@
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 0C13.1992 0 17 3.80081 17 8.5C17 13.1992 13.1992 17 8.5 17C3.80082 17 0 13.1992 0 8.5C0 3.81464 3.80082 0 8.5 0ZM6.6065 2.66748C8.0439 2.28049 9.43984 2.77805 9.71626 3.80081C9.99268 4.82358 9.05285 5.97073 7.61545 6.37154C6.17805 6.75854 4.78212 6.26098 4.50569 5.23821C4.21545 4.21545 5.1691 3.06829 6.6065 2.66748Z" fill="white"></path>
 											</svg></div>
 										<picture class="picture category-card__picture">
-											<source type="image/webp" srcset="assets/images/vodka.webp, assets/images/vodka_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka.jpg" srcset="assets/images/vodka_2x.jpg 2x" />
+											<source type="image/webp" srcset="assets/images/vino.webp, assets/images/vino_2x.webp 2x" /><img class="picture__img" src="assets/images/vino.png" srcset="assets/images/vino_2x.png 2x" />
 										</picture>
 									</div>
-									<div class="category-card__title">Водка</div>
+									<div class="category-card__title">Вино и винные напитки</div>
 								</div>
 								<div class="category-card__hover">
 									<div class="category-card__frame">
 										<div class="category-card__container">
 											<div class="category-card__img">
 												<picture class="picture category-card__bg">
-													<source type="image/webp" srcset="assets/images/vodka-bg.webp, assets/images/vodka-bg_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka-bg.jpg" srcset="assets/images/vodka-bg_2x.jpg 2x" />
+													<source type="image/webp" srcset="assets/images/vino-bg.webp, assets/images/vino-bg_2x.webp 2x" /><img class="picture__img" src="assets/images/vino-bg.jpg" srcset="assets/images/vino-bg_2x.jpg 2x" />
 												</picture>
 												<div class="category-card__img-icon"><svg class="category-card__img-svg" width="17" height="17" viewbox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 0C13.1992 0 17 3.80081 17 8.5C17 13.1992 13.1992 17 8.5 17C3.80082 17 0 13.1992 0 8.5C0 3.81464 3.80082 0 8.5 0ZM6.6065 2.66748C8.0439 2.28049 9.43984 2.77805 9.71626 3.80081C9.99268 4.82358 9.05285 5.97073 7.61545 6.37154C6.17805 6.75854 4.78212 6.26098 4.50569 5.23821C4.21545 4.21545 5.1691 3.06829 6.6065 2.66748Z" fill="white"></path>
 													</svg></div>
 												<picture class="picture category-card__picture">
-													<source type="image/webp" srcset="assets/images/vodka.webp, assets/images/vodka_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka.jpg" srcset="assets/images/vodka_2x.jpg 2x" />
+													<source type="image/webp" srcset="assets/images/vino.webp, assets/images/vino_2x.webp 2x" /><img class="picture__img" src="assets/images/vino.png" srcset="assets/images/vino_2x.png 2x" />
 												</picture>
 											</div>
-											<div class="category-card__title">Водка</div>
+											<div class="category-card__title">Вино и винные напитки</div>
 										</div>
 										<div class="category-card__icon"><svg class="category-card__svg" width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<circle cx="16" cy="16" r="16" fill="#A71E5C"></circle>
@@ -763,26 +763,26 @@
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 0C13.1992 0 17 3.80081 17 8.5C17 13.1992 13.1992 17 8.5 17C3.80082 17 0 13.1992 0 8.5C0 3.81464 3.80082 0 8.5 0ZM6.6065 2.66748C8.0439 2.28049 9.43984 2.77805 9.71626 3.80081C9.99268 4.82358 9.05285 5.97073 7.61545 6.37154C6.17805 6.75854 4.78212 6.26098 4.50569 5.23821C4.21545 4.21545 5.1691 3.06829 6.6065 2.66748Z" fill="white"></path>
 											</svg></div>
 										<picture class="picture category-card__picture">
-											<source type="image/webp" srcset="assets/images/vodka.webp, assets/images/vodka_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka.jpg" srcset="assets/images/vodka_2x.jpg 2x" />
+											<source type="image/webp" srcset="assets/images/beer.webp, assets/images/beer_2x.webp 2x" /><img class="picture__img" src="assets/images/beer.png" srcset="assets/images/beer_2x.png 2x" />
 										</picture>
 									</div>
-									<div class="category-card__title">Водка</div>
+									<div class="category-card__title">Слабоалкогольная продукция</div>
 								</div>
 								<div class="category-card__hover">
 									<div class="category-card__frame">
 										<div class="category-card__container">
 											<div class="category-card__img">
 												<picture class="picture category-card__bg">
-													<source type="image/webp" srcset="assets/images/vodka-bg.webp, assets/images/vodka-bg_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka-bg.jpg" srcset="assets/images/vodka-bg_2x.jpg 2x" />
+													<source type="image/webp" srcset="assets/images/beer-bg.webp, assets/images/beer-bg_2x.webp 2x" /><img class="picture__img" src="assets/images/beer-bg.jpg" srcset="assets/images/beer-bg_2x.jpg 2x" />
 												</picture>
 												<div class="category-card__img-icon"><svg class="category-card__img-svg" width="17" height="17" viewbox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 0C13.1992 0 17 3.80081 17 8.5C17 13.1992 13.1992 17 8.5 17C3.80082 17 0 13.1992 0 8.5C0 3.81464 3.80082 0 8.5 0ZM6.6065 2.66748C8.0439 2.28049 9.43984 2.77805 9.71626 3.80081C9.99268 4.82358 9.05285 5.97073 7.61545 6.37154C6.17805 6.75854 4.78212 6.26098 4.50569 5.23821C4.21545 4.21545 5.1691 3.06829 6.6065 2.66748Z" fill="white"></path>
 													</svg></div>
 												<picture class="picture category-card__picture">
-													<source type="image/webp" srcset="assets/images/vodka.webp, assets/images/vodka_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka.jpg" srcset="assets/images/vodka_2x.jpg 2x" />
+													<source type="image/webp" srcset="assets/images/beer.webp, assets/images/beer_2x.webp 2x" /><img class="picture__img" src="assets/images/beer.png" srcset="assets/images/beer_2x.png 2x" />
 												</picture>
 											</div>
-											<div class="category-card__title">Водка</div>
+											<div class="category-card__title">Слабоалкогольная продукция</div>
 										</div>
 										<div class="category-card__icon"><svg class="category-card__svg" width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<circle cx="16" cy="16" r="16" fill="#A71E5C"></circle>
@@ -800,26 +800,26 @@
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 0C13.1992 0 17 3.80081 17 8.5C17 13.1992 13.1992 17 8.5 17C3.80082 17 0 13.1992 0 8.5C0 3.81464 3.80082 0 8.5 0ZM6.6065 2.66748C8.0439 2.28049 9.43984 2.77805 9.71626 3.80081C9.99268 4.82358 9.05285 5.97073 7.61545 6.37154C6.17805 6.75854 4.78212 6.26098 4.50569 5.23821C4.21545 4.21545 5.1691 3.06829 6.6065 2.66748Z" fill="white"></path>
 											</svg></div>
 										<picture class="picture category-card__picture">
-											<source type="image/webp" srcset="assets/images/vodka.webp, assets/images/vodka_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka.jpg" srcset="assets/images/vodka_2x.jpg 2x" />
+											<source type="image/webp" srcset="assets/images/liqueur.webp, assets/images/liqueur_2x.webp 2x" /><img class="picture__img" src="assets/images/liqueur.png" srcset="assets/images/liqueur_2x.png 2x" />
 										</picture>
 									</div>
-									<div class="category-card__title">Водка</div>
+									<div class="category-card__title">Настойки и наливки</div>
 								</div>
 								<div class="category-card__hover">
 									<div class="category-card__frame">
 										<div class="category-card__container">
 											<div class="category-card__img">
 												<picture class="picture category-card__bg">
-													<source type="image/webp" srcset="assets/images/vodka-bg.webp, assets/images/vodka-bg_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka-bg.jpg" srcset="assets/images/vodka-bg_2x.jpg 2x" />
+													<source type="image/webp" srcset="assets/images/liqueur-bg.webp, assets/images/liqueur-bg_2x.webp 2x" /><img class="picture__img" src="assets/images/liqueur-bg.jpg" srcset="assets/images/liqueur-bg_2x.jpg 2x" />
 												</picture>
 												<div class="category-card__img-icon"><svg class="category-card__img-svg" width="17" height="17" viewbox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 0C13.1992 0 17 3.80081 17 8.5C17 13.1992 13.1992 17 8.5 17C3.80082 17 0 13.1992 0 8.5C0 3.81464 3.80082 0 8.5 0ZM6.6065 2.66748C8.0439 2.28049 9.43984 2.77805 9.71626 3.80081C9.99268 4.82358 9.05285 5.97073 7.61545 6.37154C6.17805 6.75854 4.78212 6.26098 4.50569 5.23821C4.21545 4.21545 5.1691 3.06829 6.6065 2.66748Z" fill="white"></path>
 													</svg></div>
 												<picture class="picture category-card__picture">
-													<source type="image/webp" srcset="assets/images/vodka.webp, assets/images/vodka_2x.webp 2x" /><img class="picture__img" src="assets/images/vodka.jpg" srcset="assets/images/vodka_2x.jpg 2x" />
+													<source type="image/webp" srcset="assets/images/liqueur.webp, assets/images/liqueur_2x.webp 2x" /><img class="picture__img" src="assets/images/liqueur.png" srcset="assets/images/liqueur_2x.png 2x" />
 												</picture>
 											</div>
-											<div class="category-card__title">Водка</div>
+											<div class="category-card__title">Настойки и наливки</div>
 										</div>
 										<div class="category-card__icon"><svg class="category-card__svg" width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<circle cx="16" cy="16" r="16" fill="#A71E5C"></circle>
@@ -1000,7 +1000,7 @@
 							<div class="section__text">Сети регионального и локального форматов</div>
 						</div>
 					</section>
-					<section class="section section--big">
+					<section class="section section--big section--hidden">
 						<div class="ticker">
 							<div class="ticker__item">
 								<div class="ticker__img">
@@ -1222,7 +1222,7 @@
 						<h2 class="password-modal__title">Восстановить пароль</h2>
 						<div class="password-modal__text">Чтобы восстановить пароль, укажите адрес электронный почты, на который был зарегистрирован ваш аккаунт</div>
 						<div class="modal__inner">
-							<form class="form" action="/">
+							<form class="form" action="/" data-form="rec-success">
 								<div class="form__item"><input class="form__input" type="email" data-input="" required="required" /><span class="form__span">E-mail</span></div>
 								<div class="form__item"><button class="button"><span class="button__span">Отправить</span></button></div>
 							</form>
@@ -1237,10 +1237,10 @@
 							<div class="footer__inner">
 								<ul class="footer__list">
 									<li class="footer__list-item"><a class="footer__list-link" href="#">О компании</a></li>
-									<li class="footer__list-item"><a class="footer__list-link" href="#">Контакты</a></li>
-									<li class="footer__list-item"><a class="footer__list-link" href="#">Новости</a></li>
 									<li class="footer__list-item"><a class="footer__list-link" href="#">Партнерам</a></li>
 									<li class="footer__list-item"><a class="footer__list-link" href="#">Производители</a></li>
+									<li class="footer__list-item"><a class="footer__list-link" href="#">Новости</a></li>
+									<li class="footer__list-item"><a class="footer__list-link" href="#">Контакты</a></li>
 								</ul>
 							</div>
 						</div>
