@@ -4,18 +4,18 @@ mixin category-card
       .category-card__img
         .category-card__img-icon 
           +category-bg-svg.category-card__img-svg
-        +picture('vodka.jpg').category-card__picture
+        +picture(`${attributes.img}.png`).category-card__picture
       .category-card__title 
-        |Водка
+        |#{attributes.title}
     .category-card__hover
       .category-card__frame
         .category-card__container
           .category-card__img
-            +picture('vodka-bg.jpg').category-card__bg
+            +picture(`${attributes.img}-bg.jpg`).category-card__bg
             .category-card__img-icon 
               +category-bg-svg.category-card__img-svg
-            +picture('vodka.jpg').category-card__picture
+            +picture(`${attributes.img}.png`).category-card__picture
           .category-card__title 
-            |Водка
+            |#{attributes.title}
         .category-card__icon
           +category-svg.category-card__svg

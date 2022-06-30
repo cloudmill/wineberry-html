@@ -5,7 +5,7 @@ mixin footer
         .footer__col
           .footer__inner
             ul.footer__list
-              each item in data.nav
+              each item in ['О компании', 'Партнерам', 'Производители', 'Новости', 'Контакты']
                 li.footer__list-item
                   a.footer__list-link(href="#")
                     |#{item}

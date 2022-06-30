@@ -55,7 +55,7 @@ mixin login-modal
               +submit-button
                 |Зарегистрироваться
 
-mixin password-recovery-modal 
+mixin password-recovery-modal
   .modal.password-modal(data-fancy-modal='pass-rec')
     .password-modal__container 
       .password-modal__back 
@@ -66,7 +66,7 @@ mixin password-recovery-modal
       .password-modal__text 
         |Чтобы восстановить пароль, укажите адрес электронный почты, на который был зарегистрирован ваш аккаунт
       .modal__inner
-        form.form(action="/")
+        form.form(action="/" data-form='rec-success')
           .form__item 
             +input(type = 'email')
             span.form__span 
@@ -95,7 +95,7 @@ mixin password-create-modal
               |Сохранить
 
 mixin password-success-modal 
-  .modal.password-modal 
+  .modal.password-modal(data-response='rec-success')
     .password-modal__inner 
       h2.password-modal__heading
         |Пароль успешно изменен
@@ -260,52 +260,59 @@ mixin cart-modal
             |Корзина
           .cart-modal__button(data-cart-close='')
             +cross-svg.cart-modal__button-svg 
-      ul.cart-modal__list
-        - for (i = 0; i < 4; i++)
-          li.cart-modal__item 
-            .cart-modal__container 
-              .order-card.order-card--small
-                .product-modal__row 
-                  .product-modal__col
-                    .order-card__img 
-                      +picture('wine.jpg').order-card__picture
-                  .product-modal__col
-                    .order-card__content 
-                      .order-card__code 
-                        |Артикул: 124041
-                      .order-card__title 
-                        |Ле Мэтр де Винь Совиньон Блан, вино стол.сух.бел., 11%, 0,75л.
-                      ul.order-card__stats
-                        each item in ['Франция', '0.75 л.', 'Белое', 'Сухое'] 
-                          li.order-card__stats-item 
-                            |#{item}
-                      .product-modal__prices 
-                        .order-card__prices 
-                          .order-card__prices-item 
-                            .order-card__label 
-                              |Базовая цена
-                            .order-card__price 
-                              |1 990 ₽ 
-                          .order-card__prices-item 
-                            .order-card__label 
-                              |Персональная цена
-                            .order-card__price 
-                              |1 680 ₽ 
-                          .order-card__prices-item 
+      if (!attributes.empty)
+        ul.cart-modal__list
+          - for (i = 0; i < 4; i++)
+            li.cart-modal__item 
+              .cart-modal__container 
+                .order-card.order-card--small
+                  .product-modal__row 
+                    .product-modal__col
+                      .order-card__img 
+                        +picture('wine.jpg').order-card__picture
+                    .product-modal__col
+                      .order-card__content 
+                        .order-card__code 
+                          |Артикул: 124041
+                        .order-card__title 
+                          |Ле Мэтр де Винь Совиньон Блан, вино стол.сух.бел., 11%, 0,75л.
+                        ul.order-card__stats
+                          each item in ['Франция', '0.75 л.', 'Белое', 'Сухое'] 
+                            li.order-card__stats-item 
+                              |#{item}
+                        .product-modal__prices 
+                          .order-card__prices 
+                            .order-card__prices-item 
+                              .order-card__label 
+                                |Базовая цена
+                              .order-card__price 
+                                |1 990 ₽ 
+                            .order-card__prices-item 
+                              .order-card__label 
+                                |Персональная цена
+                              .order-card__price 
+                                |1 680 ₽ 
+                            .order-card__prices-item 
+                              .order-card__label 
+                                |Количество
+                              .order-card__price 
+                                |32
+                        .cart-modal__bot
+                          .mobile-only
                             .order-card__label 
                               |Количество
-                            .order-card__price 
-                              |32
-                      .cart-modal__bot
-                        .mobile-only
-                          .order-card__label 
-                            |Количество
-                        .cart-modal__row
-                          .cart-modal__counter 
-                            +counter
-                          .cart-modal__delete
-                            +trash-svg.cart-modal__delete-svg
-      .cart-modal__panel 
+                          .cart-modal__row
+                            .cart-modal__counter 
+                              +counter
+                            .cart-modal__delete
+                              +trash-svg.cart-modal__delete-svg
+      else 
+        .cart-modal__empty 
+          .cart-modal__icon 
+            +cart-modal-svg.cart-modal__svg 
+          .cart-modal__caption 
+            |Корзина пуста
+      .cart-modal__panel(class=(attributes.empty ? 'hidden' : ''))
         .cart-modal__line 
           .cart-modal__row
             .cart-modal__label 

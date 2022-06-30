@@ -74,7 +74,7 @@ block content
                   .contacts__icon 
                     +contacts-icon-svg.contacts__svg
               .contacts__col.contacts__inner 
-                form.form(action="/")
+                form.form(action="/" data-form='contact-us')
                   each item in ddata.form 
                     .form__item 
                       +input(type = item.type)
@@ -117,3 +117,4 @@ block content
             .contacts-page__col
               .contacts-page__caption 
                 |РА 003830 от «12» августа 2016 года Рег. № 78ЗАП0005791
+  +response-modal(id='contact-us' title='Отправлено' text = 'Спасибо, мы с вами свяжемся в ближайшее время.' )

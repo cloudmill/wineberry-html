@@ -120,13 +120,13 @@ block content
           |Ключевые клиенты
         .section__text 
           |Сети регионального и локального форматов
-    section.section.section--big 
+    section.section.section--big.section--hidden
       +ticker
     section.section.section--big 
       .container
         h1
           |Ключевые клиенты
-    section.section.section--big 
+    section.section.section--big.section--hidden 
       +ticker
     section.section.section--big 
       .contacts 
@@ -142,16 +142,20 @@ block content
                 .contacts__icon 
                   +contacts-icon-svg.contacts__svg
             .contacts__col.contacts__inner 
-              form.form(action="/")
+              form.form(action="/" data-form='contact-us')
                 each item in ddata.form 
                   .form__item 
-                    +input(type = item.type placeholder = item.placeholder)
+                    +input(type = item.type)
+                    span.form__span 
+                      |#{item.placeholder}
                 .form__item 
-                  +textarea(placeholder = "Комментарий")
+                  +textarea
+                  span.form__span 
+                    |Комментарий
                 .form__bot 
                   .form__checkbox
                     +checkbox
                   .form__btn 
                     +submit-button 
                       |Отправить
-
+  +response-modal(id='contact-us' title='Отправлено' text = 'Спасибо, мы с вами свяжемся в ближайшее время.' )

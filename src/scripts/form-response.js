@@ -15,6 +15,8 @@ $(() => {
         
         $.fancybox.defaults = {...$.fancybox.defaults, ...options}
         $.fancybox.open($(`[data-response=${id}]`))
+        this.reset()
+        $(this).find('[data-input]').parent().removeClass('filled')
       })
     })
   }

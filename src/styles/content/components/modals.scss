@@ -16,6 +16,10 @@
     border-radius: 16px;
   }
 
+  &--static {
+    display: block;
+  }
+
   &__container {
     padding: 60px 110px;
     @media (max-width: ($breakpoint - 1px)) {
@@ -38,7 +42,6 @@
       margin-top: 24px;
     }
   }
-  
 }
 
 .login-modal {
@@ -413,6 +416,8 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
+    display: flex;
+    flex-direction: column;
   
     background: var(--color-white);
     box-shadow: -14px 4px 24px rgba(0, 0, 0, 0.1);
@@ -495,7 +500,7 @@
     height: 36px;
 
     path {
-      fill: #C7C7C7;
+      fill: var(--color-dark-gray);
     }
   }
 
@@ -510,6 +515,10 @@
 
     background: var(--color-white);
     box-shadow: 0px -9px 20px rgba(0, 0, 0, 0.04);
+
+    &.hidden {
+      display: none;
+    }
   }
 
   &__line {
@@ -526,7 +535,7 @@
     }
   }
 
-  &_label {
+  &__label {
     color: var(--color-lilac);
     letter-spacing: var(--letter-space);
     @media (max-width: ($breakpoint - 1px)) {
@@ -557,6 +566,41 @@
     margin-top: 20px;
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 16px;
+    }
+  }
+
+  &__empty {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &__icon {
+    margin-bottom: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 16px;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__svg {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 60px;
+      height: 56px;
+    }
+  }
+
+  &__caption {
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    color: var(--color-dark-gray);
+    @include fsl(24px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(18px);
     }
   }
 }

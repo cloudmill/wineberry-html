@@ -1,8 +1,13 @@
 .slider-buttons {
+  $comp: &;
+  
   display: flex;
 
   &__item {
     --size: 60px;
+
+    position: relative;
+    z-index: 0;
 
     width: var(--size);
     height: var(--size);
@@ -14,9 +19,31 @@
     background: var(--color-light-gray);
     border: none;
     cursor: pointer;
+    overflow: hidden;
 
     &:not(:first-child) {
       margin-left: 4px;
+    }
+
+    &::before {
+      content: "";
+      @include cover;
+      z-index: -1;
+
+      background: var(--color-wine);
+      transition: $transition;
+      transform: translateX(-100%);
+    }
+
+    &:hover {
+      &::before {
+        transform: none;
+      }
+      #{$comp}__svg {
+        path {
+          stroke: var(--color-white);
+        }
+      }
     }
   }
   &__svg {
@@ -27,6 +54,7 @@
 
     path {
       stroke: var(--color-black);
+      transition: $transition;
     }
   }
   &__left {

@@ -30,13 +30,13 @@ window.addEventListener('load', () => {
       const content = item.querySelector('[data-about-content]')
       const wipe = new TimelineMax()
 
-      wipe.add(TweenMax.fromTo(content, 1, {y: '50%', opacity: 0}, {y: '0', opacity: 1, ease: Linear.easeIn}))
+      wipe.add(TweenMax.fromTo(content, 0.5, {y: '50%', opacity: 0}, {y: '0', opacity: 1, ease: Linear.easeIn}))
       wipe.add(TweenMax.to(content, 1, {y: '-50%' ,opacity: 0, ease: Linear.easeIn}))
 
       const scene = new ScrollMagic.Scene({
         triggerElement: item,
         triggerHook: 0.5,
-        duration: 500,
+        duration: 600,
         offset: 200,
       })
         .setTween(wipe)

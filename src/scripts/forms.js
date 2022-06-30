@@ -1,5 +1,6 @@
 import 'parsleyjs';
 
+// input focus animation
 document.addEventListener('DOMContentLoaded', () => {
   const inputs = document.querySelectorAll('[data-input]')
 
@@ -9,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
       item.onfocus = function() {
         parent.classList.add('filled')
       }
-
       item.onblur = function() {
         if (!this.value) {
           parent.classList.remove('filled')
