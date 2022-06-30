@@ -43,20 +43,24 @@ block content
                     |#{item.heading}
                   each input in item.inputs 
                     .form__item 
-                      +input(type = input.type placeholder = input.placeholder)
+                      +input(type = input.type)
+                      span.form__span 
+                        |#{input.placeholder}
               .checkout-page__form-block 
                 h3.checkout-page__form-heading 
                   |Дата доставки
                 .checkout-page__form-text 
                   |Выберите адрес доставки
                 .checkout-page__form-inner 
-                  .checkout-page__form-grid 
+                  .checkout-page__form-row(data-radio-group='')
                     each item in ['23.01.2022', '26.01.2022', '28.01.2022', '30.01.2022', ]
                       +radio-button(text = item name = 'date')
               .checkout-page__form-block 
                 h3.checkout-page__form-heading 
                   |Комментарий к заказу
-                +textarea(placeholder = 'Сообщение')
+                +textarea
+                span.form__span 
+                  |Сообщение
         .checkout-page__col
           .checkout-page__panel 
             +order-panel

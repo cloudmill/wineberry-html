@@ -4,6 +4,9 @@
   @media (max-width: ($breakpoint - 1px)) {
     margin-top: 20px;
   }
+  @media (max-width: ($breakpoint-xs - 1px)) {
+    margin-top: getRem(20px);
+  }
 
   &--border {
     border-top: 1px solid var(--color-borders);
@@ -17,12 +20,18 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 68px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      margin-top: getRem(68px);
+    }
   }
 
   &--big {
     margin-top: 140px;
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 40px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      margin-top: getRem(40px);
     }
   }
 
@@ -45,6 +54,9 @@
     margin-top: 60px;
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 40px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      margin-top: getRem(40px);
     }
   }
 

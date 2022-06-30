@@ -45,7 +45,10 @@ block content
         .intro
           .intro__container
             .intro__image
-              +picture("about.jpg")
+              .desktop-only
+                +picture("about.jpg")
+              .mobile-only
+                +picture("about-mobile.jpg")
               .intro__top 
                 .section__breadcrumbs 
                   +breadcrumbs(page = 'О компании').breadcrumbs--white

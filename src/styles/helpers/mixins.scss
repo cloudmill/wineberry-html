@@ -6,12 +6,12 @@
 
 @mixin fsl($font-size, $line-height: null, $isRem: false) {
   @if $isRem {
-    font-size: unquote('#{$font-size / $fs}rem');
+    font-size: unquote('#{calc($font-size / $fs)}rem');
   } @else {
     font-size: $font-size;
   }
   @if $line-height {
-    line-height: $line-height / 100%;
+    line-height: calc($line-height / 100%);
   }
 }
 

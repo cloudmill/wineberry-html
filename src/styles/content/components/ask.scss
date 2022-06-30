@@ -28,17 +28,31 @@
   
   &__icon {
     margin-right: 8px;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      margin-right: getRem(8px);
+    }
 
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
+  &__svg {
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      width: getRem(32px);
+      height: getRem(32px);
+    }
+  }
+
   &__text {
     transition: $transition;
     letter-spacing: var(--letter-space);
     @include fsl(18px, 120%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(16px);
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      @include fsl(16px, null, true);
     }
   }
 }

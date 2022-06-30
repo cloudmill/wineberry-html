@@ -44,7 +44,10 @@ block content
         .intro
           .intro__container
             .intro__image
-              +picture("partners.jpg")
+              .desktop-only
+                +picture("partners.jpg")
+              .mobile-only
+                +picture("partners-mobile.jpg")
               .intro__top 
                 .section__breadcrumbs 
                   +breadcrumbs(page = 'Партнерам').breadcrumbs--white

@@ -11,6 +11,11 @@
 
       width: 168px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(168px) 0;
+
+      width: getRem(168px);
+    }
     width: 800px;
   }
 
@@ -30,6 +35,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: 237px;
       height: 467px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      width: getRem(237px);
+      height: getRem(467px);
     }
   }
 
@@ -62,6 +71,10 @@
       width: 137px;
       height: 86px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      width: getRem(137px);
+      height: getRem(86px);
+    }
   }
 
   &__title {
@@ -76,6 +89,9 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin: 0 auto;
       width: 133px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      width: getRem(133px);
     }
   }
 }

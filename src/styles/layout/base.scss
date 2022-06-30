@@ -18,7 +18,7 @@ button::-moz-focus-inner {border: 0;}
 
 html {
   font-size: getVw($fs, 1920px / 100);
-  @each $breakpoint in (1279px,1024px,768px,576px,414px,375px,320px) {
+  @each $breakpoint in (1279px,1024px,768px,576px,414px,375px) {
     @media (max-width: #{$breakpoint}) {
       font-size: getVw($fs, $breakpoint / 100);
     }
@@ -55,6 +55,9 @@ h1 {
   @media (max-width: ($breakpoint - 1px)) {
     @include fsl(24px);
   }
+  @media (max-width: ($breakpoint-xs - 1px)) {
+    @include fsl(24px, null, true)
+  }
 }
 
 h2 {
@@ -63,6 +66,9 @@ h2 {
   @media (max-width: ($breakpoint - 1px)) {
     @include fsl(18px); 
   }
+  @media (max-width: ($breakpoint-xs - 1px)) {
+    @include fsl(18px, null, true);
+  }
 }
 
 h3 {
@@ -70,6 +76,9 @@ h3 {
   letter-spacing: var(--letter-space);
   @media (max-width: ($breakpoint - 1px)) {
     @include fsl(16px);
+  }
+  @media (max-width: ($breakpoint - 1px)) {
+    @include fsl(16px, null, true);
   }
 }
 

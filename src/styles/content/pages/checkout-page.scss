@@ -98,19 +98,18 @@
       margin-top: 12px;
     }
 
-    
     &.hidden {
       display: none;
     }
   }
-  &__form-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  &__form-row {
+    display: flex;
     gap: 8px;
+    @media (max-width: ($breakpoint-l - 1px)) {
+      flex-wrap: wrap;
+    }
     @media (max-width: ($breakpoint - 1px)) {
-      grid-template-columns: repeat(2, 1fr);
       gap: 4px;
-      width: calc(#{$col-width-m} * 5 + #{$col-width-m} / 2);
     }
   }
 }

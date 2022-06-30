@@ -26,6 +26,9 @@
     @media (max-width: ($breakpoint - 1px)) {
       padding-bottom: 32px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding-bottom: getRem(32px);
+    }
 
     border-bottom: 1px solid var(--color-borders);
   }
@@ -33,6 +36,9 @@
   &__row {
     @media (max-width: ($breakpoint - 1px)) {
       padding: 20px 20px 0;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(20px) getRem(20px) 0;
     }
 
     display: flex;
@@ -52,6 +58,11 @@
             margin-top: 32px;
 
             width: auto;
+          }
+        }
+        @media (max-width: ($breakpoint-xs - 1px)) {
+          &:nth-child(2) {
+            margin-top: getRem(32px);
           }
         }
       }
@@ -162,6 +173,9 @@
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 32px;
       }
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        margin-top: getRem(32px);
+      }
     }
   }
 
@@ -199,6 +213,9 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 32px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      margin-bottom: getRem(32px);
+    }
 
     display: inline-block;
 
@@ -220,6 +237,9 @@
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 32px;
       }
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        margin-top: getRem(32px);
+      }
     }
   }
 
@@ -234,7 +254,10 @@
   &__bot {
     padding: 24px 0;
     @media (max-width: ($breakpoint - 1px)) {
-      padding: 20px 0;
+      padding: 0 0 20px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: 0 0 getRem(20px);
     }
   }
 
