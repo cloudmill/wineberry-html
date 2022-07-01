@@ -104,7 +104,7 @@ mixin password-success-modal
           |Авторизоваться
 
 mixin response-modal
-  .modal(data-response=attributes.id)
+  .modal(data-response=attributes.id class=attributes.class)
     .response-modal 
       .modal__container 
         .response-modal__icon 
@@ -328,3 +328,40 @@ mixin cart-modal
           .cart-modal__btn 
             +submit-button 
               |Оформить заказ
+
+mixin entity-modal 
+  .entity-modal.modal(data-fancy-modal='entity')
+    -
+      var ddata = [
+        {type: 'text', placeholder: 'Имя*'},
+        {type: 'email', placeholder: 'E-mail*'},
+        {type: 'number', placeholder: 'Телефон*'},
+        {type: 'text', placeholder: 'Название организации*'},
+        {type: 'text', placeholder: 'ИНН*'},
+        {type: 'text', placeholder: 'КПП*'},
+      ]
+    .entity-modal__container
+      h2.modal__title 
+        |Добавить дочернее юридическое лицо
+      form.form(action="/" data-form='entity-resp') 
+        .entity-modal__grid
+          each item in ddata 
+            .entity-modal__item
+              .form__item 
+                +input(type = item.type)
+                span.form__span 
+                  |#{item.placeholder}
+        .form__item 
+          +input(type = 'text')
+          span.form__span 
+            |Номер лицензии на право реализации алкогольной продукции*
+        .form__item 
+          +textarea
+          span.form__span 
+            |Комментарий
+        .form__bot 
+          .form__checkbox
+            +checkbox
+          .form__btn 
+            +submit-button 
+              |Добавить

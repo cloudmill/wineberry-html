@@ -1,6 +1,7 @@
 extends ../layouts/master
 
 include ../components/breadcrumbs
+include ../components/ticker
 
 
 block variables 
@@ -97,12 +98,51 @@ block content
     section.section.section--big
       .section__container
         .partners-page__grid 
-          - for (i = 0; i < 9; i++)
-            .partners-page__grid-item 
-              .partners-page__grid-icon 
-                +features-1-svg.partners-page__grid-svg
-              .partners-page__grid-text 
-                |Активная клиентская база – 2500 торговых точек
+          .partners-page__grid-item 
+            .partners-page__grid-icon 
+              +features-1-svg.partners-page__grid-svg
+            .partners-page__grid-text 
+              |Активная клиентская база – 2500 торговых точек
+          .partners-page__grid-item 
+            .partners-page__grid-icon 
+              +features-2-svg.partners-page__grid-svg
+            .partners-page__grid-text 
+              |Собственная транспортная компания
+          .partners-page__grid-item 
+            .partners-page__grid-icon 
+              +features-3-svg.partners-page__grid-svg
+            .partners-page__grid-text 
+              |Централизованная доставка
+          .partners-page__grid-item 
+            .partners-page__grid-icon 
+              +features-4-svg.partners-page__grid-svg
+            .partners-page__grid-text 
+              |Более 150 торговых представителей
+          .partners-page__grid-item 
+            .partners-page__grid-icon 
+              +features-5-svg.partners-page__grid-svg
+            .partners-page__grid-text 
+              |Собственный штат мерчендайзеров
+          .partners-page__grid-item 
+            .partners-page__grid-icon 
+              +features-6-svg.partners-page__grid-svg
+            .partners-page__grid-text 
+              |Площадь склада 2000 м2
+          .partners-page__grid-item 
+            .partners-page__grid-icon 
+              +features-7-svg.partners-page__grid-svg
+            .partners-page__grid-text 
+              |Гибкие договорные условия и ценовая политика
+          .partners-page__grid-item 
+            .partners-page__grid-icon 
+              +features-8-svg.partners-page__grid-svg
+            .partners-page__grid-text 
+              |Индивидуальный подход к каждому клиенту
+          .partners-page__grid-item 
+            .partners-page__grid-icon 
+              +features-9-svg.partners-page__grid-svg
+            .partners-page__grid-text 
+              |Прочные и надежные деловые связи с партнерами
     section.section.section--big 
       .container 
         .partners-page__map
@@ -120,9 +160,14 @@ block content
           .partners-page__map-bot 
             .partners-page__map-caption 
               |ТТ — торговых точек
-    section.section.section--big 
-      .qwe 
-        |slider 
+    section.section.section--big
+      .container 
+        h1.section__heading 
+          |Ключевые клиенты
+        .section__text 
+          |Сети регионального и локального форматов
+    section.section.section--big.section--hidden
+      +ticker
     section.section.section--big 
       .contacts 
         .container
@@ -137,16 +182,20 @@ block content
                 .contacts__icon 
                   +contacts-icon-svg.contacts__svg
             .contacts__col.contacts__inner 
-              form.form(action="/")
+              form.form(action="/" data-form='contact-us')
                 each item in ddata.form 
                   .form__item 
-                    +input(type = item.type placeholder = item.placeholder)
+                    +input(type = item.type)
+                    span.form__span 
+                      |#{item.placeholder}
                 .form__item 
-                  +textarea(placeholder = "Комментарий")
+                  +textarea
+                  span.form__span 
+                    |Комментарий
                 .form__bot 
                   .form__checkbox
                     +checkbox
                   .form__btn 
                     +submit-button 
                       |Отправить
-
+  +response-modal(id='contact-us' title='Отправлено' text = 'Спасибо, мы с вами свяжемся в ближайшее время.' )

@@ -120,6 +120,7 @@
     }
   }
   &__orders-label {
+    transition: color $transition;
     color: var(--color-lilac);
     letter-spacing: var(--letter-space);
     @media (max-width: ($breakpoint - 1px)) {
@@ -129,14 +130,20 @@
     }
   }
   &__orders-link {
+    display: block;
+
+    transition: $transition;
 
     &:hover {
+      background: var(--color-wine);
       #{$comp}__orders-item {
-        background: var(--color-wine);
         border-color: var(--color-wine);
       }
 
       #{$comp}__orders-text {
+        color: var(--color-white);
+      }
+      #{$comp}__orders-label {
         color: var(--color-white);
       }
       #{$comp}__orders-svg {
@@ -164,6 +171,10 @@
         path {
           stroke: var(--color-white);
         }
+      }
+
+      #{$comp}__discount-heading {
+        color: var(--color-white);
       }
     }
   }
@@ -856,6 +867,7 @@
       margin-top: 4px;
     }
 
+    transition: color $transition;
     letter-spacing: var(--letter-space);
     font-weight: 700;
     @include fsl(18px, 130%);

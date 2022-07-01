@@ -18,7 +18,7 @@ block content
         +aside-profile(third = 'active' card = true)
       .profile-page__col
         .section__breadcrumbs
-          +breadcrumbs(items = ['Личный кабинет', 'Персональные акции'] page = 'При единовременной закупке от 5 литров акционного ассортимента,  ТТ получает скидку в накладной - 15% *Ассортимент и размер скидки в руб./бут.')
+          +breadcrumbs.breadcrumbs--fade(items = ['Личный кабинет', 'Персональные акции'] page = 'При единовременной закупке от 5 литров акционного ассортимента,  ТТ получает скидку в накладной - 15% *Ассортимент и размер скидки в руб./бут.')
         .profile-page__discount-top
           .profile-page__discount-btn
             +link-left 
@@ -30,7 +30,7 @@ block content
             ul.profile-page__orders-list
               - for (i = 0; i < 6; i++)
                 li.profile-page__item
-                  a.profile-page__discount-row(href="#") 
+                  a.profile-page__discount-row.profile-page__orders-link(href='#')
                     .profile-page__discount-col
                       .profile-page__discount-item
                         .profile-page__orders-label
@@ -60,7 +60,7 @@ block content
                     .profile-page__discount-heading
                       |12,37 ₽
                 .profile-page__block-bot
-                  .profile-page__block-button 
+                  a.profile-page__block-button(href="#") 
                     .profile-page__block-text 
                       |Подробнее
                     .profile-page__orders-icon 

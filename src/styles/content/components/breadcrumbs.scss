@@ -30,6 +30,26 @@
     }
   }
 
+  &--fade {
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      right: -60px;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+
+      width: calc(#{$col-width-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
+
+      background: linear-gradient(270deg, #F7F7F7 14.24%, rgba(247, 247, 247, 0) 100%);
+    }
+  }
+
   &__list {
     display: flex;
     // flex-wrap: wrap;

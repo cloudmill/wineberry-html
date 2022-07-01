@@ -17,7 +17,7 @@ mixin radio-button
 mixin checkbox 
   .checkbox(class=attributes.class)
     label.checkbox__label
-      input.checkbox__input(type="checkbox")&attributes(attributes)
+      input.checkbox__input(type="checkbox" required name=(attributes.name ? attributes.name : 'policy'))&attributes(attributes)
       .checkbox__box 
         +check-svg.checkbox__svg
       if (attributes.text)

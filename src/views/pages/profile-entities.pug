@@ -121,7 +121,7 @@ block content
             h2
               |Заказы
             .profile-page__section-btn 
-              button.button.button--icon.button--mid
+              button.button.button--icon.button--mid(data-fancy-button='entity')
                 .button__icon 
                   +plus-svg.button__svg.button__check
                 .button__text 
@@ -197,3 +197,5 @@ block content
                       |Подробнее
                     .profile-page__orders-icon 
                       +small-arrow-svg.profile-page__orders-svg 
+  +entity-modal
+  +response-modal.modal--big(id = 'entity-resp' title = 'Заявка на добавление юридического лица отправлена' text = 'В течение 3-х дней с вами свяжется наш менеджер для подтверждения')
