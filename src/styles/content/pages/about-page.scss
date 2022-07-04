@@ -24,6 +24,9 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      margin-bottom: getRem(20px);
+    }
     display: flex;
     align-items: flex-end;
   }
@@ -67,6 +70,9 @@
       @media (max-width: ($breakpoint - 1px)) {
         margin-left: 10px;
       }
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        margin-left: getRem(10px);
+      }
     }
 
     &:nth-child(1) {
@@ -84,6 +90,9 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(48px);
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      @include fsl(48px, null, true);
+    }
   }
   &__slider-label {
     font-weight: 700;
@@ -97,6 +106,9 @@
     @include fsl(80px);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(24px);
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      @include fsl(24px, null, true);
     }
   }
   &__slider-span {

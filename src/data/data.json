@@ -13,6 +13,8 @@
     {"title": "Поиск, без результатов", "href": "search-noresult"},
     {"title": "О компании", "href": "about"},
     {"title": "Партнерам", "href": "partners"},
+    {"title": "Производителям", "href": "producers"},
+    {"title": "Производителям детальная", "href": "producers-detail"},
     {"title": "Чекаут", "href": "checkout"},
     {"title": "404", "href": "404"},
     {"title": "ЛК пользователя заказы", "href": "profile-orders"},

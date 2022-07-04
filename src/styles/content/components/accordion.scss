@@ -30,6 +30,9 @@
     @media (max-width: ($breakpoint - 1px)) {
       padding: 12px 16px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(12px) getRem(16px);
+    }
 
     cursor: pointer;
   }
@@ -69,6 +72,10 @@
       width: 24px;
       height: 24px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      width: getRem(24px);
+      height: getRem(24px);
+    }
   }
 
   &__title {
@@ -90,6 +97,10 @@
   &__arrow-svg {
     width: 32px;
     height: 32px;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      width: getRem(32px);
+      height: getRem(32px);
+    }
 
     transition: $transition;
     path {
@@ -102,6 +113,9 @@
     padding: 0 24px 24px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 0 16px 16px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: 0 getRem(16px) getRem(16px);
     }
 
     display: none;
@@ -121,6 +135,9 @@
     padding: 24px 24px 24px 32px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 20px 16px 20px 20px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(20px) getRem(16px) getRem(20px) getRem(20px);
     }
 
     background: var(--color-white);

@@ -7,6 +7,9 @@
     @media (max-width: ($breakpoint - 1px)) {
       padding-bottom: 40px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding-bottom: getRem(40px);
+    }
   }
   &__section-row {
     display: flex;
@@ -49,6 +52,9 @@
     padding-top: 212px;
     @media (max-width: ($breakpoint - 1px)) {
       padding-top: 68px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding-top: getRem(68px);
     }
 
     height: 100%;
@@ -103,6 +109,9 @@
 
       display: block;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(16px) getRem(16px) getRem(16px) getRem(8px);
+    }
     display: flex;
     align-items: center;
   }
@@ -142,6 +151,10 @@
         margin-top: 16px;
         margin-left: 66px;
       }
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        margin-top: getRem(16px);
+        margin-left: getRem(66px);
+      }
     }
   }
 
@@ -164,6 +177,10 @@
   &__svg {
     width: 36px;
     height: 36px;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      width: getRem(36px);
+      height: getRem(36px);
+    }
 
     path {
       fill: var(--color-dark-gray);

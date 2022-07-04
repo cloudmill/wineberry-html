@@ -13,6 +13,9 @@
     @media (max-width: ($breakpoint - 1px)) {
       padding: 20px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(20px);
+    }
 
     transition: $transition;
     border-top: 1px solid var(--color-borders);
@@ -39,6 +42,9 @@
     padding: getRem(16px) getRem(32px) getRem(32px) getRem(16px);
     @media (max-width: ($breakpoint - 1px)) {
       padding: 16px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(16px);
     }
 
     transition: $transition;
@@ -121,7 +127,7 @@
     &:not(:first-child) {
       margin-left: getRem(42px);
       @media (max-width: ($breakpoint - 1px)) {
-        margin-left: 19px;
+        margin-left: getRem(19px);
       }
     }
   }
@@ -192,6 +198,9 @@
       @media (max-width: ($breakpoint - 1px)) {
         margin-left: 20px;
       }
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        margin-left: getRem(20px);
+      }
     }
 
     &:nth-child(2) {
@@ -215,6 +224,10 @@
       min-height: 84px;
       min-width: auto;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(15px) getRem(20px);
+      min-height: getRem(84px);
+    }
     min-width: 191px;
     min-height: 132px;
     display: flex;
@@ -231,6 +244,9 @@
     margin-top: 60px;
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 32px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      margin-top: getRem(32px);
     }
   }
   &__section-text {
@@ -268,8 +284,6 @@
       @include fsl(14px);
     }
   }
-
- 
 
   &__products {
     margin-top: 32px;

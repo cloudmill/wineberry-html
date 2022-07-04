@@ -6,6 +6,9 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      margin-bottom: getRem(20px);
+    }
   }
 
   &__caption {
@@ -42,6 +45,9 @@
     &:nth-child(2) {
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 32px;
+      }
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        margin-top: getRem(32px);
       }
     }
   }
@@ -149,6 +155,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: 64px;
       height: 64px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      width: getRem(64px);
+      height: getRem(64px);
     }
   }
   &__grid-text {

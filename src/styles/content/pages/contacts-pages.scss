@@ -32,6 +32,9 @@
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 32px;
       }
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        margin-top: getRem(32px);
+      }
     }
   }
 
@@ -55,6 +58,9 @@
     @include fsl(32px, 120%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(24px);
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      @include fsl(24px, null, true);
     }
 
     &:hover {
@@ -102,6 +108,9 @@
         padding-left: 0;
         margin-top: 24px;
         width: auto;
+      }
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        margin-top: getRem(24px);
       }
     }
   }
@@ -172,6 +181,9 @@
     padding: 140px 0;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 40px 0;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(40px) 0;
     }
 
     background: var(--color-light-gray);

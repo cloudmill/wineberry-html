@@ -46,6 +46,9 @@
         
         width: 100%;
       }
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        padding: getRem(60px) getRem(20px) getRem(120px);
+      }
       width: calc(#{$col-width-d} * 9 + #{$col-width-d} / 2);
     }
   }
@@ -78,6 +81,9 @@
 
   &__top {
     margin-bottom: 32px;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      margin-bottom: getRem(32px);
+    }
 
     display: flex;
     align-items: center;
@@ -94,6 +100,9 @@
   }
   &__orders-top {
     padding: 30px 0;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(30px) 0;
+    }
   }
   &__orders-row {
     display: flex;
@@ -218,6 +227,9 @@
       padding: 0 20px 20px;
       border-top: none;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: 0 getRem(20px) getRem(20px);
+    }
     border-top: 1px solid var(--color-borders);
   }
   &__orders-buttons {
@@ -286,6 +298,10 @@
   &__status-svg {
     width: 24px;
     height: 24px;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      width: geRem(24px);
+      height: geRem(24px);
+    }
   }
   &__status-ok {
 
@@ -307,6 +323,9 @@
 
       #{$comp}__block-list {
         padding: 20px;
+        @media (max-width: ($breakpoint-xs - 1px)) {
+          padding: getRem(20px);
+        }
       }
 
       #{$comp}__block-item {
@@ -318,6 +337,9 @@
   }
   &__block-list {
     padding: 20px 20px 0;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(20px) getRem(20px) 0;
+    }
   }
   &__block-item {
     margin-bottom: 12px;
@@ -330,6 +352,9 @@
   }
   &__block-bot {
     padding: 12px;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(12px);
+    }
 
     display: flex;
     justify-content: flex-end;
@@ -392,6 +417,9 @@
 
   &__caption {
     margin-bottom: 20px;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      margin-bottom: getRem(20px);
+    }
     
     font-weight: 700;
     letter-spacing: var(--letter-space);
@@ -406,6 +434,9 @@
     padding: 20px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 20px 20px 0;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(20px) getRem(20px) 0;
     }
 
     display: flex;
@@ -649,6 +680,9 @@
   }
   &__data-input {
     padding: 13px 20px;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(13px) getRem(20px);
+    }
 
     width: calc(#{$col-width-d} * 2);
     @media (max-width: ($breakpoint - 1px)) {
@@ -686,6 +720,10 @@
     display: none;
     width: 24px;
     height: 24px;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      width: getRem(24px);
+      height: getRem(24px);
+    }
 
     path {
       stroke: var(--color-wine);
@@ -698,6 +736,9 @@
   }
   &__data-container {
     padding: 20px;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(20px);
+    }
   }
   &__data-list {
     padding-top: 12px;
@@ -810,9 +851,15 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(18px);
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      @include fsl(18px, null, true);
+    }
   }
   &__discount-row {
     padding: 32px 0;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(32px) 0;
+    }
 
     display: flex;
     align-items: center;
@@ -878,6 +925,9 @@
   &__discount-container {
     @media (max-width: ($breakpoint - 1px)) {
       padding: 16px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(16px);
     }
   }
 

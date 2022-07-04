@@ -15,6 +15,10 @@
 
       display: block;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding-top: getRem(60px);
+      padding-bottom: getRem(40px);
+    }
     display: flex;
   }
 
@@ -55,6 +59,9 @@
         padding: 0;
         margin-top: 40px;
       }
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        margin-top: getRem(40px);
+      }
 
       width: calc(#{$col-width-d} * 4);
       @media (max-width: ($breakpoint - 1px)) {
@@ -80,6 +87,9 @@
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 40px;
       }
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        margin-top: getRem(40px);
+      }
     }
   }
   &__form-heading {
@@ -91,6 +101,9 @@
   &__form-text {
     letter-spacing: var(--letter-space);
     @include fsl(18px, 130%);
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      @include fsl(18px, null, true);
+    }
   }
   &__form-inner {
     margin-top: 24px;
