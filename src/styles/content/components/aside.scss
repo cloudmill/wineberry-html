@@ -22,6 +22,9 @@
       display: flex;
       justify-content: center;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(12px) getRem(20px);
+    }
   }
 
   &__item {
@@ -44,6 +47,9 @@
       @media (max-width: ($breakpoint - 1px)) {
         margin-left: 32px;
         margin-top: 0;
+      }
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        margin-left: getRem(32px);
       }
     }
 
@@ -120,6 +126,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: 26px;
       height: 26px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      width: getRem(26px);
+      height: getRem(26px);
     }
 
     path {

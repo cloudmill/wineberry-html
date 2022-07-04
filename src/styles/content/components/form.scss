@@ -6,6 +6,9 @@
 
     &:not(:first-child) {
       margin-top: 12px;
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        margin-top: getRem(12px);
+      }
     }
 
     &.filled {
@@ -32,6 +35,9 @@
     padding: 31px 20px 12px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 21px 20px 12px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(21px) getRem(20px) getRem(12px);
     }
 
     width: 100%;
@@ -62,6 +68,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       top: 15px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      top: getRem(15px);
+      left: getRem(20px);
+    }
 
     transform-origin: left center;
     pointer-events: none;
@@ -77,10 +87,16 @@
     @media (max-width: ($breakpoint - 1px)) {
       padding: 21px 20px 12px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(21px) getRem(20px) getRem(12px);
+    }
 
     width: 100%;
     min-height: 120px;
     @media (max-width: ($breakpoint - 1px)) {
+      min-height: 100px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
       min-height: 100px;
     }
 
@@ -104,6 +120,9 @@
       @media (max-width: ($breakpoint - 1px)) {
         min-height: 62px;
       }
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        min-height: 62px;
+      }
     }
 
     &:hover {
@@ -115,6 +134,9 @@
     margin-top: 32px;
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 16px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      margin-top: getRem(16px);
     }
   }
 

@@ -23,11 +23,17 @@
 
     &:not(:first-child) {
       margin-top: 32px;
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        margin-top: getRem(32px);
+      }
     }
   }
 
   &__heading {
     margin-bottom: 16px;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      margin-bottom: getRem(16px);
+    }
 
     font-weight: 700;
     letter-spacing: var(--letter-space);
@@ -42,6 +48,9 @@
 
   &__show {
     margin-top: 16px;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      margin-top: getRem(16px);
+    }
 
     display: flex;
     align-items: center;

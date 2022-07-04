@@ -9,6 +9,9 @@
     @media (max-width: ($breakpoint - 1px)) {
       padding: 16px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(16px);
+    }
 
     &--bot {
       @media (max-width: ($breakpoint - 1px)) {
@@ -25,6 +28,9 @@
     padding: 20px 40px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 17px 16px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(17px) getRem(16px);
     }
 
     border-top: 1px solid var(--color-borders);
@@ -59,18 +65,27 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(18px, 120%);
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      @include fsl(18px, null, true);
+    }
   }
 
   &__total {
     font-weight: 700;
     letter-spacing: var(--letter-space);
     @include fsl(20px, 120%);
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      @include fsl(20px, null, true);
+    }
   }
 
   &__button {
     margin-top: 32px;
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 24px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      margin-top: getRem(24px);
     }
   }
 }

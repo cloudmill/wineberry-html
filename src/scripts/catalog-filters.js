@@ -11,9 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (target.closest('[data-filters-button]')) {
         menu.classList.add('active')
+        document.body.classList.add('body--hidden')
       }
       if (target.closest('[data-filters-close]')) {
         menu.classList.remove('active')
+        document.body.classList.remove('body--hidden')
       }
       if (target.closest('[data-filters-reset]')) {
         const inputs = target.closest('.filters').querySelectorAll('.checkbox__input')
@@ -35,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         menu.classList.remove('active')
+        document.body.classList.remove('body--hidden')
       }
     })
 

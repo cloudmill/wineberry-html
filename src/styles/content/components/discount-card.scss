@@ -14,6 +14,9 @@
     @media (max-width: ($breakpoint - 1px)) {
       padding: 20px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(20px);
+    }
 
     display: flex;
     flex-direction: column;
@@ -23,6 +26,9 @@
     margin-bottom: 24px;
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 16px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      margin-bottom: getRem(16px);
     }
 
     display: flex;
@@ -45,10 +51,17 @@
       width: 28px;
       height: 28px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      width: getRem(28px);
+      height: getRem(28px);
+    }
   }
 
   &__label {
     padding: 6px 12px;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(6px) getRem(12px);
+    }
 
     border-radius: 50px;
     background: var(--color-light-gray);

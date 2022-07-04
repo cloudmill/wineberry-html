@@ -8,6 +8,9 @@
   @media (max-width: ($breakpoint - 1px)) {
     padding: 15px 0;
   }
+  @media (max-width: ($breakpoint-xs - 1px)) {
+    padding: getRem(15px) 0;
+  }
   
   width: 100%;
   display: block;
@@ -26,6 +29,9 @@
   @media (max-width: ($breakpoint - 1px)) {
     @include fsl(14px);
     border-radius: 4px;
+  }
+  @media (max-width: ($breakpoint-xs - 1px)) {
+    @include fsl(14px, null, true);
   }
 
   &::before {
@@ -55,8 +61,14 @@
     @media (max-width: ($breakpoint - 1px)) {
       padding: 10px 0;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(10px) 0;
+    }
 
     width: 147px;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      width: getRem(147px);
+    }
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,12 +116,18 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: 134px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      width: getRem(134px);
+    }
   }
 
   &--download {
     padding: 19px 24px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 12px 16px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(12px) getRem(16px);
     }
 
     width: auto;
@@ -129,6 +147,9 @@
 
         width: 100%;
       }
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        padding: getRem(12px) getRem(5px);
+      }
     }
   }
 
@@ -140,6 +161,9 @@
       width: 100%;
 
       text-align: center;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(15px) 0;
     }
     width: auto;
   }
@@ -153,6 +177,9 @@
     @media (max-width: ($breakpoint - 1px)) {
       padding: 12px 14px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(12px) getRem(14px);
+    }
   }
 
   &--md {
@@ -161,6 +188,9 @@
       padding: 12px 0;
 
       width: 100%;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(12px) 0;
     }
   }
 
@@ -171,6 +201,9 @@
     }
 
     @include fsl(14px, 120%);
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      @include fsl(14px, null, true);
+    }
 
     #{$comp}__text {
       margin-left: 12px;
@@ -193,6 +226,9 @@
 
   &--big {
     padding: 21px 0;
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(21px) 0;
+    }
   }
 
   &--producer {
@@ -202,6 +238,9 @@
 
       @include fsl(12px);
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(9px) getRem(16px);
+    }
     width: auto;
   }
 
@@ -209,6 +248,9 @@
     padding: 15px 24px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 9px 16px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(9px) getRem(16px);
     }
 
     width: auto;
@@ -224,6 +266,9 @@
     @media (max-width: ($breakpoint - 1px)) {
       padding: 9px 19px;
     }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      padding: getRem(9px) getRem(19px);
+    }
 
     width: auto;
 
@@ -234,9 +279,9 @@
   }
 
   &--main {
-    padding: 19px 24px;
+    padding: getRem(19px) getRem(24px);
     @media (max-width: ($breakpoint - 1px)) {
-      padding: 15px 16px;
+      padding: getRem(15px) getRem(16px);
     }
     width: auto;
   }
@@ -281,6 +326,9 @@
     margin-left: 20px;
     @media (max-width: ($breakpoint - 1px)) {
       margin-left: 8px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      margin-left: getRem(8px);
     }
 
     transition: $transition;
