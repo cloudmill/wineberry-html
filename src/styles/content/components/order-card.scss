@@ -202,11 +202,11 @@
         top: 50%;
         transform: translateY(-50%);
 
-        width: 6px;
-        height: 6px;
+        width: 5px;
+        height: 5px;
         @media (max-width: ($breakpoint-xs - 1px)) {
-          width: getRem(6px);
-          height: getRem(6px);
+          width: getRem(5px);
+          height: getRem(5px);
         }
 
         background: var(--color-lilac);

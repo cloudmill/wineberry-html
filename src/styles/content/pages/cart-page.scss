@@ -172,6 +172,14 @@
     justify-content: center;
 
     cursor: pointer;
+
+    &:hover {
+      #{$comp}__svg {
+        path {
+          fill: var(--color-wine);
+        }
+      }
+    }
   }
 
   &__svg {
@@ -183,6 +191,7 @@
     }
 
     path {
+      transition: $transition;
       fill: var(--color-dark-gray);
     }
   }

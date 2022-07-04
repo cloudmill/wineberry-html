@@ -1,4 +1,5 @@
 .filters {
+  $comp: &;
   
   @media (max-width: ($breakpoint - 1px)) {
     display: none;
@@ -111,6 +112,17 @@
     flex-shrink: 0;
 
     cursor: pointer;
+
+    &:hover {
+      #{$comp}__button-svg {
+        path {
+          fill: var(--color-wine);
+        }
+      }
+      #{$comp}__button-text {
+        color: var(--color-wine);
+      }
+    }
   }
   &__button-icon {
     margin-right: 8px;
@@ -121,7 +133,13 @@
 
     cursor: pointer;
   }
+  &__button-svg {
+    path {
+      transition: $transition;
+    }
+  }
   &__button-text {
+    transition: $transition;
     font-weight: 700;
     letter-spacing: var(--letter-space);
     @include fsl(18px, 120%);

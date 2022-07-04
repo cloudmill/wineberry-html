@@ -125,4 +125,13 @@
       gap: 4px;
     }
   }
+
+  &__panel {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 140px;
+    @media (max-width: ($breakpoint - 1px)) {
+      position: static;
+    }
+  }
 }

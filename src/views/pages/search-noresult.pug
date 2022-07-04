@@ -9,14 +9,14 @@ block content
     section.section.section--first
       .container 
         .section__breadcrumbs 
-          +breadcrumbs( page = 'Контакты')
+          +breadcrumbs( page = 'Результаты поиска')
         h1 
-          |Контакты
+          |Результаты поиска
         .search-page__matches 
           |Найдено товаров: 24
         .section__block 
           form.form.search-page__form(action="/")
-            +input(type='text' value = 'вино ') 
+            +input.form__input--default(type='text' placeholder = 'Поиск по товарам ')
             .search-page__form-btn 
               +submit-button 
                 |Поиск

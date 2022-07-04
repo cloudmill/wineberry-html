@@ -9,6 +9,18 @@ block variables
   - var mainClass = 'main--small'
 
 block content
+  -
+    var ddata = [
+      {label: 'Страна', text: 'Франция'},
+      {label: 'Крепость', text: '5.0%'},
+      {label: 'Объем', text: '0.75'},
+      {label: 'Производитель', text: 'Даймонд Холдинг'},
+      {label: 'Регион', text: 'Южная Австралия'},
+      {label: 'Год', text: '2018'},
+      {label: 'Потенциал хранения', text: '2-4 года'},
+      {label: 'Выдержка', text: 'Бочка'},
+      {label: 'Декантация', text: 'Аэрация'},
+    ]
   .catalog-card
     section.catalog-card__section 
       .catalog-card__row 
@@ -16,6 +28,9 @@ block content
           .mobile-only 
             .catalog-card__breadcrumbs 
               +breadcrumbs(items=['Вина и винные напитки'] page = 'Ле Мэтр де Винь Совиньон Блан, вино стол.сух.бел., 11%, 0,75л.')
+          .catalog-card__button
+            +link-left.button--huge
+              |В каталог
           .catalog-card__container 
             .catalog-card__bg 
               +picture('catalog-card-bg.jpg').catalog-card__bg-img
@@ -65,14 +80,14 @@ block content
               +accordion
             .catalog-card__inner 
               ul.catalog-card__list
-                - for (i = 0; i < 6; i++)
+                each item in ddata
                   li.catalog-card__item 
                     .catalog-card__item-col
                       .catalog-card__label 
-                        |Страна
+                        |#{item.label}
                     .catalog-card__item-col
                       .catalog-card__item-text 
-                        |Франция
+                        |#{item.text}
             .catalog-card__inner 
               h2.catalog-card__heading 
                 |О производителе

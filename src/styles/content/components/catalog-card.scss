@@ -15,7 +15,7 @@
     flex-shrink: 0;
 
     &:nth-child(1) {
-      padding: 0 60px 59px;
+      padding: getRem(212px) 60px 59px;
       width: calc(#{$col-width-d} * 6);
       @media (max-width: ($breakpoint - 1px)) {
         padding: 0 20px;
@@ -28,7 +28,7 @@
     &:nth-child(2) {
       position: relative;
       z-index: 0;
-      padding: 212px 0 0;
+      padding: getRem(212px) 0 0;
       @media (max-width: ($breakpoint - 1px)) {
         padding: 0;
         margin-top: 20px;
@@ -48,8 +48,17 @@
     }
   }
 
+  &__button {
+    margin-bottom: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 71px;
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      margin-bottom: getRem(71px);
+    }
+  }
+
   &__container {
-    padding: 152px 65px 60px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 0 26px 24px;
     }
@@ -58,7 +67,7 @@
     }
     position: sticky;
     position:-webkit-sticky;
-    top: 0;
+    top: getRem(330px);
     z-index: 0;
     @media (max-width: ($breakpoint - 1px)) {
       position: relative;
@@ -66,11 +75,11 @@
   }
 
   &__bg {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+    // z-index: -1;
     
     display: flex;
     align-items: center;
@@ -85,6 +94,8 @@
   }
 
   &__image {
+    position: absolute;
+    bottom: 0;
     padding: 64px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 25px;
@@ -97,6 +108,8 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+
+    pointer-events: none;
   }
 
   &__image {

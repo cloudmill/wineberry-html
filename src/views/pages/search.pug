@@ -10,18 +10,41 @@ block content
     section.section.section--first
       .container 
         .section__breadcrumbs 
-          +breadcrumbs( page = 'Контакты')
+          +breadcrumbs( page = 'Результаты поиска')
         h1 
-          |Контакты
+          |Результаты поиска
         .search-page__matches 
           |Найдено товаров: 24
         .section__block 
           form.form.search-page__form(action="/")
-            +input(type='text' value = 'вино ') 
+            +input.form__input--default(type='text' placeholder = 'Поиск по товарам ') 
             .search-page__form-btn 
               +submit-button 
                 |Поиск
       .section__block
         .grid-container 
           - for (i = 0; i < 16; i++)
-            +product-card
+            a.product-card(href="#") 
+              .product-card__image 
+                +picture('wine.jpg').product-card__picture
+                .product-card__code 
+                  |Артикул: 124041
+              .product-card__info 
+                .product-card__top
+                  .product-card__title 
+                    |Вино Romeo 0.75 л сухое красное 0.75 л
+                  ul.product-card__list
+                    each item in ['Испания', '0.75 л.', 'Красное', 'Сухое', ]
+                      li.product-card__list-item
+                        |#{item}
+                ul.product-card__prices 
+                  li.product-card__item 
+                    .product-card__label
+                      |Базовая цена
+                    .product-card__price 
+                      |1 990 ₽
+                  li.product-card__item 
+                    .product-card__label
+                      |Персональная цена
+                    .product-card__price 
+                      |1 680 ₽

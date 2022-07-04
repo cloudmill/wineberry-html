@@ -62,8 +62,15 @@ block content
     section.section.section--big.section--hidden 
       .news-page__slider 
         .container 
-          h2.news-page__slider-title
-            |Похожие новости
+          .news-page__slider-top
+            h2
+              |Похожие новости
+            .news-page__slider-buttons 
+              .slider-buttons
+                button.slider-buttons__item.slider-buttons__left(data-slider-button = 'q')
+                  +small-arrow-svg.slider-buttons__svg
+                button.slider-buttons__item(data-slider-button = 'w')
+                  +small-arrow-svg.slider-buttons__svg
         .news-page__slider-inner 
           .swiper-container.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='news' data-slider-prev='q' data-slider-next='w')
             .swiper-wrapper 
@@ -73,11 +80,16 @@ block content
     section.section.section--big
       .container
         .news-page__follow 
-          form.news-page__follow-form(action="/") 
+          .news-page__follow-form
             h3.news-page__follow-title 
               |Подпишитесь на наши новости #[br] и будьте в курсе активностей
-            .news-page__follow-bot 
-              input.news-page__follow-input(type="email" placeholder="E-mail") 
-              .news-page__follow-btn
-                +submit-button 
-                  |Подписаться
+            form.form(action="/" data- data-form='follow') 
+              .news-page__follow-bot 
+                .form__item.news-page__follow-item
+                  +input(type="email") 
+                  span.form__span 
+                    |E-mail
+                .news-page__follow-btn
+                  +submit-button 
+                    |Подписаться
+  +response-modal(id='follow' title='Подписка оформлена')

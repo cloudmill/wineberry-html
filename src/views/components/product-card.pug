@@ -21,8 +21,10 @@ mixin product-card
           .product-card__auth-col
             .product-card__auth-text 
               |Цена доступна только для авторизованных пользователей
-            .product-card__auth-btn 
-              |Авторизоваться
+            .product-card__auth-wrapper
+              .product-card__auth-btn(data-fancy-button='auth')
+                span.product-card__auth-span
+                  |Авторизоваться
       else
         ul.product-card__prices 
           li.product-card__item 
@@ -40,5 +42,5 @@ mixin product-card
             .product-card__bot-col
               +counter
             .product-card__bot-col
-              .product-card__button(data-fancy-button='product') 
+              .product-card__button(data-fancy-button='product' class=(attributes.disabled ? 'disabled' : '')) 
                 +cart-svg.product-card__svg

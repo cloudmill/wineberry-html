@@ -1,4 +1,6 @@
 .product-card {
+  $comp: &;
+
   padding-top: 24px;
   @media (max-width: ($breakpoint - 1px)) {
     padding-top: 0;
@@ -182,6 +184,8 @@
   }
   
   &__button {
+    position: relative;
+    z-index: 0;
     padding: 0 18px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 2px 13px;
@@ -195,15 +199,45 @@
     align-items: center;
     justify-content: center;
 
+    overflow: hidden;
     background: var(--color-wine);
     cursor: pointer;
     border-radius: 8px;
     @media (max-width: ($breakpoint - 1px)) {
       border-radius: 4px;
     }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 0;
+
+      width: 100%;
+      height: 100%;
+
+      transition: $transition;
+      background: var(--color-dark-red);
+      transform: translateX(-100%);
+    }
+
+    &:hover {
+      &::before {
+        transform: none;
+      }
+    }
+
+    &.disabled {
+      opacity: 0.2;
+      pointer-events: none;
+    }
   }
 
   &__svg {
+    position: relative;
+    z-index: 1;
+
     width: 42px;
     height: 42px;
     @media (max-width: ($breakpoint - 1px)) {
@@ -273,22 +307,73 @@
       @include fsl(8px);
     }
   }
+  &__auth-wrapper {
+    display: flex;
+  }
   &__auth-btn {
+    position: relative;
+    z-index: 0;
     padding: 9px 16px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 6px 0;
 
       width: 100%;
-      text-align: center;
     }
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    font-weight: 700;
-    letter-spacing: var(--letter-space);
-    border: 1px solid var(--color-borders);
+    transition: $transition;
+    overflow: hidden;
+    
     cursor: pointer;
     background: var(--color-white);
     border-radius: 4px;
+
+    &:hover {
+      &::before {
+        transform: none;
+      }
+      &::after {
+        border-color: var(--color-wine);
+      }
+      #{$comp}__auth-span {
+        color: var(--color-white);
+      }
+    }
+
+    &::after {
+      content: "";
+      @include cover;
+      z-index: -1;
+
+      transition: $transition;
+      border-radius: 4px;
+      border: 1px solid var(--color-borders);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 100%;
+
+      transition: $transition;
+      background: var(--color-wine);
+      transform: translateX(-100%);
+    }
+  }
+  &__auth-span {
+    position: relative;
+    z-index: 1;
+
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    transition: $transition;
     @include fsl(14px, 120%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(10px);

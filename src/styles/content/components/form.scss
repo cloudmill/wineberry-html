@@ -59,6 +59,16 @@
     &:hover {
       border-color: var(--color-pink);
     }
+
+    &--default {
+      padding: 21px 20px;
+      @media (max-width: ($breakpoint - 1px)) {
+        padding: 16px 20px;
+      }
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        padding: getRem(16px) getRem(20px);
+      }
+    }
   }
 
   &__span {
