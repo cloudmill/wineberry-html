@@ -18,3 +18,18 @@
     display: block;
   }
 }
+
+
+.preloader{
+  margin: 30px;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+
+  svg path,
+  svg rect{
+    fill: var(--color-wine);
+  }
+}

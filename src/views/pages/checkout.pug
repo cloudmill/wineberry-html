@@ -26,17 +26,17 @@ block content
       },
     ]
   .checkout-page 
-    section.checkout-page__section 
-      .checkout-page__row 
-        .checkout-page__col
-          .checkout-page__button 
-            +link-left.button--huge
-              |В корзину
-        .checkout-page__col
-          h1.checkout-page__title 
-            |Оформить заказ
-          .checkout-page__form
-            form.form(action="/")
+    section.checkout-page__section
+      form.form(action="/") 
+        .checkout-page__row 
+          .checkout-page__col
+            .checkout-page__button 
+              +link-left.button--huge
+                |В корзину
+          .checkout-page__col
+            h1.checkout-page__title 
+              |Оформить заказ
+            .checkout-page__form
               each item in ddata
                 .checkout-page__form-block 
                   h3.checkout-page__form-heading 
@@ -62,6 +62,6 @@ block content
                   +textarea
                   span.form__span 
                     |Сообщение
-        .checkout-page__col
-          .checkout-page__panel 
-            +order-panel
+          .checkout-page__col
+            .checkout-page__panel 
+              +order-panel

@@ -7,6 +7,17 @@ block variables
     var mainClass = 'main--default'
 
 block content
+  -
+    var ddata = [
+      {img: 'producer.jpg', title: 'Алеф-Виналь Крым'},
+      {img: 'producer-2.jpg', title: 'Алкоторг'},
+      {img: 'producer-3.jpg', title: 'Вайнберри'},
+      {img: 'producer-4.jpg', title: 'Вериго'},
+      {img: 'producer-5.jpg', title: 'Игристые вина'},
+      {img: 'producer-6.jpg', title: 'Премьер Вин'},
+      {img: 'producer.jpg', title: 'Алеф-Виналь Крым'},
+      {img: 'producer-2.jpg', title: 'Алкоторг'},
+    ]
   .producers-page 
     section.section.section--first 
       .container.container--rem
@@ -16,16 +27,16 @@ block content
           |Производители
     .section__block
       .producers-page__grid 
-        - for (i = 0; i < 8; i++)
+        each item in ddata
           .producers-page__grid-item
             .producers-page__card 
               .producers-page__card-row 
                 .producers-page__card-col
                   .producers-page__card-container 
-                    +picture('producer.jpg')
+                    +picture(item.img)
                 .producers-page__card-col
                   h3.producers-page__card-title 
-                    |Алеф-Виналь Крым
+                    |#{item.title}
                   .desktop-only 
                     p.producers-page__card-text 
                       |Торговая марка Изюмовъ — это первый в России алкогольный бренд, который объединяет под одной торговой маркой различные категории алкогольных напитков: столовые и крепленые вина, шампанское и другие.

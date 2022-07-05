@@ -186,8 +186,8 @@
 
     &:not(:first-child) {
       margin-top: 12px;
-      @media (max-width: ($breakpoint-xs - 1px)) {
-        margin-top: getRem(12px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 6px;
       }
     }
 

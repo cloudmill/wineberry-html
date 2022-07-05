@@ -245,6 +245,9 @@
     color: var(--color-lilac);
     letter-spacing: var(--letter-space);
     @include fsl(16px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
   }
 
   &__image {

@@ -86,10 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target.closest('[data-cart-overlay]')) {
         modal.classList.remove('active')
         btn.classList.remove('active')
+        document.body.classList.remove('body--hidden')
       }
       if (target.closest('[data-cart-close]')) {
         modal.classList.remove('active')
         btn.classList.remove('active')
+        document.body.classList.remove('body--hidden')
       }
     })
   }

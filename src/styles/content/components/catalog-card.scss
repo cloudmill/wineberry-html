@@ -59,28 +59,17 @@
   }
 
   &__container {
-    @media (max-width: ($breakpoint - 1px)) {
-      padding: 0 26px 24px;
-    }
-    @media (max-width: ($breakpoint-xs - 1px)) {
-      padding: 0 getRem(26px) getRem(24px);
-    }
     position: sticky;
     position:-webkit-sticky;
     top: getRem(330px);
     z-index: 0;
     @media (max-width: ($breakpoint - 1px)) {
       position: relative;
+      top: auto;
     }
   }
 
   &__bg {
-    // position: absolute;
-    // left: 0;
-    // right: 0;
-    // bottom: 0;
-    // z-index: -1;
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,9 +88,11 @@
     padding: 64px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 25px;
+      bottom: 24px;
     }
     @media (max-width: ($breakpoint-xs - 1px)) {
       padding: getRem(25px);
+      bottom: getRem(24px);
     }
 
     display: flex;

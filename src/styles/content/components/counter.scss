@@ -39,8 +39,6 @@
       --size: 28px;
     }
 
-    padding: 5px;
-
     width: var(--size);
     height: var(--size);
     @media (max-width: ($breakpoint-xs - 1px)) {
@@ -80,6 +78,12 @@
   }
 
   &__svg {
+    --size: 24px;
+
+    flex-shrink: 0;
+    width: var(--size);
+    height: var(--size);
+
     path {
       transition: $transition;
       fill: var(--color-black);

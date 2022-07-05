@@ -102,7 +102,7 @@ block content
                   +cart-button-svg.button__svg
                 .button__text 
                   |Добавить в корзину
-    section.section.section--big 
+    section.section.section--big.section--hidden
       .container 
         .catalog-card__slider 
           .catalog-card__top 
@@ -119,4 +119,4 @@ block content
               .swiper-wrapper 
                 - for (i = 0; i < 10; i++)
                   .swiper-slide
-                    +product-card.catalog-card__slide
+                    +product-card.catalog-card__slide(bot=true)

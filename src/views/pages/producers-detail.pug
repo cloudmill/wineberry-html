@@ -50,6 +50,8 @@ block content
               .category__text
                 |Коньяк
     section.producers-page__products
-      .grid-container 
+      .grid-container.listing
         - for (i = 0; i < 18; i++)
-          +product-card
+          +product-card(bot = true)
+        .listing__wrapper 
+          +listing-loader-svg
