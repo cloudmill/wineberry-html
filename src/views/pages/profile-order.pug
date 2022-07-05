@@ -72,7 +72,7 @@ block content
                       .profile-page__status-icon 
                         +clock-svg.profile-page__status-svg
                       .profile-page__status-text 
-                        |Ждет проверки менеджером
+                        |Ждет оплаты
               each item in ddata.list
                 li.profile-page__orders-item
                   .profile-page__order-row 
@@ -136,4 +136,4 @@ block content
           ul.profile-page__composition
             - for (i = 0; i < 4; i++)
               li.profile-page__composition-item
-                +order-card
+                +order-card(buttons=true supervisor=true)

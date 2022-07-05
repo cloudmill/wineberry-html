@@ -35,13 +35,13 @@
 }
 
 .tippy-content {
-  padding: getRem(20px);
+  padding: 20px;
   
-  max-width: getRem(260px);
+  max-width: 300px;
 
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.08);
   background: var(--color-white);
-  @include fsl(13px, 130%);
+  @include fsl(12px, 120%);
 }
 
 .tippy-arrow {

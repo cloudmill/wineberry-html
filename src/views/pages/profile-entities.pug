@@ -3,6 +3,7 @@ extends ../layouts/master
 include ../components/order-card
 include ../components/breadcrumbs
 include ../components/aside
+include ../components/card-mobile
 
 block variables
   - var mainClass = "main--default"
@@ -49,7 +50,7 @@ block content
       +aside-profile(second = 'active')
     .profile-page__row.profile-page__row--big 
       .profile-page__col 
-        +aside-profile(first = 'active' card = true)
+        +aside-profile(second = 'active' card = true)
       .profile-page__col
         .section__breadcrumbs
           +breadcrumbs(items = ['Личный кабинет'] page = 'Мои юридические лица')
@@ -61,6 +62,9 @@ block content
               +exit-svg.profile-page__exit-svg 
             .profile-page__exit-text 
               |Выйти
+        .mobile-only 
+          .profile-page__card
+            +card-mobile
         .profile-page__offset
           .profile-page__info
             .profile-page__info-item.big 
@@ -70,10 +74,10 @@ block content
                     +profile-smile-svg.profile-page__info-svg
                   .profile-page__info-content
                     .profile-page__info-label 
-                      |Закреплен профилем
+                      |Ваш персональный менеджер
                     .profile-page__info-wrapper 
                       .profile-page__info-heading 
-                        |ТК 5 шагов
+                        |Жильцов Сергей
                 ul.profile-page__info-links
                   li.profile-page__info-contact 
                     .profile-page__info-img 
@@ -99,7 +103,7 @@ block content
                         span.tooltip__icon 
                           +tooltip-svg.tooltip__svg 
                         .tooltip__container 
-                          |Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa placeat iusto quibusdam?
+                          |Данный тип определяет размер скидки на продукцию. Подробнее о размерах скидок можно уточнить у вашего персонального менеджера.
             .profile-page__info-item
               .profile-page__info-col 
                 .profile-page__info-block 
@@ -116,10 +120,10 @@ block content
                     .profile-page__info-inner
                       .profile-page__info-heading 
                         |30 дней
-        .profile-page__section 
+        .profile-page__section.profile-page__section--big
           .profile-page__section-top.profile-page__heading 
             h2
-              |Заказы
+              |Юридические лица
             .profile-page__section-btn 
               button.button.button--icon.button--mid(data-fancy-button='entity')
                 .button__icon 
@@ -141,9 +145,9 @@ block content
                     .profile-page__orders-label 
                       |Статус юридического лица
                   .profile-page__entity-item
-            ul.profile-page__orders-list
-              - for (i = 0; i < 5; i++)
-                li.profile-page__orders-item 
+            .profile-page__orders-list
+              a.profile-page__orders-link(href='#')
+                .profile-page__orders-item 
                   .profile-page__orders-row 
                     .profile-page__entity-col
                       .profile-page__orders-text
@@ -156,16 +160,70 @@ block content
                         .profile-page__orders-text
                           |490901772
                       .profile-page__entity-item
-                        .profile-page__status
+                        .profile-page__status.pending
                           .profile-page__status-icon 
-                            +check-svg.profile-page__status-svg.profile-page__status-ok
+                            +clock-svg.profile-page__status-svg
                           .profile-page__status-text 
-                            |Активен
+                            |Ждет актиации
                       .profile-page__entity-item
                         .profile-page__orders-icon 
                           +small-arrow-svg.profile-page__orders-svg 
+              - for (i = 0; i < 5; i++)
+                a.profile-page__orders-link(href='#')
+                  .profile-page__orders-item 
+                    .profile-page__orders-row 
+                      .profile-page__entity-col
+                        .profile-page__orders-text
+                          |Универсам Таллинский ООО
+                      .profile-page__entity-col
+                        .profile-page__orders-text
+                          |2881362626
+                      .profile-page__entity-col
+                        .profile-page__entity-item
+                          .profile-page__orders-text
+                            |490901772
+                        .profile-page__entity-item
+                          .profile-page__status
+                            .profile-page__status-icon 
+                              +check-svg.profile-page__status-svg.profile-page__status-ok
+                            .profile-page__status-text 
+                              |Активен
+                        .profile-page__entity-item
+                          .profile-page__orders-icon 
+                            +small-arrow-svg.profile-page__orders-svg 
           .mobile-only 
-            - for (i = 0; i < 3; i++)
+            - for (i = 0; i < 2; i++)
+              .profile-page__block
+                ul.profile-page__block-list
+                  li.profile-page__block-item 
+                    .profile-page__orders-label 
+                      |Название
+                    .profile-page__orders-text 
+                      |Универсам Таллинский ООО
+                  li.profile-page__block-item 
+                    .profile-page__orders-label 
+                      |ИНН
+                    .profile-page__orders-text 
+                      |2881362626
+                  li.profile-page__block-item 
+                    .profile-page__orders-label 
+                      |КПП
+                    .profile-page__orders-text 
+                      |490901772
+                  li.profile-page__block-item 
+                    .profile-page__orders-label 
+                      |Статус
+                    .profile-page__status.pending
+                      .profile-page__status-icon 
+                        +clock-svg.profile-page__status-svg
+                      .profile-page__status-text 
+                        |Ждет актиации
+                .profile-page__block-bot
+                  a.profile-page__block-button(href="#") 
+                    .profile-page__block-text 
+                      |Подробнее
+                    .profile-page__orders-icon 
+                      +small-arrow-svg.profile-page__orders-svg 
               .profile-page__block
                 ul.profile-page__block-list
                   li.profile-page__block-item 
@@ -192,7 +250,7 @@ block content
                       .profile-page__status-text 
                         |Активен
                 .profile-page__block-bot
-                  .profile-page__block-button 
+                  a.profile-page__block-button(href="#") 
                     .profile-page__block-text 
                       |Подробнее
                     .profile-page__orders-icon 

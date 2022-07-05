@@ -6,7 +6,7 @@
   @media (max-width: ($breakpoint-l - 1px)) {
     --itemsCount: 4;
   }
-  @media (max-width: ($breakpoint - 1px)) {
+  @media (max-width: ($breakpoint-m - 1px)) {
     --itemsCount: 2;
   }
 
@@ -23,6 +23,9 @@
       --itemsCount: 3;
     }
     @media (max-width: ($breakpoint - 1px)) {
+      --itemsCount: 4;
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
       --itemsCount: 2;
     }
   }

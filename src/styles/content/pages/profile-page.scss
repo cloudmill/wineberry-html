@@ -58,6 +58,12 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 12px;
     }
+
+    &--big {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 50px;
+      }
+    }
   }
   &__section-top {
     display: flex;
@@ -943,5 +949,9 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px);
     }
+  }
+
+  &__card {
+    margin-top: 12px;
   }
 }

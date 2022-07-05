@@ -2,19 +2,19 @@ mixin aside-profile
   .aside
     if (attributes.card)
       .aside__wrapper
-        .aside__card 
-          .aside__top 
-            .aside__top-row 
-              .aside__top-col
-                .aside__top-text 
+        .card 
+          .card__top 
+            .card__row 
+              .card__col
+                .card__text 
                   |Вы авторизованы как
-              .aside__top-col
-                .aside__top-icon 
-                  +small-arrow-svg.aside__top-svg
-            .aside__title 
+              .card__col
+                .card__icon 
+                  +small-arrow-svg.card__svg
+            .card__title 
               |ТК 5 шагов
-          .aside__bot
-            .aside__type 
+          .card__bot
+            .card__type 
               |Родительский аккаунт
     ul.aside__list 
       li.aside__item(class=attributes.first)
