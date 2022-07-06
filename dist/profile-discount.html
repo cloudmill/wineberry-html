@@ -5,6 +5,11 @@
 		<meta charset="utf-8">
 		<title>wineberry</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<link rel="icon" type="image/png" href="assets/images/favicon_16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="assets/images/favicon_32x32.png" sizes="32x32">
+		<link rel="shortcut icon" href="assets/images/favicon.ico">
+		<link rel="apple-touch-icon" href="assets/images/svg/appletouch-icon.svg">
+		<meta property="og:image" content="assets/images/opengraph.jpg">
 		<script defer="defer" src="assets/vendor.js"></script>
 		<script defer="defer" src="assets/main.js"></script>
 		<link href="styles.css" rel="stylesheet">
@@ -500,22 +505,31 @@
 						<div class="profile-page__col">
 							<div class="aside">
 								<div class="aside__wrapper">
-									<div class="card">
-										<div class="card__top">
-											<div class="card__row">
-												<div class="card__col">
-													<div class="card__text">Вы авторизованы как</div>
+									<div class="card select select--below" data-select="">
+										<div class="card__container" data-select-button="">
+											<div class="card__top">
+												<div class="card__row">
+													<div class="card__col">
+														<div class="card__text">Вы авторизованы как</div>
+													</div>
+													<div class="card__col">
+														<div class="card__icon"><svg class="card__svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M10 17L15 12L10 7" stroke="#C7C7C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+															</svg></div>
+													</div>
 												</div>
-												<div class="card__col">
-													<div class="card__icon"><svg class="card__svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M10 17L15 12L10 7" stroke="#C7C7C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-														</svg></div>
-												</div>
+												<div class="card__title">ТК 5 шагов</div>
 											</div>
-											<div class="card__title">ТК 5 шагов</div>
+											<div class="card__bot">
+												<div class="card__type" data-select-text="">Родительский аккаунт</div>
+											</div>
 										</div>
-										<div class="card__bot">
-											<div class="card__type">Родительский аккаунт</div>
+										<div class="select__dropdown">
+											<ul class="select__list">
+												<li class="select__item" data-select-item="">Ржевский Универсам N 43 АО</li>
+												<li class="select__item" data-select-item="">Северный универсам ОАО</li>
+												<li class="select__item" data-select-item="">Люта ООО</li>
+											</ul>
 										</div>
 									</div>
 								</div>

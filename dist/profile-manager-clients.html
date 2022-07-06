@@ -5,6 +5,11 @@
 		<meta charset="utf-8">
 		<title>wineberry</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<link rel="icon" type="image/png" href="assets/images/favicon_16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="assets/images/favicon_32x32.png" sizes="32x32">
+		<link rel="shortcut icon" href="assets/images/favicon.ico">
+		<link rel="apple-touch-icon" href="assets/images/svg/appletouch-icon.svg">
+		<meta property="og:image" content="assets/images/opengraph.jpg">
 		<script defer="defer" src="assets/vendor.js"></script>
 		<script defer="defer" src="assets/main.js"></script>
 		<link href="styles.css" rel="stylesheet">
@@ -125,7 +130,7 @@
 									<div class="profile-page__exit-text">Выйти</div>
 								</div>
 							</div>
-							<div class="profile-page__section">
+							<div class="profile-page__section listing">
 								<h2 class="profile-page__heading">Клиенты</h2>
 								<div class="profile-page__orders">
 									<div class="profile-page__orders-top">
@@ -145,6 +150,34 @@
 										</div>
 									</div>
 									<div class="profile-page__orders-list"><a class="profile-page__orders-link" href="#">
+											<div class="profile-page__orders-item">
+												<div class="profile-page__orders-row">
+													<div class="profile-page__orders-col">
+														<div class="profile-page__orders-text">21</div>
+													</div>
+													<div class="profile-page__orders-col">
+														<div class="profile-page__status pending">
+															<div class="profile-page__status-icon"><svg class="profile-page__status-svg profile-page__status-stroke" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9997 19.0007C15.337 19.0009 18.2104 16.6451 18.8644 13.3725C19.5184 10.0998 17.7711 6.82062 14.69 5.53817C11.6089 4.25573 8.05095 5.32674 6.18976 8.0969C4.32856 10.8671 4.6818 14.5659 7.03367 16.9337C8.34765 18.2566 10.1351 19.0006 11.9997 19.0007Z" stroke="#DECA63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																	<path d="M10.9106 10.1636V13.5756H14.1776" stroke="#DECA63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+																</svg></div>
+															<div class="profile-page__status-text">Ждет подтверждения</div>
+														</div>
+													</div>
+													<div class="profile-page__orders-col">
+														<div class="profile-page__orders-text">21.09.2021</div>
+													</div>
+													<div class="profile-page__orders-col">
+														<div class="profile-page__orders-inner">
+															<div class="profile-page__orders-text">Ржевский Универсам N 43 АО</div>
+															<div class="profile-page__orders-icon"><svg class="profile-page__orders-svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M10 17L15 12L10 7" stroke="#C7C7C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																</svg></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a><a class="profile-page__orders-link" href="#">
 											<div class="profile-page__orders-item">
 												<div class="profile-page__orders-row">
 													<div class="profile-page__orders-col">
@@ -290,6 +323,38 @@
 											</li>
 											<li class="profile-page__block-item">
 												<div class="profile-page__orders-label">Статус</div>
+												<div class="profile-page__status pending">
+													<div class="profile-page__status-icon"><svg class="profile-page__status-svg profile-page__status-stroke" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9997 19.0007C15.337 19.0009 18.2104 16.6451 18.8644 13.3725C19.5184 10.0998 17.7711 6.82062 14.69 5.53817C11.6089 4.25573 8.05095 5.32674 6.18976 8.0969C4.32856 10.8671 4.6818 14.5659 7.03367 16.9337C8.34765 18.2566 10.1351 19.0006 11.9997 19.0007Z" stroke="#DECA63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M10.9106 10.1636V13.5756H14.1776" stroke="#DECA63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+													<div class="profile-page__status-text">Ждет подтверждения</div>
+												</div>
+											</li>
+											<li class="profile-page__block-item">
+												<div class="profile-page__orders-label">Дата обновления</div>
+												<div class="profile-page__orders-text">21.09.2021</div>
+											</li>
+											<li class="profile-page__block-item">
+												<div class="profile-page__orders-label">Юридическое лицо</div>
+												<div class="profile-page__orders-text">Ржевский Универсам N 43 АО</div>
+											</li>
+										</ul>
+										<div class="profile-page__block-bot"><a class="profile-page__block-button" href="#">
+												<div class="profile-page__block-text">Подробнее</div>
+												<div class="profile-page__orders-icon"><svg class="profile-page__orders-svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10 17L15 12L10 7" stroke="#C7C7C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg></div>
+											</a></div>
+									</div>
+									<div class="profile-page__block">
+										<ul class="profile-page__block-list">
+											<li class="profile-page__block-item">
+												<div class="profile-page__orders-label">Номер заказа</div>
+												<div class="profile-page__orders-text">21</div>
+											</li>
+											<li class="profile-page__block-item">
+												<div class="profile-page__orders-label">Статус</div>
 												<div class="profile-page__status">
 													<div class="profile-page__status-icon"><svg class="profile-page__status-svg profile-page__status-ok" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -376,6 +441,20 @@
 											</a></div>
 									</div>
 								</div>
+								<div class="listing__wrapper"><svg class="listing__loader" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="30px" viewbox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+										<rect x="0" y="13" width="4" height="5" fill="#333">
+											<animate attributename="height" attributetype="XML" values="5;21;5" begin="0s" dur="0.6s" repeatcount="indefinite"></animate>
+											<animate attributename="y" attributetype="XML" values="13; 5; 13" begin="0s" dur="0.6s" repeatcount="indefinite"></animate>
+										</rect>
+										<rect x="10" y="13" width="4" height="5" fill="#333">
+											<animate attributename="height" attributetype="XML" values="5;21;5" begin="0.15s" dur="0.6s" repeatcount="indefinite"></animate>
+											<animate attributename="y" attributetype="XML" values="13; 5; 13" begin="0.15s" dur="0.6s" repeatcount="indefinite"></animate>
+										</rect>
+										<rect x="20" y="13" width="4" height="5" fill="#333">
+											<animate attributename="height" attributetype="XML" values="5;21;5" begin="0.3s" dur="0.6s" repeatcount="indefinite"></animate>
+											<animate attributename="y" attributetype="XML" values="13; 5; 13" begin="0.3s" dur="0.6s" repeatcount="indefinite"></animate>
+										</rect>
+									</svg></div>
 							</div>
 						</div>
 					</div>

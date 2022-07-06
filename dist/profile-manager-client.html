@@ -5,6 +5,11 @@
 		<meta charset="utf-8">
 		<title>wineberry</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<link rel="icon" type="image/png" href="assets/images/favicon_16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="assets/images/favicon_32x32.png" sizes="32x32">
+		<link rel="shortcut icon" href="assets/images/favicon.ico">
+		<link rel="apple-touch-icon" href="assets/images/svg/appletouch-icon.svg">
+		<meta property="og:image" content="assets/images/opengraph.jpg">
 		<script defer="defer" src="assets/vendor.js"></script>
 		<script defer="defer" src="assets/main.js"></script>
 		<link href="styles.css" rel="stylesheet">
@@ -134,7 +139,7 @@
 												</div>
 												<div class="profile-page__order-col">
 													<div class="profile-page__status pending">
-														<div class="profile-page__status-icon"><svg class="profile-page__status-svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<div class="profile-page__status-icon"><svg class="profile-page__status-svg profile-page__status-stroke" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9997 19.0007C15.337 19.0009 18.2104 16.6451 18.8644 13.3725C19.5184 10.0998 17.7711 6.82062 14.69 5.53817C11.6089 4.25573 8.05095 5.32674 6.18976 8.0969C4.32856 10.8671 4.6818 14.5659 7.03367 16.9337C8.34765 18.2566 10.1351 19.0006 11.9997 19.0007Z" stroke="#DECA63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
 																<path d="M10.9106 10.1636V13.5756H14.1776" stroke="#DECA63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
 															</svg></div>
@@ -224,7 +229,7 @@
 											<li class="profile-page__block-item">
 												<div class="profile-page__orders-label">Статус</div>
 												<div class="profile-page__status pending">
-													<div class="profile-page__status-icon"><svg class="profile-page__status-svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<div class="profile-page__status-icon"><svg class="profile-page__status-svg profile-page__status-stroke" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9997 19.0007C15.337 19.0009 18.2104 16.6451 18.8644 13.3725C19.5184 10.0998 17.7711 6.82062 14.69 5.53817C11.6089 4.25573 8.05095 5.32674 6.18976 8.0969C4.32856 10.8671 4.6818 14.5659 7.03367 16.9337C8.34765 18.2566 10.1351 19.0006 11.9997 19.0007Z" stroke="#DECA63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
 															<path d="M10.9106 10.1636V13.5756H14.1776" stroke="#DECA63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
 														</svg></div>
@@ -293,7 +298,7 @@
 													<div class="profile-page__info-label">Уровень цен</div>
 													<div class="profile-page__info-wrapper">
 														<div class="profile-page__info-heading tooltip">Розница<span class="tooltip__icon"> <svg class="tooltip__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="8" fill="#9A7D8C"></circle><path d="M8.09075 2.783C6.30975 2.783 5.28275 3.407 4.87975 4.85L6.51775 5.253C6.66075 4.59 7.11575 4.317 8.03875 4.317C8.77975 4.317 9.31275 4.603 9.31275 5.227C9.31275 5.578 9.07875 5.955 8.92275 6.124C8.83175 6.215 8.68875 6.345 8.49375 6.514C8.28575 6.696 8.15575 6.813 8.09075 6.878C7.66175 7.268 7.38875 7.645 7.24575 8.022C7.10275 8.399 7.03775 8.893 7.02475 9.478H8.67575C8.67575 8.763 8.76675 8.425 9.28675 7.944C9.35175 7.892 9.50775 7.749 9.75475 7.528C10.0017 7.307 10.1837 7.151 10.2877 7.034C10.3787 6.93 10.5087 6.774 10.6777 6.566C11.0027 6.15 11.1197 5.734 11.1197 5.253C11.1197 4.434 10.8337 3.81 10.2487 3.394C9.66375 2.991 8.94875 2.783 8.09075 2.783ZM8.79275 12V10.245H6.90775V12H8.79275Z" fill="white"></path></svg></span>
-															<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa placeat iusto quibusdam?</div>
+															<div class="tooltip__container">Данный тип определяет размер скидки на продукцию. Подробнее о размерах скидок можно уточнить у вашего персонального менеджера.</div>
 														</div>
 													</div>
 												</div>
@@ -322,9 +327,20 @@
 									</div>
 								</div>
 								<div class="section__block">
-									<div class="profile-page__composition-button"><button class="button button--auto button--auto"><span class="button__span">Подтвердить юридическое лицо</span></button></div>
+									<div class="profile-page__composition-button"><button class="button button--auto button--auto" data-fancy-button="entity-valid"><span class="button__span">Подтвердить юридическое лицо</span></button></div>
 								</div>
 							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal" data-fancy-modal="entity-valid">
+					<div class="response-modal">
+						<div class="modal__container">
+							<div class="response-modal__icon"><svg class="response-modal__svg" width="132" height="132" viewbox="0 0 132 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M27.5 68.75L53.1685 93.5L104.5 44" stroke="#A71E5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg></div>
+							<h2 class="response-modal__title">Юридическое лицо проверено и добавлено к родительскому юридическому лицу «ТК 5 шагов»</h2>
+							<div class="response-modal__text">Теперь это ваш клиент!</div>
 						</div>
 					</div>
 				</div>
