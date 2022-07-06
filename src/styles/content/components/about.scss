@@ -86,7 +86,7 @@
     
     &:not(:first-child) {
       margin-top: 60px;
-      @media (max-width: ($breakpoint - 1px)) {
+      @media (max-width: ($breakpoint-m - 1px)) {
         margin-top: 32px;
       }
       @media (max-width: ($breakpoint-xs - 1px)) {
@@ -105,7 +105,7 @@
   }
   &__row {
     display: flex;
-    @media (max-width: ($breakpoint - 1px)) {
+    @media (max-width: ($breakpoint-m - 1px)) {
       display: block;
     }
   }
@@ -113,6 +113,9 @@
     flex-shrink: 0;
     width: calc(#{$col-width-d} * 3);
     @media (max-width: ($breakpoint - 1px)) {
+      width: 50%;
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
       width: auto;
     }
     
@@ -122,6 +125,9 @@
     &:nth-child(2) {
       padding-left: calc(#{$col-width-d} / 2);
       @media (max-width: ($breakpoint - 1px)) {
+        padding-left: 30px;
+      }
+      @media (max-width: ($breakpoint-m - 1px)) {
         padding-left: 0;
         margin-top: 20px;
       }

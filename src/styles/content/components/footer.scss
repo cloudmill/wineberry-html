@@ -8,6 +8,15 @@
     @media (max-width: ($breakpoint - 1px)) {
       display: none;
     }
+
+    #{$comp}__bot {
+      @media (max-width: ($breakpoint - 1px)) {
+        padding: 20px 0;
+      }
+      @media (max-width: ($breakpoint-xs - 1px)) {
+        padding: 20px 0;
+      }
+    }
   }
 
   &--mobile {
@@ -44,26 +53,31 @@
     display: flex;
 
     &--block {
-      @media (max-width: ($breakpoint - 1px)) {
+      @media (max-width: ($breakpoint-m - 1px)) {
         display: block;
       }
 
       #{$comp}__col {
-        @media (max-width: ($breakpoint - 1px)) {
-          &:nth-child(1) {
-            width: auto;
+        &:nth-child(1) {
+          @media (max-width: ($breakpoint - 1px)) {
+            width: 50%;
           }
-
-          &:nth-child(2) {
-            margin-top: 32px;
-
+          @media (max-width: ($breakpoint-m - 1px)) {
             width: auto;
           }
         }
-        @media (max-width: ($breakpoint-xs - 1px)) {
-          &:nth-child(2) {
+
+        &:nth-child(2) {
+          @media (max-width: ($breakpoint - 1px)) {
+            width: 50%;
+          }
+          @media (max-width: ($breakpoint-m - 1px)) {
+            margin-top: 32px;
+          }
+          @media (max-width: ($breakpoint-xs - 1px)) {
             margin-top: getRem(32px);
           }
+          width: auto;
         }
       }
     }
@@ -114,7 +128,7 @@
   }
 
   &__list {
-    @media (max-width: ($breakpoint - 1px)) {
+    @media (max-width: ($breakpoint-m - 1px)) {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
@@ -131,6 +145,9 @@
     &:not(:first-child) {
       margin-top: 32px;
       @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 12px;
+      }
+      @media (max-width: ($breakpoint-m - 1px)) {
         margin-top: 0;
       }
     }
@@ -232,6 +249,12 @@
   }
 
   &__item {
+    @media (max-width: ($breakpoint - 1px)) {
+      max-width: 340px;
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
+      max-width: none;
+    }
     &:not(:first-child) {
       margin-top: 40px;
       @media (max-width: ($breakpoint - 1px)) {

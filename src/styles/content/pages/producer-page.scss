@@ -163,6 +163,7 @@
     &:nth-child(2) {
       margin-left: getRem(8px);
       @media (max-width: ($breakpoint - 1px)) {
+        max-width: 195px;
         width: 100%;
       }
     }

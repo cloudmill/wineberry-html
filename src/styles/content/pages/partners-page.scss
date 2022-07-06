@@ -31,7 +31,7 @@
   &__block-row {
     display: flex;
     justify-content: space-between;
-    @media (max-width: ($breakpoint - 1px)) {
+    @media (max-width: ($breakpoint-m - 1px)) {
       display: block;
     }
   }
@@ -39,11 +39,14 @@
     flex-shrink: 0;
     width: calc(#{$col-width-d} * 3 - 32px - 16px);
     @media (max-width: ($breakpoint - 1px)) {
+      width: calc(50% - 8px);
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
       width: auto;
     }
 
     &:nth-child(2) {
-      @media (max-width: ($breakpoint - 1px)) {
+      @media (max-width: ($breakpoint-m - 1px)) {
         margin-top: 32px;
       }
       @media (max-width: ($breakpoint-xs - 1px)) {
@@ -54,7 +57,7 @@
   &__block-item {
 
     &.reverse {
-      @media (max-width: ($breakpoint - 1px)) {
+      @media (max-width: ($breakpoint-m - 1px)) {
         display: flex;
         flex-direction: column;
 
@@ -62,11 +65,13 @@
           order: -1;
         }
       }
-
       #{$comp}__block-info {
         margin-bottom: 32px;
         margin-top: 0;
         @media (max-width: ($breakpoint - 1px)) {
+          margin-bottom: 16px;
+        }
+        @media (max-width: ($breakpoint-m - 1px)) {
           margin-bottom: 0;
           margin-top: 16px;
         }
@@ -165,6 +170,10 @@
     letter-spacing: var(--letter-space);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px);
+      text-align: center;
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
+      text-align: left;
     }
   }
 

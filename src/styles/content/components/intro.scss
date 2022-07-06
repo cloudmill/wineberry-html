@@ -87,4 +87,18 @@
       height: var(--size);
     }
   }
+
+  &__image {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
+  }
+
+  &__picture {
+    img {
+      @media (max-width: ($breakpoint-m - 1px)) {
+        width: 100%;
+      }
+    }
+  }
 }

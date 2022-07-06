@@ -49,7 +49,7 @@
   }
 
   &__inner {
-    padding: getRem(24px) 0;
+    padding: getRem(20px) 0;
     @media (max-width: ($breakpoint - 1px)) {
       padding: getRem(8px) 0;
     }
@@ -85,7 +85,7 @@
   }
 
   &__top {
-    margin-bottom: getRem(24px);
+    margin-bottom: getRem(16px);
   }
 
   &__row {
@@ -222,8 +222,8 @@
     position: relative;
     z-index: 0;
 
-    width: getRem(58px);
-    height: getRem(58px);
+    width: getRem(48px);
+    height: getRem(48px);
     @media (max-width: ($breakpoint - 1px)) {
       width: auto;
       height: auto;
@@ -244,8 +244,8 @@
       content: "";
       position: absolute;
       z-index: -1;
-      top: 0;
-      left: 0;
+      top: getRem(-5px);
+      left: getRem(-5px);
 
       width: getRem(58px);
       height: getRem(62px);
