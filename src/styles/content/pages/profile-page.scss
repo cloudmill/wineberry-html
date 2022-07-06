@@ -613,7 +613,7 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 8px;
 
-      // width: 100%;
+      width: 176px;
     }
     // width: 216px;
   }
@@ -714,6 +714,17 @@
     align-items: center;
 
     cursor: pointer;
+
+    &:hover {
+      #{$comp}__data-svg {
+        path {
+          fill: var(--color-wine);
+        }
+      }
+      #{$comp}__data-text {
+        color: var(--color-wine);
+      }
+    }
   }
   &__data-icon {
     margin-right: 8px;
@@ -721,6 +732,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  &__data-svg {
+    path {
+      transition: $transition;
+    }
   }
   &__data-ok {
     display: none;
@@ -736,6 +752,7 @@
     }
   }
   &__data-text {
+    transition: color $transition;
     font-weight: 700;
     letter-spacing: var(--letter-space);
     @include fsl(14px, 120%);

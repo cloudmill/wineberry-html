@@ -90,7 +90,7 @@ block content
                       span.tooltip__icon 
                         +tooltip-svg.tooltip__svg 
                       .tooltip__container 
-                        |Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa placeat iusto quibusdam?
+                        |Данный тип определяет размер скидки на продукцию. Подробнее о размерах скидок можно уточнить у вашего персонального менеджера.
           .profile-page__info-item
             .profile-page__info-col 
               .profile-page__info-block 
@@ -119,7 +119,7 @@ block content
                     .profile-page__order-col
                       .profile-page__status.pending
                         .profile-page__status-icon 
-                          +clock-svg.profile-page__status-svg
+                          +clock-svg.profile-page__status-svg.profile-page__status-stroke
                         .profile-page__status-text 
                           |Ждет проверки менеджером
                 each item in ddata.list
@@ -142,7 +142,7 @@ block content
                     |Статус
                   .profile-page__status.pending
                     .profile-page__status-icon 
-                      +clock-svg.profile-page__status-svg
+                      +clock-svg.profile-page__status-svg.profile-page__status-stroke
                     .profile-page__status-text 
                       |Ждет проверки менеджером
                 each item in ddata.list
@@ -177,9 +177,14 @@ block content
               .profile-page__info-container
                 ul.profile-page__info-list
                   li.profile-page__info-btn 
-                    +outline-button.button--wide
+                    +outline-button.button--wide(data-fancy-button='q')
                       |Вернуть менеджеру
-                  each item in ['Отказать отгрузку клиенту', 'Согласовать отгрузку клиенту', ]
-                    li.profile-page__info-btn 
-                      +submit-button 
-                        |#{item}
+                  li.profile-page__info-btn 
+                    +submit-button(data-fancy-button='w')
+                      |Отказать отгрузку клиенту
+                  li.profile-page__info-btn 
+                    +submit-button(data-fancy-button='e')
+                      |Согласовать отгрузку клиенту
+  +response-modal(fancyId='q' title='Вы вернули заказа Менеджеру')
+  +response-modal(fancyId='w' title='Вы отказали клиенту в отгрузке')
+  +response-modal(fancyId='e' title='Вы согласовали отгрузку клиенту')

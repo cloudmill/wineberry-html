@@ -3,6 +3,7 @@ extends ../layouts/master
 include ../components/breadcrumbs
 include ../components/discount-card
 include ../components/aside
+include ../components/card-mobile
 
 block variables
   - var mainClass = "main--default"
@@ -27,6 +28,9 @@ block content
               +exit-svg.profile-page__exit-svg 
             .profile-page__exit-text 
               |Выйти
+        .mobile-only 
+          .profile-page__card 
+            +card-mobile
         .profile-page__offset
           .profile-page__info
             .profile-page__info-item.big 
@@ -36,10 +40,10 @@ block content
                     +profile-smile-svg.profile-page__info-svg
                   .profile-page__info-content
                     .profile-page__info-label 
-                      |Закреплен профилем
+                      |Ваш персональный менеджер
                     .profile-page__info-wrapper 
                       .profile-page__info-heading 
-                        |ТК 5 шагов
+                        |Жильцов Сергей
                 ul.profile-page__info-links
                   li.profile-page__info-contact 
                     .profile-page__info-img 
@@ -65,7 +69,7 @@ block content
                         span.tooltip__icon 
                           +tooltip-svg.tooltip__svg 
                         .tooltip__container 
-                          |Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa placeat iusto quibusdam?
+                          |Данный тип определяет размер скидки на продукцию. Подробнее о размерах скидок можно уточнить у вашего персонального менеджера.
             .profile-page__info-item
               .profile-page__info-col 
                 .profile-page__info-block 
@@ -82,7 +86,7 @@ block content
                     .profile-page__info-inner
                       .profile-page__info-heading 
                         |30 дней
-        .profile-page__section 
+        .profile-page__section.profile-page__section--big
           h2.profile-page__heading 
             |Персональные акции
           .profile-page__discounts 

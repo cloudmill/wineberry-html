@@ -74,7 +74,7 @@ block content
                   .profile-page__order-col
                     .profile-page__status.pending
                       .profile-page__status-icon 
-                        +clock-svg.profile-page__status-svg
+                        +clock-svg.profile-page__status-svg.profile-page__status-stroke
                       .profile-page__status-text 
                         |Ждет проверки менеджером
               each item in ddata.list
@@ -97,7 +97,7 @@ block content
                     |Статус
                   .profile-page__status.pending
                     .profile-page__status-icon 
-                      +clock-svg.profile-page__status-svg
+                      +clock-svg.profile-page__status-svg.profile-page__status-stroke
                     .profile-page__status-text 
                       |Ждет проверки менеджером
                 each item in ddata.list
@@ -133,7 +133,7 @@ block content
                         span.tooltip__icon 
                           +tooltip-svg.tooltip__svg 
                         .tooltip__container 
-                          |Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa placeat iusto quibusdam?
+                          |Данный тип определяет размер скидки на продукцию. Подробнее о размерах скидок можно уточнить у вашего персонального менеджера.
             .profile-page__info-item
               .profile-page__info-col 
                 .profile-page__info-block 
@@ -152,5 +152,6 @@ block content
                         |30 дней
           .section__block 
             .profile-page__composition-button 
-              +submit-button.button--auto
+              +submit-button.button--auto(data-fancy-button='entity-valid')
                 |Подтвердить юридическое лицо
+  +response-modal(fancyId='entity-valid' title='Юридическое лицо проверено и добавлено к родительскому юридическому лицу «ТК 5 шагов»' text='Теперь это ваш клиент!')
