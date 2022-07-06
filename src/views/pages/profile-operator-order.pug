@@ -2,6 +2,7 @@ extends ../layouts/master
 
 include ../components/order-card
 include ../components/aside
+include ../components/select
 
 block variables
   - var mainClass = "main--default"
@@ -118,7 +119,7 @@ block content
             |Какому менеджеру отправить заказ?
           .profile-page__block-row 
             .profile-page__block-col
-              |select
+              +select(items = ['Алексей Биланин', 'Спартак Игорев', 'Дмитрий Анохин', 'Игорь Спартаков', ]  placeholder = 'Выбрать менеджера')
             .profile-page__block-col
               +submit-button.button--auto
                 |Отправить на согласование

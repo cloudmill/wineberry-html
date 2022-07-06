@@ -1,0 +1,156 @@
+.select {
+  $comp: &;
+
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    #{$comp}__button {
+      border-color: var(--color-pink);
+    }
+  }
+
+  &.active {
+    #{$comp}__button {
+      border-color: var(--color-pink);
+      box-shadow: 0px 8px 16px rgba(207, 178, 191, 0.3);
+    }
+    #{$comp}__dropdown {
+      opacity: 1;
+      pointer-events: all;
+    }
+    #{$comp}__svg {
+      transform: rotate(180deg);
+
+      path {
+        stroke: var(--color-wine);
+      }
+    }
+  }
+
+  &--small {
+    #{$comp}__button {
+      padding: 8px;
+
+      border-radius: 4px;
+    }
+
+    #{$comp}__text {
+      @include fsl(14px, 120%);
+    }
+    #{$comp}__svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    #{$comp}__dropdown {
+      border-radius: 4px;
+    }
+
+    #{$comp}__item {
+      padding: 12px;
+    }
+  }
+
+  &--below {
+    #{$comp}__dropdown {
+      bottom: auto;
+      top: calc(100% + 4px);
+    }
+  }
+
+  &__button {
+    padding: 16px 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 10px 20px;
+    }
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--color-white);
+    border: 1px solid var(--color-borders);
+    border-radius: 8px;
+    transition: $transition;
+    cursor: pointer;
+  }
+
+  &__text {
+    margin-right: 5px;
+
+    letter-spacing: var(--letter-space);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: rotate(90deg);
+  }
+
+  &__svg {
+    width: 28px;
+    height: 28px;
+    transition: $transition;
+
+    path {
+      stroke: var(--color-black);
+      transition: $transition;
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    left: 0;
+    bottom: calc(100% + 4px);
+    @media (max-width: ($breakpoint - 1px)) {
+      bottom: auto;
+      top: calc(100% + 4px);
+    }
+    
+    width: 100%;
+    max-height: 200px;
+
+    overflow-y: scroll;
+    @include scrollbar-hidden;
+    background: var(--color-white);
+    border: 1px solid var(--color-borders);
+    border-radius: 4px;
+    box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.12);
+    transition: $transition;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__item {
+    padding: 12px 20px;
+
+    letter-spacing: var(--letter-space);
+    @include fsl(14px, 130%);
+    cursor: pointer;
+    transition: $transition;
+
+    &:not(:first-child) {
+      border-top: 1px solid var(--color-borders);
+    }
+
+    &:hover {
+      background: var(--color-light-gray);
+      color: var(--color-wine);
+    }
+
+    &.active {
+      background: var(--color-light-gray);
+      color: var(--color-wine);
+    }
+  }
+}

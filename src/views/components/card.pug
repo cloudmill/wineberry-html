@@ -1,0 +1,21 @@
+mixin card
+  .card.select.select--below(data-select='')
+    .card__container(data-select-button='')
+      .card__top 
+        .card__row 
+          .card__col
+            .card__text 
+              |Вы авторизованы как
+          .card__col
+            .card__icon 
+              +small-arrow-svg.card__svg
+        .card__title 
+          |ТК 5 шагов
+      .card__bot
+        .card__type(data-select-text='')
+          |Родительский аккаунт
+    .select__dropdown 
+      ul.select__list
+        each item in ['Ржевский Универсам N 43 АО', 'Северный универсам ОАО', 'Люта ООО', ]
+          li.select__item(data-select-item='')
+            |#{item}

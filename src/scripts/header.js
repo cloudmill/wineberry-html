@@ -97,3 +97,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
+
+// auth user panel
+document.addEventListener('DOMContentLoaded', () => {
+  const userBtn = document.querySelector('[data-auth]')
+
+  if (userBtn) {
+    const panel = document.querySelector('[data-auth-panel]')
+
+    window.addEventListener('click', event => {
+      const target = event.target
+
+      if (target.closest('[data-auth]')) {
+        panel.classList.toggle('active')
+        userBtn.classList.toggle('active')
+      } else if (!target.closest('[data-auth-panel]')) {
+        panel.classList.remove('active')
+        userBtn.classList.remove('active')
+      }
+    })
+  }
+})

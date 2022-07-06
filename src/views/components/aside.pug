@@ -2,20 +2,7 @@ mixin aside-profile
   .aside
     if (attributes.card)
       .aside__wrapper
-        .card 
-          .card__top 
-            .card__row 
-              .card__col
-                .card__text 
-                  |Вы авторизованы как
-              .card__col
-                .card__icon 
-                  +small-arrow-svg.card__svg
-            .card__title 
-              |ТК 5 шагов
-          .card__bot
-            .card__type 
-              |Родительский аккаунт
+        +card
     ul.aside__list 
       li.aside__item(class=attributes.first)
         a.aside__link(href="#")

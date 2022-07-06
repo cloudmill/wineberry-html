@@ -51,8 +51,12 @@ mixin header
                     +cart-svg.header__svg.header__cart-svg
                     .header__cart-count 
                       |8
-                  .header__item(data-fancy-button='auth')
-                    +user-svg.header__svg
+                  if (attributes.auth)
+                    .header__item(data-auth='')
+                      +user-svg.header__svg
+                  else
+                    .header__item(data-fancy-button='auth')
+                      +user-svg.header__svg
         .header__mobile
           .header__row 
             .header__col 
@@ -65,9 +69,13 @@ mixin header
               a.header__logo(href="#") 
                 +logo-svg.header__logo-svg
             .header__col 
-              .header__buttons 
-                .header__item(data-fancy-button='auth')
-                  +user-svg.header__svg
+              .header__buttons
+                if (attributes.auth)
+                  .header__item(data-auth='')
+                    +user-svg.header__svg
+                else
+                  .header__item(data-fancy-button='auth')
+                    +user-svg.header__svg
                 .header__item.header__cart(data-cart-button='')
                   +cart-svg.header__svg
                   .header__cart-count 
@@ -101,6 +109,44 @@ mixin header
                         +message-svg.ask__svg 
                       .ask__text 
                         |Задать вопрос
+    if (attributes.auth)
+      .auth-card(data-auth-panel='')
+        .auth-card__top 
+          .auth-card__title 
+            |ТК 5 шагов
+          .auth-card__select 
+            +select.select--small.select--below(placeholder='Сменить профиль' items = ['Ржевский Универсам N 43 АО', 'Северный универсам ОАО', 'Люта ООО', ])
+        ul.auth-card__list 
+          li.auth-card__item 
+            a.auth-card__link(href="#") 
+              .auth-card__icon
+                +orders-svg.auth-card__svg
+              .auth-card__text 
+                |Мои заказы
+          li.auth-card__item 
+            a.auth-card__link(href="#") 
+              .auth-card__icon
+                +profile-bag-svg.auth-card__svg
+              .auth-card__text 
+                |Мои юридические лица
+          li.auth-card__item 
+            a.auth-card__link(href="#") 
+              .auth-card__icon
+                +profile-offer-svg.auth-card__svg
+              .auth-card__text 
+                |Персональные акции
+          li.auth-card__item 
+            a.auth-card__link(href="#") 
+              .auth-card__icon
+                +user-svg.auth-card__svg
+              .auth-card__text 
+                |Профиль
+        .auth-card__bot 
+          .auth-card__exit 
+            .auth-card__icon
+              +exit-svg.auth-card__exit-svg
+            .auth-card__text 
+              |Выйти
     +cart-modal(empty = attributes.empty)
 
 mixin header-small

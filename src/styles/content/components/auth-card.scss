@@ -1,0 +1,99 @@
+.auth-card {
+  $comp: &;
+  position: absolute;
+  right: 30px;
+  top: calc(100% - 16px);
+
+  width: 239px;
+
+  border: 1px solid var(--color-borders);
+  box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  background: var(--color-white);
+  transition: $transition;
+  opacity: 0;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__top {
+    padding: 16px 20px 20px;
+
+    background: var(--color-light-gray);
+  }
+
+  &__title {
+    margin-bottom: 16px;
+
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+  }
+
+  &__list {
+    padding: 12px 12px 8px;
+
+    border-top: 1px solid var(--color-borders);
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      #{$comp}__svg {
+        path {
+          stroke: var(--color-wine);
+        }
+      }
+      #{$comp}__text {
+        color: var(--color-wine);
+      }
+    }
+  }
+  
+  &__icon {
+    margin-right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__svg {
+    width: 32px;
+    height: 32px;
+
+    path {
+      stroke: var(--color-lilac);
+      transition: $transition;
+    }
+  }
+
+  &__text {
+    transition: color $transition;
+    letter-spacing: var(--letter-space);
+    @include fsl(14px, 120%);
+  }
+
+  &__bot {
+    padding: 8px 12px;
+
+    border-top: 1px solid var(--color-borders);
+  }
+
+  &__exit {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+  }
+}

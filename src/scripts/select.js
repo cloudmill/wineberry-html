@@ -1,81 +1,33 @@
-import 'select2';
-import {mediaQuery} from './mediaQueries'
 
-// select
-{
-  $(() => {
-    // const select = $('.select__select');
-    $('.select__select').each(function () {
-      const select = $(this);
-      const selectWrapper = select.closest('.select-wrapper');
-      const selectWrapperStyles = getComputedStyle(selectWrapper[0]);
-      const selectPlaceholder = $(this).data('select-placeholder')
-      if (selectWrapperStyles.position === 'static') {
-        selectWrapper.css('position', 'relative');
+document.addEventListener('DOMContentLoaded', () => {
+  const select = document.querySelector('[data-select')
+
+  if (select) {
+    window.addEventListener('click', event => {
+      const target = event.target
+
+      if (target.closest('[data-select-button]')) {
+
+        target.closest('[data-select').classList.toggle('active')
+      } 
+      
+      if (target.closest('[data-select-item]')) {
+        const parent = target.closest('[data-select]')
+        const item = target.closest('[data-select-item]')
+        const text = parent.querySelector('[data-select-text]')
+
+        parent.querySelectorAll('[data-select-item].active').forEach(item => item.classList.remove('active'))
+
+        item.classList.add('active')
+        text.textContent = item.textContent
+        parent.classList.remove('active')
       }
+      
+      if (!target.closest('[data-select]')) {
+        const selects = document.querySelectorAll('[data-select].active')
 
-      select.select2({
-        dropdownParent: selectWrapper,
-        selectOnClose: true,
-        minimumResultsForSearch: Infinity,
-        placeholder: selectPlaceholder,
-      });
-
-      if (select.is('[data-select-control]')) {
-        const parent = $(this).closest('[data-aside-block]')
-        const btn = parent.find('[data-clear-block]')
-
-        select.on('change', function() {
-          if (btn.hasClass('hidden')) {
-            btn.removeClass('hidden')
-          }
-        })
+        selects.forEach(item => item.classList.remove('active'))
       }
-
-      select.on('select2:open', () => {
-        selectWrapper.css('z-index', '100000');
-
-        const selectDropdown = selectWrapper.find('.select2-dropdown');
-
-        selectDropdown.hide();
-        const timeout = setTimeout(() => {
-          selectDropdown.slideDown({ duration: 500, });
-
-          clearTimeout(timeout);
-        }, 0);
-      });
-
-      select.on('select2:closing', event => {
-        event.preventDefault();
-
-        const selectDropdown = selectWrapper.find('.select2-dropdown');
-
-        const timeout = setTimeout(() => {
-          selectWrapper.css('z-index', '');
-
-          const select2 = selectWrapper.find('.select2');
-
-          select2.addClass('closing');
-          select2.removeClass('select2-container--open');
-          selectDropdown.slideUp(500, () => {
-            const timeout2 = setTimeout(() => {
-              select.select2('destroy');
-              select.select2({
-                dropdownParent: selectWrapper,
-                selectOnClose: true,
-                minimumResultsForSearch: Infinity,
-                placeholder: selectPlaceholder,
-              });
-              select.removeClass('closing');
-
-              selectWrapper.css('z-index', '');
-
-              clearTimeout(timeout2);
-            }, 300);
-          });
-          clearTimeout(timeout);
-        }, 0);
-      });
-    });
-  });
-}
+    })
+  }
+})

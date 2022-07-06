@@ -1,0 +1,12 @@
+mixin select
+  .select(class=attributes.class data-select='')
+    button.select__button(data-select-button='')
+      .select__text(data-select-text='')
+        |#{attributes.placeholder}
+      .select__icon 
+        +small-arrow-svg.select__svg
+    .select__dropdown 
+      ul.select__list
+        each item in attributes.items
+          li.select__item(data-select-item='')
+            |#{item}
