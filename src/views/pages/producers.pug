@@ -21,14 +21,14 @@ block content
   .producers-page 
     section.section.section--first 
       .container.container--rem
-        .section__breadcrumbs
+        .section__breadcrumbs(data-aos='fade-up')
           +breadcrumbs(page = 'Производители')
-        h1
+        h1(data-aos='fade-up')
           |Производители
     .section__block
       .producers-page__grid 
         each item in ddata
-          .producers-page__grid-item
+          .producers-page__grid-item(data-aos='fade-up')
             .producers-page__card 
               .producers-page__card-row 
                 .producers-page__card-col

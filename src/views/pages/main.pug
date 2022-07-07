@@ -28,7 +28,7 @@ block content
         h1.main-page__intro-title 
           |Главный дистрибьютор алкогольной продукции #[br] на территории СЗФО*
       .main-page__intro-row 
-        .main-page__intro-col
+        .main-page__intro-col(data-aos='fade-up')
           .main-page__intro-container
             .main-page__intro-video
               .desktop-only
@@ -62,7 +62,7 @@ block content
                   .main-page__intro-item 
                     +outline-button.button--main 
                       |Больше о нас
-        .main-page__intro-col
+        .main-page__intro-col(data-aos='fade-up')
           .main-page__intro-container.fullheight-mobile
             .main-page__card
               .main-page__card-container
@@ -75,7 +75,7 @@ block content
               .mobile-only.fullheight-mobile
                 +picture('main-card-mobile.jpg').main-page__card-image 
       .tablet-only
-        .main-page__intro-bot
+        .main-page__intro-bot(data-aos='fade-up')
           .main-page__intro-caption 
             |Северо-Западного федерального округа
           .main-page__intro-buttons 
@@ -86,7 +86,7 @@ block content
               +outline-button.button--main 
                 |Больше о нас
     section.main-page__grid 
-      .main-page__grid-item.big 
+      .main-page__grid-item.big(data-aos='fade-up')
         .main-page__container 
           .main-page__grid-container 
             .main-page__grid-img 
@@ -108,9 +108,9 @@ block content
                 .main-page__grid-caption 
                   |От крупнейших производителей #[br] и импортеров алкоголя
       each item in ddata
-        .main-page__grid-item
+        .main-page__grid-item(data-aos='fade-up')
           +category-card(title = item.title img = item.img)
-    section.main-page__about#about
+    section.main-page__about#about(data-aos='fade-up')
       .main-page__about-bg 
         .main-page__about-item(data-parallax-delay='0.5')
           +main-item-first
@@ -144,11 +144,11 @@ block content
                       each text in item.items
                         li.about__feature
                           |#{text}
-    section.section.section--big 
+    section.section.section--big(data-aos='fade-up')
       .container
         h1.section__heading 
           |Ключевые клиенты
         .section__text 
           |Сети регионального и локального форматов
-    section.section.section--big.section--hidden
+    section.section.section--big.section--hidden(data-aos='fade-up')
       +ticker

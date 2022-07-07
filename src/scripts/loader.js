@@ -1,4 +1,5 @@
 import {mediaQuery} from './mediaQueries'
+import AOS from 'aos';
 
 document.body.classList.add('body--hidden')
 
@@ -56,14 +57,19 @@ window.addEventListener("load", () => {
       document.body.classList.remove('body--hidden')
       video.setAttribute('autoplay', '')
       video.load()
+      AOS.init({
+        once: true,
+        offset: 0,
+        duration: 800,
+      });
     }, 3000);
   } else {
     document.body.classList.remove('body--hidden')
     
-    // AOS.init({
-    //   once: true,
-    //   offset: 0,
-    //   duration: 1200,
-    // });
+    AOS.init({
+      once: true,
+      offset: 0,
+      duration: 800,
+    });
   }
 })

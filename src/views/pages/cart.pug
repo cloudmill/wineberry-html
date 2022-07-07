@@ -20,20 +20,20 @@ block content
         .cart-page__section-col
           .cart-page__section-inner
             .container
-              .section__breadcrumbs
+              .section__breadcrumbs(data-aos='fade-up')
                 +breadcrumbs(page = 'Корзина')
-              h1
+              h1(data-aos='fade-up')
                 |Корзина
               .section
                 .cart-page__top 
-                  .cart-page__row
+                  .cart-page__row(data-aos='fade-up')
                     each item in ddata.labels 
                       .cart-page__col
                         .cart-page__label 
                           |#{item}
                 ul.cart-page__list
                   - for (i = 0; i < 3; i++)
-                    li.cart-page__list-item 
+                    li.cart-page__list-item(data-aos='fade-up')
                       .order-card.order-card--cart
                         .cart-page__row.cart-page__row--simple
                           .cart-page__col.cart-page__container 
@@ -98,5 +98,5 @@ block content
                   .cart-page__top 
                     .cart-page__label 
                       |qwe
-              .cart-page__panel
+              .cart-page__panel(data-aos='fade-up')
                 +order-panel

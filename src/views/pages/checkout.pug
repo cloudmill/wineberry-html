@@ -29,14 +29,14 @@ block content
     section.checkout-page__section
       form.form(action="/") 
         .checkout-page__row 
-          .checkout-page__col
+          .checkout-page__col(data-aos='fade-up')
             .checkout-page__button 
               +link-left.button--huge
                 |В корзину
           .checkout-page__col
-            h1.checkout-page__title 
+            h1.checkout-page__title(data-aos='fade-up') 
               |Оформить заказ
-            .checkout-page__form
+            .checkout-page__form(data-aos='fade-up')
               each item in ddata
                 .checkout-page__form-block 
                   h3.checkout-page__form-heading 
@@ -63,5 +63,5 @@ block content
                   span.form__span 
                     |Сообщение
           .checkout-page__col
-            .checkout-page__panel 
+            .checkout-page__panel(data-aos='fade-up')
               +order-panel

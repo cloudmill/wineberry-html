@@ -8,19 +8,19 @@ block content
   .search-page 
     section.section.section--first
       .container 
-        .section__breadcrumbs 
+        .section__breadcrumbs(data-aos='fade-up')
           +breadcrumbs( page = 'Результаты поиска')
-        h1 
+        h1(data-aos='fade-up')
           |Результаты поиска
-        .search-page__matches 
+        .search-page__matches(data-aos='fade-up')
           |Найдено товаров: 24
-        .section__block 
+        .section__block(data-aos='fade-up')
           form.form.search-page__form(action="/")
             +input.form__input--default(type='text' placeholder = 'Поиск по товарам ')
             .search-page__form-btn 
               +submit-button 
                 |Поиск
-    section.search-page__section 
+    section.search-page__section(data-aos='fade-up')
       .search-page__icon 
         +search-icon-svg.search-page__svg
       .search-page__bg 

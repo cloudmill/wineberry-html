@@ -12,28 +12,28 @@ block variables
 
 block content
   .profile-page.section.section--default
-    .mobile-only 
+    .mobile-only(data-aos='fade-up')
       +aside-profile(third = 'active')
     .profile-page__row.profile-page__row--big 
-      .profile-page__col 
+      .profile-page__col(data-aos='fade-up')
         +aside-profile(third = 'active' card = true)
       .profile-page__col
-        .section__breadcrumbs
+        .section__breadcrumbs(data-aos='fade-up')
           +breadcrumbs(items = ['Личный кабинет'] page = 'Мои заказы')
-        h1
+        h1(data-aos='fade-up')
           |Личный кабинет
         .mobile-only 
-          .profile-page__exit 
+          .profile-page__exit(data-aos='fade-up')
             .profile-page__exit-icon 
               +exit-svg.profile-page__exit-svg 
             .profile-page__exit-text 
               |Выйти
         .mobile-only 
-          .profile-page__card 
+          .profile-page__card(data-aos='fade-up')
             +card
         .profile-page__offset
           .profile-page__info
-            .profile-page__info-item.big 
+            .profile-page__info-item.big(data-aos='fade-up')
               .profile-page__info-container
                 .profile-page__info-row
                   .profile-page__info-icon 
@@ -55,7 +55,7 @@ block content
                       +mail-svg
                     a.profile-page__info-link(href="#") 
                       |ksh@cloudmill.ru
-            .profile-page__info-item
+            .profile-page__info-item(data-aos='fade-up')
               .profile-page__info-container
                 .profile-page__info-row
                   .profile-page__info-icon 
@@ -70,7 +70,7 @@ block content
                           +tooltip-svg.tooltip__svg 
                         .tooltip__container 
                           |Данный тип определяет размер скидки на продукцию. Подробнее о размерах скидок можно уточнить у вашего персонального менеджера.
-            .profile-page__info-item
+            .profile-page__info-item(data-aos='fade-up')
               .profile-page__info-col 
                 .profile-page__info-block 
                   .profile-page__info-container
@@ -87,9 +87,9 @@ block content
                       .profile-page__info-heading 
                         |30 дней
         .profile-page__section.profile-page__section--big
-          h2.profile-page__heading 
+          h2.profile-page__heading(data-aos='fade-up')
             |Персональные акции
-          .profile-page__discounts 
+          .profile-page__discounts(data-aos='fade-up')
             - for (i = 0; i < 3; i++)
               +discount-card
 

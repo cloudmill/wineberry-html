@@ -36,12 +36,12 @@ block content
   .catalog-page 
     section.section.section--first 
       .container
-        .section__breadcrumbs
+        .section__breadcrumbs(data-aos='fade-up')
           +breadcrumbs(page = 'Вина и винные напитки')
-        h1
+        h1(data-aos='fade-up')
           |Вина и винные напитки
         .catalog-page__category 
-          .category 
+          .category(data-aos='fade-up')
             ul.category__list
               each item, i in ['Десертное вино', 'Столовое вино', 'Белое сухое', 'Красное сухое', 'Безалкогольное']
                 li.category__item(class=(i === 0 ? 'active' : ''))
@@ -49,7 +49,7 @@ block content
                     |#{item}
     section.catalog-page__listing 
       .catalog-page__row 
-        .catalog-page__col
+        .catalog-page__col(data-aos='fade-up')
           .catalog-page__button(data-filters-button='')
             .catalog-page__button-icon 
               +filters-svg.catalog-page__button-svg 
@@ -96,7 +96,7 @@ block content
                 .filters__button-text 
                   |Сбросить
         .catalog-page__col
-          .grid-container.grid-container--catalog.listing
+          .grid-container.grid-container--catalog.listing(data-aos='fade-up')
             +product-card-noprice
             +product-card(disabled = true bot = true)
             - for (i = 0; i < 14; i++)

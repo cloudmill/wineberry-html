@@ -27,7 +27,7 @@
 
     &:nth-child(1) {
       padding-left: 60px;
-      padding-top: 203px;
+      padding-top: getRem(203px);
       @media (max-width: ($breakpoint - 1px)) {
         padding: 0;
       }
@@ -40,7 +40,7 @@
 
     &:nth-child(2) {
       padding-right: calc(#{$col-width-d} * 2);
-      padding-top: 203px;
+      padding-top: getRem(203px);
       padding-bottom: 140px;
       @media (max-width: ($breakpoint - 1px)) {
         padding: 0;
@@ -54,7 +54,7 @@
     }
 
     &:nth-child(3) {
-      padding: 325px 60px 140px;
+      padding: getRem(325px) 60px 140px;
       @media (max-width: ($breakpoint - 1px)) {
         padding: 0;
         margin-top: 40px;
@@ -73,7 +73,7 @@
   }
 
   &__title {
-    margin-bottom: 60px;
+    margin-bottom: getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
     }

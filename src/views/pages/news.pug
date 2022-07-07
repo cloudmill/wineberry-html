@@ -7,13 +7,13 @@ block content
   .news-page 
     section.section.section--first 
       .container
-        .section__breadcrumbs
+        .section__breadcrumbs(data-aos='fade-up')
           +breadcrumbs(page = 'Новости')
-        h1
+        h1(data-aos='fade-up')
           |Новости
     section.section 
       .news-page__grid.listing
-        .news-page__grid-item.news-page__grid-item--big
+        .news-page__grid-item.news-page__grid-item--big(data-aos='fade-up')
           a.news-page__card(href="#")
             .news-page__grid-container 
               .news-page__card-row 
@@ -33,9 +33,9 @@ block content
                     .news-page__card-icon 
                       +arrow-svg.news-page__card-svg
         - for (i = 0; i < 4; i++)
-          .news-page__grid-item 
+          .news-page__grid-item(data-aos='fade-up')
             +news-card
-        .news-page__grid-item.news-page__grid-item--big
+        .news-page__grid-item.news-page__grid-item--big(data-aos='fade-up')
           a.news-page__card(href="#")
             .news-page__grid-container 
               .news-page__card-row 
@@ -55,7 +55,7 @@ block content
                     .news-page__card-icon 
                       +arrow-svg.news-page__card-svg
         - for (i = 0; i < 4; i++)
-          .news-page__grid-item 
+          .news-page__grid-item(data-aos='fade-up')
             +news-card
         .listing__wrapper 
           +listing-loader-svg

@@ -44,24 +44,24 @@ block content
       ]
     }
   .profile-page.section.section--default
-    .mobile-only 
+    .mobile-only(data-aos='fade-up')
       +aside-profile(second = 'active')
     .profile-page__row.profile-page__row--big 
-      .profile-page__col 
+      .profile-page__col(data-aos='fade-up')
         +aside-profile(second = 'active' card = true)
       .profile-page__col
-        .section__breadcrumbs
+        .section__breadcrumbs(data-aos='fade-up')
           +breadcrumbs(items = ['Личный кабинет', 'Мои юридические лица'] page = 'Универсам Таллинский ООО')
         .profile-page__order
           .desktop-only
-            .profile-page__order-top 
+            .profile-page__order-top(data-aos='fade-up')
               .profile-page__order-button 
                 +link-left 
                   |Назад
               h1 
                 |Универсам Таллинский ООО
             ul.profile-page__orders-list
-              li.profile-page__orders-item
+              li.profile-page__orders-item(data-aos='fade-up')
                 .profile-page__order-row 
                   .profile-page__order-col
                     .profile-page__orders-label 
@@ -73,7 +73,7 @@ block content
                       .profile-page__status-text 
                         |Активен
               each item in ddata.list
-                li.profile-page__orders-item
+                li.profile-page__orders-item(data-aos='fade-up')
                   .profile-page__order-row 
                     .profile-page__order-col
                       .profile-page__orders-label 
@@ -83,11 +83,11 @@ block content
                         |#{item.text}
           .mobile-only 
             .profile-page__block.profile-page__block--order
-              .profile-page__order-top
+              .profile-page__order-top(data-aos='fade-up')
                 h1
                   |Универсам Таллинский ООО
               ul.profile-page__block-list
-                li.profile-page__block-item 
+                li.profile-page__block-item(data-aos='fade-up')
                   .profile-page__orders-label 
                     |Статус
                   .profile-page__status

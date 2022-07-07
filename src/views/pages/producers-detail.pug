@@ -8,15 +8,15 @@ block content
   .producers-page 
     section.section.section--first 
       .container
-        .section__breadcrumbs
+        .section__breadcrumbs(data-aos='fade-up')
           +breadcrumbs(items = ['Производители'] page = 'Изюмов')
         .mobile-only 
-          h1 
+          h1(data-aos='fade-up')
             |Изюмов
       .producers-page__section 
         .section__container
           .producers-page__section-row 
-            .producers-page__section-col
+            .producers-page__section-col(data-aos='fade-up')
               .desktop-only
                 h1.producers-page__section-title 
                   |Изюмов
@@ -26,22 +26,22 @@ block content
                     +download-svg.button__svg.button__icon-white
                   .button__text 
                     |Скачать презентацию
-            .producers-page__section-col
+            .producers-page__section-col(data-aos='fade-up')
               .producers-page__section-image 
                 +picture('producer.jpg')
-          .producers-page__section-block 
+          .producers-page__section-block(data-aos='fade-up')
             p.producers-page__section-text
               |Торговая марка Изюмовъ — это первый в России алкогольный бренд, который объединяет под одной торговой маркой различные категории алкогольных напитков: столовые и крепленые вина, шампанское и другие.
           ul.producers-page__content 
             each item in ['Основной ассортимент продукции ТМ «Изюмовъ» производится в Крыму, из крымского винограда на самых известных и легендарных заводах: Массандра, Золотая Балка, КВКЗ «БАХЧИСАРАЙ», Севастопольский Винный Завод, Алеф-Виналь-Крым, Старокрымский и т.д.', 'Вся алкогольная продукция ТМ Изюмовъ проходит строжайший трехступенчатый контроль качества как на самих заводах-изготовителях, так и отделом качества винодельческой компании Изюмовъ и ГЛАВКРЫМВИНО, созданных специально для этих целей.', 'Продвижение ТМ Изюмовъ будет сопровождаться масштабной рекламной кампанией на центральных ТВ каналах, а также федеральными и локальными трейд-маркетинговыми мероприятиями по всей стране.', ]
-              li.producers-page__content-item 
+              li.producers-page__content-item(data-aos='fade-up')
                 p.producers-page__content-text 
                   |#{item}
     section.section.section--big 
       .section__container
-        h2.producers-page__section-heading 
+        h2.producers-page__section-heading(data-aos='fade-up')
           |Ассортимент производителя
-        .category 
+        .category(data-aos='fade-up')
           ul.category__list
             li.category__item.active
               .category__text
@@ -50,7 +50,7 @@ block content
               .category__text
                 |Коньяк
     section.producers-page__products
-      .grid-container.listing
+      .grid-container.listing(data-aos='fade-up')
         - for (i = 0; i < 18; i++)
           +product-card(bot = true)
         .listing__wrapper 

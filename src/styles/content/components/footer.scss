@@ -3,6 +3,7 @@
   
   border-top: 1px solid var(--color-wine);
   background: var(--color-white);
+  overflow-y: hidden;
 
   &--small {
     @media (max-width: ($breakpoint - 1px)) {

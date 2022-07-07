@@ -26,12 +26,12 @@ block content
       .catalog-card__row 
         .catalog-card__col
           .mobile-only 
-            .catalog-card__breadcrumbs 
+            .catalog-card__breadcrumbs(data-aos='fade-up')
               +breadcrumbs(items=['Вина и винные напитки'] page = 'Ле Мэтр де Винь Совиньон Блан, вино стол.сух.бел., 11%, 0,75л.')
-          .catalog-card__button
+          .catalog-card__button(data-aos='fade-up')
             +link-left.button--huge
               |В каталог
-          .catalog-card__container 
+          .catalog-card__container(data-aos='fade-up')
             .catalog-card__bg 
               +picture('catalog-card-bg.jpg').catalog-card__bg-img
             .catalog-card__image 
@@ -39,17 +39,17 @@ block content
         .catalog-card__col
           .catalog-card__wrapper
             .desktop-only
-              .section__breadcrumbs
+              .section__breadcrumbs(data-aos='fade-up')
                 +breadcrumbs(items=['Вина и винные напитки'] page = 'Ле Мэтр де Винь Совиньон Блан, вино стол.сух.бел., 11%, 0,75л.')
-            h1.catalog-card__title
+            h1.catalog-card__title(data-aos='fade-up')
               |Ле Мэтр де Винь Совиньон Блан, вино стол.сух.бел., 11%, 0,75л.
-            .catalog-card__code 
+            .catalog-card__code(data-aos='fade-up')
               |Артикул: 124041
-            ul.catalog-card__stats 
+            ul.catalog-card__stats(data-aos='fade-up')
               each item in ['Испания', '0.75 л.', 'Красное', 'Сухое',]
-                li.catalog-card__stats-item 
+                li.catalog-card__stats-item
                   |#{item}
-            .catalog-card__inner 
+            .catalog-card__inner(data-aos='fade-up')
               .catalog-card__prices 
                 .catalog-card__prices-item 
                   .catalog-card__label 
@@ -61,8 +61,8 @@ block content
                     |Персональная цена
                   .catalog-card__prices-price 
                     |1 680 ₽
-            .catalog-card__inner 
-              .catalog-card__auth
+            .catalog-card__inner
+              .catalog-card__auth(data-aos='fade-up')
                 .catalog-card__auth-row 
                   .catalog-card__auth-col 
                     .catalog-card__auth-icon 
@@ -76,12 +76,12 @@ block content
                   .catalog-card__auth-col
                     +outline-button.button--catalog 
                       |Авторизоваться
-            .catalog-card__inner
+            .catalog-card__inner(data-aos='fade-up')
               +accordion
             .catalog-card__inner 
               ul.catalog-card__list
                 each item in ddata
-                  li.catalog-card__item 
+                  li.catalog-card__item(data-aos='fade-up') 
                     .catalog-card__item-col
                       .catalog-card__label 
                         |#{item.label}
@@ -89,11 +89,11 @@ block content
                       .catalog-card__item-text 
                         |#{item.text}
             .catalog-card__inner 
-              h2.catalog-card__heading 
+              h2.catalog-card__heading(data-aos='fade-up') 
                 |О производителе
-              p.catalog-card__text
+              p.catalog-card__text(data-aos='fade-up')
                 |Глобальная популярность Lindeman's была обусловлена позитивной философией доктора Генри Линдмана, который основал  винодельню Lindeman's в Долине Хантер в 1843 году. Вина идеально подходящие для повседневных моментов и для особых случаев, что сделало их невероятно популярными во всем мире. Винодельня Lindeman's обладает безупречной репутацией неизменного качества.
-          .catalog-card__inner.catalog-card__panel
+          .catalog-card__inner.catalog-card__panel(data-aos='fade-up')
             .catalog-card__panel-col
               +counter.counter--big
             .catalog-card__panel-col
@@ -105,7 +105,7 @@ block content
     section.section.section--big.section--hidden
       .container 
         .catalog-card__slider 
-          .catalog-card__top 
+          .catalog-card__top(data-aos='fade-up')
             h2 
               |Похожие товары
             .catalog-card__buttons 
@@ -114,7 +114,7 @@ block content
                   +small-arrow-svg.slider-buttons__svg
                 button.slider-buttons__item(data-slider-button = '4')
                   +small-arrow-svg.slider-buttons__svg
-          .catalog-card__slider-slider 
+          .catalog-card__slider-slider(data-aos='fade-up')
             .swiper-container.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='10' data-slider-prev='3' data-slider-next='4')
               .swiper-wrapper 
                 - for (i = 0; i < 10; i++)

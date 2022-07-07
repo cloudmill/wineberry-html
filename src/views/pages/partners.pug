@@ -38,11 +38,11 @@ block content
     section.section.section--first 
       .container
         .mobile-only
-          .section__breadcrumbs 
+          .section__breadcrumbs(data-aos='fade-up')
             +breadcrumbs(page = 'Партнерам')
-          h1
+          h1(data-aos='fade-up')
             |Партнерам
-        .intro
+        .intro(data-aos='fade-up')
           .intro__container
             .intro__image
               .desktop-tablet
@@ -61,14 +61,14 @@ block content
     section.section 
       .content
         .section__container 
-          h2.partners-page__heading 
+          h2.partners-page__heading(data-aos='fade-up')
             |Мы — главный дистрибьютер алкогольной продукции ООО «ВайнБерри» на территории Северно-Западного федерального округа.
-          .partners-page__caption 
+          .partners-page__caption(data-aos='fade-up')
             |Заводы, с которыми мы работаем зарекомендовали себя как надежные партнеры со стабильным и высоким качеством продукции и регулярными поставками.
           .section__block
             .partners-page__block
               .partners-page__block-row 
-                .partners-page__block-col
+                .partners-page__block-col(data-aos='fade-up')
                   .partners-page__block-item.reverse
                     .partners-page__block-info 
                       .partners-page__block-title 
@@ -78,7 +78,7 @@ block content
                     .partners-page__block-container
                       .partners-page__block-image
                         +picture('partners-storage.jpg')
-                .partners-page__block-col
+                .partners-page__block-col(data-aos='fade-up')
                   .partners-page__block-item 
                     .partners-page__block-container
                       .partners-page__block-image 
@@ -88,64 +88,64 @@ block content
                         |100%
                       .partners-page__text 
                         |Закупка крепкой алкогольной продукции осуществляется в ООО «ВайнБерри»
-    section.section.section--big
+    section.section.section--big(data-aos='fade-up')
       .section__container
         h2 
           |Собственная логистическая компания позволяет качественно поддерживать наличие представленного на полках магазинов ассортимента продукции.
-    section.section.section--big
+    section.section.section--big(data-aos='fade-up')
       .section__wrapper 
         +picture('driver.jpg').partners-page__image
     section.section.section--big
       .section__container
         .partners-page__grid 
-          .partners-page__grid-item 
+          .partners-page__grid-item(data-aos='fade-up')
             .partners-page__grid-icon 
               +features-1-svg.partners-page__grid-svg
             .partners-page__grid-text 
               |Активная клиентская база – 2500 торговых точек
-          .partners-page__grid-item 
+          .partners-page__grid-item(data-aos='fade-up')
             .partners-page__grid-icon 
               +features-2-svg.partners-page__grid-svg
             .partners-page__grid-text 
               |Собственная транспортная компания
-          .partners-page__grid-item 
+          .partners-page__grid-item(data-aos='fade-up')
             .partners-page__grid-icon 
               +features-3-svg.partners-page__grid-svg
             .partners-page__grid-text 
               |Централизованная доставка
-          .partners-page__grid-item 
+          .partners-page__grid-item(data-aos='fade-up')
             .partners-page__grid-icon 
               +features-4-svg.partners-page__grid-svg
-            .partners-page__grid-text 
+            .partners-page__grid-text
               |Более 150 торговых представителей
-          .partners-page__grid-item 
+          .partners-page__grid-item(data-aos='fade-up')
             .partners-page__grid-icon 
               +features-5-svg.partners-page__grid-svg
             .partners-page__grid-text 
               |Собственный штат мерчендайзеров
-          .partners-page__grid-item 
+          .partners-page__grid-item(data-aos='fade-up')
             .partners-page__grid-icon 
               +features-6-svg.partners-page__grid-svg
             .partners-page__grid-text 
               |Площадь склада 2000 м2
-          .partners-page__grid-item 
+          .partners-page__grid-item(data-aos='fade-up')
             .partners-page__grid-icon 
               +features-7-svg.partners-page__grid-svg
             .partners-page__grid-text 
               |Гибкие договорные условия и ценовая политика
-          .partners-page__grid-item 
+          .partners-page__grid-item(data-aos='fade-up')
             .partners-page__grid-icon 
               +features-8-svg.partners-page__grid-svg
             .partners-page__grid-text 
               |Индивидуальный подход к каждому клиенту
-          .partners-page__grid-item 
+          .partners-page__grid-item(data-aos='fade-up')
             .partners-page__grid-icon 
               +features-9-svg.partners-page__grid-svg
             .partners-page__grid-text 
               |Прочные и надежные деловые связи с партнерами
     section.section.section--big 
       .container 
-        .partners-page__map
+        .partners-page__map(data-aos='fade-up')
           +picture('partners-map.jpg').partners-page__map-picture
           .partners-page__map-top 
             .partners-page__map-title 
@@ -160,19 +160,19 @@ block content
           .partners-page__map-bot 
             .partners-page__map-caption 
               |ТТ — торговых точек
-    section.section.section--big
+    section.section.section--big(data-aos='fade-up')
       .container 
         h1.section__heading 
           |Ключевые клиенты
         .section__text 
           |Сети регионального и локального форматов
-    section.section.section--big.section--hidden
+    section.section.section--big.section--hidden(data-aos='fade-up')
       +ticker
     section.section.section--big 
       .contacts 
         .container
           .contacts__row.contacts__form 
-            .contacts__col.contacts__inner
+            .contacts__col.contacts__inner(data-aos='fade-up')
               .contacts__form-col 
                 h2 
                   |Связаться с нами
@@ -181,7 +181,7 @@ block content
                     |Мы всегда открыты к предложениям и сотрудничеству. Если у вас возникли вопросы или вы хотите стать нашим партнером, оставьте заявку через форму обратной связи.
                 .contacts__icon 
                   +contacts-icon-svg.contacts__svg
-            .contacts__col.contacts__inner 
+            .contacts__col.contacts__inner(data-aos='fade-up')
               form.form(action="/" data-form='contact-us')
                 each item in ddata.form 
                   .form__item 

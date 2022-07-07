@@ -49,11 +49,8 @@
     }
   }
   &__section-inner {
-    padding-top: 212px;
+    padding-top: getRem(212px);
     @media (max-width: ($breakpoint - 1px)) {
-      padding-top: 68px;
-    }
-    @media (max-width: ($breakpoint-xs - 1px)) {
       padding-top: getRem(68px);
     }
 

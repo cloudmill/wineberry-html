@@ -11,15 +11,15 @@ block variables
 
 block content
   .profile-page.section.section--default
-    .mobile-only 
+    .mobile-only(data-aos='fade-up')
       +aside-profile(third = 'active')
     .profile-page__row.profile-page__row--big 
-      .profile-page__col 
+      .profile-page__col(data-aos='fade-up')
         +aside-profile(third = 'active' card = true)
       .profile-page__col
-        .section__breadcrumbs
+        .section__breadcrumbs(data-aos='fade-up')
           +breadcrumbs.breadcrumbs--fade(items = ['Личный кабинет', 'Персональные акции'] page = 'При единовременной закупке от 5 литров акционного ассортимента,  ТТ получает скидку в накладной - 15% *Ассортимент и размер скидки в руб./бут.')
-        .profile-page__discount-top
+        .profile-page__discount-top(data-aos='fade-up')
           .profile-page__discount-btn
             +link-left 
               |Назад
@@ -29,7 +29,7 @@ block content
           .desktop-only
             ul.profile-page__orders-list
               - for (i = 0; i < 6; i++)
-                li.profile-page__item
+                li.profile-page__item(data-aos='fade-up')
                   a.profile-page__discount-row.profile-page__orders-link(href='#')
                     .profile-page__discount-col
                       .profile-page__discount-item
@@ -47,7 +47,7 @@ block content
                         +small-arrow-svg.profile-page__orders-svg 
           .mobile-only
             - for (i = 0; i < 3; i++)
-              .profile-page__block
+              .profile-page__block(data-aos='fade-up')
                 .profile-page__discount-container
                   .profile-page__discount-item
                     .profile-page__orders-label
