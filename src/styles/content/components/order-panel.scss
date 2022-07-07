@@ -14,8 +14,11 @@
     }
 
     &--bot {
+      @media (max-width: ($breakpoint-ll - 1px)) {
+        padding: 23px 32px;
+      }
       @media (max-width: ($breakpoint - 1px)) {
-        padding-top: 24px;
+        padding: 24px 16px 16px;
       }
     }
   }
@@ -45,7 +48,7 @@
   &__label {
     color: var(--color-lilac);
     letter-spacing: var(--letter-space);
-    @media (max-width: ($breakpoint - 1px)) {
+    @media (max-width: ($breakpoint-ll - 1px)) {
       @include fsl(14px, 120%);
     }
   }
@@ -53,6 +56,12 @@
   &__num {
     font-weight: 700;
     letter-spacing: var(--letter-space);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      @include fsl(14px, 120%);
+    }
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px);
+    }
 
     &.discont {
       color: var(--color-light-green);
@@ -76,6 +85,15 @@
     @include fsl(20px, 120%);
     @media (max-width: ($breakpoint-xs - 1px)) {
       @include fsl(20px, null, true);
+    }
+  }
+
+  &__top {
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      padding: 0 17px;
+    }
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0;
     }
   }
 

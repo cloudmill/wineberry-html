@@ -37,6 +37,9 @@
 
     &:nth-child(1) {
       width: calc(#{$col-width-d} * 2);
+      @media (max-width: ($breakpoint-ll - 1px)) {
+        width: calc(#{$col-width-d} * 2.5);
+      }
       @media (max-width: ($breakpoint - 1px)) {
         margin: 0 20px;
         width: auto;
@@ -47,6 +50,9 @@
       margin-top: -1px;
       margin-left: -1px;
       width: calc(#{$col-width-d} * 10);
+      @media (max-width: ($breakpoint-ll - 1px)) {
+        width: calc(#{$col-width-d} * 9.5);
+      }
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 20px;
         margin-left: 0;

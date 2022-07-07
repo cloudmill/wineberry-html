@@ -1,22 +1,6 @@
 mixin ticker 
-  .ticker 
-    .ticker__item
+  .ticker(data-ticker='')
+    .ticker__item(data-ticker-line='')
       - for (i = 1; i < 6; i++)
-        .ticker__img 
-          +picture(`client-${i}.jpg`)
-      .ticker__img 
-        +picture('client-1.jpg')
-    .ticker__item
-      - for (i = 2; i < 6; i++)
-        .ticker__img 
-          +picture(`client-${i}.jpg`)
-      - for (i = 1; i < 3; i++)
-        .ticker__img 
-          +picture(`client-${i}.jpg`)
-    .ticker__item
-      - for (i = 3; i < 6; i++)
-        .ticker__img 
-          +picture(`client-${i}.jpg`)
-      - for (i = 1; i < 4; i++)
-        .ticker__img 
-          +picture(`client-${i}.jpg`)
+        .ticker__img(data-ticker-item='')
+          +picture(`client-${i}.jpg`).ticker__picture

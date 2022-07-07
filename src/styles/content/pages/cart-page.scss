@@ -67,6 +67,31 @@
     }
   }
 
+  &__prices {
+    margin-bottom: 16px;
+
+    display: flex;
+  }
+  &__prices-item {
+
+    &:not(:first-child) {
+      margin-left: 36px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__label {
+    color: var(--color-lilac);
+    letter-spacing: var(--letter-space);
+    @media (max-width: ($breakpoint-xl - 1px)) {
+      @include fsl(12px, 120%);
+    }
+  }
+
   &__top {
     margin-bottom: 20px;
     @media (max-width: ($breakpoint - 1px)) {
@@ -114,6 +139,25 @@
     }
     display: flex;
     align-items: center;
+
+    &--simple {
+      #{$comp}__col {
+        &:nth-child(2) {
+          @media (max-width: ($breakpoint-xl - 1px)) {
+            width: auto;
+            flex-grow: 1;
+          }
+          @media (max-width: ($breakpoint - 1px)) {
+            flex-grow: 0;
+          }
+        }
+        &:nth-child(3) {
+          @media (max-width: ($breakpoint-xl - 1px)) {
+            display: none;
+          }
+        }
+      }
+    }
   }
 
   &__col {
@@ -122,6 +166,9 @@
     &:nth-child(1) {
       padding-right: 10px;
       width: calc(#{$col-width-d} * 4 - 60px);
+      @media (max-width: ($breakpoint-xl - 1px)) {
+        width: calc(#{$col-width-d} * 5 - 60px);
+      }
       @media (max-width: ($breakpoint - 1px)) {
         padding-right: 0;
         width: auto;
@@ -129,11 +176,14 @@
     }
     &:nth-child(2) {
       width: calc(#{$col-width-d});
-      @media (max-width: ($breakpoint - 1px)) {
+      @media (max-width: ($breakpoint-xl - 1px)) {
         width: auto;
       }
     }
     &:nth-child(3) {
+      @media (max-width: ($breakpoint-xl - 1px)) {
+        margin-left: 20px;
+      }
       width: calc(#{$col-width-d} + 22px);
       @media (max-width: ($breakpoint - 1px)) {
         display: none;
@@ -144,6 +194,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @media (max-width: ($breakpoint-xl - 1px)) {
+        display: none;
+      }
+      @media (max-width: ($breakpoint - 1px)) {
+        display: flex;
+      }
     }
 
     &:not(:first-child) {
@@ -167,6 +223,13 @@
   }
 
   &__icon {
+    @media (max-width: ($breakpoint-xl - 1px)) {
+      margin-left: 35px;
+    }
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 0;
+    }
+
     display: flex;
     align-items: center;
     justify-content: center;

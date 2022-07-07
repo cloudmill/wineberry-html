@@ -35,7 +35,7 @@ block content
                   - for (i = 0; i < 3; i++)
                     li.cart-page__list-item 
                       .order-card.order-card--cart
-                        .cart-page__row 
+                        .cart-page__row.cart-page__row--simple
                           .cart-page__col.cart-page__container 
                             .order-card__info 
                               .order-card__img 
@@ -50,9 +50,22 @@ block content
                                     li.order-card__stats-item 
                                       |#{item}
                           .cart-page__col.cart-page__container 
-                            .desktop-only
+                            .desktop-xl
                               .order-card__price 
                                 |1 990 ₽ 
+                            .desktop-ll
+                              .cart-page__prices 
+                                .cart-page_prices-item 
+                                  .order-card__price 
+                                    |1 990 ₽ 
+                                .cart-page__prices-item 
+                                  .order-card__price 
+                                    |1 680 ₽ 
+                              .cart-page__wrapper
+                                .cart-page__counter 
+                                  +counter
+                                .cart-page__icon 
+                                  +trash-svg.cart-page__svg
                             .mobile-only
                               .order-card__prices 
                                 .order-card__prices-item 

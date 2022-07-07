@@ -125,7 +125,7 @@
       margin-bottom: 8px;
     }
 
-    @include fsl(36px, 110%);
+    @include fsl(28px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(18px);
     }
@@ -208,6 +208,9 @@
   &__prices-item {
     flex-shrink: 0;
     width: calc(#{$col-width-d} * 2 - 60px);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      width: calc(#{$col-width-d} * 2);
+    }
     @media (max-width: ($breakpoint - 1px)) {
       width: calc(#{$col-width-m} * 4 - 20px);
     }
@@ -217,7 +220,7 @@
 
     font-weight: 700;
     letter-spacing: var(--letter-space);
-    @include fsl(32px, 150%);
+    @include fsl(28px, 150%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(20px);
     }
@@ -318,7 +321,7 @@
   }
 
   &__panel {
-    padding: 20px 60px;
+    padding: getRem(20px) getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {
       padding: 20px;
     }

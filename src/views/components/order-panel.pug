@@ -30,13 +30,14 @@ mixin order-panel
               .order-panel__num(class=item.class)
                 |#{item.num}
     .order-panel__container.order-panel__container--bot
-      .order-panel__row
-        .order-panel__col
-          .order-panel__text 
-            |Итого
-        .order-panel__col
-          .order-panel__total
-            |105 696 ₽
+      .order-panel__top
+        .order-panel__row
+          .order-panel__col
+            .order-panel__text 
+              |Итого
+          .order-panel__col
+            .order-panel__total
+              |105 696 ₽
       .order-panel__button 
         +submit-button 
           |Перейти к оформлению

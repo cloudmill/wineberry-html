@@ -4,6 +4,22 @@
   }
 }
 
+.desktop-xl {
+  @media (max-width: ($breakpoint-xl - 1px)) {
+    display: none;
+  }
+}
+
+.desktop-ll {
+  display: none;
+  @media (max-width: ($breakpoint-xl - 1px)) {
+    display: block;
+  }
+  @media (max-width: ($breakpoint - 1px)) {
+    display: none;
+  }
+}
+
 .desktop-tablet {
   @media (max-width: ($breakpoint-m - 1px)) {
     display: none;
