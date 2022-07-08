@@ -21,12 +21,6 @@ window.addEventListener("load", () => {
         if (i === 13 || i === 26 || i === 74) {
           await timer(400)
         }
-        // if (i === 26) {
-        //   delay = 10
-        // } 
-        // if (i === 74) {
-        //   delay = 20
-        // } 
 
         setTimeout(() => {
           text.textContent = `${i}%`

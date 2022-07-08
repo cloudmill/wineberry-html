@@ -6,13 +6,13 @@ mixin footer
           .footer__inner
             ul.footer__list
               each item in ['О компании', 'Партнерам', 'Производители', 'Новости', 'Контакты']
-                li.footer__list-item
+                li.footer__list-item(data-aos='fade-up')
                   a.footer__list-link(href="#")
                     |#{item}
         .footer__col
           .footer__inner 
             .footer__container 
-              .footer__container-col
+              .footer__container-col(data-aos='fade-up')
                 .footer__label 
                   |Клиентский сервис
                 a.footer__phone(href="tel:88123375662") 
@@ -24,7 +24,7 @@ mixin footer
                     +message-svg.ask__svg 
                   .ask__text 
                     |Задать вопрос
-              .footer__container-col
+              .footer__container-col(data-aos='fade-up')
                 .footer__item 
                   .footer__label 
                     |Центральный офис
@@ -35,7 +35,7 @@ mixin footer
                     |Склад
                   address.footer__text 
                     |192289, Санкт-Петербург, ул. Карпатская, д.8, лит. Б, пом. 8-Н
-    .footer__row 
+    .footer__row(data-aos='fade-up')
       .footer__col
         .footer__bot
           .footer__logo 

@@ -36,7 +36,7 @@ mixin product-card
               +cart-svg.product-card__svg
 
 mixin product-card-noprice 
-  .product-card
+  .product-card(class=attributes.class)
     a.product-card__link(href="#") 
       .product-card__image 
         +picture('wine.jpg').product-card__picture

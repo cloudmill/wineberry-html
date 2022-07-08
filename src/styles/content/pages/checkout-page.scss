@@ -72,6 +72,15 @@
     }
   }
 
+  &__button {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 140px;
+    @media (max-width: ($breakpoint - 1px)) {
+      position: static;
+    }
+  }
+
   &__title {
     margin-bottom: getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {

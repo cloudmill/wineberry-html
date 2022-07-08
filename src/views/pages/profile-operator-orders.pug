@@ -15,36 +15,36 @@ block footer
 
 block content
   .profile-page
-    .mobile-only 
+    .mobile-only(data-aos='fade-up')
       +aside-operator(first = 'active')
     .profile-page__row 
-      .profile-page__col 
+      .profile-page__col(data-aos='fade-up')
         +aside-operator(first = 'active')
       .profile-page__col
         .mobile-only 
-          p.profile-page__caption 
+          p.profile-page__caption(data-aos='fade-up')
             |Главный дистрибьютор алкогольной продукции #[br] на территории Северо-Западного федерального округа
-        h1
+        h1(data-aos='fade-up')
           |Личный кабинет
         .mobile-only 
-          .profile-page__exit 
+          .profile-page__exit(data-aos='fade-up')
             .profile-page__exit-icon 
               +exit-svg.profile-page__exit-svg 
             .profile-page__exit-text 
               |Выйти
         .profile-page__section 
-          h2.profile-page__heading 
+          h2.profile-page__heading(data-aos='fade-up')
             |Заказы
           .profile-page__orders 
             .profile-page__orders-top 
-              .profile-page__orders-row 
+              .profile-page__orders-row(data-aos='fade-up')
                 each item in ['№', 'Статус', 'Дата обновления', 'Ответственный менеджер']
                   .profile-page__orders-col
                     .profile-page__orders-label 
                       |#{item}
             ul.profile-page__orders-list
               - for (i = 0; i < 5; i++)
-                li.profile-page__orders-item 
+                li.profile-page__orders-item(data-aos='fade-up')
                   .profile-page__orders-row 
                     .profile-page__orders-col
                       .profile-page__orders-text 
@@ -66,7 +66,7 @@ block content
                           +small-arrow-svg.profile-page__orders-svg 
           .mobile-only 
             - for (i = 0; i < 3; i++)
-              .profile-page__block
+              .profile-page__block(data-aos='fade-up')
                 ul.profile-page__block-list
                   li.profile-page__block-item 
                     .profile-page__orders-label 

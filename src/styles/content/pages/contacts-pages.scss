@@ -15,9 +15,11 @@
   }
 
   &__item {
+    padding-right: 20px;
     flex-shrink: 0;
     width: calc(#{$col-width-d} * 3);
     @media (max-width: ($breakpoint - 1px)) {
+      padding-right: 0;
       width: auto;
     }
 

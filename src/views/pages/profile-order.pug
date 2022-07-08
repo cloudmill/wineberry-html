@@ -45,24 +45,24 @@ block content
       ]
     }
   .profile-page.section.section--default
-    .mobile-only 
+    .mobile-only(data-aos='fade-up')
       +aside-profile(first = 'active')
     .profile-page__row.profile-page__row--big 
-      .profile-page__col 
+      .profile-page__col(data-aos='fade-up')
         +aside-profile(card = true first = 'active')
       .profile-page__col
-        .section__breadcrumbs
+        .section__breadcrumbs(data-aos='fade-up')
           +breadcrumbs(items = ['Личный кабинет', 'Мои заказы'] page = 'Заказ №21')
         .profile-page__order
           .desktop-only
-            .profile-page__order-top 
+            .profile-page__order-top(data-aos='fade-up')
               .profile-page__order-button 
                 +link-left 
                   |Назад
               h1 
                 |Заказ №21
             ul.profile-page__orders-list
-              li.profile-page__orders-item
+              li.profile-page__orders-item(data-aos='fade-up')
                 .profile-page__order-row 
                   .profile-page__order-col
                     .profile-page__orders-label 
@@ -74,7 +74,7 @@ block content
                       .profile-page__status-text 
                         |Ждет оплаты
               each item in ddata.list
-                li.profile-page__orders-item
+                li.profile-page__orders-item(data-aos='fade-up')
                   .profile-page__order-row 
                     .profile-page__order-col
                       .profile-page__orders-label 
@@ -82,7 +82,7 @@ block content
                     .profile-page__order-col
                       .profile-page__orders-text 
                         |#{item.text}
-            .profile-page__orders-bot 
+            .profile-page__orders-bot(data-aos='fade-up')
               .profile-page__orders-buttons 
                 .profile-page__orders-btn 
                   .button.button--outline.button--auto
@@ -97,7 +97,7 @@ block content
                     .button__text 
                       |Повторить заказ  
           .mobile-only 
-            .profile-page__block.profile-page__block--order
+            .profile-page__block.profile-page__block--order(data-aos='fade-up')
               .profile-page__order-top
                 h1
                   |Заказ №21
@@ -131,9 +131,9 @@ block content
                       .button__text 
                         |Повторить заказ  
         .section__block 
-          h2.profile-page__heading 
+          h2.profile-page__heading(data-aos='fade-up')
             |Состав заказа
           ul.profile-page__composition
             - for (i = 0; i < 4; i++)
-              li.profile-page__composition-item
+              li.profile-page__composition-item(data-aos='fade-up')
                 +order-card(buttons=true supervisor=true)

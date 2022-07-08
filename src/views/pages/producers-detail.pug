@@ -52,6 +52,6 @@ block content
     section.producers-page__products
       .grid-container.listing(data-aos='fade-up')
         - for (i = 0; i < 18; i++)
-          +product-card(bot = true)
+          +product-card.grid-container__item(bot = true)
         .listing__wrapper 
           +listing-loader-svg

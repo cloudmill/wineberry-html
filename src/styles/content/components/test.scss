@@ -33,22 +33,42 @@
   }
 }
 
-.test__ticker {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.test__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+
+  background: var(--color-black);
+  overflow-y: scroll;
+
 }
 
-.test__line {
-  flex-shrink: 0;
+.test__btn {
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0;
+
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  height: 100px;
+  font-weight: 700;
+  background: var(--color-white);
 }
 
 .test__item {
-  flex-shrink: 0;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
 
-  &:not(:first-child) {
-    margin-left: 170px;
-  }
+  border-top: 1px solid var(--color-white);
+  font-weight: 700;
+  font-size: 34px;
+  color: var(--color-white);
 }

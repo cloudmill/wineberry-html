@@ -1,11 +1,15 @@
 .aside {
   $comp: &;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 140px;
   @media (max-width: ($breakpoint - 1px)) {
     position: fixed;
     z-index: 100;
     bottom: 0;
     left: 0;
     right: 0;
+    top: auto;
 
     background: var(--color-white);
     border-radius: 12px 12px 0px 0px;

@@ -49,25 +49,25 @@ block content
       ]
     }
   .profile-page
-    .mobile-only 
+    .mobile-only(data-aos='fade-up')
       +aside-operator(first = 'active')
     .profile-page__row 
-      .profile-page__col 
+      .profile-page__col(data-aos='fade-up')
         +aside-operator(first = 'active')
       .profile-page__col
         .mobile-only 
-          p.profile-page__caption 
+          p.profile-page__caption(data-aos='fade-up')
             |Главный дистрибьютор алкогольной продукции #[br] на территории Северо-Западного федерального округа
         .profile-page__order
           .desktop-only
-            .profile-page__order-top 
+            .profile-page__order-top(data-aos='fade-up')
               .profile-page__order-button 
                 +link-left 
                   |Назад
               h1 
                 |Заказ №21
             ul.profile-page__orders-list
-              li.profile-page__orders-item
+              li.profile-page__orders-item(data-aos='fade-up')
                 .profile-page__order-row 
                   .profile-page__order-col
                     .profile-page__orders-label 
@@ -79,7 +79,7 @@ block content
                       .profile-page__status-text 
                         |Ждет проверки менеджером
               each item in ddata.list
-                li.profile-page__orders-item
+                li.profile-page__orders-item(data-aos='fade-up')
                   .profile-page__order-row 
                     .profile-page__order-col
                       .profile-page__orders-label 
@@ -89,11 +89,11 @@ block content
                         |#{item.text}
           .mobile-only 
             .profile-page__block.profile-page__block--order
-              .profile-page__order-top
+              .profile-page__order-top(data-aos='fade-up')
                 h1
                   |Заказ №21
               ul.profile-page__block-list
-                li.profile-page__block-item 
+                li.profile-page__block-item(data-aos='fade-up')
                   .profile-page__orders-label 
                     |Статус
                   .profile-page__status.pending
@@ -102,19 +102,19 @@ block content
                     .profile-page__status-text 
                       |Ждет проверки менеджером
                 each item in ddata.list
-                  li.profile-page__block-item 
+                  li.profile-page__block-item(data-aos='fade-up')
                     .profile-page__orders-label 
                       |#{item.label}
                     .profile-page__orders-text 
                       |#{item.text}
         .section__block 
-          h2.profile-page__heading 
+          h2.profile-page__heading(data-aos='fade-up')
             |Состав заказа
           ul.profile-page__composition
             - for (i = 0; i < 4; i++)
-              li.profile-page__composition-item
+              li.profile-page__composition-item(data-aos='fade-up')
                 +order-card
-        .section__block
+        .section__block(data-aos='fade-up')
           h2.profile-page__heading 
             |Какому менеджеру отправить заказ?
           .profile-page__block-row 
