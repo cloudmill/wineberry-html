@@ -12,9 +12,9 @@
       #{$comp}__col {
         &:nth-child(1),
         &:nth-child(2) {
-          padding-top: 212px;
+          padding-top: getRem(212px);
           @media (max-width: ($breakpoint - 1px)) {
-            padding-top: 68px;
+            padding-top: getRem(68px);
           }
         }
       }
@@ -29,7 +29,7 @@
     }
 
     &:nth-child(1) {
-      padding-top: 156px;
+      padding-top: getRem(156px);
       padding-bottom: 147px;
 
       width: calc(#{$col-width-d} * 2 + #{$col-width-d} / 1.5);
@@ -40,7 +40,7 @@
       background: var(--color-white);
     }
     &:nth-child(2) {
-      padding: 156px 60px 147px;
+      padding: getRem(156px) 60px 147px;
       @media (max-width: ($breakpoint - 1px)) {
         padding: 60px 20px 120px;
         
@@ -864,6 +864,9 @@
   }
   &__discount-btn {
     margin-right: 60px;
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      margin-right: 30px;
+    }
     @media (max-width: ($breakpoint - 1px)) {
       display: none;
     }

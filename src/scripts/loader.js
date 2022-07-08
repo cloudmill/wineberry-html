@@ -27,11 +27,11 @@ window.addEventListener("load", () => {
           progress.style.height = `${i}%`
           
           if (mediaQuery.matches) {
-            text.style.bottom = `${i}%`
-  
-            if (i > 90) {
-              text.style.bottom = 'auto'
-              text.style.top = '60px'
+            
+            if (i < 96 && i > 12) {
+              text.style.height = `${i}%`
+              // text.style.bottom = 'auto'
+              // text.style.top = '60px'
             }
           }
         }, delay * i);

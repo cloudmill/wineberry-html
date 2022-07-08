@@ -80,16 +80,20 @@
     &:nth-child(2) {
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 16px;
-        // padding-left: calc(#{$col-width-d} + #{$col-width-d} / 2 - 8px);
         padding-left: 66px;
-
-        width: 100%;
       }
       @media (max-width: ($breakpoint-xs - 1px)) {
         margin-top: getRem(16px);
         padding-left: getRem(66px);
       }
-      width: calc(#{$col-width-d} * 4 - 20px);
+
+      width: calc(#{$col-width-d} * 4 - 60px);
+      @media (max-width: ($breakpoint-l - 1px)) {
+        width: calc(#{$col-width-d} * 4 - 80px);
+      }
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+      }
     }
   }
 
@@ -224,6 +228,9 @@
   }
   &__prices-item {
     padding-right: 17px;
+    @media (max-width: ($breakpoint-l - 1px)) {
+      padding-right: 10px;
+    }
     @media (max-width: ($breakpoint - 1px)) {
       padding-right: 0;
     }
@@ -232,7 +239,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: calc(#{$col-width-d});
-    @media (max-width: ($breakpoint - 1px)) {
+    @media (max-width: ($breakpoint-l - 1px)) {
       width: auto;
     }
   }
@@ -288,13 +295,18 @@
       display: block;
     }
     display: flex;
+    column-gap: 12px;
+    row-gap: 6px;
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      flex-wrap: wrap;
+    }
   }
   &__buttons-item {
 
     &:not(:first-child) {
-      margin-left: 12px;
+      // margin-left: 12px;
       @media (max-width: ($breakpoint - 1px)) {
-        margin-left: 0;
+        // margin-left: 0;
         margin-top: 8px;
       }
     }

@@ -64,7 +64,7 @@
     font-weight: 700;
     letter-spacing: var(--letter-space);
     color: var(--color-wine);
-    transition: $transition;
+    // transition: $transition;
     @include fsl(136px, 100%, true);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(80px, null, true);

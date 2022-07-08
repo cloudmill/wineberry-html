@@ -26,9 +26,9 @@ block content
         h1(data-aos='fade-up')
           |Производители
     .section__block
-      .producers-page__grid 
+      .producers-page__grid(data-aos='fade-up')
         each item in ddata
-          .producers-page__grid-item(data-aos='fade-up')
+          .producers-page__grid-item
             .producers-page__card 
               .producers-page__card-row 
                 .producers-page__card-col
@@ -58,7 +58,7 @@ block content
                           span.button__span
                             |Подробнее
                       .producers-page__card-btn 
-                        a.button.button--icon.button--small(href="#") 
+                        a.button.button--icon.button--small.button--small--rem(href="#") 
                           .button__icon 
                             +download-svg.button__svg.button__icon-white
                           .button__text 

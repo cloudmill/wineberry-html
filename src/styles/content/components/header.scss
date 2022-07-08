@@ -339,6 +339,9 @@
 
   &__container {
     width: calc(#{$col-width-d} * 6 - 60px);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      width: calc(#{$col-width-d} * 8 - 60px);
+    }
     @media (max-width: ($breakpoint - 1px)) {
       width: auto;
     }

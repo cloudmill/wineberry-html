@@ -222,6 +222,22 @@
 
       @include fsl(12px);
     }
+
+    &--rem {
+      padding: getRem(12px) getRem(14px);
+      @media (max-width: ($breakpoint - 1px)) {
+        padding: getRem(4px) getRem(6px);
+        @include fsl(12px);
+      }
+      @include fsl(18px, null, true);
+      #{$comp}__text {
+        margin-left: getRem(20px);
+      }
+      #{$comp}__svg {
+        width: getRem(24px);
+        height: getRem(24px);
+      }
+    }
   }
 
   &--big {
@@ -232,16 +248,21 @@
   }
 
   &--producer {
-    padding: 13px 19px;
+    padding: getRem(13px) getRem(19px);
     @media (max-width: ($breakpoint - 1px)) {
-      padding: 9px 16px;
-
-      @include fsl(12px);
+      padding: getRem(9px) getRem(16px);
+      height: auto;
     }
+    height: 100%;
+    width: auto;
     @media (max-width: ($breakpoint-xs - 1px)) {
       padding: getRem(9px) getRem(16px);
     }
-    width: auto;
+    
+    @include fsl(18px, null, true);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
   }
 
   &--discount {
