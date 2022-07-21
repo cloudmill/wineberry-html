@@ -4,26 +4,35 @@ mixin footer
       .footer__row.footer__row--block 
         .footer__col
           .footer__inner
-            ul.footer__list
-              each item in ['О компании', 'Партнерам', 'Производители', 'Новости', 'Контакты']
-                li.footer__list-item(data-aos='fade-up')
-                  a.footer__list-link(href="#")
-                    |#{item}
+            .footer__flex 
+              .footer__flex-col
+                a.footer__logo(href="#")
+                  +footer-logo-svg.footer__logo-svg
+              .footer__flex-col
+                ul.footer__list
+                  each item in ['О компании', 'Партнерам', 'Производители', 'Новости', 'Контакты']
+                    li.footer__list-item(data-aos='fade-up')
+                      a.footer__list-link(href="#")
+                        |#{item}
         .footer__col
           .footer__inner 
             .footer__container 
               .footer__container-col(data-aos='fade-up')
-                .footer__label 
-                  |Клиентский сервис
-                a.footer__phone(href="tel:88123375662") 
-                  |8 812 337-56-62
-                a.footer__mail(href="mailto:info@wine78.ru") 
-                  |info@wine78.ru
-                a.ask(href="#" data-fancy-button='ask') 
-                  .ask__icon 
-                    +message-svg.ask__svg 
-                  .ask__text 
-                    |Задать вопрос
+                .footer__container-item
+                  .footer__label 
+                    |Клиентский сервис
+                  a.footer__phone(href="tel:88123375662") 
+                    |8 812 337-56-62
+                  a.footer__mail(href="mailto:info@wine78.ru") 
+                    |info@wine78.ru
+                  a.ask(href="#" data-fancy-button='ask') 
+                    .ask__icon 
+                      +message-svg.ask__svg 
+                    .ask__text 
+                      |Задать вопрос
+                .footer__container-item 
+                  a.footer__logo(href="#")
+                    +footer-logo-svg.footer__logo-svg
               .footer__container-col(data-aos='fade-up')
                 .footer__item 
                   .footer__label 
