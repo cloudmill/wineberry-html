@@ -1,5 +1,6 @@
 import "./styles/app";
 
+import "./scripts/backend";
 import "./scripts/sliders";
 import "./scripts/range-slider";
 import "./scripts/accordion";
@@ -44,7 +45,7 @@ $(() => {
         //   const lines = item.querySelectorAll('[data-ticker-line]')
         //   const clone = lines[k].cloneNode(true)
         //   const cloneItems = clone.querySelectorAll('[data-ticker-item]')
-  
+
         //   for (let j = 0; j < i; j++) {
         //     const cloneItem = cloneItems[j+i].cloneNode(true)
         //     cloneItems[j].remove()
