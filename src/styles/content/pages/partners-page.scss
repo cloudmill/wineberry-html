@@ -118,8 +118,15 @@
   }
 
   &__image {
+    width: 100%;
+
     border-radius: 32px;
     overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
   &__grid {
@@ -218,16 +225,16 @@
     }
   }
   &__map-picture {
+    width: 100%;
+    height: 100%;
     @media (max-width: ($breakpoint - 1px)) {
-      width: 100%;
-      height: 100%;
     }
 
     img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       @media (max-width: ($breakpoint - 1px)) {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
       }
     }
   }

@@ -89,7 +89,9 @@
   }
 
   &__image {
-    @media (max-width: ($breakpoint - 1px)) {
+    width: 100%;
+
+    img {
       width: 100%;
     }
   }

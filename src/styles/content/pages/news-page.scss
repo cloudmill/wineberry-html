@@ -184,6 +184,10 @@
   &__card-img {
     display: flex;
     align-items: center;
+
+    img {
+      width: 100%;
+    }
   }
   &__card-bot {
     position: absolute;
@@ -269,6 +273,10 @@
     border-radius: 32px;
     @media (max-width: ($breakpoint - 1px)) {
       border-radius: 16px;
+    }
+
+    img {
+      width: 100%;
     }
   }
 
