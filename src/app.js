@@ -16,6 +16,7 @@ import "./scripts/counter";
 import "./scripts/real-tabs";
 import "./scripts/catalog-filters";
 import "./scripts/select";
+import "./scripts/pagination-event";
 
 
 $(() => {
@@ -62,4 +63,8 @@ $(() => {
       item.classList.add('active')
     })
   }
+
+  // window.addEventListener("paginationTrigger", () => {
+  //   console.log(123)
+  // })
 })
