@@ -276,7 +276,23 @@
   }
 
   &__image {
+    margin-bottom: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 32px;
+    }
     
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+    border-radius: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 16px;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 
 
