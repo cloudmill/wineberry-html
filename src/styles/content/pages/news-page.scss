@@ -276,210 +276,9 @@
   }
 
   &__image {
-    margin-bottom: 60px;
-    @media (max-width: ($breakpoint - 1px)) {
-      margin-bottom: 32px;
-    }
     
-    display: flex;
-    align-items: center;
-
-    overflow: hidden;
-    border-radius: 32px;
-    @media (max-width: ($breakpoint - 1px)) {
-      border-radius: 16px;
-    }
-
-    img {
-      width: 100%;
-    }
   }
 
-  &__caption {
-    margin-bottom: 60px;
-    @media (max-width: ($breakpoint - 1px)) {
-      margin-bottom: 32px;
-    }
-
-    letter-spacing: var(--letter-space);
-    @include fsl(24px, 130%);
-    @media (max-width: ($breakpoint - 1px)) {
-      @include fsl(16px);
-    }
-  }
-
-  &__content {
-    margin-bottom: 60px;
-    @media (max-width: ($breakpoint - 1px)) {
-      margin-bottom: 32px;
-    }
-  }
-
-  &__heading {
-    margin-bottom: 32px;
-    @media (max-width: ($breakpoint - 1px)) {
-      margin-bottom: 12px;
-    }
-  }
-
-  &__text {
-    margin-left: calc(#{$col-width-d});
-    @media (max-width: ($breakpoint - 1px)) {
-      margin-left: 0;
-    }
-
-    letter-spacing: var(--letter-space);
-    @include fsl(18px, 160%);
-    @media (max-width: ($breakpoint - 1px)) {
-      @include fsl(14px);
-    }
-
-    &:not(:first-child) {
-      margin-top: 16px;
-    }
-  }
-
-  &__enum {
-    margin-top: 24px;
-    padding-left: calc(#{$col-width-d});
-    @media (max-width: ($breakpoint - 1px)) {
-      padding-left: 0;
-      margin-top: 16px;
-    }
-
-    li {
-      padding-left: 68px;
-      @media (max-width: ($breakpoint - 1px)) {
-        padding-left: 36px;
-      }
-      position: relative;
-      z-index: 0;
-
-      letter-spacing: var(--letter-space);
-      @include fsl(18px, 160%);
-      @media (max-width: ($breakpoint - 1px)) {
-        @include fsl(14px);
-      }
-
-      &:not(:first-child) {
-        margin-top: 8px;
-        @media (max-width: ($breakpoint - 1px)) {
-          margin-top: 4px;
-        }
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-
-        width: 20px;
-        height: 20px;
-
-        background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 4.6933L13.3333 10.5266L7.5 16.36' stroke='%23A71E5C' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-    }
-  }
-
-  &__quote {
-    margin-bottom: 60px;
-    padding: 60px calc(#{$col-width-d});
-    @media (max-width: ($breakpoint - 1px)) {
-      margin-bottom: 32px;
-      padding: 60px 40px 40px;
-    }
-    position: relative;
-    z-index: 0;
-
-    border-radius: 20px;
-    background: var(--color-light-gray);
-    font-weight: 700;
-    letter-spacing: var(--letter-space);
-    @include fsl(18px, 160%);
-    @media (max-width: ($breakpoint - 1px)) {
-      border-radius: 12px;
-      @include fsl(14px);
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 60px;
-      top: 60px;
-      z-index: 1;
-      @media (max-width: ($breakpoint - 1px)) {
-        top: 20px;
-        left: 40px;
-      }
-
-      width: 40px;
-      height: 32px;
-      @media (max-width: ($breakpoint - 1px)) {
-        width: 24px;
-        height: 20px;
-      }
-
-      background-image: url("data:image/svg+xml,%3Csvg width='40' height='33' viewBox='0 0 40 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M39.36 0.199951C30.4 0.199951 24.16 5.47995 24.16 17.64V32.2H39.36V16.68H31.2C31.84 8.99995 34.4 7.07996 39.36 7.07996V0.199951ZM15.2 0.199951C6.24 0.199951 0 5.47995 0 17.48V32.2H15.2V16.68H7.04C7.68 8.99995 10.24 7.07996 15.2 7.07996V0.199951Z' fill='%23A71E5C'/%3E%3C/svg%3E%0A");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  }
-
-  &__list {
-    padding-left: calc(#{$col-width-d});
-    margin-top: 25px;
-    @media (max-width: ($breakpoint - 1px)) {
-      margin-top: 20px;
-      padding-left: 0;
-    }
-
-    counter-reset: index;
-
-    li {
-      padding-left: 68px;
-      position: relative;
-      z-index: 0;
-      @media (max-width: ($breakpoint - 1px)) {
-        padding-left: 36px;
-      }
-
-      counter-increment: index;
-      letter-spacing: var(--letter-space);
-      @include fsl(18px, 160%);
-      @media (max-width: ($breakpoint - 1px)) {
-        @include fsl(14px);
-      }
-
-      &:not(:first-child) {
-        margin-top: 8px;
-        @media (max-width: ($breakpoint - 1px)) {
-          margin-top: 4px;
-        }
-      }
-
-      &::before {
-        content: counter(index);
-        position: absolute;
-        top: 1px;
-        left: 0;
-        z-index: 1;
-
-        color: var(--color-wine);
-        font-weight: 700;
-        letter-spacing: var(--letter-space);
-        @include fsl(18px, 160%);
-        @media (max-width: ($breakpoint - 1px)) {
-          @include fsl(16px);
-        }
-      }
-    }
-  }
 
   &__slider {}
   &__slider-title {
@@ -559,5 +358,206 @@
       width: auto;
     }
     width: 275px;
+  }
+}
+
+.page-content {
+
+  strong {
+    margin-bottom: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 32px;
+    }
+
+    display: block;
+
+    letter-spacing: var(--letter-space);
+    @include fsl(24px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px);
+    }
+  }
+
+  h3 {
+    margin-bottom: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 12px;
+    }
+  }
+
+  p {
+    margin: 16px 0;
+    margin-left: calc(#{$col-width-d});
+
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 0;
+    }
+
+    letter-spacing: var(--letter-space);
+    @include fsl(18px, 160%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+    }
+  }
+
+  ul {
+    margin-bottom: 60px;
+    margin-top: 24px;
+    padding-left: calc(#{$col-width-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 32px;
+      padding-left: 0;
+      margin-top: 16px;
+    }
+
+    li {
+      padding-left: 68px;
+      @media (max-width: ($breakpoint - 1px)) {
+        padding-left: 36px;
+      }
+      position: relative;
+      z-index: 0;
+
+      letter-spacing: var(--letter-space);
+      @include fsl(18px, 160%);
+      @media (max-width: ($breakpoint - 1px)) {
+        @include fsl(14px);
+      }
+
+      &:not(:first-child) {
+        margin-top: 8px;
+        @media (max-width: ($breakpoint - 1px)) {
+          margin-top: 4px;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 20px;
+        height: 20px;
+
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 4.6933L13.3333 10.5266L7.5 16.36' stroke='%23A71E5C' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  ol {
+    margin-bottom: 60px;
+    padding-left: calc(#{$col-width-d});
+    margin-top: 25px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 32px;
+      margin-top: 20px;
+      padding-left: 0;
+    }
+
+    counter-reset: index;
+
+    li {
+      padding-left: 68px;
+      position: relative;
+      z-index: 0;
+      @media (max-width: ($breakpoint - 1px)) {
+        padding-left: 36px;
+      }
+
+      counter-increment: index;
+      letter-spacing: var(--letter-space);
+      @include fsl(18px, 160%);
+      @media (max-width: ($breakpoint - 1px)) {
+        @include fsl(14px);
+      }
+
+      &:not(:first-child) {
+        margin-top: 8px;
+        @media (max-width: ($breakpoint - 1px)) {
+          margin-top: 4px;
+        }
+      }
+
+      &::before {
+        content: counter(index);
+        position: absolute;
+        top: 1px;
+        left: 0;
+        z-index: 1;
+
+        color: var(--color-wine);
+        font-weight: 700;
+        letter-spacing: var(--letter-space);
+        @include fsl(18px, 160%);
+        @media (max-width: ($breakpoint - 1px)) {
+          @include fsl(16px);
+        }
+      }
+    }
+  }
+
+  blockquote {
+    margin-bottom: 60px;
+    padding: 60px calc(#{$col-width-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 32px;
+      padding: 60px 40px 40px;
+    }
+    position: relative;
+    z-index: 0;
+
+    border-radius: 20px;
+    background: var(--color-light-gray);
+    font-weight: 700;
+    letter-spacing: var(--letter-space);
+    @include fsl(18px, 160%);
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 12px;
+      @include fsl(14px);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 60px;
+      top: 60px;
+      z-index: 1;
+      @media (max-width: ($breakpoint - 1px)) {
+        top: 20px;
+        left: 40px;
+      }
+
+      width: 40px;
+      height: 32px;
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 24px;
+        height: 20px;
+      }
+
+      background-image: url("data:image/svg+xml,%3Csvg width='40' height='33' viewBox='0 0 40 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M39.36 0.199951C30.4 0.199951 24.16 5.47995 24.16 17.64V32.2H39.36V16.68H31.2C31.84 8.99995 34.4 7.07996 39.36 7.07996V0.199951ZM15.2 0.199951C6.24 0.199951 0 5.47995 0 17.48V32.2H15.2V16.68H7.04C7.68 8.99995 10.24 7.07996 15.2 7.07996V0.199951Z' fill='%23A71E5C'/%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  img {
+    margin-bottom: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 32px;
+    }
+    
+    width: 100%;
+    display: block;
+
+    border-radius: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 16px;
+    }
   }
 }
