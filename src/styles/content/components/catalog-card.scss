@@ -80,6 +80,9 @@
     @media (max-width: ($breakpoint - 1px)) {
       border-radius: 16px;
     }
+    @media (max-width: ($breakpoint-s - 1px)) {
+      max-height: 250px;
+    }
   }
 
   &__image {
@@ -104,6 +107,10 @@
     width: 100%;
 
     pointer-events: none;
+  }
+
+  &__picture {
+    height: 100%;
   }
 
   &__image {
