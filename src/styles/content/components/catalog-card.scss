@@ -90,6 +90,9 @@
       padding: 25px;
       bottom: 24px;
     }
+    @media (max-width: ($breakpoint-s - 1px)) {
+      height: calc(100vw - 40px);
+    }
     @media (max-width: ($breakpoint-xs - 1px)) {
       padding: getRem(25px);
       bottom: getRem(24px);
