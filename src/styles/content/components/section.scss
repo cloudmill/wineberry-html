@@ -92,6 +92,15 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 4px;
     }
+    font-weight: 700;
+    @include fsl(48px, 110%);
+    letter-spacing: var(--letter-space);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(24px);
+    }
+    @media (max-width: ($breakpoint-xs - 1px)) {
+      @include fsl(24px, null, true)
+    }
   }
 
   &__text {
