@@ -77,7 +77,10 @@ block content
                 form.form(action="/" data-form='contact-us')
                   each item in ddata.form 
                     .form__item 
-                      +input(type = item.type)
+                      if (item.type === 'phone') 
+                        +input(type = 'string' data-mask-phone='' data-parsley-phone='')
+                      else
+                        +input(type = item.type)
                       span.form__span 
                         |#{item.placeholder}
                   .form__item 

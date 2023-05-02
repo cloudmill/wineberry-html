@@ -1,4 +1,5 @@
 import 'parsleyjs';
+import mask from "inputmask";
 
 // input focus animation
 document.addEventListener('DOMContentLoaded', () => {
@@ -49,6 +50,25 @@ $(() => {
   });
 
   Parsley.setLocale('ru');
+
+  // маска на телефон
+  Inputmask({ mask: "+7 (999) 999-99-99", showMaskOnHover: false }).mask(
+    "[data-mask-phone]"
+  )
+
+  // валидация телефона
+  window.Parsley
+    .addValidator('phone', {
+      requirementType: 'string',
+      validateString: function(value) {
+        const result = value.replaceAll(/\D/g, '')
+
+        return result.length === 11
+      },
+      messages: {
+        ru: 'Заполните поле'
+      }
+    })
 });
 
 // выделение активной радиокнопки

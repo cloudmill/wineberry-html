@@ -46,6 +46,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "aos": "^2.3.4",
     "gsap": "^3.10.4",
+    "inputmask": "^5.0.8",
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",
     "nouislider": "^15.6.0",
