@@ -51,6 +51,39 @@ $(() => {
 
   Parsley.setLocale('ru');
 
+  const passwordInputs = $('[data-password]');
+
+  passwordInputs.each(function () {
+    const input = $(this);
+    const equalTo = $($(this).attr('data-parsley-equalto'));
+
+    input.parsley().on('field:error', function () {
+      const equalToError = input.parent().find('.parsley-equalto');
+
+      if (input.val().length > 0 && input.val().length < 7) {
+        equalToError.css('display', 'none');
+      } else {
+        equalToError.css('display', '');
+      }
+    });
+
+    input.on('input', function () {
+      if ($(this).val() === equalTo.val()) {
+        equalTo.removeClass('parsley-error');
+        equalTo.addClass('parsley-succes');
+        equalTo.parent().find('li').remove();
+      }
+    });
+
+    equalTo.on('input', function () {
+      if ($(this).val() === input.val() && input.val().length >= 7) {
+        input.removeClass('parsley-error');
+        input.addClass('parsley-succes');
+        input.parent().find('li').remove();
+      }
+    });
+  });
+
   // маска на телефон
   Inputmask({ mask: "+7 (999) 999-99-99", showMaskOnHover: false }).mask(
     "[data-mask-phone]"

@@ -42,6 +42,14 @@ mixin login-modal
                 span.form__span 
                   |#{item.placeholder}
             .form__item 
+              input.form__input#password(type='password' data-input='' required data-parsley-equalto="#passwordAgain" data-parsley-priority-enabled='false' data-password='' data-parsley-minlength="7")
+              span.form__span 
+                |Пароль
+            .form__item 
+              input.form__input#passwordAgain(type='password' data-input='' required data-parsley-equalto="#password")
+              span.form__span 
+                |Пароль еще раз
+            .form__item 
               +textarea.form__textarea--small
               span.form__span 
                 |Номер лицензии на право реализации алкогольной продукции*
