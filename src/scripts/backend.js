@@ -2,6 +2,7 @@ import {defaults} from "./fancybox";
 
 $(() => {
   formEvent();
+  logIn();
 });
 
 function formEvent() {
@@ -54,4 +55,28 @@ function formEvent() {
   });
 }
 
+//функция авторизации
+function logIn () {
+  $('[data-action=logIn]').on('submit', function (e) {
+    e.preventDefault();
+    const thisObj = $(this),
+        data = {};
+    thisObj.find('[data-field]').each(function () {
+      data[this.name] = $(this).val().trim();
+    });
 
+    $.ajax({
+      type: 'POST',
+      url: '/local/templates/main/include/ajax/forms/logIn.php',
+      dataType: 'json',
+      data: data,
+      success: function (r) {
+        if (r.success) {
+          location.reload();
+        } else {
+          alert(r.message)
+        }
+      },
+    });
+  })
+}
