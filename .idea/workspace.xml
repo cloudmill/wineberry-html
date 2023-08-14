@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a5934cee-a8f4-4d7c-82e3-18f1faa03484" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/about-mobile.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/about-mobile.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/about-mobile_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/about-mobile_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/about-slider-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/about-slider-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/about-slider-1_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/about-slider-1_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/about-slider-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/about-slider-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/about-slider-2_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/about-slider-2_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/about-slider-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/about-slider-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/about-slider-3_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/about-slider-3_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/about-slider-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/about-slider-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/about-slider-4_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/about-slider-4_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/about.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/about.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/about_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/about_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/aperol-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/aperol-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/aperol-bg_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/aperol-bg_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/beer-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/beer-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/beer-bg_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/beer-bg_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/brandy-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/brandy-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/brandy-bg_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/brandy-bg_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/catalog-card-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/catalog-card-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/catalog-card-bg_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/catalog-card-bg_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/client-1_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/client-1_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/client-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/client-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/client-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/client-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/client-3_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/client-3_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/client-4_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/client-4_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/client-5_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/client-5_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/clients-slider-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/clients-slider-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/clients-slider-1_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/clients-slider-1_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/clients-slider-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/clients-slider-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/clients-slider-2_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/clients-slider-2_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/clients-slider-3_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/clients-slider-3_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/clients-slider-4_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/clients-slider-4_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/clients-slider-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/clients-slider-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/clients-slider-5_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/clients-slider-5_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/driver.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/driver.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/driver_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/driver_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/features-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/features-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/features-1_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/features-1_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/features-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/features-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/features-2_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/features-2_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/features-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/features-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/features-3_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/features-3_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/features-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/features-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/features-4_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/features-4_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/features-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/features-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/features-5_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/features-5_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/liqueur-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/liqueur-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/liqueur-bg_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/liqueur-bg_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/liqueur_2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/liqueur_2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/main-card-mobile.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/main-card-mobile.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/main-card-mobile_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/main-card-mobile_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/main-card.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/main-card.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/main-card_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/main-card_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/news-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/news-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/news-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/news-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/news-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/news-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/news.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/news.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/opengraph.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/opengraph.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/partners-map.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/partners-map.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/partners-map_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/partners-map_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/partners-mobile.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/partners-mobile.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/partners-mobile_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/partners-mobile_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/partners-storage.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/partners-storage.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/partners-storage_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/partners-storage_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/partners-wine.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/partners-wine.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/partners-wine_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/partners-wine_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/partners.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/partners.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/partners_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/partners_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/poster-mobile.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/poster-mobile.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/poster.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/poster.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/producer-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/producer-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/producer-2_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/producer-2_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/producer-4_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/producer-4_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/producer-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/producer-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/producer-5_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/producer-5_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/producer-6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/producer-6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/producer-6_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/producer-6_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/product.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/product.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/vino-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/vino-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/vino-bg_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/vino-bg_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/vino.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/vino.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/vino_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/vino_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/vodka-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/vodka-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/vodka-bg_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/vodka-bg_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/vodka.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/vodka.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/vodka.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/vodka.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/vodka_2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/vodka_2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/wine.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/wine.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/wine_2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/images/wine_2x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/backend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/backend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/form-response.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/form-response.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NggfgyaovTteafgNR7yNBNjPEe" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/scripts" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/scripts" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5934cee-a8f4-4d7c-82e3-18f1faa03484" name="Changes" comment="" />
+      <created>1680091244111</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680091244111</updated>
+      <workItem from="1680091246778" duration="8738000" />
+      <workItem from="1680156088333" duration="6085000" />
+      <workItem from="1680512834950" duration="15531000" />
+      <workItem from="1680611458538" duration="1409000" />
+      <workItem from="1680761827007" duration="287000" />
+      <workItem from="1680763624974" duration="2912000" />
+      <workItem from="1680768210940" duration="2454000" />
+      <workItem from="1680780338412" duration="255000" />
+      <workItem from="1680796986968" duration="812000" />
+      <workItem from="1680798049161" duration="1262000" />
+      <workItem from="1681115552208" duration="1000" />
+      <workItem from="1681129863234" duration="1549000" />
+      <workItem from="1681202261107" duration="709000" />
+      <workItem from="1681386289947" duration="765000" />
+      <workItem from="1681389234532" duration="124000" />
+      <workItem from="1681389817734" duration="259000" />
+      <workItem from="1681391085996" duration="140000" />
+      <workItem from="1681392472087" duration="169000" />
+      <workItem from="1681456172722" duration="2518000" />
+      <workItem from="1681459722454" duration="205000" />
+      <workItem from="1681460556815" duration="1605000" />
+      <workItem from="1681466699982" duration="53000" />
+      <workItem from="1681466790165" duration="2090000" />
+      <workItem from="1681484481485" duration="614000" />
+      <workItem from="1681485442505" duration="607000" />
+      <workItem from="1681488464516" duration="1170000" />
+      <workItem from="1681735122258" duration="33000" />
+      <workItem from="1681744750652" duration="412000" />
+      <workItem from="1681905952539" duration="94000" />
+      <workItem from="1682410793759" duration="18000" />
+      <workItem from="1683030567457" duration="3125000" />
+      <workItem from="1683033737152" duration="1211000" />
+      <workItem from="1683038947879" duration="1197000" />
+      <workItem from="1683095842156" duration="149000" />
+      <workItem from="1683273345821" duration="98000" />
+      <workItem from="1683804864842" duration="530000" />
+      <workItem from="1683893210751" duration="1542000" />
+      <workItem from="1683895369680" duration="339000" />
+      <workItem from="1684403932631" duration="484000" />
+      <workItem from="1684405126475" duration="1053000" />
+      <workItem from="1684415980236" duration="648000" />
+      <workItem from="1684844284121" duration="126000" />
+      <workItem from="1685006769224" duration="20000" />
+      <workItem from="1685096803601" duration="955000" />
+      <workItem from="1685107388123" duration="14000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

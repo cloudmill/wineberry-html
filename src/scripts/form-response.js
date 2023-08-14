@@ -11,13 +11,19 @@ $(() => {
 
       ths.on('submit', (e) => {
         e.preventDefault()
-        const options = {...defaults}
-        
-        $.fancybox.defaults = {...$.fancybox.defaults, ...options}
-        $.fancybox.open($(`[data-response=${id}]`))
-        this.reset()
-        $(this).find('[data-input]').parent().removeClass('filled')
+        openModel();
       })
     })
   }
 });
+
+export function openModel (e) {
+  const form = $(e),
+      id = form.data('id'),
+    options = {...defaults};
+
+  $.fancybox.defaults = {...$.fancybox.defaults, ...options}
+  $.fancybox.open($(`[data-response=${id}]`))
+  form[0].reset()
+  form.find('[data-input]').parent().removeClass('filled')
+}
