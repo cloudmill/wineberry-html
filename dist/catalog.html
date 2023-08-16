@@ -266,7 +266,7 @@
 								<div class="filters">
 									<ul class="filters__list">
 										<li class="filters__item">
-											<div class="filters__heading">Производитель</div>
+											<div class="filters__heading">Стоимость</div>
 											<div class="filters__range">
 												<div class="range" data-range-block="">
 													<div class="range__inputs"><label class="range__item"><span class="range__label">от</span><input class="range__input" type="number" value="2300" data-input-start="2300"></label><label class="range__item"><span class="range__label">до</span><input class="range__input" type="number" value="4000" data-input-end="4000"></label></div>
@@ -276,7 +276,7 @@
 										</li>
 										<li class="filters__item">
 											<div class="filters__heading">Цвет</div>
-											<div class="filters__body">
+											<div class="filters__body" data-accordion="">
 												<ul class="filers__options">
 													<li class="filters__box">
 														<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" required="required" name="policy" text="Белое" />
@@ -303,11 +303,43 @@
 															</label></div>
 													</li>
 												</ul>
+												<div class="filters__dropdown" data-accordion-dropdown="">
+													<div class="filters__box">
+														<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" required="required" name="policy" text="Белое" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__caption">Белое</div>
+															</label></div>
+													</div>
+													<div class="filters__box">
+														<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" required="required" name="policy" text="Красное" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__caption">Красное</div>
+															</label></div>
+													</div>
+													<div class="filters__box">
+														<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" required="required" name="policy" text="Розовое" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__caption">Розовое</div>
+															</label></div>
+													</div>
+												</div>
+												<div class="filters__show" data-accordion-button="" data-button-show="">
+													<div class="filters__text">Показать все</div>
+													<div class="filters__icon"><svg class="filters__svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M10 17L15 12L10 7" stroke="#C7C7C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+												</div>
 											</div>
 										</li>
 										<li class="filters__item">
 											<div class="filters__heading">Содержание сахара</div>
-											<div class="filters__body">
+											<div class="filters__body" data-accordion="">
 												<ul class="filers__options">
 													<li class="filters__box">
 														<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" required="required" name="policy" text="Сухое" />
@@ -346,7 +378,7 @@
 										</li>
 										<li class="filters__item">
 											<div class="filters__heading">Страна</div>
-											<div class="filters__body">
+											<div class="filters__body" data-accordion="">
 												<ul class="filers__options">
 													<li class="filters__box">
 														<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" required="required" name="policy" text="Австралия" />
@@ -401,7 +433,7 @@
 										</li>
 										<li class="filters__item">
 											<div class="filters__heading">Объем, л.</div>
-											<div class="filters__body">
+											<div class="filters__body" data-accordion="">
 												<ul class="filers__options">
 													<li class="filters__box">
 														<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" required="required" name="policy" text="0.75" />
@@ -452,11 +484,67 @@
 															</label></div>
 													</li>
 												</ul>
+												<div class="filters__dropdown" data-accordion-dropdown="">
+													<div class="filters__box">
+														<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" required="required" name="policy" text="0.75" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__caption">0.75</div>
+															</label></div>
+													</div>
+													<div class="filters__box">
+														<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" required="required" name="policy" text="1.5" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__caption">1.5</div>
+															</label></div>
+													</div>
+													<div class="filters__box">
+														<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" required="required" name="policy" text="1" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__caption">1</div>
+															</label></div>
+													</div>
+													<div class="filters__box">
+														<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" required="required" name="policy" text="0.7" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__caption">0.7</div>
+															</label></div>
+													</div>
+													<div class="filters__box">
+														<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" required="required" name="policy" text="2" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__caption">2</div>
+															</label></div>
+													</div>
+													<div class="filters__box">
+														<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" required="required" name="policy" text="2" />
+																<div class="checkbox__box"><svg class="checkbox__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M3.33301 8.33331L6.44434 11.3333L12.6663 5.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+																	</svg></div>
+																<div class="checkbox__caption">2</div>
+															</label></div>
+													</div>
+												</div>
+												<div class="filters__show" data-accordion-button="" data-button-show="">
+													<div class="filters__text">Показать все</div>
+													<div class="filters__icon"><svg class="filters__svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M10 17L15 12L10 7" stroke="#C7C7C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg></div>
+												</div>
 											</div>
 										</li>
 										<li class="filters__item">
 											<div class="filters__heading">Крепость, ℃</div>
-											<div class="filters__body">
+											<div class="filters__body" data-accordion="">
 												<ul class="filers__options">
 													<li class="filters__box">
 														<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" required="required" name="policy" text="0.0%" />
@@ -511,7 +599,7 @@
 										</li>
 										<li class="filters__item">
 											<div class="filters__heading">Производитель</div>
-											<div class="filters__body">
+											<div class="filters__body" data-accordion="">
 												<ul class="filers__options">
 													<li class="filters__box">
 														<div class="checkbox checkbox--filters"><label class="checkbox__label"><input class="checkbox__input checkbox--filters" type="checkbox" required="required" name="policy" text="Абхазия Мстраль алко" />

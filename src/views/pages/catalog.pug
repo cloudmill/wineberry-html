@@ -61,7 +61,7 @@ block content
             ul.filters__list
               li.filters__item
                 .filters__heading 
-                  |Производитель
+                  |Стоимость
                 .filters__range
                   .range(data-range-block='')
                     .range__inputs 
@@ -74,17 +74,21 @@ block content
                           |до
                         input.range__input(type="number" value ='4000' data-input-end='4000')
                     .range__range
-              each item in ddata
+              each item, i in ddata
                 li.filters__item
                   .filters__heading 
                     |#{item.title}
-                  .filters__body 
+                  .filters__body(data-accordion='')
                     ul.filers__options 
                       each checkbox in item.items
                         li.filters__box 
                           +checkbox(text = checkbox).checkbox--filters
                     if (i % 3 === 0)
-                      .filters__show 
+                      .filters__dropdown(data-accordion-dropdown='')
+                        each checkbox in item.items
+                          .filters__box 
+                            +checkbox(text = checkbox).checkbox--filters
+                      .filters__show(data-accordion-button='' data-button-show='')
                         .filters__text 
                           |Показать все
                         .filters__icon

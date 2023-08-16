@@ -17,6 +17,7 @@ import "./scripts/real-tabs";
 import "./scripts/catalog-filters";
 import "./scripts/select";
 import "./scripts/pagination-event";
+import "./scripts/show-more";
 
 
 $(() => {

@@ -50,6 +50,13 @@
     }
   }
 
+
+  &__dropdown {
+    margin-top: 8px;
+
+    display: none;
+  }
+
   &__show {
     margin-top: 16px;
     @media (max-width: ($breakpoint-xs - 1px)) {
@@ -60,6 +67,12 @@
     align-items: center;
 
     cursor: pointer;
+
+    &.active {
+      #{$comp}__icon {
+        transform: rotate(180deg);
+      }
+    }
   }
 
   &__text {
@@ -74,6 +87,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition: $transition;
   }
 
   &__svg {
