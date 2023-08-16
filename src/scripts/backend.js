@@ -30,6 +30,10 @@ window.objFormSuccess = {
   modalOpen: (form) => {
     openModel(form);
   },
+  contactUs: (form, r) => {
+    alert(r.message);
+    form[0].reset();
+  }
 }
 
 //обработка форм
