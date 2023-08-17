@@ -24,6 +24,9 @@ export function openModel (e) {
 
   $.fancybox.defaults = {...$.fancybox.defaults, ...options}
   $.fancybox.open($(`[data-response=${id}]`))
-  form[0].reset()
+  //старая логика
+  //form[0].reset();
+  $(form).trigger("reset");
   form.find('[data-input]').parent().removeClass('filled')
+
 }
