@@ -25,20 +25,20 @@ $(() => {
       const inputStartValue = inputStart.attr('data-input-start');
       const inputEndValue = inputEnd.attr('data-input-end');
 
-      // const rangeMin = Number(rangeSlider.attr('data-range-min'));
-      // const rangeMax = Number(rangeSlider.attr('data-range-max'));
+      const rangeMin = Number(rangeSlider.attr('data-range-min'));
+      const rangeMax = Number(rangeSlider.attr('data-range-max'));
 
       noUiSlider.create(rangeSlider[0], {
         start: [inputStartValue, inputEndValue],
         step: 100,
-        // range: {
-        //   min: rangeMin,
-        //   max: rangeMax
-        // },
         range: {
-          min: 1000,
-          max: 10000
+          min: rangeMin,
+          max: rangeMax
         },
+        // range: {
+        //   min: 1000,
+        //   max: 10000
+        // },
         connect: true,
         format: wNumb({
           decimals: 0
