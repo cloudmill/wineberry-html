@@ -56,15 +56,15 @@ $(() => {
         }
       });
 
-      // rangeSlider[0].noUiSlider.on('end', function (values) {
-      //   window.dispatchEvent(new CustomEvent(
-      //       'range_slider_change', {
-      //         detail: {
-      //             data: values,
-      //         }
-      //       }
-      //   ));
-      // });
+      rangeSlider[0].noUiSlider.on('end', function (values) {
+        window.dispatchEvent(new CustomEvent(
+          'range_slider_change', {
+            detail: {
+              data: values,
+            }
+          }
+        ));
+      });
 
       inputStart.on('change', function() {
         rangeSlider[0].noUiSlider.set([+this.value, null])
