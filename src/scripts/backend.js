@@ -5,6 +5,7 @@ $(() => {
   init();
   filters();
   forms();
+  pagination();
   // formEvent();
   // logIn();
 });
@@ -193,3 +194,8 @@ function replace(r) {
   })
 }
 
+function pagination() {
+  window.addEventListener('paginationTrigger', () => {
+    
+  })
+}
