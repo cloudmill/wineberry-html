@@ -5,8 +5,8 @@ export class Counter {
     this.minus = this.root.querySelector('[data-counter-minus]')
     this.number = this.root.querySelector('[data-counter-count]')
 
-    // this.init()
-    // this.inputHandler()
+    this.init()
+    this.inputHandler()
   }
 
   init() {
