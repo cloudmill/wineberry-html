@@ -6,6 +6,7 @@ $(() => {
   filters();
   forms();
   pagination();
+  basket();
   // formEvent();
   // logIn();
 });
@@ -178,22 +179,6 @@ function filters() {
   })
 }
 
-function replace(r) {
-  $('[data-replace]').each((i, item) => {
-    const jqObj = $(item),
-      link = jqObj.data('replace')
-
-    let linkElem = $(r).filter(`[data-replace=${link}]`)
-
-    if (!linkElem.length) {
-      linkElem = $(r).find(`[data-replace=${link}]`)
-    }
-
-    jqObj.empty()
-    jqObj.append(linkElem.html())
-  })
-}
-
 function pagination() {
   window.addEventListener('paginationTrigger', () => {
     const thisObj = $('[data-type=lazy-load]'),
@@ -226,5 +211,76 @@ function pagination() {
         }
       })
     }
+  })
+}
+
+function basket() {
+  $(document).on('click', '[data-type=basket-add]', function () {
+    const
+      thisObj = $(this),
+      id = thisObj.data('id'),
+      count = $(`[data-type=counter][data-id="${id}"]`).val(),
+      modalId = thisObj.data('open-modal'),
+      modal = $(`[data-fancy-modal="${modalId}"]`);
+    if (count >= 1) {
+      $.ajax({
+        type: 'post',
+        href: window.location.pathname,
+        dataType: 'json',
+        data: {
+          action: 'add',
+          id: id,
+          count: count
+        },
+        success: function (r) {
+          if (r.success) {
+            const
+              options = {...defaults},
+              counter = $('[data-type=basket-counter]');
+            counter.text(r.count);
+            $.fancybox.defaults = {...$.fancybox.defaults, ...options};
+            $.fancybox.open(modal);
+          } else {
+            alert(r.message);
+          }
+        },
+      })
+    }
+  });
+  $(document).on('click', '[data-type=basket]', function () {
+    const
+      thisObj = $(this),
+      id = thisObj.data('id'),
+      action = thisObj.data('action'),
+      update = thisObj.data('update');
+    $.ajax({
+      type: 'post',
+      href: window.location.pathname,
+      dataType: 'html',
+      data: {
+        action: action,
+        update: update,
+        id: id,
+      },
+      success: function (r) {
+        replace(r);
+      },
+    })
+  });
+}
+
+function replace(r) {
+  $('[data-replace]').each((i, item) => {
+    const jqObj = $(item),
+      link = jqObj.data('replace')
+
+    let linkElem = $(r).filter(`[data-replace=${link}]`)
+
+    if (!linkElem.length) {
+      linkElem = $(r).find(`[data-replace=${link}]`)
+    }
+
+    jqObj.empty()
+    jqObj.append(linkElem.html())
   })
 }
