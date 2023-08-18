@@ -196,6 +196,35 @@ function replace(r) {
 
 function pagination() {
   window.addEventListener('paginationTrigger', () => {
-    
+    const thisObj = $('[data-type=lazy-load]'),
+      btnContainer = thisObj.closest('[data-type=lazy-load-container]'),
+      targetSelector = btnContainer.data('lazy-load-content'),
+      itemsContainer = $(document).find(`[data-type=lazy-load-list][data-lazy-load-content=${targetSelector}]`), //  Контейнер, в котором хранятся новости
+      url = thisObj.attr('data-url');    //  URL, из которого будем брать элементы
+
+    thisObj.attr('data-type', '');
+
+    if (url !== undefined) {
+      $.ajax({
+        type: 'GET',
+        url: url,
+        data: {
+          pagination: true
+        },
+        dataType: 'html',
+        success: function (p) {
+          const responseDataContainer = $(p).find(`[data-type=lazy-load-list][data-lazy-load-content=${targetSelector}]`),
+            elements = responseDataContainer.find(`[data-type=lazy-load-item]`),  //  Ищем элементы
+
+            responseBtnContainer = $(p).find(`[data-type=lazy-load-container][data-lazy-load-content=${targetSelector}]`);
+          //pagination = responseBtnContainer.find(`[data-type=lazy-load]`);//  Ищем навигацию
+
+          btnContainer.remove();
+          itemsContainer.append(elements);   //  Добавляем посты в конец контейнера
+          itemsContainer.append(responseBtnContainer); //  добавляем навигацию следом
+
+        }
+      })
+    }
   })
 }
