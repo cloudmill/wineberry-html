@@ -30,7 +30,7 @@ export class Counter {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const counters = document.querySelectorAll('.counter')
+  const counters = document.querySelectorAll('[data-counter]')
 
   if (counters.length) {
     counters.forEach(item => {

@@ -223,26 +223,24 @@ function basket() {
       modalId = thisObj.data('open-modal'),
       modal = $(`[data-fancy-modal="${modalId}"]`);
     if (count >= 1) {
+      thisObj.css('pointer-events', 'none');
       $.ajax({
         type: 'post',
         href: window.location.pathname,
-        dataType: 'json',
+        dataType: 'html',
         data: {
           action: 'add',
           id: id,
           count: count
         },
         success: function (r) {
-          if (r.success) {
-            const
-              options = {...defaults},
-              counter = $('[data-type=basket-counter]');
-            counter.text(r.count);
-            $.fancybox.defaults = {...$.fancybox.defaults, ...options};
-            $.fancybox.open(modal);
-          } else {
-            alert(r.message);
-          }
+          const
+            options = {...defaults},
+            counter = $('[data-type=basket-counter]');
+          $.fancybox.defaults = {...$.fancybox.defaults, ...options};
+          $.fancybox.open(modal);
+          replace(r);
+          thisObj.css('pointer-events', 'auto');
         },
       })
     }
@@ -253,6 +251,7 @@ function basket() {
       id = thisObj.data('id'),
       action = thisObj.data('action'),
       update = thisObj.data('update');
+    thisObj.css('pointer-events', 'none');
     $.ajax({
       type: 'post',
       href: window.location.pathname,
@@ -264,6 +263,7 @@ function basket() {
       },
       success: function (r) {
         replace(r);
+        thisObj.css('pointer-events', 'auto');
       },
     })
   });
