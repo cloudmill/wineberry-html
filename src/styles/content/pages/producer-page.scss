@@ -292,4 +292,12 @@
       margin-top: 12px;
     }
   }
+
+  &__block {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
 }

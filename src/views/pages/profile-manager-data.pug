@@ -68,7 +68,7 @@ block content
           .desktop-only
             ul.profile-page__orders-list
               each item in ddata.list
-                li.profile-page__orders-item.profile-page__orders-item--noborder-top(data-aos='fade-up')
+                li.profile-page__orders-item.profile-page__orders-item--noborder-top.data(data-aos='fade-up' data-edit='')
                   .profile-page__order-row 
                     .profile-page__order-col
                       .profile-page__orders-label 
@@ -76,29 +76,29 @@ block content
                     .profile-page__order-col
                       .profile-page__data
                         .profile-page__data-col
-                          input.profile-page__data-input.locked(type=item.type value = item.value)
+                          input.profile-page__data-input.locked(type=item.type value = item.value data-edit-input='')
                         .profile-page__data-col
                           if (item.button)
-                            .profile-page__data-btn 
+                            .profile-page__data-btn(data-edit-btn='')
                               .profile-page__data-icon 
                                 +pencil-svg.profile-page__data-svg
                                 +check-svg.profile-page__data-ok
-                              .profile-page__data-text 
+                              .profile-page__data-text(data-edit-text='')
                                 |Изменить
           .mobile-only 
             .profile-page__block.profile-page__block--order
               .profile-page__data-container
                 ul.profile-page__data-list
                   each item in ddata.list
-                    li.profile-page__block-item(data-aos='fade-up')
+                    li.profile-page__block-item(data-aos='fade-up' data-edit='')
                       .profile-page__orders-label 
                         |#{item.label}
-                      input.profile-page__data-input.locked(type=item.type value = item.value)
+                      input.profile-page__data-input.locked(type=item.type value = item.value data-edit-input='')
                       if (item.button)
                         .profile-page__data-inner 
-                          .profile-page__data-btn 
+                          .profile-page__data-btn(data-edit-btn='')
                             .profile-page__data-icon 
                               +pencil-svg.profile-page__data-svg
                               +check-svg.profile-page__data-ok
-                            .profile-page__data-text 
+                            .profile-page__data-text(data-edit-text='')
                               |Изменить
