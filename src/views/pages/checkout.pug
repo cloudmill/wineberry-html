@@ -42,8 +42,11 @@ block content
                   h3.checkout-page__form-heading 
                     |#{item.heading}
                   each input in item.inputs 
-                    .form__item 
-                      +input(type = input.type)
+                    .form__item
+                      if (input.type == 'phone')
+                        +input(type = 'text' data-mask-phone='' data-parsley-phone='')
+                      else
+                        +input(type = input.type)
                       span.form__span 
                         |#{input.placeholder}
               .checkout-page__form-block 
