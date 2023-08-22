@@ -687,6 +687,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .parsley-errors-list {
+      position: absolute;
+      top: calc(100% + 2px);
+
+      li {
+        @include fsl(12px, 130%);
+        color: var(--color-wine);
+      }
+    }
+  }
+  &__data-col {
+    &:nth-child(1) {
+      position: relative;
+      z-index: 0;
+    }
   }
   &__data-input {
     padding: 13px 20px;

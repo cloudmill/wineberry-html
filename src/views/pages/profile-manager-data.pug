@@ -25,7 +25,7 @@ block content
         },
         {
           label: 'Номер телефона',
-          value: '8 981-850-45-73',
+          value: '+7 (312) 231-12-32',
           type: 'phone',
           button: true,
         },
@@ -33,7 +33,7 @@ block content
           label: 'Email (Логин)',
           value: 'igspartakov@mail.ru',
           type: 'email',
-          button: false,
+          button: true,
         },
         {
           label: 'Пароль',
@@ -76,7 +76,10 @@ block content
                     .profile-page__order-col
                       .profile-page__data
                         .profile-page__data-col
-                          input.profile-page__data-input.locked(type=item.type value = item.value data-edit-input='')
+                          if (item.type === 'phone')
+                            input.profile-page__data-input.locked(type='text' value = item.value data-edit-input='' data-mask-phone='' data-parsley-phone='')
+                          else
+                            input.profile-page__data-input.locked(type=item.type value = item.value data-edit-input='' required)
                         .profile-page__data-col
                           if (item.button)
                             .profile-page__data-btn(data-edit-btn='')

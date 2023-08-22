@@ -9,9 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btn.onclick = function() {
       if (this.classList.contains('active')) {
-        input.classList.add('locked')
-        text.textContent = 'Изменить'
-        btn.classList.remove('active')
+        console.log($(input).parsley().isValid())
+        if ($(input).parsley().isValid()) {
+          input.classList.add('locked')
+          text.textContent = 'Изменить'
+          btn.classList.remove('active')
+        } else {
+          $(input).parsley().validate()
+        }
       } else {
         input.classList.remove('locked')
         input.focus()
