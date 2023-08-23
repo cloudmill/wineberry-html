@@ -67,6 +67,9 @@ $(() => {
   }
 
   // window.addEventListener("paginationTrigger", () => {
+  //   console.log(333)
+  // })
+  // window.addEventListener("paginationTriggerManufacturers", () => {
   //   console.log(123)
   // })
 })

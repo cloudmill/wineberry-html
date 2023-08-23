@@ -51,7 +51,7 @@ block content
                 |Коньяк
     section.producers-page__products
       .producers-page__block.active(data-tabs-block='')
-        .grid-container.listing(data-aos='fade-up')
+        .grid-container.listing(data-aos='fade-up' data-listing-section='Manufacturers')
           - for (i = 0; i < 18; i++)
             +product-card.grid-container__item(bot = true)
           .listing__wrapper 
