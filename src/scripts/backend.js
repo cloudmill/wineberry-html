@@ -7,8 +7,7 @@ $(() => {
   forms();
   pagination();
   basket();
-  // formEvent();
-  // logIn();
+  paginManufactur();
 });
 
 function init() {
@@ -125,7 +124,6 @@ function forms() {
   });
 }
 
-
 function filters() {
   window.addEventListener('range_slider_change', (event) => {
     const thisObj = $('[data-type=filter-range]');
@@ -212,6 +210,24 @@ function pagination() {
       })
     }
   })
+}
+
+function paginManufactur () {
+    window.addEventListener('paginationTriggerManufacturers', () => {
+        const tabActiveId = $('.active[data-tabs-item]').attr('data-section-id');
+
+//        $.ajax({
+//            type: 'POST',
+//            href: window.location,
+//            dataType: 'text',
+//            data: {
+//                tabActiveId
+//            },
+//            success: function (r) {
+//                console.log(r);
+//            },
+//        })
+    })
 }
 
 function basket() {
