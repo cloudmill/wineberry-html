@@ -7,7 +7,8 @@ $(() => {
   forms();
   pagination();
   basket();
-  paginManufactur();
+  //paginManufactur();
+  paginSearch();
 });
 
 function init() {
@@ -204,6 +205,31 @@ function pagination() {
       })
     }
   })
+}
+
+let check = true;
+function paginSearch () {
+        window.addEventListener('paginationTriggerSearch', (e) => {
+
+            const thisObj = $('[data-listing-section="Search"]'),
+                curPage = thisObj.data('cur-page'),
+                maxPage = thisObj.data('max-page');
+
+            if (curPage != maxPage && check) {
+                check = false;
+                $.ajax({
+                    type: 'GET',
+                    href: 'https://wine.devmill.ru/search/?q=%D0%B2%D0%BE%D0%B4%D0%BA%D0%B0&PAGEN_1=2',
+                    //href: window.location + '&PAGEN_1=' + (curPage + 1),
+                    dataType: 'html',
+                    success: function (r) {
+                        console.log(window.location + '&PAGEN_1=' + (curPage + 1));
+                        let elems = $(r).find('[data-elem]');
+                        $(thisObj).append(elems);
+                    },
+                })
+            }
+        })
 }
 
 function paginManufactur () {
