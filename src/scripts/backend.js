@@ -133,16 +133,13 @@ function filters() {
       thisObj.data('field'),
       event.detail.data
     )
-    // console.log(event.detail);
-    // console.log('filters data')
-    // console.log(Object.values(window.filters.data.filters))
     $.ajax({
       type: 'GET',
       url: window.location.href,
       dataType: 'html',
       data: window.filters.data,
       success: function (r) {
-        replace(r);
+        replace(r, 'filter-replace');
       },
     })
   })
@@ -153,18 +150,17 @@ function filters() {
       thisObj.data('field'),
       thisObj.data('val')
     )
-    console.log('filters data')
-    console.log(Object.values(window.filters.data.filters))
     $.ajax({
       type: 'GET',
       url: window.location.href,
       dataType: 'html',
       data: window.filters.data,
       success: function (r) {
-        replace(r);
+        replace(r, 'filter-replace');
       },
     })
   })
+
   $(document).on('click', '[data-type=filter-click-reset]', function () {
     window.filters.data.filters = {}
     $.ajax({
@@ -173,7 +169,7 @@ function filters() {
       href: '',
       dataType: 'html',
       success: function (r) {
-        replace(r);
+        replace(r, 'filter-replace');
       },
     })
   })
@@ -198,16 +194,14 @@ function pagination() {
         },
         dataType: 'html',
         success: function (p) {
-          const responseDataContainer = $(p).find(`[data-type=lazy-load-list][data-lazy-load-content=${targetSelector}]`),
+          const
+            responseDataContainer = $(p).find(`[data-type=lazy-load-list][data-lazy-load-content=${targetSelector}]`),
             elements = responseDataContainer.find(`[data-type=lazy-load-item]`),  //  Ищем элементы
-
             responseBtnContainer = $(p).find(`[data-type=lazy-load-container][data-lazy-load-content=${targetSelector}]`);
-          //pagination = responseBtnContainer.find(`[data-type=lazy-load]`);//  Ищем навигацию
 
           btnContainer.remove();
           itemsContainer.append(elements);   //  Добавляем посты в конец контейнера
           itemsContainer.append(responseBtnContainer); //  добавляем навигацию следом
-
         }
       })
     }
@@ -269,15 +263,17 @@ function basket() {
   });
 }
 
-function replace(r) {
-  $('[data-replace]').each((i, item) => {
+function replace(r, selector = 'replace') {
+  $(`[data-${selector}]`).each((i, item) => {
     const jqObj = $(item),
-      link = jqObj.data('replace')
+      link = jqObj.data(selector)
+    let linkElem = $(r).filter(`[data-${selector}=${link}]`)
 
-    let linkElem = $(r).filter(`[data-replace=${link}]`)
+    console.log(link)
+    console.log(selector)
 
     if (!linkElem.length) {
-      linkElem = $(r).find(`[data-replace=${link}]`)
+      linkElem = $(r).find(`[data-${selector}=${link}]`)
     }
 
     jqObj.empty()
