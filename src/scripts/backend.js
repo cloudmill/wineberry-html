@@ -238,7 +238,7 @@ function basket() {
         },
       })
     }
-  });
+  })
   $(document).on('click', '[data-type=basket]', function () {
     const
       thisObj = $(this),
@@ -259,8 +259,34 @@ function basket() {
         replace(r);
         thisObj.css('pointer-events', 'auto');
       },
+      statusCode: {
+        302: (xhr) => {
+          window.location.pathname = xhr.getResponseHeader('Redirect-Location')
+        }
+      }
     })
-  });
+  })
+  $(document).on('change', '[data-type=basket-input]', function () {
+    const
+      thisObj = $(this),
+      id = thisObj.data('id');
+    thisObj.css('pointer-events', 'none')
+    $.ajax({
+      type: 'post',
+      href: window.location.pathname,
+      dataType: 'html',
+      data: {
+        count: thisObj.val(),
+        action: 'update',
+        update: 'input',
+        id: id,
+      },
+      success: function (r) {
+        replace(r);
+        thisObj.css('pointer-events', 'auto')
+      },
+    })
+  })
 }
 
 function replace(r, selector = 'replace') {
