@@ -9,6 +9,7 @@ $(() => {
   basket();
   //paginManufactur();
   paginSearch();
+  subscribeNews();
 });
 
 function init() {
@@ -49,13 +50,17 @@ window.filters = {
     },
   },
 }
-window.objFormErrors = {};
+window.objFormErrors = {
+  modalError : (form, r) => {
+    alert(r.message);
+  }
+};
 window.objFormSuccess = {
   modal: (form, r) => {
     const options = {...defaults}
     $.fancybox.defaults = {...$.fancybox.defaults, ...options};
     $.fancybox.open($('[data-response]'));
-    form.reset();
+    form[0].reset();
     form.find('[data-input]').parent().removeClass('filled');
   },
   reloadPage: () => {
@@ -113,6 +118,7 @@ function forms() {
         }
 
         const func = form.data('func');
+
         if (typeof func === 'object') {
           $.each(func, (i, item) => {
             window.objFormSuccess[item](form, r);
@@ -206,7 +212,6 @@ function pagination() {
     }
   })
 }
-
 
 let check = true;
 function paginSearch () {
@@ -351,4 +356,29 @@ function replace(r, selector = 'replace') {
     jqObj.empty()
     jqObj.append(linkElem.html())
   })
+}
+
+function subscribeNews () {
+    $(document).on('submit', '[data-type=subscribeNews]', function(e) {
+        e.preventDefault();
+        const form = $(this),
+            action = form.attr('action');
+        let data = {};
+        form.find('[data-type=get-field]').each(function (i, elem) {
+            data[$(elem).attr('name')] = $(elem).val();
+        });
+        $.ajax({
+            type: 'POST',
+            url: action,
+            data: data,
+            success: function (r) {
+                const func = form.data('func');
+                if (r.success) {
+                    window.objFormSuccess[func](form, r);
+                } else {
+                    window.objFormErrors[func](form, r)
+                }
+            }
+        })
+    })
 }
