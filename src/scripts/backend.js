@@ -51,9 +51,12 @@ window.filters = {
   },
 }
 window.objFormErrors = {
-  modalError : (form, r) => {
-    alert(r.message);
-  }
+    modalOpen : (form) => {
+        openModel(form);
+    },
+    modalError : (form, r) => {
+        alert(r.message);
+    }
 };
 window.objFormSuccess = {
   modal: (form, r) => {
@@ -73,6 +76,31 @@ window.objFormSuccess = {
     alert(r.message);
     form[0].reset();
   }
+}
+
+function subscribeNews () {
+    $(document).on('submit', '[data-type=subscribeNews]', function(e) {
+        e.preventDefault();
+        const form = $(this),
+            action = form.attr('action');
+        let data = {};
+        form.find('[data-type=get-field]').each(function (i, elem) {
+            data[$(elem).attr('name')] = $(elem).val();
+        });
+        $.ajax({
+            type: 'POST',
+            url: action,
+            data: data,
+            success: function (r) {
+                if (r.success) {
+                    $(form).data('id', 'follow');
+                } else {
+                    $(form).data('id', 'follow-error');
+                }
+                openModel(form);
+            }
+        })
+    })
 }
 
 //обработка форм
@@ -356,29 +384,4 @@ function replace(r, selector = 'replace') {
     jqObj.empty()
     jqObj.append(linkElem.html())
   })
-}
-
-function subscribeNews () {
-    $(document).on('submit', '[data-type=subscribeNews]', function(e) {
-        e.preventDefault();
-        const form = $(this),
-            action = form.attr('action');
-        let data = {};
-        form.find('[data-type=get-field]').each(function (i, elem) {
-            data[$(elem).attr('name')] = $(elem).val();
-        });
-        $.ajax({
-            type: 'POST',
-            url: action,
-            data: data,
-            success: function (r) {
-                const func = form.data('func');
-                if (r.success) {
-                    window.objFormSuccess[func](form, r);
-                } else {
-                    window.objFormErrors[func](form, r)
-                }
-            }
-        })
-    })
 }

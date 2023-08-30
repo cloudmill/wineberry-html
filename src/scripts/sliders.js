@@ -1,7 +1,6 @@
 import Swiper from 'swiper/bundle';
 
 const BREAKPOINT = 1280;
-console.log(123);
 // swiper 
 {
   $(window).on('load', () => {
