@@ -20,5 +20,8 @@ mixin accordion
               p.accordion__text 
                 |При единовременной закупке от 5 литров акционного ассортимента,  ТТ получает скидку в накладной - 15% *Ассортимент и размер скидки в руб./бут.
               .accordion__btn 
-                +outline-button.button--discount
+                a.button.button--outline.button--discount(href="#") 
+                  span.button__span
+                    |Подробнее
+                //- +outline-button.button--discount
                   |Подробнее

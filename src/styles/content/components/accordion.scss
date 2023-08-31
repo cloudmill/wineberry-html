@@ -179,4 +179,8 @@
       @include fsl(14px);
     }
   }
+
+  &__btn {
+    display: flex;
+  }
 }
