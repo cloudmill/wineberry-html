@@ -50,6 +50,7 @@ window.filters = {
     },
   },
 }
+
 window.objFormErrors = {
     modalOpen : (form) => {
         openModel(form);
@@ -59,6 +60,11 @@ window.objFormErrors = {
     }
 };
 window.objFormSuccess = {
+  success_checkout: (form, r) => {
+    if (r.success) {
+      window.location.replace('/');
+    }
+  },
   modal: (form, r) => {
     const options = {...defaults}
     $.fancybox.defaults = {...$.fancybox.defaults, ...options};
@@ -146,13 +152,12 @@ function forms() {
         }
 
         const func = form.data('func');
-
         if (typeof func === 'object') {
-          $.each(func, (i, item) => {
+            $.each(func, (i, item) => {
             window.objFormSuccess[item](form, r);
           });
         } else {
-          window.objFormSuccess[func](form, r);
+            window.objFormSuccess[func](form, r);
         }
       },
     });
