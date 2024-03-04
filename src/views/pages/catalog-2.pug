@@ -1,0 +1,61 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+
+include ../components/product-card
+
+
+block content
+  -
+    var ddata = [
+      {
+        title: 'Цвет',
+        items: ['Белое', 'Красное', 'Розовое',]
+      },
+      {
+        title: 'Содержание сахара',
+        items: ['Сухое', 'Полусухое', 'Полусладкое', 'Сладкое',]
+      },
+      {
+        title: 'Страна',
+        items: ['Австралия', 'Армения', 'Германия', 'Грузия', 'Испания', 'Италия', ]
+      },
+      {
+        title: 'Объем, л.',
+        items: ['0.75', '1.5', '1', '0.7', '2', '2', ]
+      },
+      {
+        title: 'Крепость, ℃',
+        items: ['0.0%', '13.0%', '9.0%', '16.0%', '5.0%', '11.0%', ]
+      },
+      {
+        title: 'Производитель',
+        items: ['Абхазия Мстраль алко', 'Азербайжан Альтернатива', 'Розовое', 'Азербайжан гянджа', 'Алко-СК протвейн', 'Алко-СК т/пак', 'Альтервина', ]
+      },
+    ]
+  .catalog-page 
+    section.section.section--first 
+      .container
+        .section__breadcrumbs(data-aos='fade-up')
+          +breadcrumbs(page = 'Вина и винные напитки')
+        h1(data-aos='fade-up')
+          |Вина и винные напитки
+        .catalog-page__category 
+          .category(data-aos='fade-up')
+            ul.category__list
+              each item, i in ['Десертное вино', 'Столовое вино', 'Белое сухое', 'Красное сухое', 'Безалкогольное']
+                li.category__item(class=(i === 0 ? 'active' : ''))
+                  .category__text
+                    |#{item}
+    section.catalog-page__listing 
+      .catalog-page__row.alt
+        .catalog-page__col
+          .grid-container.grid-container--catalog.listing(data-aos='fade-up')
+            +product-card-noprice.grid-container__item
+            +product-card.grid-container__item(disabled = true bot = true)
+            - for (i = 0; i < 14; i++)
+              +product-card.grid-container__item(bot = true)
+            .listing__wrapper 
+              +listing-loader-svg
+  +product-modal
+  +catalog-menu
