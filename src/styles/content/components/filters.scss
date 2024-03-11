@@ -103,8 +103,8 @@
     @media (max-width: ($breakpoint - 1px)) {
       padding: 10px 20px;
     }
-    position: -webkit-sticky;
     position: sticky;
+    position: -webkit-sticky;
     bottom: 0;
 
     width: 100%;
