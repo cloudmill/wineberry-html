@@ -307,6 +307,11 @@
     width: auto;
   }
 
+  &.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
   &__icon {
     display: flex;
     align-items: center;
