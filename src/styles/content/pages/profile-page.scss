@@ -1011,5 +1011,9 @@
 
   &__card {
     margin-top: 12px;
+    @media (max-width: ($breakpoint - 1px)) {
+      position: relative;
+      z-index: 1;
+    }
   }
 }
