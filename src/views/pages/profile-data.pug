@@ -167,7 +167,7 @@ block content
                               .profile-page__text 
                                 |#{item.text}
                 each item in ddata.list
-                  li.profile-page__orders-item.profile-page__orders-item--noborder-top(data-aos='fade-up')
+                  li.profile-page__orders-item.profile-page__orders-item--noborder-top(data-aos='fade-up' data-edit='')
                     .profile-page__order-row 
                       .profile-page__order-col
                         .profile-page__orders-label 
@@ -175,14 +175,18 @@ block content
                       .profile-page__order-col
                         .profile-page__data
                           .profile-page__data-col
-                            input.profile-page__data-input.locked(type=item.type value = item.value)
+                            //- input.profile-page__data-input.locked(type=item.type value = item.value)
+                            if (item.type === 'phone')
+                              input.profile-page__data-input.locked(type='text' value = item.value data-edit-input='' data-mask-phone='' data-parsley-phone='')
+                            else
+                              input.profile-page__data-input.locked(type=item.type value = item.value data-edit-input='' required)
                           .profile-page__data-col
                             if (item.button)
-                              .profile-page__data-btn 
+                              .profile-page__data-btn(data-edit-btn='')
                                 .profile-page__data-icon 
                                   +pencil-svg.profile-page__data-svg
                                   +check-svg.profile-page__data-ok
-                                .profile-page__data-text 
+                                .profile-page__data-text(data-edit-text='')
                                   |Изменить
             .mobile-only 
               .profile-page__block.profile-page__block--order

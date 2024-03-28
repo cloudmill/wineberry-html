@@ -21,9 +21,16 @@
         box-shadow: 0px 8px 16px rgba(207, 178, 191, 0.3);
       }
       #{$comp}__span {
-        transform: translateY(-7px) scale(0.75);
+        top: 13px;
+        font-size: getRem(12px);
+        // transform: translateY(-7px) scale(0.75);
         @media (max-width: ($breakpoint - 1px)) {
-          
+          top: 8px;
+          font-size: getRem(8px);
+        }
+        @media (max-width: ($breakpoint-xs - 1px)) {
+          top: getRem(7px);
+          // font-size: getRem(7px);
         }
 
         color: #87707B;
@@ -85,7 +92,7 @@
 
     transform-origin: left center;
     pointer-events: none;
-    transition: $transition;
+    transition: 0.3s $transition-timing-function;
     letter-spacing: var(--letter-space);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px);

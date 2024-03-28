@@ -37,10 +37,16 @@ mixin login-modal
         .tabs-block(data-tabs-block='')
           form.form(action="/" data-form='reg')
             each item in ddata
-              .form__item 
-                +input(type = item.type)
-                span.form__span 
-                  |#{item.placeholder}
+              if (item.type === 'phone')
+                .form__item 
+                  input.form__input(type='text' data-edit-input='' data-mask-phone='' data-parsley-phone='' required data-input='')
+                  span.form__span 
+                    |#{item.placeholder}
+              else
+                .form__item 
+                  +input(type = item.type)
+                  span.form__span 
+                    |#{item.placeholder}
             .form__item 
               input.form__input#password(type='password' data-input='' required data-parsley-equalto="#passwordAgain" data-parsley-priority-enabled='false' data-password='' data-parsley-minlength="6")
               span.form__span 
@@ -50,7 +56,8 @@ mixin login-modal
               span.form__span 
                 |Пароль еще раз
             .form__item 
-              +textarea.form__textarea--small
+              //- textarea.form__textarea.form__textarea--small(placeholder = 'Номер лицензии на право реализации алкогольной продукции*' required)
+              +textarea.form__textarea--small(required = true)
               span.form__span 
                 |Номер лицензии на право реализации алкогольной продукции*
             .form__item 
