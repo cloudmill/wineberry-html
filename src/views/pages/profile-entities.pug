@@ -120,7 +120,7 @@ block content
                     .profile-page__info-inner
                       .profile-page__info-heading 
                         |30 дней
-        .profile-page__section.profile-page__section--big
+        .profile-page__section.profile-page__section--big.listing
           .profile-page__section-top.profile-page__heading(data-aos='fade-up')
             h2
               |Юридические лица
@@ -164,7 +164,7 @@ block content
                           .profile-page__status-icon 
                             +clock-svg.profile-page__status-svg.profile-page__status-stroke
                           .profile-page__status-text 
-                            |Ждет актиации
+                            |Ждет активации
                       .profile-page__entity-item
                         .profile-page__orders-icon 
                           +small-arrow-svg.profile-page__orders-svg 
@@ -217,7 +217,7 @@ block content
                       .profile-page__status-icon 
                         +clock-svg.profile-page__status-svg.profile-page__status-stroke
                       .profile-page__status-text 
-                        |Ждет актиации
+                        |Ждет активации
                 .profile-page__block-bot
                   a.profile-page__block-button(href="#") 
                     .profile-page__block-text 
@@ -255,5 +255,7 @@ block content
                       |Подробнее
                     .profile-page__orders-icon 
                       +small-arrow-svg.profile-page__orders-svg 
+          .listing__wrapper
+            +listing-loader-svg
   +entity-modal
   +response-modal.modal--big(id = 'entity-resp' title = 'Заявка на добавление юридического лица отправлена' text = 'В течение 3-х дней с вами свяжется наш менеджер для подтверждения')

@@ -208,16 +208,20 @@ block content
                             |#{item.text}
                         
                     each item in ddata.list
-                      li.profile-page__block-item(data-aos='fade-up')
+                      li.profile-page__block-item(data-aos='fade-up' data-edit='')
                         .profile-page__orders-label 
                           |#{item.label}
-                        input.profile-page__data-input.locked(type=item.type value = item.value)
+                        if (item.type === 'phone')
+                          input.profile-page__data-input.locked(type='text' value = item.value data-edit-input='' data-mask-phone='' data-parsley-phone='')
+                        else
+                          input.profile-page__data-input.locked(type=item.type value = item.value data-edit-input='' required)
+                        //- input.profile-page__data-input.locked(type=item.type value = item.value data-edit-input='' required)
                         if (item.button)
                           .profile-page__data-inner 
-                            .profile-page__data-btn 
+                            .profile-page__data-btn(data-edit-btn='')
                               .profile-page__data-icon 
                                 +pencil-svg.profile-page__data-svg
                                 +check-svg.profile-page__data-ok
-                              .profile-page__data-text 
+                              .profile-page__data-text(data-edit-text='')
                                 |Изменить
 

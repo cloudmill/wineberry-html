@@ -2,6 +2,9 @@
   $comp: &;
 
   margin: 0 60px;
+  @media (max-width: ($breakpoint-xl - 1px)) {
+    margin: 0 40px;
+  }
   @media (max-width: ($breakpoint-ll - 1px)) {
     margin: 0 30px;
   }
