@@ -285,6 +285,14 @@
       border-radius: 4px;
       @include fsl(12px);
     }
+
+    
+    &.locked {
+      // padding: 0;
+
+      border-color: transparent;
+      pointer-events: none;
+    }
   }
 
   &__buttons {
