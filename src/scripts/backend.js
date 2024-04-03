@@ -52,8 +52,8 @@ window.filters = {
 }
 
 window.objFormErrors = {
-    modalOpen : (form) => {
-        openModel(form);
+    modalOpen : (form, r) => {
+        alert(r.message);
     },
     modalError : (form, r) => {
         alert(r.message);
@@ -142,6 +142,7 @@ function forms() {
       url: action ? action : `${window.config.path}/include/ajax/forms/index.php`,
       data: data,
       contentType: file.length ? false : 'application/x-www-form-urlencoded; charset=UTF-8',
+      dataType: 'json',
       processData: !file.length,
       success: function (r) {
         if (typeof r === 'object') {
