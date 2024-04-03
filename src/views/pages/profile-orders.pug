@@ -87,7 +87,7 @@ block content
                     .profile-page__info-inner
                       .profile-page__info-heading 
                         |30 дней
-        .profile-page__section.profile-page__section--big
+        .profile-page__section.profile-page__section--big.listing
           h2.profile-page__heading(data-aos='fade-up')
             |Заказы
           .profile-page__orders 
@@ -226,4 +226,5 @@ block content
                       |Подробнее
                     .profile-page__orders-icon 
                       +small-arrow-svg.profile-page__orders-svg 
-
+          .listing__wrapper
+            +listing-loader-svg

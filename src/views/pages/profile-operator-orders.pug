@@ -44,7 +44,7 @@ block content
                       |#{item}
             ul.profile-page__orders-list
               - for (i = 0; i < 5; i++)
-                li.profile-page__orders-item(data-aos='fade-up')
+                a.profile-page__orders-item(href="#" data-aos='fade-up')
                   .profile-page__orders-row 
                     .profile-page__orders-col
                       .profile-page__orders-text 
@@ -92,7 +92,7 @@ block content
                     .profile-page__orders-text 
                       |Игорь Дудников
                 .profile-page__block-bot
-                  .profile-page__block-button 
+                  a.profile-page__block-button(href="#") 
                     .profile-page__block-text 
                       |Подробнее
                     .profile-page__orders-icon 

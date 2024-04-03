@@ -34,6 +34,9 @@
 
   &__item {
     padding-left: 60px;
+    @media (max-width: ($breakpoint-xl - 1px)) {
+      padding-left: 40px;
+    }
     @media (max-width: ($breakpoint-ll - 1px)) {
       padding-left: 30px;
     }
@@ -159,6 +162,7 @@
   }
 
   &__text {
+    color: var(--color-lilac);
     transition: color $transition;
     letter-spacing: var(--letter-space);
     @include fsl(18px, 120%);
