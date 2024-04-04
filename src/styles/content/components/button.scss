@@ -53,6 +53,12 @@
     &::before {
       transform: none;
     }
+
+    .profile-page__data-svg {
+      path {
+        fill: var(--color-white);
+      }
+    }
   }
 
   &--outline {
@@ -313,6 +319,9 @@
   }
 
   &__icon {
+    position: relative;
+    z-index: 1;
+
     display: flex;
     align-items: center;
     justify-content: center;
