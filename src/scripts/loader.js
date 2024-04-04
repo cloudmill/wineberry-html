@@ -1,16 +1,17 @@
 import {mediaQuery} from './mediaQueries'
 import AOS from 'aos';
 
-document.body.classList.add('body--hidden')
+
 
 window.addEventListener("load", () => {
+  document.body.classList.add('body--hidden')
   document.body.classList.remove('body--unvisible')
   const loader = document.querySelector('.loader')
 
   if (loader) {
     const text = loader.querySelector('[data-loader-count]')
     const progress = loader.querySelector('[data-loader-progress]')
-    
+
     async function loop() {
       let delay = 15;
       function timer(ms) {
@@ -25,9 +26,9 @@ window.addEventListener("load", () => {
         setTimeout(() => {
           text.textContent = `${i}%`
           progress.style.height = `${i}%`
-          
+
           if (mediaQuery.matches) {
-            
+
             if (i < 96 && i > 12) {
               text.style.height = `${i}%`
               // text.style.bottom = 'auto'
@@ -59,7 +60,7 @@ window.addEventListener("load", () => {
     }, 3000);
   } else {
     document.body.classList.remove('body--hidden')
-    
+
     AOS.init({
       once: true,
       offset: 0,
