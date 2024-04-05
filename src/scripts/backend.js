@@ -65,6 +65,11 @@ window.objFormSuccess = {
       window.location.replace('/');
     }
   },
+  success_checkout_private : (form, r) => {
+    if (r.success) {
+      window.location.replace('/' + 'profile-' + r.role + '-data/');
+    }
+  },
   modal: (form, r) => {
     const options = {...defaults}
     $.fancybox.defaults = {...$.fancybox.defaults, ...options};
