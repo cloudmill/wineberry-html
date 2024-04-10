@@ -10,6 +10,8 @@ $(() => {
   //paginManufactur();
   paginSearch();
   subscribeNews();
+  chooseManager();
+
 });
 
 function init() {
@@ -86,7 +88,41 @@ window.objFormSuccess = {
   contactUs: (form, r) => {
     alert(r.message);
     form[0].reset();
+  },
+  chooseManager : (name) => {
+    const options = {...defaults},
+      modal = $('[data-response]');
+      modal.find('.response-modal__title').text('Отправлено на согласование ' + name);
+    $.fancybox.defaults = {...$.fancybox.defaults, ...options};
+    $.fancybox.open($('[data-response]'));
   }
+}
+
+function chooseManager () {
+  let chManagerBox = $('[data-choose-manager]');
+
+  chManagerBox.find('[data-manager-btn]').on('click', function (event) {
+      let data = {
+          typeEvent : 'chooseManager',
+          managerId : chManagerBox.find('.active[data-id-manager]').data('id-manager'),
+          legalId : chManagerBox.data('id-legal'),
+      },
+      managerName = chManagerBox.find('.active[data-id-manager]').text();
+
+      $.ajax({
+          type: 'POST',
+          url: '/local/templates/main/include/ajax/profiles/chooseManager.php',
+          data: data,
+          dataType : 'json',
+          success : function (res) {
+              if (res.success) {
+                window.objFormSuccess.chooseManager(managerName);
+              }
+          }
+      });
+
+  })
+
 }
 
 function subscribeNews () {
