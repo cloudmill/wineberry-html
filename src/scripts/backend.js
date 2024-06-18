@@ -200,68 +200,61 @@ function subscribeNews() {
 
 //обработка форм
 function forms() {
-  $(document).on("submit", "[data-type=form-ajax]", function (e) {
+$(document).on("submit", "[data-type=form-ajax]", function (e) {
     e.preventDefault();
 
     const form = $(this),
-      method = form.attr("method"),
-      action = form.attr("action"),
-      fileElem = form[0].querySelector("[data-file-input]"),
-      file = fileElem ? fileElem.appFile.files : [],
-      data = file.length ? new FormData() : {};
+		method = form.attr("method"),
+		action = form.attr("action"),
+		fileElem = form[0].querySelector("[data-file-input]"),
+		file = fileElem ? fileElem.appFile.files : [],
+		data = file.length ? new FormData() : {};
 
-    form
-      .find(
-        "[data-type=get-field], input:checked[data-type=get-field], input[type=hidden]"
-      )
-      .each(function () {
+    form.find("[data-type=get-field], input:checked[data-type=get-field], input[type=hidden]").each(function () {
         const val = $(this).val();
 
         if (!val) {
-          return;
+			return;
         }
 
         const field = $(this).attr("name");
-
         file.length ? data.append(field, val) : (data[field] = val);
-      });
+	});
 
     $.each(file, (i, item) => {
-      data.append(`files[]`, item);
+		data.append(`files[]`, item);
     });
 
     $.ajax({
-      type: method ? method : "POST",
-      url: action
-        ? action
-        : `${window.config.path}/include/ajax/forms/index.php`,
-      data: data,
-      contentType: file.length
-        ? false
-        : "application/x-www-form-urlencoded; charset=UTF-8",
-      dataType: "json",
-      processData: !file.length,
-      success: function (r) {
-        if (typeof r === "object") {
-          if (!r.success) {
-            const errorFuncInit = form.data("func-error");
-            errorFuncInit
-              ? window.objFormErrors[errorFuncInit](form, r)
-              : alert(r.message);
-          }
-        }
+        type: method ? method : "POST",
+        url: action ? action : `${window.config.path}/include/ajax/forms/index.php`,
+        data: data,
+        contentType: file.length ? false : "application/x-www-form-urlencoded; charset=UTF-8",
+        dataType: "json",
+        processData: !file.length,
+        success: function (r) {
+			console.log(typeof r);
+            if (typeof r === "object") {
+				if (!r.success) {
+					console.log(typeof r);
+					const errorFuncInit = form.data("func-error");
+					errorFuncInit ? window.objFormErrors[errorFuncInit](form, r) : alert(r.message);
+					return;
+				}
+			}
 
-        const func = form.data("func");
-        if (typeof func === "object") {
-          $.each(func, (i, item) => {
-            window.objFormSuccess[item](form, r);
-          });
-        } else {
-          window.objFormSuccess[func](form, r);
-        }
-      },
+			const func = form.data("func");
+
+			if (typeof func === "object") {
+				$.each(func, (i, item) => {
+					window.objFormSuccess[item](form, r);
+				});
+			} else {
+				window.objFormSuccess[func](form, r);
+			}
+		},
     });
-  });
+	});
 }
 
 function filters() {
