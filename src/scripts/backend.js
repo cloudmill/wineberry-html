@@ -10,7 +10,7 @@ $(() => {
   //paginManufactur();
   paginSearch();
   subscribeNews();
-  chooseManager();
+  oparatorEventLegal();
 
 });
 
@@ -36,6 +36,7 @@ window.filters = {
       window.filters.data.filters[field] = val
     },
     many: (field, val) => {
+
       if (!window.filters.data.filters[field]) {
         window.filters.data.filters[field] = {}
       }
@@ -89,38 +90,69 @@ window.objFormSuccess = {
     alert(r.message);
     form[0].reset();
   },
-  chooseManager : (name) => {
-    const options = {...defaults},
-      modal = $('[data-response]');
-      modal.find('.response-modal__title').text('Отправлено на согласование ' + name);
+
+  eventLegalResponse : (res, name, typeModal) => {
+    const options = {...defaults};
+    let modal = $(`[data-response=${typeModal}]`),
+        text = '';
+
+      switch (res.typeEvent) {
+        case 'chooseManager':
+          text = 'Отправлено на согласование менеджеру ' + name;
+          break;
+        case 'nonManager':
+          text = 'Выберите менеджера';
+          typeModal = 'chooseManagerNoSvg';
+          modal = $(`[data-response=${typeModal}]`);
+          break;
+        case 'denyLegal':
+          text = 'Вы отказали ' + name;
+          break;
+      }
+
+    modal.find('.response-modal__title').text(text);
     $.fancybox.defaults = {...$.fancybox.defaults, ...options};
-    $.fancybox.open($('[data-response]'));
-  }
+    $.fancybox.open($(`[data-response=${typeModal}]`));
+  },
+
 }
 
-function chooseManager () {
-  let chManagerBox = $('[data-choose-manager]');
+// действия оператора для юр лица
+function oparatorEventLegal () {
+  let obj = $('[data-event-client]');
 
-  chManagerBox.find('[data-manager-btn]').on('click', function (event) {
+  obj.find('[data-event-btn]').on('click', function () {
       let data = {
-          typeEvent : 'chooseManager',
-          managerId : chManagerBox.find('.active[data-id-manager]').data('id-manager'),
-          legalId : chManagerBox.data('id-legal'),
+          typeEvent : $(this).data('event-type'),
+          legalId : obj.data('id-legal'),
       },
-      managerName = chManagerBox.find('.active[data-id-manager]').text();
+          entityName = '',
+          typeModal = '';
 
-      $.ajax({
-          type: 'POST',
-          url: '/local/templates/main/include/ajax/profiles/chooseManager.php',
-          data: data,
-          dataType : 'json',
-          success : function (res) {
-              if (res.success) {
-                window.objFormSuccess.chooseManager(managerName);
-              }
-          }
-      });
+      if (data.typeEvent == 'chooseManager') {
+        data.managerId = obj.find('.active[data-id-manager]').data('id-manager');
+        entityName = obj.find('.active[data-id-manager]').text();
+        typeModal = $(this).data('fancy-modal');
+      } else if (data.typeEvent == 'denyLegal') {
+        entityName = $(this).data('legal-name');
+        typeModal = $(this).data('fancy-modal');
+      }
 
+      if (data.typeEvent) {
+        $.ajax({
+            type: 'POST',
+            url: '/local/templates/main/include/ajax/profiles/eventOperatorLegal.php',
+            data: data,
+            dataType : 'json',
+            success : function (res) {
+                if (res.success) {
+                    window.objFormSuccess.eventLegalResponse(res, entityName, typeModal);
+                } else {
+                  alert(res.message);
+                }
+            }
+        });
+      }
   })
 
 }
@@ -207,6 +239,7 @@ function forms() {
 }
 
 function filters() {
+  //todo для price filter
   window.addEventListener('range_slider_change', (event) => {
     const thisObj = $('[data-type=filter-range]');
     window.filters.getData[thisObj.data('get-type')](
@@ -224,6 +257,7 @@ function filters() {
     })
   })
 
+  //todo для inputs filter
   $(document).on('click', '[data-type=filter-click]', function () {
     const thisObj = $(this)
     window.filters.getData[thisObj.data('get-type')](
@@ -241,6 +275,7 @@ function filters() {
     })
   })
 
+  //todo для reset filter
   $(document).on('click', '[data-type=filter-click-reset]', function () {
     window.filters.data.filters = {}
     $.ajax({
