@@ -19,26 +19,25 @@ import "./scripts/select";
 import "./scripts/pagination-event";
 import "./scripts/show-more";
 import "./scripts/edit";
-
+import "./scripts/disclaimer";
 
 $(() => {
-  const tickers = document.querySelectorAll('[data-ticker]')
+  const tickers = document.querySelectorAll("[data-ticker]");
   if (tickers.length) {
-    tickers.forEach(item => {
-      const line = item.querySelector('[data-ticker-line]')
+    tickers.forEach((item) => {
+      const line = item.querySelector("[data-ticker-line]");
 
       if (line.clientWidth < window.innerWidth) {
-
-        let items = line.querySelectorAll('[data-ticker-item]')
+        let items = line.querySelectorAll("[data-ticker-item]");
         // let i = 0;
         while (line.clientWidth < window.innerWidth) {
-          items.forEach(item => {
-            line.append(item.cloneNode(true))
-          })
+          items.forEach((item) => {
+            line.append(item.cloneNode(true));
+          });
         }
 
         for (let i = 0; i < 2; i++) {
-          item.append(line.cloneNode(true))
+          item.append(line.cloneNode(true));
         }
         // while (line.clientWidth < window.innerWidth) {
         //   line.append(items[i].cloneNode(true))
@@ -58,12 +57,12 @@ $(() => {
         // }
       } else {
         for (let i = 0; i < 2; i++) {
-          item.append(line.cloneNode(true))
+          item.append(line.cloneNode(true));
         }
       }
 
-      item.classList.add('active')
-    })
+      item.classList.add("active");
+    });
   }
 
   // window.addEventListener("paginationTrigger", () => {
@@ -72,4 +71,4 @@ $(() => {
   // window.addEventListener("paginationTriggerManufacturers", () => {
   //   console.log(123)
   // })
-})
+});
