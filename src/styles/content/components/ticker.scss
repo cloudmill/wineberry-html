@@ -40,7 +40,6 @@
     display: flex;
     align-items: center;
 
-
     padding-left: 170px;
     @media (max-width: ($breakpoint - 1px)) {
       padding-left: 38px;
@@ -48,9 +47,10 @@
   }
 
   &__img {
-    width: 166px;
+    // width: 166px;
+    width: max-content;
     @media (max-width: ($breakpoint - 1px)) {
-      width: 86px;
+      // width: 86px;
       height: 48px;
     }
     flex-shrink: 0;
