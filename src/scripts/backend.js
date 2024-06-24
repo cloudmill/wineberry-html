@@ -99,7 +99,8 @@ window.objFormSuccess = {
 	},
 	eventLegalResponse: (res, name, typeModal) => {
 		const options = { ...defaults };
-
+    console.log(name);
+    console.log(res);
 		let modal = $(`[data-response=${typeModal}]`),
 			text = "";
 
@@ -118,6 +119,9 @@ window.objFormSuccess = {
 			break;
 			case 'successByTheManager':
 				text = "Вы активировали " + name;
+			break;
+      case 'newManager':
+				text = "Вы изменили менеджера";
 			break;
 		}
 
