@@ -1,0 +1,8 @@
+mixin disclaimer
+    .disclaimer.--active(data-disclaimer='')
+        .disclaimer__modal.modal
+            .disclaimer__modal-container.modal__container
+                +logo-svg.header__logo-svg
+                h2.modal__title Вход на сайт разрешен только&nbsp;лицам старше 18&nbsp;лет
+                +submit-button(data-disclaimer-close='')
+                    |Мне уже есть 18 лет

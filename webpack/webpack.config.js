@@ -11,7 +11,7 @@ const utils = require("./utils");
 
 module.exports = (env) => {
   return {
-    entry: ['babel-polyfill', './app.js'],
+    entry: ["babel-polyfill", "./app.js"],
     context: path.resolve(__dirname, "../src"),
 
     // entry: {
@@ -199,11 +199,11 @@ module.exports = (env) => {
       ...utils.pages(env.NODE_ENV),
 
       new webpack.ProvidePlugin({
-				$: 'jquery',
-				jQuery: 'jquery',
-				'window.$': 'jquery',
-				'window.jQuery': 'jquery'
-			}),
+        $: "jquery",
+        jQuery: "jquery",
+        "window.$": "jquery",
+        "window.jQuery": "jquery",
+      }),
 
       new HtmlBeautifyPlugin({
         end_with_newline: true,

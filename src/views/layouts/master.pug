@@ -10,6 +10,7 @@ include ../components/form-components
 include ../components/counter
 include ../components/card
 include ../components/select
+include ../components/disclaimer
 
 block variables
   -
@@ -36,9 +37,12 @@ html(lang='ru')
     //- opengraph
     meta(property='og:image' content='assets/images/opengraph.jpg')
   
-  body.body.body--unvisible(class=bodyClass)
+  body.body.body--unvisible.body--hidden(class=bodyClass)
     
     block loader
+
+    block disclaimer 
+      +disclaimer
 
     .wrapper
       block header
