@@ -11,6 +11,7 @@ $(() => {
 	paginSearch();
 	subscribeNews();
 	oparatorEventLegal();
+  oparatorEventOrder();
 });
 
 function init() {
@@ -68,6 +69,14 @@ window.objFormErrors = {
 		$.fancybox.defaults = { ...$.fancybox.defaults, ...options };
 		$.fancybox.open($(`[data-response=${typeModal}]`));
 	},
+  eventOrderResponse : (text, name, typeModal) => {
+    const options = { ...defaults };
+
+		let modal = $(`[data-response=${typeModal}]`);
+		modal.find(".response-modal__title").text(text+ ' ' + name);
+		$.fancybox.defaults = { ...$.fancybox.defaults, ...options };
+		$.fancybox.open($(`[data-response=${typeModal}]`));
+  }
 };
 window.objFormSuccess = {
 	success_checkout: (form, r) => {
@@ -129,7 +138,51 @@ window.objFormSuccess = {
 			$.fancybox.defaults = { ...$.fancybox.defaults, ...options };
 			$.fancybox.open($(`[data-response=${typeModal}]`));
 	},
+  eventOrderResponse : (text, name, typeModal) => {
+    const options = { ...defaults };
+		let modal = $(`[data-response=${typeModal}]`);
+		modal.find(".response-modal__title").text(text + ' ' + name);
+		$.fancybox.defaults = { ...$.fancybox.defaults, ...options };
+		$.fancybox.open($(`[data-response=${typeModal}]`));
+  }
 };
+// действия оператора для заказа
+function oparatorEventOrder() {
+	let obj = $('[data-event-order-operator]');
+
+	obj.find("[data-event-btn]").on("click", function () {
+		let data = {
+			orderId: obj.data("id-order"),
+      managerId: obj.find(".active[data-id-manager]").data("id-manager")
+    },
+
+    entityName = obj.find('[data-select-text]').text(),
+    typeModal = $(this).data("fancy-modal");
+
+    console.log(typeModal);
+
+    if (!data.managerId) {
+      window.objFormErrors.eventOrderResponse('Выберите менеджера', 'chooseManagerNoSvg');
+    }
+
+    $.ajax({
+      type: "POST",
+      url: "/local/templates/main/include/ajax/profiles/eventOperatorOrder.php",
+      data: data,
+      dataType: "json",
+      success: function (res) {
+        if (res.success) {
+          window.objFormSuccess.eventOrderResponse(res.message, entityName, typeModal);
+        } else {
+          window.objFormErrors.eventOrderResponse(res.message, entityName, typeModal);
+        }
+      },
+    });
+
+
+	});
+
+}
 
 // действия оператора для юр лица
 function oparatorEventLegal() {
@@ -174,7 +227,6 @@ function oparatorEventLegal() {
 			});
 		}
 	});
-
 }
 
 function subscribeNews() {

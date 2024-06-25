@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   body = document.querySelector("body.body");
   disclaimer = document.querySelector("[data-disclaimer]");
-  closeDiscraimer = disclaimer.querySelector("[data-disclaimer-close]");
-
   //todo добавил проверку на существование data-disclaimer
   if (disclaimer) {
+    closeDiscraimer = disclaimer.querySelector("[data-disclaimer-close]");
     const showDisclaimer = sessionStorage["disclaimerHide"];
 
     if (showDisclaimer && showDisclaimer == "true") {
