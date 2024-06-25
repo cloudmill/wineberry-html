@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   disclaimer = document.querySelector("[data-disclaimer]");
   //todo добавил проверку на существование data-disclaimer
   if (disclaimer) {
-    console.log('work DOMContentLoaded');
     closeDiscraimer = disclaimer.querySelector("[data-disclaimer-close]");
     const showDisclaimer = sessionStorage["disclaimerHide"];
 
