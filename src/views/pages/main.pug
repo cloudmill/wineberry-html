@@ -15,12 +15,12 @@ block loader
 block content
   -
     var ddata = [
+      {title: 'Вина', img: 'vino'},
+      {title: 'Вина игристые', img: 'champagne'},
       {title: 'Водка', img: 'vodka'},
-      {title: 'Ликероводочные изделия', img: 'aperol'},
-      {title: 'Коньяк', img: 'brandy'},
-      {title: 'Вино и винные напитки', img: 'vino'},
-      {title: 'Слабоалкогольная продукция', img: 'beer'},
-      {title: 'Настойки и наливки', img: 'liqueur'},
+      {title: 'Коньяк', img: 'cogniac'},
+      {title: 'Крепкие напитки', img: 'whiskey'},
+      {title: 'Напитки слабоалкогольные', img: 'cocktail'},
     ]
   .main-page
     section.main-page__intro
@@ -88,15 +88,20 @@ block content
     section.main-page__grid 
       .main-page__grid-item.big(data-aos='fade-up')
         .main-page__container 
+          .main-page__grid-img 
+            +picture('main-positions-bg.jpg')
           .main-page__grid-container 
-            .main-page__grid-img 
-              +contacts-icon-svg.main-page__grid-bg 
+
+            //- .main-page__grid-img 
+              //- +contacts-icon-svg.main-page__grid-bg 
             .main-page__grid-top
               .main-page__grid-title 
-                |400+
+                |2000+
               .desktop-only
                 .main-page__grid-text 
                   |позиций в ассортименте
+                .main-page__grid-subtext 
+                  |От крупнейших производителей #[br] и импортеров алкоголя
               .mobile-only
                 .main-page__grid-text 
                   |позиций в ассортименте #[br] от крупнейших производителей #[br] и импортеров алкоголя
@@ -104,9 +109,9 @@ block content
               .main-page__grid-col
                 .main-page__grid-icon 
                   +wb-icon-svg.main-page__grid-svg 
-              .main-page__grid-col
-                .main-page__grid-caption 
-                  |От крупнейших производителей #[br] и импортеров алкоголя
+              //- .main-page__grid-col
+              //-   .main-page__grid-caption 
+              //-     |От крупнейших производителей #[br] и импортеров алкоголя
       each item in ddata
         .main-page__grid-item(data-aos='fade-up')
           +category-card(title = item.title img = item.img)

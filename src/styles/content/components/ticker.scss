@@ -12,15 +12,15 @@
   &.active {
     #{$comp}__item {
       &:nth-child(1) {
-        animation: tickerFirst 40s 1 linear forwards;
+        animation: tickerFirst 140s 1 linear forwards;
       }
       &:nth-child(2) {
         transform: translateX(100%);
-        animation: ticker 40s infinite linear forwards;
+        animation: ticker 140s infinite linear forwards;
       }
       &:nth-child(3) {
         transform: translateX(100%);
-        animation: ticker 40s infinite 20s linear forwards;
+        animation: ticker 140s infinite 70s linear forwards;
       }
     }
   }
