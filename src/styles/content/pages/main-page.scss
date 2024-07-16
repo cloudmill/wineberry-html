@@ -1,5 +1,4 @@
 .main-page {
-
   &__intro {
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: getRem(68px);
@@ -164,7 +163,6 @@
     display: flex;
   }
   &__intro-item {
-
     &:not(:first-child) {
       margin-left: 8px;
       @media (max-width: ($breakpoint - 1px)) {
@@ -243,6 +241,8 @@
 
   &__container {
     padding: getRem(60px);
+    overflow: hidden;
+
     @media (max-width: ($breakpoint - 1px)) {
       padding: 20px;
     }
@@ -267,7 +267,6 @@
     grid-template-columns: repeat(var(--itemsCount), 1fr);
   }
   &__grid-item {
-
     border-top: 1px solid var(--color-borders);
     border-left: 1px solid var(--color-borders);
 
@@ -288,12 +287,14 @@
     justify-content: space-between;
   }
   &__grid-img {
+    overflow: hidden;
+
     @include cover;
     z-index: -1;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
     @media (max-width: ($breakpoint - 1px)) {
       display: none;
     }
@@ -320,6 +321,12 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(16px, null, true);
     }
+  }
+  &__grid-subtext {
+    margin-top: getRem(40px);
+    font-weight: 400;
+    letter-spacing: var(--letter-space);
+    @include fsl(24px, 130%, true);
   }
   &__grid-bot {
     display: flex;
@@ -382,12 +389,12 @@
   }
   &__about-item {
     position: absolute;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
     filter: blur(7px);
-    
+
     &:nth-child(1) {
       top: getRem(198px);
       left: getRem(103px);
