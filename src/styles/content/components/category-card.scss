@@ -23,7 +23,7 @@
       padding: getRem(20px);
     }
   }
-  
+
   &__img {
     position: relative;
     z-index: 0;
@@ -70,6 +70,13 @@
 
   &__picture {
     height: 100%;
+
+    &.picture {
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
   }
 
   &__title {
@@ -94,7 +101,7 @@
     transition: $transition;
 
     #{$comp}__title {
-      color: var(--color-wine)
+      color: var(--color-wine);
     }
   }
 
