@@ -9,23 +9,27 @@ mixin product-card
           |Артикул: 124041
       .product-card__info 
         .product-card__top
-          .product-card__title 
-            |Вино Romeo 0.75 л сухое красное 0.75 л
-          ul.product-card__list
-            each item in ['Испания', '0.75 л.', 'Красное', 'Сухое', ]
-              li.product-card__list-item
-                |#{item}
-          ul.product-card__prices 
-            li.product-card__item 
-              .product-card__label
-                |Базовая цена
-              .product-card__price 
-                |1 990 ₽
-            li.product-card__item 
-              .product-card__label
-                |Персональная цена
-              .product-card__price 
-                |1 680 ₽
+          .product-card__title
+            if (attributes.title)
+              |#{attributes.title}
+            else
+              |Вино Romeo 0.75 л сухое красное 0.75 л
+          .product-card__inner
+            ul.product-card__list
+              each item in ['Испания', '0.75 л.', 'Красное', 'Сухое', ]
+                li.product-card__list-item
+                  |#{item}
+            ul.product-card__prices 
+              li.product-card__item 
+                .product-card__label
+                  |Базовая цена
+                .product-card__price 
+                  |1 990 ₽
+              li.product-card__item 
+                .product-card__label
+                  |Персональная цена
+                .product-card__price 
+                  |1 680 ₽
     if (attributes.bot)
       .product-card__wrapper
         .product-card__bot
@@ -46,10 +50,11 @@ mixin product-card-noprice
         .product-card__top
           .product-card__title 
             |Вино Romeo 0.75 л сухое красное 0.75 л
-          ul.product-card__list
-            each item in ['Испания', '0.75 л.', 'Красное', 'Сухое', ]
-              li.product-card__list-item
-                |#{item}
+          .product-card__inner
+            ul.product-card__list
+              each item in ['Испания', '0.75 л.', 'Красное', 'Сухое', ]
+                li.product-card__list-item
+                  |#{item}
     .product-card__wrapper
       .product-card__auth 
         .product-card__auth-col
