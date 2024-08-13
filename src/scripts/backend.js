@@ -1,17 +1,18 @@
-import { defaults } from "./fancybox";
-import { openModel } from "./form-response";
+import {defaults} from "./fancybox";
+import {openModel} from "./form-response";
 
 $(() => {
-	init();
-	filters();
-	forms();
-	pagination();
-	basket();
-	//paginManufactur();
-	paginSearch();
-	subscribeNews();
-	oparatorEventLegal();
+  init();
+  filters();
+  forms();
+  pagination();
+  basket();
+  //paginManufactur();
+  paginSearch();
+  subscribeNews();
+  oparatorEventLegal();
   oparatorEventOrder();
+  initFilters()
 });
 
 function init() {
@@ -54,110 +55,111 @@ window.filters = {
 };
 
 window.objFormErrors = {
-	modalOpen: (form, r) => {
-	alert(r.message);
-	},
-	modalError: (form, r) => {
-	alert(r.message);
-	},
-	eventLegalResponse: (res, name, typeModal) => {
-		const options = { ...defaults };
+  modalOpen: (form, r) => {
+    alert(r.message);
+  },
+  modalError: (form, r) => {
+    alert(r.message);
+  },
+  eventLegalResponse: (res, name, typeModal) => {
+    const options = {...defaults};
 
-		let modal = $(`[data-response=${typeModal}]`);
+    let modal = $(`[data-response=${typeModal}]`);
 
-		modal.find(".response-modal__title").text(res.message);
-		$.fancybox.defaults = { ...$.fancybox.defaults, ...options };
-		$.fancybox.open($(`[data-response=${typeModal}]`));
-	},
-  eventOrderResponse : (text, name, typeModal) => {
-    const options = { ...defaults };
+    modal.find(".response-modal__title").text(res.message);
+    $.fancybox.defaults = {...$.fancybox.defaults, ...options};
+    $.fancybox.open($(`[data-response=${typeModal}]`));
+  },
+  eventOrderResponse: (text, name, typeModal) => {
+    const options = {...defaults};
 
-		let modal = $(`[data-response=${typeModal}]`);
-		modal.find(".response-modal__title").text(text+ ' ' + name);
-		$.fancybox.defaults = { ...$.fancybox.defaults, ...options };
-		$.fancybox.open($(`[data-response=${typeModal}]`));
+    let modal = $(`[data-response=${typeModal}]`);
+    modal.find(".response-modal__title").text(text + ' ' + name);
+    $.fancybox.defaults = {...$.fancybox.defaults, ...options};
+    $.fancybox.open($(`[data-response=${typeModal}]`));
   }
 };
 window.objFormSuccess = {
-	success_checkout: (form, r) => {
-		if (r.success) {
-		window.location.replace("/");
-		}
-	},
-	success_checkout_private: (form, r) => {
-		if (r.success) {
-		window.location.replace("/" + "profile-" + r.role + "-data/");
-		}
-	},
-	modal: (form, r) => {
-		const options = { ...defaults };
-		$.fancybox.defaults = { ...$.fancybox.defaults, ...options };
-		$.fancybox.open($("[data-response]"));
-		form[0].reset();
-		form.find("[data-input]").parent().removeClass("filled");
-	},
-	reloadPage: () => {
-		location.reload();
-	},
-	modalOpen: (form) => {
-		openModel(form);
-	},
-	contactUs: (form, r) => {
-		alert(r.message);
-		form[0].reset();
-	},
-	eventLegalResponse: (res, name, typeModal) => {
-		const options = { ...defaults };
+  success_checkout: (form, r) => {
+    if (r.success) {
+      window.location.replace("/");
+    }
+  },
+  success_checkout_private: (form, r) => {
+    if (r.success) {
+      window.location.replace("/" + "profile-" + r.role + "-data/");
+    }
+  },
+  modal: (form, r) => {
+    const options = {...defaults};
+    $.fancybox.defaults = {...$.fancybox.defaults, ...options};
+    $.fancybox.open($("[data-response]"));
+    form[0].reset();
+    form.find("[data-input]").parent().removeClass("filled");
+  },
+  reloadPage: () => {
+    location.reload();
+  },
+  modalOpen: (form) => {
+    openModel(form);
+  },
+  contactUs: (form, r) => {
+    alert(r.message);
+    form[0].reset();
+  },
+  eventLegalResponse: (res, name, typeModal) => {
+    const options = {...defaults};
     console.log(name);
     console.log(res);
-		let modal = $(`[data-response=${typeModal}]`),
-			text = "";
+    let modal = $(`[data-response=${typeModal}]`),
+      text = "";
 
-		switch (res.typeEvent) {
-			case "chooseManager":
-				text = "Отправлено на согласование менеджеру " + name;
-			break;
-			case "nonManager":
-				text = "Выберите менеджера";
-				typeModal = "chooseManagerNoSvg";
-				modal = $(`[data-response=${typeModal}]`);
-			break;
-			case 'denyLegalManager':
-			case "denyLegal":
-				text = "Вы отказали " + name;
-			break;
-			case 'successByTheManager':
-				text = "Вы активировали " + name;
-			break;
+    switch (res.typeEvent) {
+      case "chooseManager":
+        text = "Отправлено на согласование менеджеру " + name;
+        break;
+      case "nonManager":
+        text = "Выберите менеджера";
+        typeModal = "chooseManagerNoSvg";
+        modal = $(`[data-response=${typeModal}]`);
+        break;
+      case 'denyLegalManager':
+      case "denyLegal":
+        text = "Вы отказали " + name;
+        break;
+      case 'successByTheManager':
+        text = "Вы активировали " + name;
+        break;
       case 'newManager':
-				text = "Вы изменили менеджера";
-			break;
-		}
+        text = "Вы изменили менеджера";
+        break;
+    }
 
-			modal.find(".response-modal__title").text(text);
-			$.fancybox.defaults = { ...$.fancybox.defaults, ...options };
-			$.fancybox.open($(`[data-response=${typeModal}]`));
-	},
-  eventOrderResponse : (text, name, typeModal) => {
-    const options = { ...defaults };
-		let modal = $(`[data-response=${typeModal}]`);
-		modal.find(".response-modal__title").text(text + ' ' + name);
-		$.fancybox.defaults = { ...$.fancybox.defaults, ...options };
-		$.fancybox.open($(`[data-response=${typeModal}]`));
+    modal.find(".response-modal__title").text(text);
+    $.fancybox.defaults = {...$.fancybox.defaults, ...options};
+    $.fancybox.open($(`[data-response=${typeModal}]`));
+  },
+  eventOrderResponse: (text, name, typeModal) => {
+    const options = {...defaults};
+    let modal = $(`[data-response=${typeModal}]`);
+    modal.find(".response-modal__title").text(text + ' ' + name);
+    $.fancybox.defaults = {...$.fancybox.defaults, ...options};
+    $.fancybox.open($(`[data-response=${typeModal}]`));
   }
 };
+
 // действия оператора для заказа
 function oparatorEventOrder() {
-	let obj = $('[data-event-order-operator]');
+  let obj = $('[data-event-order-operator]');
 
-	obj.find("[data-event-btn]").on("click", function () {
-		let data = {
-			orderId: obj.data("id-order"),
-      managerId: obj.find(".active[data-id-manager]").data("id-manager")
-    },
+  obj.find("[data-event-btn]").on("click", function () {
+    let data = {
+        orderId: obj.data("id-order"),
+        managerId: obj.find(".active[data-id-manager]").data("id-manager")
+      },
 
-    entityName = obj.find('[data-select-text]').text(),
-    typeModal = $(this).data("fancy-modal");
+      entityName = obj.find('[data-select-text]').text(),
+      typeModal = $(this).data("fancy-modal");
 
     console.log(typeModal);
 
@@ -180,53 +182,53 @@ function oparatorEventOrder() {
     });
 
 
-	});
+  });
 
 }
 
 // действия оператора для юр лица
 function oparatorEventLegal() {
-	let obj = $("[data-event-client]");
-	obj.find("[data-event-btn]").on("click", function () {
-		let data = {
-			typeEvent: $(this).data("event-type"),
-			legalId: obj.data("id-legal"),
-		},
-		entityName = "",
-		typeModal = "";
+  let obj = $("[data-event-client]");
+  obj.find("[data-event-btn]").on("click", function () {
+    let data = {
+        typeEvent: $(this).data("event-type"),
+        legalId: obj.data("id-legal"),
+      },
+      entityName = "",
+      typeModal = "";
 
-		switch (data.typeEvent) {
-			case "chooseManager":
-				data.managerId = obj.find(".active[data-id-manager]").data("id-manager");
-				entityName = obj.find(".active[data-id-manager]").text();
-				typeModal = $(this).data("fancy-modal");
-				break;
-			case 'denyLegalManager':
-			case 'denyLegal':
-			case 'successByTheManager':
-				entityName = $(this).data("legal-name");
-				typeModal = $(this).data("fancy-modal");
-				break;
-			default:
-				alert('Не удалось выбрать событие');
-		}
+    switch (data.typeEvent) {
+      case "chooseManager":
+        data.managerId = obj.find(".active[data-id-manager]").data("id-manager");
+        entityName = obj.find(".active[data-id-manager]").text();
+        typeModal = $(this).data("fancy-modal");
+        break;
+      case 'denyLegalManager':
+      case 'denyLegal':
+      case 'successByTheManager':
+        entityName = $(this).data("legal-name");
+        typeModal = $(this).data("fancy-modal");
+        break;
+      default:
+        alert('Не удалось выбрать событие');
+    }
 
-		if (data.typeEvent) {
-			$.ajax({
-				type: "POST",
-				url: "/local/templates/main/include/ajax/profiles/eventOperatorLegal.php",
-				data: data,
-				dataType: "json",
-				success: function (res) {
-					if (res.success) {
-						window.objFormSuccess.eventLegalResponse(res, entityName, typeModal);
-					} else {
-						window.objFormErrors.eventLegalResponse(res, entityName, typeModal);
-					}
-				},
-			});
-		}
-	});
+    if (data.typeEvent) {
+      $.ajax({
+        type: "POST",
+        url: "/local/templates/main/include/ajax/profiles/eventOperatorLegal.php",
+        data: data,
+        dataType: "json",
+        success: function (res) {
+          if (res.success) {
+            window.objFormSuccess.eventLegalResponse(res, entityName, typeModal);
+          } else {
+            window.objFormErrors.eventLegalResponse(res, entityName, typeModal);
+          }
+        },
+      });
+    }
+  });
 }
 
 function subscribeNews() {
@@ -256,61 +258,61 @@ function subscribeNews() {
 
 //обработка форм
 function forms() {
-$(document).on("submit", "[data-type=form-ajax]", function (e) {
+  $(document).on("submit", "[data-type=form-ajax]", function (e) {
     e.preventDefault();
 
     const form = $(this),
-		method = form.attr("method"),
-		action = form.attr("action"),
-		fileElem = form[0].querySelector("[data-file-input]"),
-		file = fileElem ? fileElem.appFile.files : [],
-		data = file.length ? new FormData() : {};
+      method = form.attr("method"),
+      action = form.attr("action"),
+      fileElem = form[0].querySelector("[data-file-input]"),
+      file = fileElem ? fileElem.appFile.files : [],
+      data = file.length ? new FormData() : {};
 
     form.find("[data-type=get-field], input:checked[data-type=get-field], input[type=hidden]").each(function () {
-        const val = $(this).val();
+      const val = $(this).val();
 
-        if (!val) {
-			return;
-        }
+      if (!val) {
+        return;
+      }
 
-        const field = $(this).attr("name");
-        file.length ? data.append(field, val) : (data[field] = val);
-	});
+      const field = $(this).attr("name");
+      file.length ? data.append(field, val) : (data[field] = val);
+    });
 
     $.each(file, (i, item) => {
-		data.append(`files[]`, item);
+      data.append(`files[]`, item);
     });
 
     $.ajax({
-        type: method ? method : "POST",
-        url: action ? action : `${window.config.path}/include/ajax/forms/index.php`,
-        data: data,
-        contentType: file.length ? false : "application/x-www-form-urlencoded; charset=UTF-8",
-        dataType: "json",
-        processData: !file.length,
-        success: function (r) {
-			console.log(typeof r);
-            if (typeof r === "object") {
-				if (!r.success) {
-					console.log(typeof r);
-					const errorFuncInit = form.data("func-error");
-					errorFuncInit ? window.objFormErrors[errorFuncInit](form, r) : alert(r.message);
-					return;
-				}
-			}
+      type: method ? method : "POST",
+      url: action ? action : `${window.config.path}/include/ajax/forms/index.php`,
+      data: data,
+      contentType: file.length ? false : "application/x-www-form-urlencoded; charset=UTF-8",
+      dataType: "json",
+      processData: !file.length,
+      success: function (r) {
+        console.log(typeof r);
+        if (typeof r === "object") {
+          if (!r.success) {
+            console.log(typeof r);
+            const errorFuncInit = form.data("func-error");
+            errorFuncInit ? window.objFormErrors[errorFuncInit](form, r) : alert(r.message);
+            return;
+          }
+        }
 
-			const func = form.data("func");
+        const func = form.data("func");
 
-			if (typeof func === "object") {
-				$.each(func, (i, item) => {
-					window.objFormSuccess[item](form, r);
-				});
-			} else {
-				window.objFormSuccess[func](form, r);
-			}
-		},
+        if (typeof func === "object") {
+          $.each(func, (i, item) => {
+            window.objFormSuccess[item](form, r);
+          });
+        } else {
+          window.objFormSuccess[func](form, r);
+        }
+      },
     });
-	});
+  });
 }
 
 function filters() {
@@ -328,6 +330,13 @@ function filters() {
       data: window.filters.data,
       success: function (r) {
         replace(r, "filter-replace");
+
+        // update url
+        let filtersParam = ''
+        if (Object.keys(window.filters.data.filters).length !== 0) {
+          filtersParam = '?filters=' + JSON.stringify(window.filters.data.filters)
+        }
+        history.pushState(null, '', window.location.origin + window.location.pathname + filtersParam)
       },
     });
   });
@@ -346,6 +355,13 @@ function filters() {
       data: window.filters.data,
       success: function (r) {
         replace(r, "filter-replace");
+
+        // update url
+        let filtersParam = ''
+        if (Object.keys(window.filters.data.filters).length !== 0) {
+          filtersParam = '?filters=' + JSON.stringify(window.filters.data.filters)
+        }
+        history.pushState(null, '', window.location.origin + window.location.pathname + filtersParam)
       },
     });
   });
@@ -360,6 +376,7 @@ function filters() {
       dataType: "html",
       success: function (r) {
         replace(r, "filter-replace");
+        history.pushState(null, '', window.location.origin + window.location.pathname)
       },
     });
   });
@@ -467,9 +484,9 @@ function basket() {
           count: count,
         },
         success: function (r) {
-          const options = { ...defaults },
+          const options = {...defaults},
             counter = $("[data-type=basket-counter]");
-          $.fancybox.defaults = { ...$.fancybox.defaults, ...options };
+          $.fancybox.defaults = {...$.fancybox.defaults, ...options};
           $.fancybox.open(modal);
           replace(r);
           thisObj.css("pointer-events", "auto");
@@ -541,4 +558,19 @@ function replace(r, selector = "replace") {
     jqObj.empty();
     jqObj.append(linkElem.html());
   });
+}
+
+function getAppliedFilters() {
+  const url = new URL(window.location.href)
+  const urlParams = new URLSearchParams(url.search)
+  for (const [key, val] of urlParams.entries()) {
+    if(key === 'filters') return val
+  }
+  return false
+}
+
+function initFilters() {
+  const filters = getAppliedFilters();
+  if (!filters) return;
+  window.filters.data.filters = JSON.parse(filters)
 }
