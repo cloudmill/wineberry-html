@@ -237,6 +237,17 @@
       @media (max-width: ($breakpoint - 1px)) {
       }
     }
+    
+    &.desktop {
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
+    }
+    &.mobile {
+      @media (min-width: $breakpoint) {
+        display: none;
+      }
+    }
   }
   &__map-icon {
     display: none;

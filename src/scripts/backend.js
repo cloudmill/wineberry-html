@@ -357,6 +357,9 @@ function filters() {
         replace(r, "filter-replace");
 
         // update url
+        window.scrollTo({
+          top: 0,
+        })
         let filtersParam = ''
         if (Object.keys(window.filters.data.filters).length !== 0) {
           filtersParam = '?filters=' + JSON.stringify(window.filters.data.filters)
