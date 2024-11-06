@@ -43,6 +43,26 @@ block content
                     .profile-page__orders-label 
                       |#{item}
             ul.profile-page__orders-list
+              a.profile-page__orders-item(href="#" data-aos='fade-up')
+                .profile-page__orders-row 
+                  .profile-page__orders-col
+                    .profile-page__orders-text 
+                      |21
+                  .profile-page__orders-col
+                    .profile-page__status.cancel
+                      .profile-page__status-icon 
+                        +search-sort-svg.profile-page__status-svg
+                      .profile-page__status-text 
+                        |Заказ отменен оператором
+                  .profile-page__orders-col
+                    .profile-page__orders-text 
+                        |21.09.2021
+                  .profile-page__orders-col
+                    .profile-page__orders-inner
+                      .profile-page__orders-text 
+                        |Игорь Дудников
+                      .profile-page__orders-icon 
+                        +small-arrow-svg.profile-page__orders-svg 
               - for (i = 0; i < 5; i++)
                 a.profile-page__orders-item(href="#" data-aos='fade-up')
                   .profile-page__orders-row 
@@ -65,6 +85,37 @@ block content
                         .profile-page__orders-icon 
                           +small-arrow-svg.profile-page__orders-svg 
           .mobile-only 
+            .profile-page__block(data-aos='fade-up')
+              ul.profile-page__block-list
+                li.profile-page__block-item 
+                  .profile-page__orders-label 
+                    |Номер заказа
+                  .profile-page__orders-text 
+                    |21
+                li.profile-page__block-item 
+                  .profile-page__orders-label 
+                    |Статус
+                  .profile-page__status.cancel
+                    .profile-page__status-icon 
+                      +search-sort-svg.profile-page__status-svg
+                    .profile-page__status-text 
+                      |Заказ отменен оператором
+                li.profile-page__block-item 
+                  .profile-page__orders-label 
+                    |Дата обновления
+                  .profile-page__orders-text 
+                    |21.09.2021
+                li.profile-page__block-item 
+                  .profile-page__orders-label 
+                    |Ответственный менеджер
+                  .profile-page__orders-text 
+                    |Игорь Дудников
+              .profile-page__block-bot
+                a.profile-page__block-button(href="#") 
+                  .profile-page__block-text 
+                    |Подробнее
+                  .profile-page__orders-icon 
+                    +small-arrow-svg.profile-page__orders-svg 
             - for (i = 0; i < 3; i++)
               .profile-page__block(data-aos='fade-up')
                 ul.profile-page__block-list

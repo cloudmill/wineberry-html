@@ -286,6 +286,17 @@
         color: var(--color-light-blue);
       }
     }
+
+    &.cancel {
+      #{$comp}__status-svg {
+        path {
+          stroke: var(--color-dark-red);
+        }
+      }
+      #{$comp}__status-text {
+        color: var(--color-dark-red);
+      }
+    }
   }
   &__status-icon {
     margin-right: 4px;
